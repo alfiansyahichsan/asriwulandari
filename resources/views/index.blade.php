@@ -1,207 +1,193 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Asri Peni Wulandari, PhD</title>
-		
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800italic,800,700italic,700,600italic,400italic,600,300italic,300|Oswald:400,300,700' rel='stylesheet' type='text/css'>
-		<!-- Bootstrap -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/font-awesome.min.css" rel="stylesheet">
+@extends('layout.menu')
+@section('halaman')
+Home
+@endsection
+@section('content')
+	<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400, 900" rel="stylesheet"> -->
+	<!-- Modernizr JS -->
+	<script src="{{ asset('js/modernizr-2.6.2.min.js') }}"></script>
 
+	<section id="gtco-hero" class="gtco-cover bgImg" style="background-image: url(images/boom.jpg);"  data-section="home"  data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-md-offset-0 text-center">
+					<div class="display-t">
+						<div class="display-tc">
+							<h3 class="animate-box" data-animate-effect="fadeIn">Scientist | Lecturer</h3>
+							<span class="line"></span>
+							<h1 class="animate-box" data-animate-effect="fadeIn">ASRI PENI WULANDARI</h1>
+							<!-- <p class="gtco-video-link animate-box" data-animate-effect="fadeIn"><a href="https://vimeo.com/channels/staffpicks/93951774" class="popup-vimeo"><i class="icon-controller-play"></i></a></p>  -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-		<link href="css/owl.carousel.css" rel="stylesheet">
-		<link href="css/owl.theme.css" rel="stylesheet">
-		<link href="css/owl.transitions.css" rel="stylesheet">
+	<section id="gtco-our-team" data-section="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 heading animate-box" data-animate-effect="fadeIn" >
+					<h1>Welcome</h1>
+					<p class="sub" style="margin-top: -20px;"></p>
+					<h2 class="heading-colored" style="margin-top: 20px;">ASRI PENI WULANDARI, PhD</h2>
+					<p class="subtle-text animate-box" data-animate-effect="fadeIn"></p>
+				</div>
+			</div>
+			<div class="row team-item gtco-team-reverse">
+				<div class="col-md-6 col-md-push-7 animate-box" data-animate-effect="fadeInRight">
+					<div class="img-shadow">
+						<img src="http://www.unpad.ac.id/wp-content/uploads/2015/04/asri-peni-DADAN.jpg" class="img-responsive" alt="Asri WULANDARI">
+					</div>
+				</div>
+				<div class="col-md-6  col-md-pull-6 animate-box" data-animate-effect="fadeInRight">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus aliquid maiores, voluptatum ex. Accusantium, eum distinctio laudantium. Perferendis dolor, corporis quasi? Tempore quod molestiae quis cumque pariatur dolore vel sit, fugit delectus quasi reprehenderit officia voluptate incidunt, culpa odit impedit qui dolorum fugiat. Quidem possimus reprehenderit, quae recusandae voluptatibus magnam!</p>
+					<p>Ratione facilis quod laborum eaque illo dolore blanditiis nobis dicta voluptatem fugit optio, eveniet non dolor quia delectus, sint, dignissimos atque porro consequuntur unde. Soluta ex necessitatibus delectus saepe aliquam, culpa officiis doloremque, ipsa facere hic, voluptatem accusantium veniam, quasi! Explicabo accusantium sint, corporis consequuntur fugit ipsam, dolorum excepturi adipisci.</p>
+				</div>
+			</div>
 
-		<link href="css/style.css" rel="stylesheet">
-		<link type="text/css" rel="stylesheet" href="css/lightslider.css" />   
+		</div>
+	</section>
+	
+	<section id="gtco-about" data-section="about" style="background-image: url(images/4.png); background-size: cover;">
+		<div class="container">
+			<div class="row row-pb-md">
+				<div class="col-md-8 col-md-offset-2 heading animate-box" data-animate-effect="fadeIn">
+					<img src="images/icons/medal.png" style="height: 100px; padding-bottom: 20px;">
+					<h1 style="letter-spacing: 2px;">ACHIEVEMENT</h1>
+					<p class="sub" style="margin-top: -20px;"></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 animate-box" data-animate-effect="fadeInRight">
+					<div class="img-shadow">
+						<p>Penghargaan 1</p>
+					</div>
+				</div>
+				<div class="col-md-4 animate-box" data-animate-effect="fadeInRight">
+					<div class="img-shadow">
+						<p>Penghargaan 2</p>
+					</div>
+				</div>
+				<div class="col-md-4 animate-box" data-animate-effect="fadeInRight">
+					<div class="img-shadow">
+						<p>Penghargaan 3</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
-		<script src="js/html5shiv.min.js"></script>
-		<script src="js/respond.min.js"></script>
-		<![endif]-->
-	</head>
-	<body data-spy="scroll" data-target=".main-nav">
+	<section id="gtco-practice-areas" data-section="practice-areas">
+		<div class="container">
+			<div class="row row-pb-md">
+				<div class="col-md-8 col-md-offset-2 heading animate-box" data-animate-effect="fadeIn">
+					<h1 style="letter-spacing: 2px;">HASIL RISET</h1>
+					<p class="sub" style="margin-top: -20px;"></p>
+				</div>
+			</div>
+			<div class="row">
+              <div class="mb-sm-20 wow fadeInUp col-md-4 col-sm-6 col-xs-12" onclick="wow fadeInUp">
+                <div class="team-item">
+                  <div class="team-image"><img src="/images/ijo.jpg" alt="Member Photo"/>
+                    <div class="team-detail">
+                      <h3 class="font-alt" style="color: white;">RISET 1</h3>
+                      <p class="font-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit lacus, a&amp;nbsp;iaculis diam.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-sm-20 wow fadeInUp col-md-4 col-sm-6 col-xs-12" onclick="wow fadeInUp">
+                <div class="team-item">
+                  <div class="team-image"><img src="/images/ijo.jpg" alt="Member Photo"/>
+                    <div class="team-detail">
+                      <h3 class="font-alt" style="color: white;">RISET 2</h3>
+                      <p class="font-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit lacus, a&amp;nbsp;iaculis diam.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-sm-20 wow fadeInUp col-md-4 col-sm-6 col-xs-12" onclick="wow fadeInUp">
+                <div class="team-item">
+                  <div class="team-image"><img src="/images/ijo.jpg" alt="Member Photo"/>
+                    <div class="team-detail">
+                      <h3 class="font-alt" style="color: white;">RISET 3</h3>
+                      <p class="font-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit lacus, a&amp;nbsp;iaculis diam.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+		</div>
+		<div class="container" style="margin-top: 60px;">
+			<div class="row row-pb-md">
+				<div class="col-md-8 col-md-offset-2 heading animate-box" data-animate-effect="fadeIn">
+					<h1 style="letter-spacing: 2px;">LATEST JOURNAL</h1>
+					<p class="sub" style="margin-top: -20px;"></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="gtco-practice-area-item animate-box">
+						<div class="gtco-icon">
+							<img src="images/scale.png" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
+						</div>
+						<div class="gtco-copy">
+							<h3>Journal 1</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed scelerisque sapien. Sed sodales, libero non faucibus rutrum, purus tellus finibus diam, eget ornare tortor leo eget erat. </p>
+						</div>
+					</div>
 
-		<header class="st-navbar">
-			<nav class="navbar navbar-default navbar-fixed-top clearfix" role="navigation">
-				<div class="container"><!-- Brand and toggle get grouped for better mobile display -->
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sept-main-nav">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						
+					<div class="gtco-practice-area-item animate-box">
+						<div class="gtco-icon">
+							<img src="images/scale.png" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
+						</div>
+						<div class="gtco-copy">
+							<h3>Journal 1</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed scelerisque sapien. Sed sodales, libero non faucibus rutrum, purus tellus finibus diam, eget ornare tortor leo eget erat. </p>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-md-6">
 					
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse main-nav" id="sept-main-nav">
-						<ul class="nav navbar-nav navbar-right">
-							<li class="active"><a href="#home">Home</a></li>
-							<li ><a href="#about" >About</a></li>
-							<li ><a href="#service" >Riset</a></li>
-							<li><a href="#portfolio">Gallery</a></li>
-							
-							<li><a href="#blog">Blog</a></li>
-							
-						</ul>
-					</div><!-- /.navbar-collapse -->
-				</div>
-			</nav>
-		</header>
-		
-		<section class="home" id="home" data-stellar-background-ratio="0.4">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="st-home-unit">
-							<div class="hero-txt">
-								<p class="hero-work">Scientist - Lecturer</p>
-								<h2 class="hero-title">ASRI PENI WULANDARI</h2>
-								<!-- <p class="hero-sub-title">We Provide Hight Quality Bootstrap Template</p> -->
-								<!-- <a href="#" class="btn btn-default btn-lg left-btn">Purchase Now</a> -->
-								<a href="#" class="btn btn-main btn-lg">Find Out More</a>
-							</div>
-
+					<div class="gtco-practice-area-item animate-box">
+						<div class="gtco-icon">
+							<img src="images/scale.png" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
+						</div>
+						<div class="gtco-copy">
+							<h3>Journal 1</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed scelerisque sapien. Sed sodales, libero non faucibus rutrum, purus tellus finibus diam, eget ornare tortor leo eget erat. </p>
 						</div>
 					</div>
+
+					<div class="gtco-practice-area-item animate-box">
+						<div class="gtco-icon">
+							<img src="images/scale.png" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
+						</div>
+						<div class="gtco-copy">
+							<h3>Journal 1</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed scelerisque sapien. Sed sodales, libero non faucibus rutrum, purus tellus finibus diam, eget ornare tortor leo eget erat. </p>
+						</div>
+					</div>
+
 				</div>
 			</div>
-			<div class="mouse-icon"><div class="wheel"></div></div>
-		</section>
+		</div>
+	</section>
 
-		
-
-		<section class="about" id="about">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="section-title st-center">
-							<h3>WelCome</h3>
-							<p>Asri Peni Wulandari</p>
-						</div>
-						<div class="row mb90">
-							<div class="col-md-6">
-								<p>Texit l, habere se indocti magnosque culpa gravioribus discedere eas indignae diogenem, praetermissum effugiendorum vult dicent, periculum dolere putat. Iucunditatem quid turbulenta patre eae depravatum talem elaborare plerisque repellere, o potiendi tuo aliter, militaris sint tranquillat liberalitati. Locus delicata divelli intemperantes audeam maximisque sitne pulcherrimum aegritudines studium. Habent inveniri fidelissimae aequi andriam laudabilis. Libido censet assiduitas quae probantur tantalo exquisitaque erunt laudatur optari. Late suapte veterum enim qui magna securi eaque proficiscuntur.</p>
-							</div><div class="col-md-6">
-							<div class="demo">
-					        <div class="item">            
-					            <div class="clearfix" style="max-width:474px;">
-					                <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
-					                    <li data-thumb="http://www.unpad.ac.id/wp-content/uploads/2015/04/asri-peni-DADAN.jpg" alt="" class="img-responsive"> 
-					                        <img src="http://www.unpad.ac.id/wp-content/uploads/2015/04/asri-peni-DADAN.jpg" alt="" class="img-responsive" />
-					                         </li>
-					                         <li data-thumb="http://www.unpad.ac.id/wp-content/uploads/2015/04/asri-peni-DADAN-2.jpg" alt="" class="img-responsive"> 
-					                        <img src="http://www.unpad.ac.id/wp-content/uploads/2015/04/asri-peni-DADAN-2.jpg" />
-					                         </li>
-					                         <li data-thumb="http://www.unpad.ac.id/wp-content/uploads/2015/04/asri-peni-DADAN.jpg" alt="" class="img-responsive"> 
-					                        <img src="http://www.unpad.ac.id/wp-content/uploads/2015/04/asri-peni-DADAN.jpg" alt="" class="img-responsive" />
-					                         </li>
-								</ul>
-								</div>
-								</div>
-
-						
-							
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="funfacts" data-stellar-background-ratio="0.4">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6">
-						<div class="funfact">
-							<div class="st-funfact-icon"><i class="fa fa-briefcase"></i></div>
-							<div class="st-funfact-counter" >Achievement+</div>
-							<strong class="funfact-title">Penghargaan Bina Riset</strong><br>
-							<strong class="funfact-title">Penghargaan website keren</strong>
-						</div><!-- .funfact -->
-					</div>
-					<div class="col-md-6">
-						<div class="funfact">
-							<div class="st-funfact-icon"><i class="fa fa-clock-o"></i></div>
-							<div class="st-funfact-counter" >Latest Journal+</div>
-							<strong class="funfact-title">Aktivitas Biosurfaktan dari Jamur Eksogenous Terhadap Penurunan Total Petroleum Hydrocarbon (TPH) Oily Sludge Asal Balongan</strong>
-						</div><!-- .funfact -->
-					</div>
-					
-					
-				</div>
-			</div>
-		</section>
-
-		<section class="service" id="service">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="section-title st-center">							
-							<p>HASIL RISET</p>
-						</div>
-						<div class="row">
-							<div class="col-md-4">
-								<div class="st-member">
-									<div class="st-member-img">
-										<img src="https://s2.bukalapak.com/img/7048172041/m-1000-1000/Arang_Bio_Briket.JPG" alt="" class="img-responsive">
-									</div>
-									<div class="st-member-info">
-										<strong class="st-member-name">Manfaat Tanaman Rami untuk Tekstil dan Biobriket</strong>
-										<p class="st-member-pos"></p>
-									</div>
-								</div><p align="center">Pro adiuvet, honesto foris liberiusque statuat theseo scribimus mererer percurri geometria.</p>
-							</div>
-							<div class="col-md-4">
-								<div class="st-member">
-									<div class="st-member-img">
-										<img src="https://s2.bukalapak.com/img/7048172041/m-1000-1000/Arang_Bio_Briket.JPG" alt="" class="img-responsive">
-									</div>
-									<div class="st-member-info">
-										<strong class="st-member-name">Manfaat Tanaman Rami untuk Tekstil dan Biobriket</strong>
-										<p class="st-member-pos"></p>
-									</div>
-								</div><p align="center">Pro adiuvet, honesto foris liberiusque statuat theseo scribimus mererer percurri geometria.</p>
-							</div>
-							<div class="col-md-4">
-								<div class="st-member">
-									<div class="st-member-img">
-										<img src="https://s2.bukalapak.com/img/7048172041/m-1000-1000/Arang_Bio_Briket.JPG" alt="" class="img-responsive">
-									</div>
-									<div class="st-member-info">
-										<strong class="st-member-name">Manfaat Tanaman Rami untuk Tekstil dan Biobriket</strong>
-										<p class="st-member-pos"></p>
-									</div>
-								</div><p align="center">Pro adiuvet, honesto foris liberiusque statuat theseo scribimus mererer percurri geometria.</p>
-							</div>
-							
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		
-
-		<section class="portfolio" id="portfolio">
+	<section class="portfolio" id="portfolio" data-section="gallery">
 			<div class="container-fluid ">
 				<div class="row">
 					<div class="col-md-12 no-padding ">
-						<div class="section-title st-center">
-							
-							<p>GALLERY</p>
+						<div class="row row-pb-md">
+							<div class="col-md-8 col-md-offset-2 heading animate-box" data-animate-effect="fadeIn">
+								<h1 style="letter-spacing: 2px;">GALLERY</h1>
+								<p class="sub" style="margin-top: -20px;"></p>
+							</div>
 						</div>
-						
+
 						<div class="grid">
 							<figure class="portfolio-item" data-groups='["photography"]'>
 								<img src="photos/portfolio.jpg" alt=""/>
@@ -306,211 +292,11 @@
 			</div>
 		</section>
 
-		
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
 
-		
-		
-		<section class="blog" id="blog">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="section-title st-center">
-							<h3>Recent News</h3>
-							<p>Some Recent News from Blog</p>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-8">
-						<div class="blog-post">
-							<div class="post-meta">
-								<span class="author"><a href="#"><img src="photos/author.jpg" alt=""> Raju Ahmmed</a></span>,
-								<span>Posted in <a href="#">WordPress</a></span>,
-								<span>At <strong>10 January, 2015</strong></span>
-							</div>
-							<h2 class="post-title"><a href="#">Asri Peni Wulandari, PhD Teliti Manfaat Tanaman Rami untuk Tekstil dan Biobriket</a></h2>
-							<div class="post-thumb"><a href="#"><img src="http://www.unpad.ac.id/wp-content/uploads/2015/04/asri-peni-DADAN.jpg" alt="" class="img-responsive"></a></div>
-							<div class="post-content">
-								<p>[Unpad.ac.id, 6/04/2015] Indonesia mempunyai potensi biomassa yang belum terolah secara efektif. Salah satu tanaman yang berpotensi untuk dikembangkan adalah rami. Tanaman rami (Boehmeria nivea) selama ini dikenal sebagai bahan baku tekstil pengganti kapas yang sudah dibudidayakan sejak masa penjajahan Belanda. Seratnya diambil untuk diolah menjadi bahan baku tekstil, dengan kualitas yang baik jika dibandingkan dengan bahan baku serat alam lainnya. <a href="#" class="more-link">Continue reading <span class="meta-nav">&rarr;</span></a></p>
-							</div>
-						</div>
-						<div class="blog-post">
-							<div class="post-meta">
-								<span class="author"><a href="#"><img src="photos/author.jpg" alt=""> Raju Ahmmed</a></span>,
-								<span>Posted in <a href="#">WordPress</a></span>,
-								<span>At <strong>10 January, 2015</strong></span>
-							</div>
-							<h2 class="post-title"><a href="#">A example blog post with image</a></h2>
-							<div class="post-thumb"><a href="#"><img src="photos/post-thumb.jpg" alt="" class="img-responsive"></a></div>
-							<div class="post-content">
-								<p>Torquatos nihil utuntur liberamur benivole epularum evertunt accommodare, democrito didicerimus occulta egregios, praeclaram familiaritatem novi accusamus delectus opinemur mutae expetenda perpauca eas, concederetur fecerit ignorare delectari industria patientiamque. Invenire probes contereret maior opinor iucundo inciderint depravate, concupiscunt, deorum didicerimus, solitudo ingeniis confectum attento illustribus. Quanta suam, quieti usu necessarius. Sapienter existimo fruenda contentiones deduceret dolere minuti animi scientia, inbecilloque servire evertunt. Exeduntur vivi laudatum dicitur omnia verterem fuerit inanitate efficiatur <a href="#" class="more-link">Continue reading <span class="meta-nav">&rarr;</span></a></p>
-							</div>
-						</div>
-						<div class="blog-post">
-							<div class="post-meta">
-								<span class="author"><a href="#"><img src="photos/author.jpg" alt=""> Raju Ahmmed</a></span>,
-								<span>Posted in <a href="#">WordPress</a></span>,
-								<span>At <strong>10 January, 2015</strong></span>
-							</div>
-							<h2 class="post-title"><a href="#">A example blog post without image</a></h2>
-							<div class="post-content">
-								<p>Torquatos nihil utuntur liberamur benivole epularum evertunt accommodare, democrito didicerimus occulta egregios, praeclaram familiaritatem novi accusamus delectus opinemur mutae expetenda perpauca eas, concederetur fecerit ignorare delectari industria patientiamque. Invenire probes contereret maior opinor iucundo inciderint depravate, concupiscunt, deorum didicerimus, solitudo ingeniis confectum attento illustribus. Quanta suam, quieti usu necessarius. Sapienter existimo fruenda contentiones deduceret dolere minuti animi scientia, inbecilloque servire evertunt. Exeduntur vivi laudatum dicitur omnia verterem fuerit inanitate efficiatur <a href="#" class="more-link">Continue reading <span class="meta-nav">&rarr;</span></a></p>
+@section('script')
 
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="widgets">
-							<div class="widget">
-								<form action="" class="">
-									<div class="input-group">
-										<input type="text" class="form-control" placeholder="Search...">
-										<span class="input-group-btn">
-											<button class="btn btn-default btn-lg" type="submit"><i class="fa fa-search"></i></button>
-										</span>
-									</div>
-								</form>
-							</div>
-							<div class="widget">
-								<h2 class="widget-title">Categories</h2>
-								<ul>
-									<li><a href="#">Video <span class="badge pull-right">5</span></a></li>
-									<li><a href="#">Flyer <span class="badge pull-right">7</span></a></li>
-									<li><a href="#">PSD <span class="badge pull-right">2</span></a></li>
-									<li><a href="#">Theme <span class="badge pull-right">6</span></a></li>
-									<li><a href="#">Music <span class="badge pull-right">8</span></a></li>
-									<li><a href="#">Bootstrap <span class="badge pull-right">2</span></a></li>
-									<li><a href="#">WordPress <span class="badge pull-right">9</span></a></li>
-									<li><a href="#">Framework <span class="badge pull-right">7</span></a></li>
-								</ul>
-							</div>
-							<div class="widget">
-								<h2 class="widget-title">Recent Post</h2>
-								<ul>
-									<li>
-										<div class="recent-post clearfix">
-											<a href="#" class="post-thumb"><img src="photos/post-thumb-sm.jpg"></a>
-											<h2 class="post-title">
-												<a href="#">A example blog post with image</a>
-											</h2>
-											<div class="post-meta">
-												<span>Posted in <a href="#">WordPress</a></span>
-											</div>
-											
-										</div>
-									</li>
-									<li>
-										<div class="recent-post clearfix">
-											<a href="#" class="post-thumb"><img src="photos/post-thumb-sm.jpg"></a>
-											<h2 class="post-title">
-												<a href="#">A example blog post with image</a>
-											</h2>
-											<div class="post-meta">
-												<span>Posted in <a href="#">WordPress</a></span>
-											</div>
-											
-										</div>
-									</li>
-									<li>
-										<div class="recent-post clearfix">
-											<a href="#" class="post-thumb"><img src="photos/post-thumb-sm.jpg"></a>
-											<h2 class="post-title">
-												<a href="#">A example blog post with image</a>
-											</h2>
-											<div class="post-meta">
-												<span>Posted in <a href="#">WordPress</a></span>
-											</div>
-											
-										</div>
-									</li>
-									<li>
-										<div class="recent-post clearfix">
-											<a href="#" class="post-thumb"><img src="photos/post-thumb-sm.jpg"></a>
-											<h2 class="post-title">
-												<a href="#">A example blog post with image</a>
-											</h2>
-											<div class="post-meta">
-												<span>Posted in <a href="#">WordPress</a></span>
-											</div>
-											
-										</div>
-									</li>
-								</ul>
-							</div>
-							<div id="tag_cloud-3" class="widget widget_tag_cloud">
-								<h2 class="widget-title">Tags</h2>
-								<div class="tagcloud">
-									<a href="#">bootstrap3</a>
-									<a href="#">css</a>
-									<a href="#">html</a>
-									<a href="#">js</a>
-									<a href="#">php</a>
-									<a href="#">wordpress</a>
-									<a href="#">jquery</a>
-									<a href="#">less</a>
-									<a href="#">editor</a>
-									<a href="#">responsive</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		
-
-		<footer class="site-footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-					<p class="c-copyright c-font-white">2017 &copy; Asri Peni Wulandari, Developed by <a href="http://scriptpainter.com" style="color:#337ab7;">ScriptPainter</a>
-                            <span class="c-font-white">All Rights Reserved.</span>
-						<!--&copy; <a href="https://www.cantothemes.com">CantoThemes</a> 2015.-->
-						<!-- Don't Remove/Edit this. If you remove this you don't have permission to use this template. -->
-						<!-- Designed by <a href="https://www.cantothemes.com">CantoThemes</a>-->
-						<!-- So Please don't remove this -->
-					</div>
-				</div>
-			</div>
-		</footer>
-
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="js/jquery.min.js"></script>
-		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/jquery.easing.min.js"></script>
-		<script src="js/jquery.stellar.js"></script>
-		<script src="js/jquery.appear.js"></script>
-		<script src="js/jquery.nicescroll.min.js"></script>
-		<script src="js/jquery.countTo.js"></script>
-		<script src="js/jquery.shuffle.modernizr.js"></script>
-		<script src="js/jquery.shuffle.js"></script>
-		<script src="js/owl.carousel.js"></script>
-		<script src="js/jquery.ajaxchimp.min.js"></script>
-		<script src="js/script.js"></script>
-
-		<script src="js/lightslider.js"></script>
-
-		 <script>
-    	 $(document).ready(function() {
-			$("#content-slider").lightSlider({
-                loop:true,
-                keyPress:true
-            });
-            $('#image-gallery').lightSlider({
-                gallery:true,
-                item:1,
-                thumbItem:9,
-                slideMargin: 0,
-                speed:500,
-                auto:true,
-                loop:true,
-                onSliderLoad: function() {
-                    $('#image-gallery').removeClass('cS-hidden');
-                }  
-            });
-		});
-    </script>
-	</body>
-</html>
+@endsection
+@endsection()
