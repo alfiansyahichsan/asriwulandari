@@ -40,6 +40,7 @@
 	<link rel="stylesheet" href="{{ asset('css/flexslider.css') }}">
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/linea-icon.css') }}">
 </head>
 <body>
 	<div class="gtco-loader"></div>
@@ -63,6 +64,12 @@
 	<script src="{{ asset('js/magnific-popup-options.js') }}"></script>
 	<!-- Main -->
 	<script src="{{ asset('js/main.js') }}"></script>
+
+	<script src="{{ asset('js/menuzord.js') }}"></script>
+	<script src="{{ asset('js/jquery.flexslider-min.js') }}"></script>
+	<script src="{{ asset('js/jquery.isotope.js') }}"></script>
+	<script src="{{ asset('js/smooth.js') }}"></script>
+	<script src="{{ asset('js/wow.min.js') }}"></script>
 	
 
 	</body>

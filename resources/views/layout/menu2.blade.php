@@ -1,7 +1,7 @@
 @extends('master')
 @section('layout')
 <div id="page">
-	<nav class="gtco-nav" role="navigation">
+	<nav class="gtco-nav" role="navigation" style="background-color: green;">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-2 col-xs-12">
@@ -13,7 +13,7 @@
 						<li><a href="#" data-nav-section="about">About</a></li>
 						<li><a href="#" data-nav-section="practice-areas">Riset</a></li>
 						<li><a href="#" data-nav-section="gallery">Gallery</a></li>
-						<li><a href="<?php echo url('blogasri') ?>" data-nav-section="blog">Blog</a></li>
+						<li><a href="<?php echo url('blogasri') ?>"">Blog</a></li>
 						<!-- For external page link -->
 						<!-- <li><a href="http://freehtml5.co/" class="external">External</a></li> -->
 					</ul>

@@ -17,3 +17,6 @@ Route::get('/', function () {
 Route::get('/biodegum', function () {
     return view('biodegum');
 });
+Route::get('/blog', function () {
+    return view('blogasri');
+});
