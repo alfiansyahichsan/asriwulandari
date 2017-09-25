@@ -42,7 +42,7 @@ Home
 					</div>
 				</div>
 				<div class="col-md-6  col-md-pull-6 animate-box" data-animate-effect="fadeInRight">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus aliquid maiores, voluptatum ex. Accusantium, eum distinctio laudantium. Perferendis dolor, corporis quasi? Tempore quod molestiae quis cumque pariatur dolore vel sit, fugit delectus quasi reprehenderit officia voluptate incidunt, culpa odit impedit qui dolorum fugiat. Quidem possimus reprehenderit, quae recusandae voluptatibus magnam!</p>
+					<p>Tentang Asri Peni Wulandari Torquatos nihil utuntur liberamur benivole epularum evertunt accommodare, democrito didicerimus occulta egregios, praeclaram familiaritatem novi accusamus delectus opinemur mutae expetenda perpauca eas, concederetur fecerit ignorare delectari industria patientiamque. Invenire probes contereret maior opinor iucundo inciderint depravate, concupiscunt, deorum didicerimus, solitudo ingeniis confectum attento illustribus. Quanta suam, quieti usu necessarius. Sapienter existimo fruenda contentiones deduceret dolere minuti animi scientia, inbecilloque servire evertunt. Exeduntur vivi laudatum dicitur omnia verterem fuerit inanitate efficiatur Torquatos nihil utuntur liberamur benivole epularum evertunt accommodare, democrito didicerimus occulta egregios, praeclaram familiaritatem novi accusamus delectus opinemur mutae expetenda perpauca eas, concederetur fecerit ignorare delectari industria patientiamque.</p>
 				</div>
 			</div>
 
@@ -60,20 +60,20 @@ Home
 			</div>
 			<div class="row">
 				<div class="col-md-4 animate-box" data-animate-effect="fadeInRight">
-					<div class="img-shadow">
-						<img src="images/icons/bdg.png" style="height: 60px;">
+					<div class="img-shadow test">
+						<a data-toggle="modal" href="#myModal"><img src="images/icons/bdg.png" style="height: 60px;"></a>
 						<p>Penghargaan 1</p>
 					</div>
 				</div>
 				<div class="col-md-4 animate-box" data-animate-effect="fadeInRight">
-					<div class="img-shadow">
-						<img src="images/icons/bdg.png" style="height: 60px;">
+					<div class="img-shadow test">
+						<a data-toggle="modal" href="#myModal"><img src="images/icons/bdg.png" style="height: 60px;"></a>
 						<p>Penghargaan 2</p>
 					</div>
 				</div>
 				<div class="col-md-4 animate-box" data-animate-effect="fadeInRight">
-					<div class="img-shadow">
-						<img src="images/icons/bdg.png" style="height: 60px;">
+					<div class="img-shadow test">
+						<a data-toggle="modal" href="#myModal"><img src="images/icons/bdg.png" style="height: 60px;"></a>
 						<p>Penghargaan 3</p>
 					</div>
 				</div>
@@ -155,9 +155,9 @@ Home
 							<img src="images/scale.png" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
 						</div>
 						<div class="gtco-copy">
-							<h3>Journal 1</h3>
+							<h3><a href="{{URL::route('detailjurnal')}}" style="color: black;">Journal 1</a></h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed scelerisque sapien. Sed sodales, libero non faucibus rutrum, purus tellus finibus diam, eget ornare tortor leo eget erat. </p>
-							<a href="#">Read More</a>
+							<a href="{{URL::route('detailjurnal')}}">Read More</a>
 						</div>
 					</div>
 
@@ -169,9 +169,9 @@ Home
 							<img src="images/scale.png" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
 						</div>
 						<div class="gtco-copy">
-							<h3>Journal 1</h3>
+							<h3><a href="{{URL::route('detailjurnal')}}" style="color: black;">Journal 2</a></h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed scelerisque sapien. Sed sodales, libero non faucibus rutrum, purus tellus finibus diam, eget ornare tortor leo eget erat. </p>
-							<a href="#">Read More</a>
+							<a href="{{URL::route('detailjurnal')}}">Read More</a>
 						</div>
 					</div>
 
@@ -183,9 +183,9 @@ Home
 							<img src="images/scale.png" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
 						</div>
 						<div class="gtco-copy">
-							<h3>Journal 1</h3>
+							<h3><a href="{{URL::route('detailjurnal')}}" style="color: black;">Journal 3</a></h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed scelerisque sapien. Sed sodales, libero non faucibus rutrum, purus tellus finibus diam, eget ornare tortor leo eget erat. </p>
-							<a href="#">Read More</a>
+							<a href="{{URL::route('detailjurnal')}}">Read More</a>
 						</div>
 					</div>
 
@@ -359,10 +359,10 @@ Home
 						<span class="author"><a href="#"><img src="photos/author.jpg" alt=""> Asri Wulandari</a></span>,
 						<span>At <strong>22 September, 2017</strong></span>
 					</div>
-					<h2 class="post-title"><a href="#">Asri Peni Wulandari, PhD Teliti Manfaat Tanaman Rami untuk Tekstil dan Biobriket</a></h2>
-					<div class="post-thumb"><a href="#"><img src="http://www.unpad.ac.id/wp-content/uploads/2015/04/asri-peni-DADAN.jpg" alt="" class="img-responsive"></a></div>
+					<h2 class="post-title"><a href="{{URL::route('detailblog')}}">Asri Peni Wulandari, PhD Teliti Manfaat Tanaman Rami untuk Tekstil dan Biobriket</a></h2>
+					<div class="post-thumb"><a href="{{URL::route('detailblog')}}"><img src="http://www.unpad.ac.id/wp-content/uploads/2015/04/asri-peni-DADAN.jpg" alt="" class="img-responsive"></a></div>
 					<div class="post-content">
-						<p>Torquatos nihil utuntur liberamur benivole epularum evertunt accommodare, democrito didicerimus occulta egregios, praeclaram familiaritatem novi accusamus delectus opinemur mutae expetenda perpauca eas, concederetur fecerit ignorare delectari industria patientiamque. Invenire probes contereret maior opinor iucundo inciderint depravate, concupiscunt, deorum didicerimus, solitudo ingeniis confectum attento illustribus. Quanta suam, quieti usu necessarius. Sapienter existimo fruenda contentiones deduceret dolere minuti animi scientia, inbecilloque servire evertunt. Exeduntur vivi laudatum dicitur omnia verterem fuerit inanitate efficiatur <a href="#" class="more-link">Continue reading <span class="meta-nav">&rarr;</span></a></p>
+						<p>Torquatos nihil utuntur liberamur benivole epularum evertunt accommodare, democrito didicerimus occulta egregios, praeclaram familiaritatem novi accusamus delectus opinemur mutae expetenda perpauca eas, concederetur fecerit ignorare delectari industria patientiamque. Invenire probes contereret maior opinor iucundo inciderint depravate, concupiscunt, deorum didicerimus, solitudo ingeniis confectum attento illustribus. Quanta suam, quieti usu necessarius. Sapienter existimo fruenda contentiones deduceret dolere minuti animi scientia, inbecilloque servire evertunt. Exeduntur vivi laudatum dicitur omnia verterem fuerit inanitate efficiatur <a href="{{URL::route('detailblog')}}" class="more-link">Continue reading <span class="meta-nav">&rarr;</span></a></p>
 					</div>
 				</div>
 			</div>
@@ -465,6 +465,26 @@ Home
 	</div>
 </section>
 
+<div id="myModal" class="modal fade" role="dialog">
+<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			<h3 class="modal-title" style="text-align: center; letter-spacing: 3px;">ACHIEVEMENT</h3>
+		</div>
+		<div class="modal-body" style="text-align: center;">
+			<p>Penghargaan 1</p>
+			<p>Mikro</p>
+			<p>Pada tahun 2017</p>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-success" data-dismiss="modal">
+					<span class='glyphicon glyphicon-remove'></span> Close
+				</button>
+			</div>
+		</div>
+		</div>
+	</div>
+</div>
 
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>

@@ -11,12 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/',array('as'=>'home','uses'=>'PagesController@Home'));
 Route::get('/biodegum',array('as'=>'biodegum','uses'=>'PagesController@biodegum'));
 Route::get('/fipulp',array('as'=>'fipulp','uses'=>'PagesController@fipulp'));
+Route::get('/jurnal/detail',array('as'=>'detailjurnal','uses'=>'PagesController@detailjurnal'));
+Route::get('/blog',array('as'=>'detailblog','uses'=>'PagesController@detailblog'));
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/login', 'PagesController@Login')->name('login');

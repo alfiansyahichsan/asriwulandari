@@ -1,11 +1,11 @@
 @extends('master')
 @section('layout')
 <div id="page">
-	<nav class="gtco-nav" role="navigation" style="background-color: green;">
+	<nav class="gtco-nav" role="navigation" style="background-color: #58914C;">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-2 col-xs-12">
-					<div id="gtco-logo"><a href="index.html"><img src="{{ asset('images/logo/asri.png') }}" style="height: 35px;"></a></div>
+					<div id="gtco-logo"><a href="{{URL::route('home')}}"><img src="{{ asset('images/logo/asri.png') }}" style="height: 35px;"></a></div>
 				</div>
 				<div class="col-xs-10 text-right menu-1 main-nav">
 					<ul>
