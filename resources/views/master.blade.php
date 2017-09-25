@@ -23,6 +23,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 @yield('css')
 	<!-- ========== CSS INCLUDES ========== -->
+	<link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="{{ asset('css/animate.css') }}">
 	<!-- Icomoon Icon Fonts-->
@@ -31,6 +32,7 @@
 	<link rel="stylesheet" href="{{ asset('css/themify-icons.css') }}">
 	<!-- Bootstrap  -->
 	<link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 	<!-- Magnific Popup -->
 	<link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
 	<!-- Owl Carousel  -->
@@ -65,11 +67,11 @@
 	<!-- Main -->
 	<script src="{{ asset('js/main.js') }}"></script>
 
-	<script src="{{ asset('js/menuzord.js') }}"></script>
+	<!-- <script src="{{ asset('js/menuzord.js') }}"></script>
 	<script src="{{ asset('js/jquery.flexslider-min.js') }}"></script>
 	<script src="{{ asset('js/jquery.isotope.js') }}"></script>
 	<script src="{{ asset('js/smooth.js') }}"></script>
-	<script src="{{ asset('js/wow.min.js') }}"></script>
+	<script src="{{ asset('js/wow.min.js') }}"></script> -->
 	
 
 	</body>

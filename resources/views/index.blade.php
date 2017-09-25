@@ -7,7 +7,7 @@ Home
 	<!-- Modernizr JS -->
 	<script src="{{ asset('js/modernizr-2.6.2.min.js') }}"></script>
 
-	<section id="gtco-hero" class="gtco-cover" style="background-image: url(images/boom.jpg);"  data-section="home"  data-stellar-background-ratio="0.5">
+	<section id="gtco-hero" class="gtco-cover" style="background-image: url(images/3.jpg);"  data-section="home"  data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
@@ -25,7 +25,7 @@ Home
 		</div>
 	</section>
 
-	<section id="gtco-our-team" data-section="about">
+	<section id="gtco-our-team" data-section="about" style="margin-bottom: 40px;">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 heading animate-box" data-animate-effect="fadeIn" >
@@ -35,7 +35,7 @@ Home
 					<p class="subtle-text animate-box" data-animate-effect="fadeIn"></p>
 				</div>
 			</div>
-			<div class="row team-item gtco-team-reverse">
+			<div class="row gtco-team-reverse">
 				<div class="col-md-6 col-md-push-7 animate-box" data-animate-effect="fadeInRight">
 					<div class="img-shadow">
 						<img src="http://www.unpad.ac.id/wp-content/uploads/2015/04/asri-peni-DADAN.jpg" class="img-responsive" alt="Asri WULANDARI">
@@ -50,11 +50,11 @@ Home
 		</div>
 	</section>
 	
-	<section id="gtco-about" data-section="about" style="background-image: url(images/4.png); background-size: cover;">
+	<section id="gtco-about" data-section="about" style="background-image: url(images/header-back.png); background-repeat: no-repeat; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
 		<div class="container">
 			<div class="row row-pb-md">
 				<div class="col-md-8 col-md-offset-2 heading animate-box" data-animate-effect="fadeIn">
-					<img src="images/icons/medal.png" style="height: 100px; padding-bottom: 20px;">
+					
 					<h1 style="letter-spacing: 2px;">ACHIEVEMENT</h1>
 					<p class="sub" style="margin-top: -20px;"></p>
 				</div>
@@ -62,16 +62,19 @@ Home
 			<div class="row">
 				<div class="col-md-4 animate-box" data-animate-effect="fadeInRight">
 					<div class="img-shadow">
+						<img src="images/icons/bdg.png" style="height: 60px;">
 						<p>Penghargaan 1</p>
 					</div>
 				</div>
 				<div class="col-md-4 animate-box" data-animate-effect="fadeInRight">
 					<div class="img-shadow">
+						<img src="images/icons/bdg.png" style="height: 60px;">
 						<p>Penghargaan 2</p>
 					</div>
 				</div>
 				<div class="col-md-4 animate-box" data-animate-effect="fadeInRight">
 					<div class="img-shadow">
+						<img src="images/icons/bdg.png" style="height: 60px;">
 						<p>Penghargaan 3</p>
 					</div>
 				</div>
@@ -80,8 +83,8 @@ Home
 	</section>
 
 	<section id="gtco-practice-areas" data-section="practice-areas">
-		<div class="container">
-			<div class="row row-pb-md">
+		<div class="container" style="margin-bottom: 50px;">
+			<div class="row">
 				<div class="col-md-8 col-md-offset-2 heading animate-box" data-animate-effect="fadeIn">
 					<h1 style="letter-spacing: 2px;">HASIL RISET</h1>
 					<p class="sub" style="margin-top: -20px;"></p>
@@ -95,7 +98,7 @@ Home
 						</div>
 						<div class="st-member-info">
 							<strong class="st-member-name">RISET 1</strong>
-							<p class="st-member-pos">ini riset 1</p>
+							<p>riset ini merupakan riset di bidang mikroorganisme</p>
 							<div class="skills">
 								<div class="skill">
 									<strong>PROGRESS</strong>
@@ -136,7 +139,7 @@ Home
 						</div>
 						<div class="st-member-info">
 							<strong class="st-member-name">RISET 2</strong>
-							<p class="st-member-pos">ini riset 2</p>
+							<p>riset ini merupakan riset di bidang mikroorganisme</p>
 							<div class="skills">
 								<div class="skill">
 									<strong>PROGRESS</strong>
@@ -177,7 +180,7 @@ Home
 						</div>
 						<div class="st-member-info">
 							<strong class="st-member-name">RISET 3</strong>
-							<p class="st-member-pos">ini riset 3</p>
+							<p>riset ini merupakan riset di bidang mikroorganisme</p>
 							<div class="skills">
 								<div class="skill">
 									<strong>PROGRESS</strong>
@@ -214,7 +217,10 @@ Home
 				
 			</div>
 		</div>
-		<div class="container" style="margin-top: 80px;">
+	</section>
+
+	<section id="gtco-practice-areas" style="background-image: url(images/funfact4.png); background-size: cover;">
+		<div class="container">
 			<div class="row row-pb-md">
 				<div class="col-md-8 col-md-offset-2 heading animate-box" data-animate-effect="fadeIn">
 					<h1 style="letter-spacing: 2px;">LATEST JOURNAL</h1>
@@ -222,18 +228,7 @@ Home
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-6">
-					<div class="gtco-practice-area-item animate-box">
-						<div class="gtco-icon">
-							<img src="images/scale.png" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
-						</div>
-						<div class="gtco-copy">
-							<h3>Journal 1</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed scelerisque sapien. Sed sodales, libero non faucibus rutrum, purus tellus finibus diam, eget ornare tortor leo eget erat. </p>
-							<a href="#">Read More</a>
-						</div>
-					</div>
-
+				<div class="col-md-4">
 					<div class="gtco-practice-area-item animate-box">
 						<div class="gtco-icon">
 							<img src="images/scale.png" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
@@ -246,7 +241,7 @@ Home
 					</div>
 
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-4">
 					
 					<div class="gtco-practice-area-item animate-box">
 						<div class="gtco-icon">
@@ -259,6 +254,9 @@ Home
 						</div>
 					</div>
 
+				</div>
+				<div class="col-md-4">
+					
 					<div class="gtco-practice-area-item animate-box">
 						<div class="gtco-icon">
 							<img src="images/scale.png" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
@@ -274,8 +272,9 @@ Home
 			</div>
 		</div>
 	</section>
+		
 
-	<section class="body-content page-content" data-section="gallery">
+	<section id="gtco-practice-areas" data-section="gallery">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -285,82 +284,72 @@ Home
 							<p class="sub" style="margin-top: -20px;"></p>
 						</div>
 
-                        <div class="portfolio col-3 portfolio-gallery gutter ">
+						<div class="aduh col-sm-4">
+			                <div class="blogBox">   
+			                    <div class="gallerySection">
+			                        <figure>
+			                                    <!-- Single Album Image -->
+			                            <figcaption>
+			                                <!-- Single Album Image -->
+			                                <div class="hovereffect">
+			                                    <img class="img-responsive object-fit_contain" src="/images/yuhu.jpg" alt="">
+			                                    <div class="overlay">
+			                                       <a class="info lightbox" href="images/yuhu.jpg"></a>
+			                                    </div>
+			                                </div>
+			                            </figcaption>
+			                            <!-- Single Album View Button -->
+			                            
+			                        </figure>
+			                    </div>
+			                    
+			                </div><!-- end blogBox -->
+			            </div><!-- end col-sm-4 --> 
 
-                            <div class="portfolio-item cat1 cat3 ">
-                                <div class="thumb">
-                                    <img src="images/2.jpg" alt="">
-                                    <div class="portfolio-hover">
-                                        <div class="action-btn">
-                                            <a href="images/2.jpg" class="popup-gallery" title="Title 1"> <i class="icon-basic_magnifier"></i>  </a>
-                                        </div>
-                                        <div class="portfolio-description">
-                                            <h4><a href="images/2.jpg" class="popup-gallery2" title="Title 1">lightbox view</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+			            <div class="aduh col-sm-4">
+			                <div class="blogBox">   
+			                    <div class="gallerySection">
+			                        <figure>
+			                                    <!-- Single Album Image -->
+			                            <figcaption>
+			                                <!-- Single Album Image -->
+			                                <div class="hovereffect">
+			                                    <img class="img-responsive object-fit_contain" src="/images/yuhu.jpg" alt="">
+			                                    <div class="overlay">
+			                                       <a class="info lightbox" href="images/yuhu.jpg"></a>
+			                                    </div>
+			                                </div>
+			                            </figcaption>
+			                            <!-- Single Album View Button -->
+			                            
+			                        </figure>
+			                    </div>
+			                    
+			                </div><!-- end blogBox -->
+			            </div>
 
-                            <div class="portfolio-item cat2 cat4 ">
-                                <div class="thumb">
-                                    <img src="images/2.jpg" alt="">
-                                    <div class="portfolio-hover">
-                                        <div class="action-btn">
-                                            <a href="images/2.jpg" class="popup-gallery" title="Title 2"> <i class="icon-basic_magnifier"></i>  </a>
-                                        </div>
-                                        <div class="portfolio-description">
-                                            <h4><a href="images/2.jpg" class="popup-gallery2" title="Title 2">lightbox view</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="portfolio-item cat3 cat5 ">
-                                <div class="thumb">
-                                    <img src="images/2.jpg" alt="">
-                                    <div class="portfolio-hover">
-                                        <div class="action-btn">
-                                            <a href="images/2.jpg" class="popup-gallery" title="Title 3"> <i class="icon-basic_magnifier"></i>  </a>
-                                        </div>
-                                        <div class="portfolio-description">
-                                            <h4><a href="images/2.jpg" class="popup-gallery2" title="Title 3">lightbox view</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="portfolio-item cat1 cat4 ">
-                                <div class="thumb">
-                                    <img src="images/2.jpg" alt="">
-                                    <div class="portfolio-hover">
-                                        <div class="action-btn">
-                                            <a href="images/2.jpg" class="popup-gallery" title="Title 4"> <i class="icon-basic_magnifier"></i>  </a>
-                                        </div>
-                                        <div class="portfolio-description">
-                                            <h4><a href="images/2.jpg" class="popup-gallery2" title="Title 4">lightbox view</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="portfolio-item cat2 cat4">
-                                <div class="thumb">
-                                    <img src="images/2.jpg" alt="">
-                                    <div class="portfolio-hover">
-                                        <div class="action-btn">
-                                            <a href="images/2.jpg" class="popup-gallery" title="Title 5"> <i class="icon-basic_magnifier"></i>  </a>
-                                        </div>
-                                        <div class="portfolio-description">
-                                            <h4><a href="images/2.jpg" class="popup-gallery2" title="Title 5">lightbox view</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-
+			            <div class="aduh col-sm-4">
+			                <div class="blogBox">   
+			                    <div class="gallerySection">
+			                        <figure>
+			                                    <!-- Single Album Image -->
+			                            <figcaption>
+			                                <!-- Single Album Image -->
+			                                <div class="hovereffect">
+			                                    <img class="img-responsive object-fit_contain" src="/images/yuhu.jpg" alt="">
+			                                    <div class="overlay">
+			                                       <a class="info lightbox" href="images/yuhu.jpg"></a>
+			                                    </div>
+			                                </div>
+			                            </figcaption>
+			                            <!-- Single Album View Button -->
+			                            
+			                        </figure>
+			                    </div>
+			                    
+			                </div><!-- end blogBox -->
+			            </div>
+                        
                     </div>
                 </div>
             </div>
@@ -383,32 +372,10 @@ Home
 						<span class="author"><a href="#"><img src="photos/author.jpg" alt=""> Asri Wulandari</a></span>,
 						<span>At <strong>22 September, 2017</strong></span>
 					</div>
-					<h2 class="post-title"><a href="#">A example blog post with image</a></h2>
-					<div class="post-thumb"><a href="#"><img src="photos/post-thumb.jpg" alt="" class="img-responsive"></a></div>
+					<h2 class="post-title"><a href="#">Asri Peni Wulandari, PhD Teliti Manfaat Tanaman Rami untuk Tekstil dan Biobriket</a></h2>
+					<div class="post-thumb"><a href="#"><img src="http://www.unpad.ac.id/wp-content/uploads/2015/04/asri-peni-DADAN.jpg" alt="" class="img-responsive"></a></div>
 					<div class="post-content">
 						<p>Torquatos nihil utuntur liberamur benivole epularum evertunt accommodare, democrito didicerimus occulta egregios, praeclaram familiaritatem novi accusamus delectus opinemur mutae expetenda perpauca eas, concederetur fecerit ignorare delectari industria patientiamque. Invenire probes contereret maior opinor iucundo inciderint depravate, concupiscunt, deorum didicerimus, solitudo ingeniis confectum attento illustribus. Quanta suam, quieti usu necessarius. Sapienter existimo fruenda contentiones deduceret dolere minuti animi scientia, inbecilloque servire evertunt. Exeduntur vivi laudatum dicitur omnia verterem fuerit inanitate efficiatur <a href="#" class="more-link">Continue reading <span class="meta-nav">&rarr;</span></a></p>
-					</div>
-				</div>
-				<div class="blog-post">
-					<div class="post-meta">
-						<span class="author"><a href="#"><img src="photos/author.jpg" alt=""> Asri Wulandari</a></span>,
-						<span>At <strong>22 September, 2017</strong></span>
-					</div>
-					<h2 class="post-title"><a href="#">A example blog post with image</a></h2>
-					<div class="post-thumb"><a href="#"><img src="photos/post-thumb.jpg" alt="" class="img-responsive"></a></div>
-					<div class="post-content">
-						<p>Torquatos nihil utuntur liberamur benivole epularum evertunt accommodare, democrito didicerimus occulta egregios, praeclaram familiaritatem novi accusamus delectus opinemur mutae expetenda perpauca eas, concederetur fecerit ignorare delectari industria patientiamque. Invenire probes contereret maior opinor iucundo inciderint depravate, concupiscunt, deorum didicerimus, solitudo ingeniis confectum attento illustribus. Quanta suam, quieti usu necessarius. Sapienter existimo fruenda contentiones deduceret dolere minuti animi scientia, inbecilloque servire evertunt. Exeduntur vivi laudatum dicitur omnia verterem fuerit inanitate efficiatur <a href="#" class="more-link">Continue reading <span class="meta-nav">&rarr;</span></a></p>
-					</div>
-				</div>
-				<div class="blog-post">
-					<div class="post-meta">
-						<span class="author"><a href="#"><img src="photos/author.jpg" alt=""> Asri Wulandari</a></span>,
-						<span>At <strong>22 September, 2017</strong></span>
-					</div>
-					<h2 class="post-title"><a href="#">A example blog post without image</a></h2>
-					<div class="post-content">
-						<p>Torquatos nihil utuntur liberamur benivole epularum evertunt accommodare, democrito didicerimus occulta egregios, praeclaram familiaritatem novi accusamus delectus opinemur mutae expetenda perpauca eas, concederetur fecerit ignorare delectari industria patientiamque. Invenire probes contereret maior opinor iucundo inciderint depravate, concupiscunt, deorum didicerimus, solitudo ingeniis confectum attento illustribus. Quanta suam, quieti usu necessarius. Sapienter existimo fruenda contentiones deduceret dolere minuti animi scientia, inbecilloque servire evertunt. Exeduntur vivi laudatum dicitur omnia verterem fuerit inanitate efficiatur <a href="#" class="more-link">Continue reading <span class="meta-nav">&rarr;</span></a></p>
-
 					</div>
 				</div>
 			</div>

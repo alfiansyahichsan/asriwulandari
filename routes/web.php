@@ -23,3 +23,7 @@ Route::get('/blog', function () {
 Route::get('/fipulp', function () {
     return view('fipulp');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
