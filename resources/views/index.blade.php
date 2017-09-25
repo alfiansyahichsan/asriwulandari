@@ -43,19 +43,18 @@ Home
 				</div>
 				<div class="col-md-6  col-md-pull-6 animate-box" data-animate-effect="fadeInRight">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus aliquid maiores, voluptatum ex. Accusantium, eum distinctio laudantium. Perferendis dolor, corporis quasi? Tempore quod molestiae quis cumque pariatur dolore vel sit, fugit delectus quasi reprehenderit officia voluptate incidunt, culpa odit impedit qui dolorum fugiat. Quidem possimus reprehenderit, quae recusandae voluptatibus magnam!</p>
-					<p>Ratione facilis quod laborum eaque illo dolore blanditiis nobis dicta voluptatem fugit optio, eveniet non dolor quia delectus, sint, dignissimos atque porro consequuntur unde. Soluta ex necessitatibus delectus saepe aliquam, culpa officiis doloremque, ipsa facere hic, voluptatem accusantium veniam, quasi! Explicabo accusantium sint, corporis consequuntur fugit ipsam, dolorum excepturi adipisci.</p>
 				</div>
 			</div>
 
 		</div>
 	</section>
 	
-	<section id="gtco-about" data-section="about" style="background-image: url(images/header-back.png); background-repeat: no-repeat; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+	<section id="gtco-about" data-section="about" style="background-image: url(images/header-back.png); background-repeat: no-repeat; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; margin-bottom: 50px;">
 		<div class="container">
 			<div class="row row-pb-md">
 				<div class="col-md-8 col-md-offset-2 heading animate-box" data-animate-effect="fadeIn">
 					
-					<h1 style="letter-spacing: 2px;">ACHIEVEMENT</h1>
+					<h1 style="letter-spacing: 2px; color: white;">ACHIEVEMENT</h1>
 					<p class="sub" style="margin-top: -20px;"></p>
 				</div>
 			</div>
@@ -91,39 +90,21 @@ Home
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-md-6">
 					<div class="st-member">
-						<div class="st-member-img">
-							<img src="images/2.jpg" alt="" class="img-responsive">
+						<div class="st-member-img object-fit_cover" style="background-image: url(images/yuhu.jpg);">
 						</div>
 						<div class="st-member-info">
-							<strong class="st-member-name">RISET 1</strong>
+
+							<strong class="st-member-name"><a href="{{URL::route('biodegum')}}" style="color: black;">BIODEGUM</a></strong>
 							<p>riset ini merupakan riset di bidang mikroorganisme</p>
 							<div class="skills">
 								<div class="skill">
 									<strong>PROGRESS</strong>
-									<span>90%</span>
+									<span>100%</span>
 									<div class="progress">
-										<div class="progress-bar progress-bar-sept" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
-											<span class="sr-only">90% Complete</span>
-										</div>
-									</div>
-								</div>
-								<div class="skill">
-									<strong>PROGRESS</strong>
-									<span>70%</span>
-									<div class="progress">
-										<div class="progress-bar progress-bar-sept" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-											<span class="sr-only">70% Complete</span>
-										</div>
-									</div>
-								</div>
-								<div class="skill">
-									<strong>PROGRESS</strong>
-									<span>86%</span>
-									<div class="progress">
-										<div class="progress-bar progress-bar-sept" role="progressbar" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100" style="width: 86%;">
-											<span class="sr-only">86% Complete</span>
+										<div class="progress-bar progress-bar-sept" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+											<span class="sr-only">100% Complete</span>
 										</div>
 									</div>
 								</div>
@@ -132,80 +113,20 @@ Home
 					</div>
 				</div>
 
-				<div class="col-md-4">
+				<div class="col-md-6">
 					<div class="st-member">
-						<div class="st-member-img">
-							<img src="images/2.jpg" alt="" class="img-responsive">
+						<div class="st-member-img object-fit_cover" style="background-image: url(images/yuhu.jpg);">
 						</div>
 						<div class="st-member-info">
-							<strong class="st-member-name">RISET 2</strong>
+							<strong class="st-member-name"><a href="{{URL::route('fipulp')}}" style="color: black;">FIPULP</a></strong>
 							<p>riset ini merupakan riset di bidang mikroorganisme</p>
 							<div class="skills">
 								<div class="skill">
 									<strong>PROGRESS</strong>
-									<span>90%</span>
+									<span>100%</span>
 									<div class="progress">
-										<div class="progress-bar progress-bar-sept" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
-											<span class="sr-only">90% Complete</span>
-										</div>
-									</div>
-								</div>
-								<div class="skill">
-									<strong>PROGRESS</strong>
-									<span>70%</span>
-									<div class="progress">
-										<div class="progress-bar progress-bar-sept" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-											<span class="sr-only">70% Complete</span>
-										</div>
-									</div>
-								</div>
-								<div class="skill">
-									<strong>PROGRESS</strong>
-									<span>86%</span>
-									<div class="progress">
-										<div class="progress-bar progress-bar-sept" role="progressbar" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100" style="width: 86%;">
-											<span class="sr-only">86% Complete</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-4">
-					<div class="st-member">
-						<div class="st-member-img">
-							<img src="images/2.jpg" alt="" class="img-responsive">
-						</div>
-						<div class="st-member-info">
-							<strong class="st-member-name">RISET 3</strong>
-							<p>riset ini merupakan riset di bidang mikroorganisme</p>
-							<div class="skills">
-								<div class="skill">
-									<strong>PROGRESS</strong>
-									<span>90%</span>
-									<div class="progress">
-										<div class="progress-bar progress-bar-sept" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
-											<span class="sr-only">90% Complete</span>
-										</div>
-									</div>
-								</div>
-								<div class="skill">
-									<strong>PROGRESS</strong>
-									<span>70%</span>
-									<div class="progress">
-										<div class="progress-bar progress-bar-sept" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-											<span class="sr-only">70% Complete</span>
-										</div>
-									</div>
-								</div>
-								<div class="skill">
-									<strong>PROGRESS</strong>
-									<span>86%</span>
-									<div class="progress">
-										<div class="progress-bar progress-bar-sept" role="progressbar" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100" style="width: 86%;">
-											<span class="sr-only">86% Complete</span>
+										<div class="progress-bar progress-bar-sept" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+											<span class="sr-only">100% Complete</span>
 										</div>
 									</div>
 								</div>
@@ -219,7 +140,7 @@ Home
 		</div>
 	</section>
 
-	<section id="gtco-practice-areas" style="background-image: url(images/funfact4.png); background-size: cover;">
+	<section id="gtco-practice-areas" style="background-image: url(images/funfact4.png); background-size: cover; margin-bottom: 50px;">
 		<div class="container">
 			<div class="row row-pb-md">
 				<div class="col-md-8 col-md-offset-2 heading animate-box" data-animate-effect="fadeIn">
@@ -349,6 +270,72 @@ Home
 			                    
 			                </div><!-- end blogBox -->
 			            </div>
+
+			            <div class="aduh col-sm-4">
+			                <div class="blogBox">   
+			                    <div class="gallerySection">
+			                        <figure>
+			                                    <!-- Single Album Image -->
+			                            <figcaption>
+			                                <!-- Single Album Image -->
+			                                <div class="hovereffect">
+			                                    <img class="img-responsive object-fit_contain" src="/images/yuhu.jpg" alt="">
+			                                    <div class="overlay">
+			                                       <a class="info lightbox" href="images/yuhu.jpg"></a>
+			                                    </div>
+			                                </div>
+			                            </figcaption>
+			                            <!-- Single Album View Button -->
+			                            
+			                        </figure>
+			                    </div>
+			                    
+			                </div><!-- end blogBox -->
+			            </div><!-- end col-sm-4 --> 
+
+			            <div class="aduh col-sm-4">
+			                <div class="blogBox">   
+			                    <div class="gallerySection">
+			                        <figure>
+			                                    <!-- Single Album Image -->
+			                            <figcaption>
+			                                <!-- Single Album Image -->
+			                                <div class="hovereffect">
+			                                    <img class="img-responsive object-fit_contain" src="/images/yuhu.jpg" alt="">
+			                                    <div class="overlay">
+			                                       <a class="info lightbox" href="images/yuhu.jpg"></a>
+			                                    </div>
+			                                </div>
+			                            </figcaption>
+			                            <!-- Single Album View Button -->
+			                            
+			                        </figure>
+			                    </div>
+			                    
+			                </div><!-- end blogBox -->
+			            </div>
+
+			            <div class="aduh col-sm-4">
+			                <div class="blogBox">   
+			                    <div class="gallerySection">
+			                        <figure>
+			                                    <!-- Single Album Image -->
+			                            <figcaption>
+			                                <!-- Single Album Image -->
+			                                <div class="hovereffect">
+			                                    <img class="img-responsive object-fit_contain" src="/images/yuhu.jpg" alt="">
+			                                    <div class="overlay">
+			                                       <a class="info lightbox" href="images/yuhu.jpg"></a>
+			                                    </div>
+			                                </div>
+			                            </figcaption>
+			                            <!-- Single Album View Button -->
+			                            
+			                        </figure>
+			                    </div>
+			                    
+			                </div><!-- end blogBox -->
+			            </div>
                         
                     </div>
                 </div>
@@ -391,7 +378,7 @@ Home
 							</div>
 						</form>
 					</div>
-					<div class="widget">
+					<!-- <div class="widget">
 						<h2 class="widget-title">Categories</h2>
 						<ul>
 							<li><a href="#">Video <span class="badge pull-right">5</span></a></li>
@@ -403,7 +390,7 @@ Home
 							<li><a href="#">WordPress <span class="badge pull-right">9</span></a></li>
 							<li><a href="#">Framework <span class="badge pull-right">7</span></a></li>
 						</ul>
-					</div>
+					</div> -->
 					<div class="widget">
 						<h2 class="widget-title">Recent Post</h2>
 						<ul>
@@ -457,7 +444,7 @@ Home
 							</li>
 						</ul>
 					</div>
-					<div id="tag_cloud-3" class="widget widget_tag_cloud">
+					<!-- <div id="tag_cloud-3" class="widget widget_tag_cloud">
 						<h2 class="widget-title">Tags</h2>
 						<div class="tagcloud">
 							<a href="#">bootstrap3</a>
@@ -471,7 +458,7 @@ Home
 							<a href="#">editor</a>
 							<a href="#">responsive</a>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>

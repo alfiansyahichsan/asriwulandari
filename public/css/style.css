@@ -7,7 +7,7 @@
 }
 /* =======================================================
 *
-* 	Template Style 
+*   Template Style 
 *
 * ======================================================= */
 body {
@@ -41,6 +41,12 @@ body {
   background: rgba(0, 0, 0, 0.7);
   content: "";
 }
+
+.object-fit_contain { object-fit: cover }
+.object-fit_fill { object-fit: fill }
+.object-fit_cover { object-fit: contain }
+.object-fit_none { object-fit: none }
+.object-fit_scale-down { object-fit: scale-down }
 
 a {
   color: #7ED321;
@@ -96,6 +102,9 @@ h1, h2, h3, h4, h5, h6, figure {
 @media screen and (max-width: 768px) {
   .gtco-nav {
     padding: 20px 0;
+  }
+  .st-member-img{
+    margin-bottom: 15px;
   }
 }
 .gtco-nav #gtco-logo {
@@ -1565,8 +1574,12 @@ form label {
 }
 
 .st-member {
-  position: relative;
-  overflow: hidden;
+}
+.st-member-img{
+  width: 100%;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .st-member .st-member-info {
   width: 100%;
@@ -1576,7 +1589,7 @@ form label {
   top: 0;
   left: 0;
   text-align: center;
-  background-color: rgba(254, 254, 254, 0.6);
+  background-color: rgba(254, 254, 254, 0.7);
   opacity: 0;
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
@@ -2303,8 +2316,6 @@ form label {
   padding-bottom: 30px;
   display: block;
   position: relative;
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
 }
@@ -2375,5 +2386,13 @@ form label {
   padding: 10px 35px;
   letter-spacing: 2px;
   font-size: 21px;
+}
+
+.img-shadow img:hover{
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  transform: rotate(360deg);
 }
 /*# sourceMappingURL=style.css.map */

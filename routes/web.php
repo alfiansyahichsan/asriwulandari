@@ -14,15 +14,8 @@
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/biodegum', function () {
-    return view('biodegum');
-});
-Route::get('/blog', function () {
-    return view('blogasri');
-});
-Route::get('/fipulp', function () {
-    return view('fipulp');
-});
+Route::get('/biodegum',array('as'=>'biodegum','uses'=>'PagesController@biodegum'));
+Route::get('/fipulp',array('as'=>'fipulp','uses'=>'PagesController@fipulp'));
 
 Auth::routes();
 
