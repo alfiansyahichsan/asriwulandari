@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Fame - One Page Multipurpose Bootstrap Theme</title>
+    <title>Biodegum - Asri Peni Wulandari</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bdg_bootstrap.min.css" rel="stylesheet">

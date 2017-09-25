@@ -20,3 +20,6 @@ Route::get('/biodegum', function () {
 Route::get('/blog', function () {
     return view('blogasri');
 });
+Route::get('/fipulp', function () {
+    return view('fipulp');
+});
