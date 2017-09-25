@@ -80,10 +80,9 @@
                         <ul class="nav navbar-nav navbar-right">
                             <li><a class="page-scroll" href="body">Home</a></li>
                             <li><a class="page-scroll" href="#about-section">About</a></li>
-                            <li><a class="page-scroll" href="#services-section">Services</a></li>
-                            <li><a class="page-scroll" href="#portfolio-section">Works</a></li>
+                            <li><a class="page-scroll" href="#portfolio-section">Gallery</a></li>
                             <li><a class="page-scroll" href="#team-section">Team</a></li>                            
-                            
+                            <li><a class="page-scroll" href="#latest-news">Latest News</a></li> 
                             <li><a class="page-scroll" href="#contact-section">Contact</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
@@ -128,7 +127,7 @@
                 <div class="page-header-wrapper">
                     <div class="container">
                         <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
-                            <h2>About</h2>
+                            <h2>FIPULP</h2>
                             <div class="devider"></div>
                             <p class="subtitle"><img src="images/fipulp/organic.png" width="200" length="200"></p>
                         </div>
@@ -190,90 +189,7 @@
                 
           </section>
           <!-- End about section -->
-
-              
-              
-              
-          
-
-              
-              
-              
-            <!-- Begin Services -->
-            <section id="services-section" class="page text-center">
-                <!-- Begin page header-->
-                <div class="page-header-wrapper">
-                    <div class="container">
-                        <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
-                            <h2>Services</h2>
-                            <div class="devider"></div>
-                            <p class="subtitle">what we really know how</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End page header-->
-            
-                <!-- Begin roatet box-2 -->
-                <div class="rotate-box-2-wrapper">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-3 col-sm-6">
-                                <a href="#" class="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0">
-                                    <span class="rotate-box-icon"><i class="fa fa-mobile"></i></span>
-                                    <div class="rotate-box-info">
-                                        <h4>App Development</h4>
-                                        <p>Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.</p>
-                                    </div>
-                                </a>
-                            </div>
-            
-                            <div class="col-md-3 col-sm-6">
-                                <a href="#" class="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0.2s">
-                                    <span class="rotate-box-icon"><i class="fa fa-pie-chart"></i></span>
-                                    <div class="rotate-box-info">
-                                        <h4>Ui Design</h4>
-                                        <p>Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.</p>
-                                    </div>
-                                </a>
-                            </div>
-            
-                            <div class="col-md-3 col-sm-6">
-                                <a href="#" class="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0.4s">
-                                    <span class="rotate-box-icon"><i class="fa fa-cloud"></i></span>
-                                    <div class="rotate-box-info">
-                                        <h4>Cloud Hosting</h4>
-                                        <p>Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.</p>
-                                    </div>
-                                </a>
-                            </div>
-                            
-                            <div class="col-md-3 col-sm-6">
-                                <a href="#" class="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0.6s">
-                                    <span class="rotate-box-icon"><i class="fa fa-pencil"></i></span>
-                                    <div class="rotate-box-info">
-                                        <h4>Coding Pen</h4>
-                                        <p>Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.</p>
-                                    </div>
-                                </a>
-                            </div>
-                            
-                        </div> <!-- /.row -->
-                    </div> <!-- /.container -->
-                    
-                    <div class="container">
-                        <!-- Cta Button -->
-                        <div class="extra-space-l"></div>
-                        <div class="text-center">
-                    		<a class="btn btn-default btn-lg-xl" href="http://www.imransdesign.com/" target="_blank" role="button">Large Button</a>
-                        </div>
-                    </div> <!-- /.container -->                       
-                </div>
-                <!-- End rotate-box-2 -->
-            </section>
-            <!-- End Services -->
-              
-              
-              
+ 
               
             <!-- Begin testimonials -->
             <section id="testimonial-section">
@@ -335,7 +251,7 @@
                                 <div class="page-header-wrapper">
                                     <div class="container">
                                         <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
-                                            <h2>Our Works</h2>
+                                            <h2>Gallery<	/h2>
                                             <div class="devider"></div>
                                             <p class="subtitle">What we are proud of</p>
                                         </div>
@@ -343,17 +259,7 @@
                                 </div>
                                 <!-- End page header-->
                                 <div class="portfoloi_content_area" >
-                                    <div class="portfolio_menu" id="filters">
-                                        <ul>
-                                            <li class="active_prot_menu"><a href="#porfolio_menu" data-filter="*">all</a></li>
-                                            <li><a href="#porfolio_menu" data-filter=".websites">websites</a></li>
-                                            <li><a href="#porfolio_menu" data-filter=".webDesign" >web design</a></li>
-                                            <li><a href="#porfolio_menu" data-filter=".appsDevelopment">apps development</a></li>
-                                            <li><a href="#porfolio_menu" data-filter=".GraphicDesign">graphic design</a></li>
-                                            <li><a href="#porfolio_menu" data-filter=".responsive">responsive</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="portfolio_content">
+                                   <div class="portfolio_content">
                                         <div class="row"  id="portfolio">
                                             <div class="col-xs-12 col-sm-4 appsDevelopment">
                                                 <div class="portfolio_single_content">

@@ -101,17 +101,12 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#feature">Feature</a>
+                        <a class="page-scroll" href="#feature">About</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#portfolio">Portfolio</a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="#about-us">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#service">Services</a>
-                    </li>
+                   
                     <li>
                         <a class="page-scroll" href="#team">Team</a>
                     </li>
@@ -183,7 +178,10 @@
     <!-- Start Feature Section -->
         <section id="feature" class="feature-section">
             <div class="container">
-            <center><img src="images/biodegum/bdg.png" lenght="200px" width="200px"><br><strong>BIODEGUM</strong></center>
+            <div class="section-title text-center">
+                            <h3 style="color:black">BIODEGUM</h3>
+            </div>    
+            <center><img src="images/biodegum/bdg.png" lenght="200px" width="200px"></center>
                 <div class="row">
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="feature">
@@ -350,165 +348,7 @@
         </div>
         <!-- End Portfolio Modal Section -->
     
-    
-    <!-- Start About Us Section -->
-    <section id="about-us" class="about-us-section-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12">
-                    <div class="section-title text-center">
-                            <h3>About Us</h3>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate</p>
-                        </div>
-                </div>
-            </div>
-            <div class="row">
-                
-                <div class="col-md-4">
-                    <div class="welcome-section text-center">
-                        <img src="images/biodegum/about-01.jpg" class="img-responsive" alt="..">
-                        <h4>Office Philosophy</h4>
-                        <div class="border"></div>
-                        <p>Duis aute irure dolor in reprehen derit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Lorem reprehenderit</p>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="welcome-section text-center">
-                        <img src="images/biodegum/about-02.jpg" class="img-responsive" alt="..">
-                        <h4>Office Mission & Vission</h4>
-                        <div class="border"></div>
-                        <p>Duis aute irure dolor in reprehen derit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Lorem reprehenderit</p>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="welcome-section text-center">
-                        <img src="images/biodegum/about-03.jpg" class="img-responsive" alt="..">
-                        <h4>Office Value & Rules</h4>
-                        <div class="border"></div>
-                        <p>Duis aute irure dolor in reprehen derit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Lorem reprehenderit</p>
-                    </div>
-                </div>
-                
-            </div><!-- /.row -->            
-            
-        </div><!-- /.container -->
-    </section>
-    <!-- End About Us Section -->
-
-
- 
-
-
-    <!-- Start Feature Section -->
-        <section id="service" class="services-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="section-title text-center">
-                            <h3>Our Services</h3>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="feature-2">
-                            <div class="media">
-                                <div class="pull-left">
-                                    <i class="fa fa-magic"></i>
-                                    <div class="border"></div>
-                                </div>
-                                <div class="media-body">
-                                    <h4 class="media-heading">Web Design</h4>
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- /.col-md-4 -->
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="feature-2">
-                            <div class="media">
-                                <div class="pull-left">
-                                    <i class="fa fa-css3"></i>
-                                    <div class="border"></div>
-                                </div>
-                                <div class="media-body">
-                                    <h4 class="media-heading">HTML5 & CSS3</h4>
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- /.col-md-4 -->
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="feature-2">
-                            <div class="media">
-                                <div class="pull-left">
-                                    <i class="fa fa-wordpress"></i>
-                                    <div class="border"></div>
-                                </div>
-                                <div class="media-body">
-                                    <h4 class="media-heading">Wordpress Theme</h4>
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- /.col-md-4 -->
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="feature-2">
-                            <div class="media">
-                                <div class="pull-left">
-                                    <i class="fa fa-plug"></i>
-                                    <div class="border"></div>
-                                </div>
-                                <div class="media-body">
-                                    <h4 class="media-heading">Wordpress Plugin</h4>
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- /.col-md-4 -->
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="feature-2">
-                            <div class="media">
-                                <div class="pull-left">
-                                    <i class="fa fa-joomla"></i>
-                                    <div class="border"></div>
-                                </div>
-                                <div class="media-body">
-                                    <h4 class="media-heading">Joomla Template</h4>
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- /.col-md-4 -->
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="feature-2">
-                            <div class="media">
-                                <div class="pull-left">
-                                    <i class="fa fa-cube"></i>
-                                    <div class="border"></div>
-                                </div>
-                                <div class="media-body">
-                                    <h4 class="media-heading">Joomla Extension</h4>
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- /.col-md-4 -->
-                    
-                </div><!-- /.row -->
-            
-            </div><!-- /.container -->
-        </section>
-        <!-- End Feature Section -->
-    
-    
-    
-   
-
-
+  
     <!-- Start Team Member Section -->
     <section id="team" class="team-member-section">
         <div class="container">
@@ -524,12 +364,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div id="team-section">
-                    
-                        
-                
-                
-
-                                <div class="our-team">
+                                 <div class="our-team">
 
                                     <div class="team-member">
                                         <img src="images/biodegum/team/manage-1.png" class="img-responsive" alt="">
