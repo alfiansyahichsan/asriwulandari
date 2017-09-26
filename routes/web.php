@@ -11,12 +11,19 @@
 |
 */
 
-Route::get('/',array('as'=>'home','uses'=>'PagesController@Home'));
-Route::get('/biodegum',array('as'=>'biodegum','uses'=>'PagesController@biodegum'));
-Route::get('/fipulp',array('as'=>'fipulp','uses'=>'PagesController@fipulp'));
-Route::get('/jurnal/detail',array('as'=>'detailjurnal','uses'=>'PagesController@detailjurnal'));
-Route::get('/blog',array('as'=>'detailblog','uses'=>'PagesController@detailblog'));
+Route::get('/','PagesController@Home')->name('home');
+Route::get('/biodegum','PagesController@biodegum')->name('biodegum');
+Route::get('/fipulp','PagesController@fipulp')->name('fipulp');
+Route::get('/jurnal/detail','PagesController@detailjurnal')->name('detailjurnal');
+Route::get('/blog','PagesController@detailblog')->name('detailblog');
+
+//admin
+Route::group(['namespace' => 'Admin', 'middleware' => 'auth'], function() {
+	Route::get('admin/dashboard', 'DashboardController@index')->name('dashboard');
+	Route::get('admin', 'Asriwulandari\DashboardController@index')->name('dashboard');
+	Route::get('logout','\App\Http\Controllers\Auth\LoginController@logout');
+});
 
 Auth::routes();
 
-Route::get('/login', 'PagesController@Login')->name('login');
+//Route::get('/home', 'HomeController@index')->name('home');
