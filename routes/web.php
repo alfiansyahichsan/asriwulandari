@@ -13,17 +13,32 @@
 
 Route::get('/','PagesController@Home')->name('home');
 Route::get('/biodegum','PagesController@biodegum')->name('biodegum');
-Route::get('/fipulp','PagesController@fipulp')->name('fipulp');
 Route::get('/jurnal/detail','PagesController@detailjurnal')->name('detailjurnal');
 Route::get('/blog','PagesController@detailblog')->name('detailblog');
+Route::get('/fipulp','PagesController@fipulp')->name('fipulp');
+Route::get('/admin','AdminController@redirect')->name('admin');
+Route::get('/oops','AdminController@sorry')->name('sorry');
 
 //admin
-Route::group(['namespace' => 'Admin', 'middleware' => 'auth'], function() {
-	Route::get('admin/dashboard', 'DashboardController@index')->name('dashboard');
-	Route::get('admin', 'Asriwulandari\DashboardController@index')->name('dashboard');
-	Route::get('logout','\App\Http\Controllers\Auth\LoginController@logout');
+Route::group(['middleware' => ['auth','superuser']], function() {
+	Route::get('/admin/dashboard',array('as'=>'admindashboard','uses'=>'AdminController@index'));
+	Route::get('/admin/asriw/dashboard',array('as'=>'suasridashboard','uses'=>'Admin\Asriwulandari\AsriController@index'));
+	Route::get('/admin/biodegum/dashboard',array('as'=>'subiodegumdashboard','uses'=>'Admin\Biodegum\BiodegumController@index'));
+	Route::get('/admin/fipulp/dashboard',array('as'=>'sufipulpdashboard','uses'=>'Admin\Fipulp\FipulpController@index'));
+});
+
+Route::group(['namespace' => 'Admin\Asriwulandari','middleware' => ['auth','asriwulandari']], function() {
+	Route::get('/asriw/dashboard',array('as'=>'asridashboard','uses'=>'AsriController@index'));
+});
+
+Route::group(['namespace' => 'Admin\Biodegum','middleware' => ['auth','biodegum']], function() {
+	Route::get('/biodegum/dashboard',array('as'=>'biodegumdashboard','uses'=>'BiodegumController@index'));
+});
+
+Route::group(['namespace' => 'Admin\Fipulp','middleware' => ['auth','fipulp']], function() {
+	Route::get('/fipulp/dashboard',array('as'=>'fipulpdashboard','uses'=>'FipulpController@index'));
 });
 
 Auth::routes();
-
-//Route::get('/home', 'HomeController@index')->name('home');
+Route::get('logout','\App\Http\Controllers\Auth\LoginController@logout');
+Route::get('/home', 'HomeController@index')->name('home');

@@ -3,12 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class PagesController extends Controller
 {
-	public function Login(){
-		return view('auth/login');
-	}
 
 	public function Home()
     {

@@ -6,7 +6,7 @@
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
         <li @yield('nav1')>
-            <a href="{{URL::Route('dashboard')}}">
+            <a href="#">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
             </a>
         </li>
