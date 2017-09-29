@@ -7,7 +7,7 @@ Home
 	<!-- Modernizr JS -->
 	<script src="{{ asset('js/modernizr-2.6.2.min.js') }}"></script>
 
-	<section id="gtco-hero" class="gtco-cover" style="background-image: url(images/3.jpg);"  data-section="home"  data-stellar-background-ratio="0.5">
+	<section id="gtco-hero" class="gtco-cover" style="background-image: url(images/bum.jpg);"  data-section="home"  data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
@@ -213,9 +213,9 @@ Home
 			                            <figcaption>
 			                                <!-- Single Album Image -->
 			                                <div class="hovereffect">
-			                                    <img class="img-responsive object-fit_contain" src="/images/yuhu.jpg" alt="">
+			                                    <img class="img-responsive object-fit_contain" src="/images/bum.jpg" alt="">
 			                                    <div class="overlay">
-			                                       <a class="info lightbox" href="images/yuhu.jpg"></a>
+			                                       <a class="info lightbox" href="images/bum.jpg"></a>
 			                                    </div>
 			                                </div>
 			                            </figcaption>
@@ -368,7 +368,7 @@ Home
 			</div>
 			<div class="col-md-4">
 				<div class="widgets">
-					<div class="widget">
+					<!-- <div class="widget">
 						<form action="" class="">
 							<div class="input-group">
 								<input type="text" class="form-control" placeholder="Search...">
@@ -377,7 +377,7 @@ Home
 								</span>
 							</div>
 						</form>
-					</div>
+					</div> -->
 					<!-- <div class="widget">
 						<h2 class="widget-title">Categories</h2>
 						<ul>

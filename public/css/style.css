@@ -3251,4 +3251,438 @@ form label {
   background-position: center;
   -webkit-transform: translate(0, 0);
 }
+
+.fancybox-wrap,
+.fancybox-skin,
+.fancybox-outer,
+.fancybox-inner,
+.fancybox-image,
+.fancybox-wrap iframe,
+.fancybox-wrap object,
+.fancybox-nav,
+.fancybox-nav span,
+.fancybox-tmp {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+  vertical-align: top;
+}
+.fancybox-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99920;
+}
+.fancybox-skin {
+  position: relative;
+  padding: 0!important;
+}
+.fancybox-opened {
+  z-index: 99930;
+}
+.fancybox-inner {
+  overflow: hidden;
+}
+.fancybox-outer,
+.fancybox-inner {
+  position: relative;
+  overflow: hidden;
+}
+.fancybox-type-iframe .fancybox-inner {
+  -webkit-overflow-scrolling: touch;
+}
+.fancybox-error {
+  color: #FFF;
+  margin: 0;
+  padding: 15px;
+  white-space: nowrap;
+}
+.fancybox-image,
+.fancybox-iframe {
+  cursor: default;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.fancybox-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+#fancybox-loading {
+  cursor: pointer;
+  height: 40px;
+  left: 50%;
+  margin-left: -20px;
+  margin-top: -20px;
+  position: relative;
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  width: 40px;
+  z-index: 99960;
+  -webkit-animation: sk-chasingDotsRotate 1.5s infinite linear;
+  animation: sk-chasingDotsRotate 1.5s infinite linear;
+}
+#fancybox-loading div {
+  background-color: #181818;
+  border-radius: 100%;
+  display: inline-block;
+  height: 60%;
+  position: absolute;
+  top: 0;
+  width: 60%;
+  -webkit-animation: sk-chasingDotsBounce 1.5s infinite ease-in-out;
+  animation: sk-chasingDotsBounce 1.5s infinite ease-in-out;
+}
+#fancybox-loading .sk-dot2 {
+  bottom: 0px;
+  top: auto;
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+.fancybox-close {
+  display: none;
+}
+.fancybox-nav {
+  cursor: pointer;
+  height: 100%;
+  position: absolute;
+  text-decoration: none;
+  top: 0;
+  width: 50%;
+  z-index: 99940;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.fancybox-nav span {
+  background: url(../images/content/sprite.png) no-repeat #FFF;
+  cursor: pointer;
+  height: 55px;
+  margin-top: -27px;
+  position: absolute;
+  top: 50%;
+  width: 55px;
+  z-index: 99940;
+  -webkit-transition: background-color 0.1s;
+  -moz-transition: background-color 0.1s;
+  -ms-transition: background-color 0.1s;
+  -o-transition: background-color 0.1s;
+}
+.fancybox-nav:hover span {
+  background-color: #181818;
+}
+.fancybox-next {
+  right: 0;
+}
+.fancybox-prev {
+  left: 0;
+}
+.ie9 .fancybox-next:hover,
+.ie9 .fancybox-prev:hover {
+  cursor: pointer;
+}
+.fancybox-next span {
+  background-position: -22px -373px;
+  right: 30px;
+}
+.fancybox-next:hover span {
+  background-position: -22px -273px;
+}
+.fancybox-prev span {
+  background-position: -24px -323px;
+  left: 30px;
+}
+.fancybox-prev:hover span {
+  background-position: -24px -223px;
+}
+.fancybox-nav span {
+  visibility: visible!important;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeslideleft;
+  animation-name: fadeslideleft;
+  -webkit-animation-duration: .1s;
+  animation-duration: .1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+@keyframes fadeslideleft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@-webkit-keyframes fadeslideleft {
+  0% {
+    -webkit-transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+  }
+}
+.fancybox-prev span {
+  -webkit-animation-name: fadeslideright;
+  animation-name: fadeslideright;
+}
+@keyframes fadeslideright {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@-webkit-keyframes fadeslideright {
+  0% {
+    -webkit-transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+  }
+}
+.fancybox-tmp {
+  left: -99999px;
+  max-height: 99999px;
+  max-width: 99999px;
+  overflow: visible !important;
+  position: absolute;
+  top: -99999px;
+  visibility: hidden;
+}
+/* OVERLAY HELPER */
+.fancybox-lock {
+  overflow: hidden !important;
+  width: auto;
+}
+.fancybox-lock body {
+  overflow: hidden !important;
+}
+.fancybox-lock-test {
+  overflow-y: hidden !important;
+}
+.fancybox-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 99910;
+}
+.fancybox-overlay-fixed {
+  bottom: 0;
+  position: fixed;
+  right: 0;
+}
+.fancybox-lock .fancybox-overlay {
+  cursor: pointer;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.fancybox-title {
+  visibility: hidden;
+  position: relative;
+  text-shadow: none;
+  z-index: 99950;
+}
+.fancybox-opened .fancybox-title {
+  visibility: visible;
+}
+.fancybox-title-float-wrap {
+  bottom: 0;
+  margin-bottom: -35px;
+  position: absolute;
+  right: 50%;
+  text-align: center;
+  z-index: 99950;
+}
+.fancybox-title-float-wrap .child {
+  background: transparent;
+  color: #FFF;
+  display: inline-block;
+  margin-right: -100%;
+  padding: 2px 20px;
+  white-space: nowrap;
+  display: none;
+}
+.fancybox-title-outside-wrap {
+  color: #FFF;
+  margin-top: 10px;
+  position: relative;
+}
+.fancybox-title-inside-wrap {
+  padding-top: 10px;
+}
+.fancybox-title-over-wrap {
+  background: #000;
+  background: rgba(0, 0, 0, 0.8);
+  bottom: 0;
+  color: #6F6F6F;
+  left: 0;
+  padding: 10px;
+  position: absolute;
+}
+img.hidden,
+a.lightbox.hidden {
+  display: none!important;
+}
+@media (max-width: 500px) {
+  .fancybox-prev span {
+    left: 0;
+  }
+  .fancybox-next span {
+    right: 0;
+  }
+}
+#ava-slider,
+#ava-slider-home {
+  width: 100%;
+  color: #000;
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  -webkit-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  transition-delay: 0s;
+  -webkit-transition-property: left;
+  -o-transition-property: left;
+  transition-property: left;
+  -webkit-transition-timing-function: cubic-bezier(0.645, 0.045, 0.095, 1.08);
+  -o-transition-timing-function: cubic-bezier(0.645, 0.045, 0.095, 1.08);
+  transition-timing-function: cubic-bezier(0.645, 0.045, 0.095, 1.08);
+  -webkit-transition-duration: 800ms;
+  -o-transition-duration: 800ms;
+  transition-duration: 800ms;
+}
+#ava-slider .rsArrowLeft,
+#ava-slider-home .rsArrowLeft,
+#ava-slider .rsArrowRight,
+#ava-slider-home .rsArrowRight {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 40%;
+}
+#ava-slider .rsArrowLeft *,
+#ava-slider-home .rsArrowLeft *,
+#ava-slider .rsArrowRight *,
+#ava-slider-home .rsArrowRight * {
+  display: none;
+}
+#ava-slider .rsArrowLeft,
+#ava-slider-home .rsArrowLeft {
+  left: 0;
+  cursor: url('../royalslider/grab-gallery-left-dark.png') 8 8, move !important;
+}
+#ava-slider .rsArrowRight,
+#ava-slider-home .rsArrowRight {
+  right: 0;
+  cursor: url('../royalslider/grab-gallery-right-dark.png') 8 8, move !important;
+}
+#ava-slider-home .rsArrowLeft,
+#ava-slider-home .rsArrowRight {
+  width: 50%;
+}
+.ava-slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+#ava-slider {
+  height: 965px!important;
+}
+/* v1.0.5 */
+/* Core RS CSS file. 95% of time you shouldn't change anything here. */
+.royalSlider {
+  width: 600px;
+  height: 400px;
+  position: relative;
+  direction: ltr;
+}
+.royalSlider > * {
+  float: left;
+}
+.rsWebkit3d .rsSlide {
+  -webkit-transform: translateZ(0);
+}
+.rsWebkit3d .rsSlide,
+.rsWebkit3d .rsContainer,
+.rsWebkit3d .rsThumbs,
+.rsWebkit3d .rsPreloader,
+.rsWebkit3d img,
+.rsWebkit3d .rsOverflow,
+.rsWebkit3d .rsBtnCenterer,
+.rsWebkit3d .rsAbsoluteEl,
+.rsWebkit3d .rsABlock,
+.rsWebkit3d .rsLink {
+  -webkit-backface-visibility: hidden;
+}
+.rsFade.rsWebkit3d .rsSlide,
+.rsFade.rsWebkit3d img,
+.rsFade.rsWebkit3d .rsContainer {
+  -webkit-transform: none;
+}
+.rsOverflow {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  cursor: default!important;
+}
+.rsVisibleNearbyWrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.rsVisibleNearbyWrap .rsOverflow {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.rsContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.rsArrow,
+.rsThumbsArrow {
+  cursor: pointer;
+}
+.rsThumb {
+  float: left;
+  position: relative;
+}
+.rsArrow,
+.rsNav,
+.rsThumbsArrow {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s linear;
+  -moz-transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+}
+.rsHidden {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 0s linear 0.3s,opacity 0.3s linear;
+  -moz-transition: visibility 0s linear 0.3s,opacity 0.3s linear;
+  -o-transition: visibility 0s linear 0.3s,opacity 0.3s linear;
+  transition: visibility 0s linear 0.3s,opacity 0.3s linear;
+}
+.rsGCaption {
+  width: 100%;
+  float: left;
+  text-align: center;
+}
 /*# sourceMappingURL=style.css.map */

@@ -62,6 +62,19 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="password-confirm" class="col-md-4 control-label">Role</label>
+
+                            <div class="col-md-6">
+                                <select name="role" class="form-control">
+                                    <option value="1">Super User</option>
+                                    <option value="2">Admin Web Asri Wulandari</option>
+                                    <option value="3">Admin Web Biodegum</option>
+                                    <option value="4">Admin Web Fipulp</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
                                     Register
