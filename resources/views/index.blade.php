@@ -3,9 +3,6 @@
 Home
 @endsection
 @section('content')
-	<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400, 900" rel="stylesheet"> -->
-	<!-- Modernizr JS -->
-	<script src="{{ asset('js/modernizr-2.6.2.min.js') }}"></script>
 
 	<section id="gtco-hero" class="gtco-cover" style="background-image: url(images/bum.jpg);"  data-section="home"  data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
@@ -157,7 +154,7 @@ Home
 						<div class="gtco-copy">
 							<h3><a href="{{URL::route('detailjurnal')}}" style="color: black;">Journal 1</a></h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed scelerisque sapien. Sed sodales, libero non faucibus rutrum, purus tellus finibus diam, eget ornare tortor leo eget erat. </p>
-							<a href="{{URL::route('detailjurnal')}}">Read More</a>
+							<a href="{{URL::route('detailjurnal')}}" class="read-more"><i>Read More</i></a>
 						</div>
 					</div>
 
@@ -171,7 +168,7 @@ Home
 						<div class="gtco-copy">
 							<h3><a href="{{URL::route('detailjurnal')}}" style="color: black;">Journal 2</a></h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed scelerisque sapien. Sed sodales, libero non faucibus rutrum, purus tellus finibus diam, eget ornare tortor leo eget erat. </p>
-							<a href="{{URL::route('detailjurnal')}}">Read More</a>
+							<a href="{{URL::route('detailjurnal')}}" class="read-more"><i>Read More</i></a>
 						</div>
 					</div>
 
@@ -185,7 +182,7 @@ Home
 						<div class="gtco-copy">
 							<h3><a href="{{URL::route('detailjurnal')}}" style="color: black;">Journal 3</a></h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed scelerisque sapien. Sed sodales, libero non faucibus rutrum, purus tellus finibus diam, eget ornare tortor leo eget erat. </p>
-							<a href="{{URL::route('detailjurnal')}}">Read More</a>
+							<a href="{{URL::route('detailjurnal')}}" class="read-more"><i>Read More</i></a>
 						</div>
 					</div>
 
@@ -194,155 +191,7 @@ Home
 		</div>
 	</section>
 		
-
-	<section id="gtco-practice-areas" data-section="gallery">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-
-                        <div class="col-md-8 col-md-offset-2 heading animate-box" data-animate-effect="fadeIn">
-							<h1 style="letter-spacing: 2px;">GALLERY</h1>
-							<p class="sub" style="margin-top: -20px;"></p>
-						</div>
-
-						<div class="aduh col-sm-4">
-			                <div class="blogBox">   
-			                    <div class="gallerySection">
-			                        <figure>
-			                                    <!-- Single Album Image -->
-			                            <figcaption>
-			                                <!-- Single Album Image -->
-			                                <div class="hovereffect">
-			                                    <img class="img-responsive object-fit_contain" src="/images/bum.jpg" alt="">
-			                                    <div class="overlay">
-			                                       <a class="info lightbox" href="images/bum.jpg"></a>
-			                                    </div>
-			                                </div>
-			                            </figcaption>
-			                            <!-- Single Album View Button -->
-			                            
-			                        </figure>
-			                    </div>
-			                    
-			                </div><!-- end blogBox -->
-			            </div><!-- end col-sm-4 --> 
-
-			            <div class="aduh col-sm-4">
-			                <div class="blogBox">   
-			                    <div class="gallerySection">
-			                        <figure>
-			                                    <!-- Single Album Image -->
-			                            <figcaption>
-			                                <!-- Single Album Image -->
-			                                <div class="hovereffect">
-			                                    <img class="img-responsive object-fit_contain" src="/images/yuhu.jpg" alt="">
-			                                    <div class="overlay">
-			                                       <a class="info lightbox" href="images/yuhu.jpg"></a>
-			                                    </div>
-			                                </div>
-			                            </figcaption>
-			                            <!-- Single Album View Button -->
-			                            
-			                        </figure>
-			                    </div>
-			                    
-			                </div><!-- end blogBox -->
-			            </div>
-
-			            <div class="aduh col-sm-4">
-			                <div class="blogBox">   
-			                    <div class="gallerySection">
-			                        <figure>
-			                                    <!-- Single Album Image -->
-			                            <figcaption>
-			                                <!-- Single Album Image -->
-			                                <div class="hovereffect">
-			                                    <img class="img-responsive object-fit_contain" src="/images/yuhu.jpg" alt="">
-			                                    <div class="overlay">
-			                                       <a class="info lightbox" href="images/yuhu.jpg"></a>
-			                                    </div>
-			                                </div>
-			                            </figcaption>
-			                            <!-- Single Album View Button -->
-			                            
-			                        </figure>
-			                    </div>
-			                    
-			                </div><!-- end blogBox -->
-			            </div>
-
-			            <div class="aduh col-sm-4">
-			                <div class="blogBox">   
-			                    <div class="gallerySection">
-			                        <figure>
-			                                    <!-- Single Album Image -->
-			                            <figcaption>
-			                                <!-- Single Album Image -->
-			                                <div class="hovereffect">
-			                                    <img class="img-responsive object-fit_contain" src="/images/yuhu.jpg" alt="">
-			                                    <div class="overlay">
-			                                       <a class="info lightbox" href="images/yuhu.jpg"></a>
-			                                    </div>
-			                                </div>
-			                            </figcaption>
-			                            <!-- Single Album View Button -->
-			                            
-			                        </figure>
-			                    </div>
-			                    
-			                </div><!-- end blogBox -->
-			            </div><!-- end col-sm-4 --> 
-
-			            <div class="aduh col-sm-4">
-			                <div class="blogBox">   
-			                    <div class="gallerySection">
-			                        <figure>
-			                                    <!-- Single Album Image -->
-			                            <figcaption>
-			                                <!-- Single Album Image -->
-			                                <div class="hovereffect">
-			                                    <img class="img-responsive object-fit_contain" src="/images/yuhu.jpg" alt="">
-			                                    <div class="overlay">
-			                                       <a class="info lightbox" href="images/yuhu.jpg"></a>
-			                                    </div>
-			                                </div>
-			                            </figcaption>
-			                            <!-- Single Album View Button -->
-			                            
-			                        </figure>
-			                    </div>
-			                    
-			                </div><!-- end blogBox -->
-			            </div>
-
-			            <div class="aduh col-sm-4">
-			                <div class="blogBox">   
-			                    <div class="gallerySection">
-			                        <figure>
-			                                    <!-- Single Album Image -->
-			                            <figcaption>
-			                                <!-- Single Album Image -->
-			                                <div class="hovereffect">
-			                                    <img class="img-responsive object-fit_contain" src="/images/yuhu.jpg" alt="">
-			                                    <div class="overlay">
-			                                       <a class="info lightbox" href="images/yuhu.jpg"></a>
-			                                    </div>
-			                                </div>
-			                            </figcaption>
-			                            <!-- Single Album View Button -->
-			                            
-			                        </figure>
-			                    </div>
-			                    
-			                </div><!-- end blogBox -->
-			            </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="blog" id="blog" data-section="blog">
+<section class="blog" id="blog" data-section="blog">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -461,6 +310,127 @@ Home
 					</div> -->
 				</div>
 			</div>
+		</div>
+	</div>
+</section>
+
+<section class="screenshots" id="gtco-practice-areas" data-section="gallery">
+    <div class="container-fluid">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2 heading animate-box" data-animate-effect="fadeIn">
+					<h1 style="letter-spacing: 2px;">GALLERY</h1>
+					<p class="sub" style="margin-top: -20px;"></p>
+				</div>
+			<ul class="grid">
+				<li>
+					<figure>
+						<img src="images/bum.jpg" alt="Screenshot 01">
+						<figcaption>
+						<div class="caption-content">
+							<a href="images/bum.jpg" class="single_image">
+								<i class="fa fa-search"></i><br>
+								<p>Optimised For Design</p>
+							</a>
+						</div>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<img src="images/02-screenshot.jpg" alt="Screenshot 01">
+						<figcaption>
+						<div class="caption-content">
+							<a href="images/large/02.jpg" class="single_image">
+								<i class="fa fa-search"></i><br>
+								<p>User Centric Design</p>
+							</a>
+						</div>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<img src="images/03-screenshot.jpg" alt="Screenshot 01">
+						<figcaption>
+						<div class="caption-content">
+							<a href="images/large/03.jpg" class="single_image">
+								<i class="fa fa-search"></i><br>
+								<p>Responsive and Adaptive</p>
+							</a>
+						</div>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<img src="images/04-screenshot.jpg" alt="Screenshot 01">
+						<figcaption>
+						<div class="caption-content">
+							<a href="images/large/04.jpg" class="single_image">
+								<i class="fa fa-search"></i><br>
+								<p>Absolutely Free</p>
+							</a>
+						</div>
+						</figcaption>
+					</figure>
+				</li>
+			</ul>
+		</div>
+		<div class="row">
+			<ul class="grid">
+				<li>
+					<figure>
+						<img src="images/05-screenshot.jpg" alt="Screenshot 01">
+						<figcaption>
+						<div class="caption-content">
+							<a href="images/large/05.jpg" class="single_image">
+								<i class="fa fa-search"></i><br>
+								<p>Multi-Purpose Design</p>
+							</a>
+						</div>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<img src="images/06-screenshot.jpg" alt="Screenshot 01">
+						<figcaption>
+						<div class="caption-content">
+							<a href="images/large/06.jpg" class="single_image">
+								<i class="fa fa-search"></i><br>
+								<p>Exclusive to Codrops</p>
+							</a>
+						</div>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<img src="images/07-screenshot.jpg" alt="Screenshot 01">
+						<figcaption>
+						<div class="caption-content">
+							<a href="images/large/07.jpg" class="single_image">
+								<i class="fa fa-search"></i><br>
+								<p>Made with Love</p>
+							</a>
+						</div>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<img src="images/08-screenshot.jpg" alt="Screenshot 01">
+						<figcaption>
+						<div class="caption-content">
+							<a href="images/large/08.jpg" class="single_image">
+								<i class="fa fa-search"></i><br>
+								<p>In Sydney, Australia</p>
+							</a>
+						</div>
+						</figcaption>
+					</figure>
+				</li>
+			</ul>
 		</div>
 	</div>
 </section>

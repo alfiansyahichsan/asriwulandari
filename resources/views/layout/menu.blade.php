@@ -12,8 +12,8 @@
 						<li class="active"><a href="#" data-nav-section="home">Home</a></li>
 						<li><a href="#" data-nav-section="about">About</a></li>
 						<li><a href="#" data-nav-section="practice-areas">Riset</a></li>
-						<li><a href="#" data-nav-section="gallery">Gallery</a></li>
 						<li><a href="#" data-nav-section="blog">Blog</a></li>
+						<li><a href="#" data-nav-section="gallery">Gallery</a></li>
 						<!-- For external page link -->
 						<!-- <li><a href="http://freehtml5.co/" class="external">External</a></li> -->
 					</ul>
