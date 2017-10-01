@@ -11,11 +11,32 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        $user = new \App\User;
-        $user->name = 'Admin';
-        $user->email = 'admin@asriwulandari.com';
-        $user->password = bcrypt('123456');
-        $user->role = '2';
-        $user->save();
+        DB::table('users')->insert([
+            'name' => 'Super Administrator',
+            'email' => 'admin@asriwulandari.com',
+            'password' => bcrypt('123456'),
+            'role' => 1,
+        ]);
+
+        DB::table('users')->insert([
+            'name' => 'Administrator Asri',
+            'email' => 'asri@asriwulandari.com',
+            'password' => bcrypt('123456'),
+            'role' => 2,
+        ]);
+
+        DB::table('users')->insert([
+            'name' => 'Administrator BioDegum',
+            'email' => 'adminbiodegum@asriwulandari.com',
+            'password' => bcrypt('123456'),
+            'role' => 3,
+        ]);
+
+        DB::table('users')->insert([
+            'name' => 'Administrator Fipulp',
+            'email' => 'adminfipulp@asriwulandari.com',
+            'password' => bcrypt('123456'),
+            'role' => 4,
+        ]);
     }
 }

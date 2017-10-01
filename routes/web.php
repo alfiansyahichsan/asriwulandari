@@ -37,6 +37,8 @@ Route::group(['namespace' => 'Admin\Biodegum','middleware' => ['auth','biodegum'
 
 Route::group(['namespace' => 'Admin\Fipulp','middleware' => ['auth','fipulp']], function() {
 	Route::get('/fipulp/dashboard',array('as'=>'fipulpdashboard','uses'=>'FipulpController@index'));
+	Route::get('/fipulp/dashboard/posts',array('as'=>'fipulpdashboard.posts','uses'=>'FipulpPostsController@index'));
+	Route::get('/fipulp/dashboard/gallery',array('as'=>'fipulpdashboard.gallery','uses'=>'FipulpGalleryController@index'));
 });
 
 Auth::routes();
