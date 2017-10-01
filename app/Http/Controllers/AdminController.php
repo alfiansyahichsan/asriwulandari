@@ -38,4 +38,31 @@ class AdminController extends Controller
     {
     	return view('admin.sorry');
     }
+
+    public function Upload(Request $request){
+        $listFile = array();
+        $rules = array('image' => 'required | image | max:2000'); 
+        $fileCount = $request->fileCount;
+        
+        for ($i = 1; $i <= $fileCount ; $i++){
+            $fileName = "";
+            if($request->file('file-'.$i)){
+
+                $img = $request->file('file-'.$i);
+                $file = array('image' => $img);
+                $validator = Validator::make($file, $rules);
+               
+
+                if ($img->isValid() && !$validator->fails()) {
+                    $extension = $img->getClientOriginalExtension(); 
+                    $fileName = rand(111111,999999).'.'.$extension; 
+                    $img->storeAs('asriwulandari/tmp', $fileName);
+        
+                }
+                     
+            }
+            array_push($listFile, $fileName);
+        }
+        return response()->json($listFile);
+    }
 }

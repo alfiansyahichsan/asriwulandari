@@ -12,12 +12,12 @@
         </li>
         <li @yield('nav2')>
             <a href="{{URL::Route('fipulpdashboard.gallery')}}">
-            <i class="fa fa-dashboard"></i> <span>Gallery</span>
+            <i class="fa fa-picture-o"></i> <span>Gallery</span>
             </a>
         </li>
        <li @yield('nav3')>
             <a href="{{URL::Route('fipulpdashboard.posts')}}">
-            <i class="fa fa-dashboard"></i> <span>Posts</span>
+            <i class="fa fa-newspaper-o"></i> <span>Posts</span>
             </a>
         </li>
       </ul>

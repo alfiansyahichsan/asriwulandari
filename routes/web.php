@@ -16,6 +16,7 @@ Route::get('/biodegum','PagesController@biodegum')->name('biodegum');
 Route::get('/jurnal/detail','PagesController@detailjurnal')->name('detailjurnal');
 Route::get('/blog','PagesController@detailblog')->name('detailblog');
 Route::get('/fipulp','PagesController@fipulp')->name('fipulp');
+Route::get('/fipulp/','PagesController@fipulp')->name('fipulp');
 Route::get('/admin','AdminController@redirect')->name('admin');
 Route::get('/oops','AdminController@sorry')->name('sorry');
 
@@ -44,3 +45,5 @@ Route::group(['namespace' => 'Admin\Fipulp','middleware' => ['auth','fipulp']], 
 Auth::routes();
 Route::get('logout','\App\Http\Controllers\Auth\LoginController@logout');
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/upload', 'AdminController@Upload')->name('upload');

@@ -1,44 +1,30 @@
 @extends('admin.fipulp.layout.layout')
 
 @section('title')
-Posts
+Slider
 @endsection
 
-@section('nav3')
+@section('nav2')
 class="active"
 @endsection
 
 @section('js')
 
 <meta name="_token" content="{!! csrf_token() !!}" />
-<script src="{{asset('lte-admin/plugins/datepicker/bootstrap-datepicker.js')}}"></script>
-<script src="{{asset('lte-admin/plugins/ckeditor/ckeditor.js')}}"></script>
-<script>
-  $(function () {
-    CKEDITOR.replace( 'content', {
-      extraPlugins: 'imageuploader'
-    });
-  });
-</script>
-@include("admin.fipulp.posts.ajax")
+@include("admin.fipulp.gallery.ajax")
 
-
-@endsection
-
-@section('css')
-<link rel="stylesheet" href="{{asset('lte-admin/plugins/datepicker/datepicker3.css')}}">
 @endsection
 
 @section('content')
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Posts
+        Slider
         <small>Panel</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="{{URL::Route('fipulpdashboard')}}"> Home</a></li>
-        <li class="active">Posts</li>
+        <li class="active">Gallery</li>
       </ol>
     </section>
 
@@ -73,23 +59,21 @@ class="active"
                         <thead>
                             <tr>
                                 <th>Judul</th>
-                                <th>Tanggal</th>
-                                <th>Foto</th>
+                                <th>Gambar</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody id="datalist">
-                            @foreach($posts as $po)
-                            <tr id="row{{$po['id_fipulp_blog']}}">
-                                <td> {{$po['title']}} </td>
-                                <td> {{$po['created_at']}} </td>
-                                <td><img src="{{asset('/images/fipulp/posts/'.$po->image())}}" width="100"> </td>
+                            @foreach($images as $img)
+                            <tr id="row{{$img['id_gallery']}}">
+                                <td> {{$img['title']}} </td>
+                                <td><img src="{{asset('/images/fipulp/gallery/'.$img->image())}}" width="300"> </td>
                                 <td> 
-                                    <button type="button" class="btn btn-info editModal" data-toggle="modal" data-target="#editModal" value="{{$po['id_fipulp_blog']}}">
+                                    <button type="button" class="btn btn-info editModal" data-toggle="modal" data-target="#editModal" value="{{$img['id_gallery']}}">
                                     Edit
                                     </button>
 
-                                    <button type="button" class="btn btn-danger deleteModal" data-toggle="modal" data-target="#deleteModal" value="{{$po['id_fipulp_blog']}}">
+                                    <button type="button" class="btn btn-danger deleteModal" data-toggle="modal" data-target="#deleteModal" value="{{$img['id_gallery']}}">
                                     Delete
                                     </button>
                                 </td>
@@ -119,41 +103,49 @@ class="active"
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Edit News</h4>
+                <h4 class="modal-title">Edit Slider</h4>
               </div>
               <div class="modal-body">
                 <form id="form" name="form">
                   <input type="hidden" name="id" value="" id="id">
                   <input type="hidden" name="fileCount" value="1" id="fileCount">
-                  
                   <div class="form-group">
                     <label for="title">Judul</label>
                     <input type="text" class="form-control" id="title" placeholder="Judul" name="title">
                   </div>
-                  <div class="form-group">
+                  <!--<div class="form-group">
                     <label for="content">Konten</label>
                     <textarea class="form-control" id="content" name="content"></textarea>
-                  </div>
+                  </div>-->
                   <div class="form-group">
-                    <label>Date</label>
-                    <div class="input-group date">
-                      <div class="input-group-addon">
-                        <i class="fa fa-calendar"></i>
-                      </div>
-                      <input type="text" class="form-control pull-right" id="date" name="date">
-                    </div>
-                    <!-- /.input group -->
-                  </div>
-                  <div class="form-group">
-                    <label for="hashtag">Hashtag</label>
-                    <input type="text" class="form-control" id="hashtag" placeholder="Hashtag" name="hashtag" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="fileimage">Image (Recommended 1280x720 px)</label>
+                    <label for="fileimage">Image</label>
                     <input type="file" name="file-1" onChange="validateJPG(this)" value="blank">
                     <a href="#" id="fileimage" target="_blank">Download</a>
                   </div>
                   
+                  <div class="form-group">
+                    <label for="link">Link</label>
+                    <input type="text" class="form-control" id="link" name="link">
+                  </div>
+                  <div class="form-group">
+                    <label for="order">Urutan</label>
+                    <input type="number" class="form-control" id="order" placeholder="1" name="order">
+                  </div>
+                  <!--<div class="form-group">
+                    <label for="dark">Dark</label>
+                    <select class="form-control" name="dark" id="dark">
+											<option value="yes">Dark</option>
+											<option value="no">Light</option>
+										</select>
+                  </div>
+                  <div class="form-group">
+                    <label for="position">Position</label>
+                    <select class="form-control" name="position" id="position">
+											<option value="left">Left</option>
+											<option value="mid">Mid</option>
+											<option value="right">Right</option>
+										</select> 
+                  </div>-->
                   <input type="submit" value="submit" style="display:none;">
                 </form>
               </div>
