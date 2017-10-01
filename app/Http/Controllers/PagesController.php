@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\FipulpBlog;
+use App\FipulpGallery;
 use Auth;
 
 class PagesController extends Controller
@@ -20,7 +22,17 @@ class PagesController extends Controller
 
     public function fipulp()
     {
-    	return view('fipulp');
+        $posts = FipulpBlog::where('status',1)
+            ->take(6)
+            ->orderby('created_at', 'desc')
+            ->get();
+        $gallery = FipulpGallery::take(6)
+            ->orderby('created_at', 'desc')
+            ->get();
+    	return view('fipulp')->with([
+            'posts'   => $posts,
+            'gallery' => $gallery
+        ]);
     }
 
     public function detailjurnal()

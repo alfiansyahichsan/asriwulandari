@@ -17,8 +17,12 @@ class CreateFipulpBlogTable extends Migration
             $table->increments('id');
             $table->integer('status');
             $table->integer('created_by');
+            $table->text('title');
+            $table->text('subtitle');
+            $table->text('img_header');
             $table->text('content');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -4,15 +4,12 @@
     $("#failflash").hide();
   });
     var table = $("#example1").DataTable({
+        "order": [[ 2, "asc" ]],
         responsive:true
-    });
-    $('#date').datepicker({
-       format: 'yyyy-m-d',
-       defaultDate: "{{date('Y-m-d')}}"
     });
 
     /* Ajax Start */
-    var url = "{{URL::Route('fipulpdashboard.posts')}}";
+    var url = "{{URL::Route('fipulpdashboard.gallery')}}";
     var uploadurl = "{{URL::Route('upload')}}";
 
     //display modal form for task editing
@@ -20,15 +17,17 @@
         var id = $(this).val();
         $.get(url + '/' + id, function (data) {
             //success data
-            // console.log(data);
+            //console.log(data);
             $("#fileimage").hide();
-            $('#id').val(data.idnews);
-            $('#hashtag').val(data.hashtag);
+            $('#id').val(data.idslider);
+            $('#link').val(data.link);
             $('#title').val(data.title);
-            CKEDITOR.instances.content.setData(data.content);
-            $('#date').val(data.date);
+            $('#order').val(data.order);
+            //$('#content').val(data.content);
+            //$('#dark').val(data.dark);
+            //$('#position').val(data.position);
             if(data.image != null){
-                $("#fileimage").attr("href", "{{asset('forsa/news/')}}/"+data.image);
+                $("#fileimage").attr("href", "{{asset('forsa/slider/')}}/"+data.image);
                 $("#fileimage").show();
             }
             
@@ -39,7 +38,6 @@
     //display modal form for creating new task
     $('#btn-add').click(function(){
         $('#form').trigger("reset");
-        CKEDITOR.instances.content.setData("");
         $('#btn-save').val("add");
         $("#fileimage").hide();
     });
@@ -69,9 +67,11 @@
 
         var formData = {
             title : $('#title').val(),
-            content:CKEDITOR.instances['content'].getData(),
-            hashtag:$('#hashtag').val(),
-            date:$('#date').val(),
+            //content:$('#content').val(),
+            link:$('#link').val(),
+            order:$('#order').val(),
+            //dark:$('#dark').val(),
+            //position:$('#position').val(),
             file:"",
             
         }
@@ -107,15 +107,14 @@
 
                         var newData = [
                             data.title,
-                            data.date,
-                            data.hashtag,
-                            '<img src="{{asset('forsa/news/')}}/'+data.image+'" width="100">',
-                            '<button type="button" class="btn btn-info editModal" data-toggle="modal" data-target="#editModal" value="'+data.idnews+'">Edit</button> <button type="button" class="btn btn-danger deleteModal" data-toggle="modal" data-target="#deleteModal" value="'+data.idnews+'">Delete</button>'
+                            '<img src="{{asset('forsa/slider/')}}/'+data.image+'" width="300">',
+                            data.order,
+                            '<button type="button" class="btn btn-info editModal" data-toggle="modal" data-target="#editModal" value="'+data.idslider+'">Edit</button> <button type="button" class="btn btn-danger deleteModal" data-toggle="modal" data-target="#deleteModal" value="'+data.idslider+'">Delete</button>'
                             ];
 
                         if (state == "add"){ //if user added a new record
                             var newRow = table.row.add(newData).draw().node();
-                            $(newRow).attr("id","row"+data.idnews);
+                            $(newRow).attr("id","row"+data.idslider);
                         }else{ //if user updated an existing record
 
                             table.row("#row" + id).data(newData).draw(false);
@@ -162,7 +161,7 @@
             url: url + '/' + id,
             success: function (data) {
                 console.log(data);
-                table.row("#row" + data.idnews).remove().draw(false);
+                table.row("#row" + data.idslider).remove().draw(false);
                  $('#flash').html($('#successflash').html());
                 $('#deleteModal').modal("hide");
             },

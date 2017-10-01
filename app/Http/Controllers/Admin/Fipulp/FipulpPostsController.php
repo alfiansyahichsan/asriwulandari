@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin\Fipulp;
 
+use App\FipulpBlog;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -14,7 +15,10 @@ class FipulpPostsController extends Controller
      */
     public function index()
     {
-        return view('admin.fipulp.posts.index');
+        $posts = FipulpBlog::orderby('created_at','desc')->get();
+        return view('admin.fipulp.posts.index', [
+            'posts' => $posts
+            ]);
     }
 
     /**

@@ -77,13 +77,13 @@ Dashboard
           <!-- small box -->
           <div class="small-box bg-yellow">
             <div class="inner">
-              <h3>0</h3>
+              <h3>{{$total["posts"]}}</h3>
 
               <p>Posts</p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
-            </div>More info <i class="fa fa-arrow-circle-right"></i></a>
+            </div><a href="{{URL::Route('fipulpdashboard.posts')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -106,24 +106,6 @@ Dashboard
      
       </div>
       <!-- /.row -->
-
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="box">
-            <div class="box-header">
-              <h3 class="box-title">Unapproved Funding</h3>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body table-responsive no-padding">
-              Welcome to dashboard
-            </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
-        </div>
-      </div>
- 
-      <!-- /.row (main row) -->
 
     </section>
     <!-- /.content -->

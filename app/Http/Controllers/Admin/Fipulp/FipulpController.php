@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin\Fipulp;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Log;
 
 class FipulpController extends Controller
 {
@@ -14,7 +15,8 @@ class FipulpController extends Controller
      */
     public function index()
     {
-        return view('admin.fipulp.index');
+        $total["posts"] = \App\FipulpBlog::count();
+        return view('admin.fipulp.index')->with('total',$total);
     }
 
     /**
@@ -82,4 +84,5 @@ class FipulpController extends Controller
     {
         //
     }
+
 }

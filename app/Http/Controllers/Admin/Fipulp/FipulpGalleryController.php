@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin\Fipulp;
 
+use App\FipulpGallery;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -14,7 +15,8 @@ class FipulpGalleryController extends Controller
      */
     public function index()
     {
-        return view('admin.fipulp.index');
+        $images = FipulpGallery::orderby('created_at','desc')->get();
+        return view('admin.fipulp.gallery.index')->with('images', $images);
     }
 
     /**

@@ -251,7 +251,7 @@
                                 <div class="page-header-wrapper">
                                     <div class="container">
                                         <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
-                                            <h2>Gallery<	/h2>
+                                            <h2>Gallery</h2>
                                             <div class="devider"></div>
                                             <p class="subtitle">What we are proud of</p>
                                         </div>
@@ -261,87 +261,17 @@
                                 <div class="portfoloi_content_area" >
                                    <div class="portfolio_content">
                                         <div class="row"  id="portfolio">
+                                            @foreach ($gallery as $img)
                                             <div class="col-xs-12 col-sm-4 appsDevelopment">
                                                 <div class="portfolio_single_content">
-                                                    <img src="images/fipulp/portfolio/p1.jpg" alt="title"/>
+                                                    <img src="images/fipulp/gallery/{{$img['image_source']}}" alt="title"/>
                                                     <div>
-                                                        <a href="#">Skull Awesome</a>
-                                                        <span>Subtitle</span>
+                                                        <a href="#">{{$img['title']}}</a>
+                                                        <span>{{$img['subtitle']}}</span>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-xs-12 col-sm-4 GraphicDesign">
-                                                <div class="portfolio_single_content">
-                                                    <img src="images/fipulp/portfolio/p2.jpg" alt="title"/>
-                                                    <div>
-                                                        <a href="#">Photo Frame</a>
-                                                        <span>Subtitle</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-4 responsive">
-                                                <div class="portfolio_single_content">
-                                                    <img src="images/fipulp/portfolio/p3.jpg" alt="title"/>
-                                                    <div>
-                                                        <a href="#">Hand Shots</a>
-                                                        <span>Subtitle</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-4 webDesign websites">
-                                                <div class="portfolio_single_content">
-                                                    <img src="images/fipulp/portfolio/p4.jpg" alt="title"/>
-                                                    <div>
-                                                        <a href="#">Night Abstract</a>
-                                                        <span>Subtitle</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-4 appsDevelopment websites">
-                                                <div class="portfolio_single_content">
-                                                    <img src="images/fipulp//portfolio/p5.jpg" alt="title"/>
-                                                    <div>
-                                                        <a href="#">Joy of Independence</a>
-                                                        <span>Subtitle</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-4 GraphicDesign">
-                                                <div class="portfolio_single_content">
-                                                    <img src="images/fipulp/portfolio/p6.jpg" alt="title"/>
-                                                    <div>
-                                                        <a href="#">Night Crawlers</a>
-                                                        <span>Subtitle</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-4 responsive">
-                                                <div class="portfolio_single_content">
-                                                    <img src="images/fipulp/portfolio/p7.jpg" alt="title"/>
-                                                    <div>
-                                                        <a href="#">Last Motel</a>
-                                                        <span>Subtitle</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-4 GraphicDesign">
-                                                <div class="portfolio_single_content">
-                                                    <img src="images/fipulp/portfolio/p8.jpg" alt="title"/>
-                                                    <div>
-                                                        <a href="#">Dirk Road</a>
-                                                        <span>Subtitle</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-4 websites">
-                                                <div class="portfolio_single_content">
-                                                    <img src="images/fipulp/portfolio/p9.jpg" alt="title"/>
-                                                    <div>
-                                                        <a href="#">Old is Gold</a>
-                                                        <span>Subtitle</span>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            @endforeach
                                         </div>
                                     </div>
                                 </div>
@@ -505,19 +435,20 @@
             </div>
             <div class="row">
                 <div class="latest-news">
+                    @foreach($posts as $po)
                     <div class="col-md-4">
                         <div class="latest-post">
-                            <img src="images/biodegum/about-01.jpg" class="img-responsive" alt="">
-                            <h4><a href="#">Standard Post with Image</a></h4>
+                            <img src="images/fipulp/posts/{{$po->image()}}" class="img-responsive" alt="">
+                            <h4><a href="#">{{$po['title']}}</a></h4>
                             <div class="post-details">
-                                <span class="date"><strong>31</strong> <br>Dec , 2014</span>
-                                
+                                <span class="date">{{$po->date()}}</span>                                
                             </div>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                            <p>{{$po['content']}}</p>
                             <a href="#" class="btn btn-primary">Read More</a>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    @endforeach
+                    <!-- <div class="col-md-4">
                         <div class="latest-post">
                             <img src="images/biodegum/about-02.jpg" class="img-responsive" alt="">
                             <h4><a href="#">Standard Post with Image</a></h4>
@@ -576,7 +507,7 @@
                             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
                             <a href="#" class="btn btn-primary">Read More</a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
