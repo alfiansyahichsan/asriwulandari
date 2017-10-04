@@ -1,78 +1,62 @@
-<!DOCTYPE HTML>
-<html lang="en" class="no-js">
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Asri Peni Wulandari, PhD</title>
-	<link rel="icon" href="{{ asset('images/logo/asri2.png')}}">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mosaddek">
 
-  	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
-	<!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <!--favicon icon-->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+    <title>Asri Peni Wulandari PhD</title>
 @yield('css')
-	<script src="{{ asset('js/modernizr-2.6.2.min.js') }}"></script>
-	<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-	<link rel="stylesheet" href="{{ asset('css/jquery.fancybox.css') }}">
-	<link rel="stylesheet" href="{{ asset('css/flickity.css') }}">
-	<link rel="stylesheet" href="{{ asset('css/animate.css') }}">
-	<!-- ========== CSS INCLUDES ========== -->
-	<link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
-	<!-- Animate.css -->
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="{{ asset('css/icomoon.css') }}">
-	<!-- Themify Icons-->
-	<link rel="stylesheet" href="{{ asset('css/themify-icons.css') }}">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
-	<!-- Magnific Popup -->
-	<link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
-	<link rel="stylesheet" href="{{ asset('css/linea-icon.css') }}">
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
-	<link href="{{ asset('css/queries.css') }}" rel="stylesheet">
+    <!--common style-->
+
+
+    <link href='http://fonts.googleapis.com/css?family=Abel|Source+Sans+Pro:400,300,300italic,400italic,600,600italic,700,700italic,900,900italic,200italic,200' rel='stylesheet' type='text/css'>
+    <link href="{{ asset('css/asriw/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/asriw/css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/asriw/css/magnific-popup.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/asriw/css/shortcodes/shortcodes.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/asriw/css/owl.carousel.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/asriw/css/owl.theme.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/asriw/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/asriw/css/style-responsive.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/asriw/css/default-theme.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/asriw/css/blog.css') }}" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
 </head>
+
 <body>
-	<div class="gtco-loader"></div>
+	<!--  preloader start -->
+<div id="tb-preloader">
+    <div class="tb-preloader-wave"></div>
+</div>
+<!-- preloader end -->
 @yield('layout')
 @yield('script')
-	<script src="{{ asset('js/min/toucheffects-min.js') }}"></script>
-	<script src="{{ asset('js/jquery.min.js') }}"></script>
-	<script src="{{ asset('js/flickity.pkgd.min.js') }}"></script>
-	<script src="{{ asset('js/jquery.fancybox.pack.js') }}"></script>
-	<!-- ================================================== -->
-	<!-- =============== START JQUERY SCRIPTS ================ -->
-	<!-- ================================================== -->
-	<!-- jQuery -->
-	<script src="{{ asset('js/jquery.easing.1.3.js') }}"></script>
-	<!-- Bootstrap -->
-	<script src="{{ asset('js/bootstrap.min.js') }}"></script>
-	<!-- Waypoints -->
-	<script src="{{ asset('js/jquery.waypoints.min.js') }}"></script>
-	<!-- Stellar -->
-	<script src="{{ asset('js/jquery.stellar.min.js') }}"></script>
-	<!-- Magnific Popup -->
-	<script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
-	<script src="{{ asset('js/magnific-popup-options.js') }}"></script>
-	<!-- Main -->
-	<script src="{{ asset('js/main.js') }}"></script>
-
-	<script src="{{ asset('js/retina.js') }}"></script>
-	<script src="{{ asset('js/min/scripts-min.js') }}"></script>
-	<!-- <script src="{{ asset('js/menuzord.js') }}"></script>
-	<script src="{{ asset('js/jquery.flexslider-min.js') }}"></script>
-	<script src="{{ asset('js/jquery.isotope.js') }}"></script>
-	<script src="{{ asset('js/smooth.js') }}"></script>
-	<script src="{{ asset('js/wow.min.js') }}"></script> -->
+	<!-- Placed js at the end of the document so the pages load faster -->
+	<script src="{{ asset('js/asriw/js/jquery-1.10.2.min.js') }}"></script>
+	<script src="{{ asset('js/asriw/js/bootstrap.min.js') }}"></script>
+	<script src="{{ asset('js/asriw/js/menuzord.js') }}"></script>
+	<script src="{{ asset('js/asriw/js/jquery.flexslider-min.js') }}"></script>
+	<script src="{{ asset('js/asriw/js/owl.carousel.min.js') }}"></script>
+	<script src="{{ asset('js/asriw/js/jquery.isotope.js') }}"></script>
+	<script src="{{ asset('js/asriw/js/jquery.magnific-popup.min.js') }}"></script>
+	<script src="{{ asset('js/asriw/js/jquery.countTo.js') }}"></script>
+	<script src="{{ asset('js/asriw/js/visible.js') }}"></script>
+	<script src="{{ asset('js/asriw/js/smooth.js') }}"></script>
+	<script src="{{ asset('js/asriw/js/wow.min.js') }}"></script>
+	<script src="{{ asset('js/asriw/js/imagesloaded.js') }}"></script>
+	    <!--common scripts-->
+	<script src="{{ asset('js/asriw/js/scripts.js?6') }}"></script>
 	
 
 	</body>

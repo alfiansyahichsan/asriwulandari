@@ -1,31 +1,38 @@
 @extends('master')
 @section('layout')
-<div id="page">
-	<nav class="gtco-nav" role="navigation">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-2 col-xs-12">
-					<div id="gtco-logo"><a href="{{URL::route('home')}}"><img src="{{ asset('images/logo/asri.png') }}" style="height: 35px;"></a></div>
-				</div>
-				<div class="col-xs-10 text-right menu-1 main-nav">
-					<ul>
-						<li class="active"><a href="#" data-nav-section="home">Home</a></li>
-						<li><a href="#" data-nav-section="about">About</a></li>
-						<li><a href="#" data-nav-section="practice-areas">Riset</a></li>
-						<li><a href="#" data-nav-section="blog">Blog</a></li>
-						<li><a href="#" data-nav-section="gallery">Gallery</a></li>
-						<!-- For external page link -->
-						<!-- <li><a href="http://freehtml5.co/" class="external">External</a></li> -->
-					</ul>
-				</div>
-			</div>
-			
-		</div>
-	</nav>
+<!--header start-->
+    <header id="header" class=" header-full-width  transparent-header ">
 
+        <div class="header-sticky light-header- dark-header header-bottom-border- ">
+            <div class="container">
+                <div id="massive-menu" class="menuzord">
+
+                    <!--logo start-->
+                    <a href="index.html" class="logo-brand">
+                        <img class="retina" src="images/logo/asri.png" alt=""/>
+                    </a>
+                    <!--logo end-->
+                    <!--mega menu start-->
+                    <ul class="menuzord-menu pull-right light">
+                        <li><a href="#" data-nav-section="home">Home</a></li>
+						<li><a href="#about" data-nav-section="about">About</a></li>
+						<li><a href="#riset" data-nav-section="practice-areas">Riset</a></li>
+						<li><a href="#blog" data-nav-section="blog">Blog</a></li>
+						<li><a href="#gallery" data-nav-section="gallery">Gallery</a></li>
+                    </ul>
+                    <!--mega menu end-->
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <!--header end-->
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
 @yield('content');
-
-<footer id="gtco-footer" role="contentinfo">
+</body>
+<!--footer 1 start -->
+    <footer id="gtco-footer" role="contentinfo">
 	<div class="container">
 		
 		<div class="row copyright">

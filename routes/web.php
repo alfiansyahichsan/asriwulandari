@@ -14,7 +14,8 @@
 Route::get('/','PagesController@Home')->name('home');
 Route::get('/biodegum','PagesController@biodegum')->name('biodegum');
 Route::get('/jurnal/detail','PagesController@detailjurnal')->name('detailjurnal');
-Route::get('/blog','PagesController@detailblog')->name('detailblog');
+Route::get('/blog','PagesController@blog')->name('blog');
+Route::get('/blog/detail','PagesController@detailblog')->name('detailblog');
 Route::get('/fipulp','PagesController@fipulp')->name('fipulp');
 Route::get('/fipulp/','PagesController@fipulp')->name('fipulp');
 Route::get('/admin','AdminController@redirect')->name('admin');
@@ -30,6 +31,12 @@ Route::group(['middleware' => ['auth','superuser']], function() {
 
 Route::group(['namespace' => 'Admin\Asriwulandari','middleware' => ['auth','asriwulandari']], function() {
 	Route::get('/asriw/dashboard',array('as'=>'asridashboard','uses'=>'AsriController@index'));
+	Route::resource('asriw/gallery', 'GalleryController');
+	Route::resource('asriw/achievement', 'AchievementController');
+	Route::resource('asriw/about', 'AboutController');
+	Route::resource('asriw/pagesetting', 'PagesController');
+	Route::resource('asriw/hasilriset', 'HasilRisetController');
+	Route::resource('asriw/blog', 'BlogController');
 });
 
 Route::group(['namespace' => 'Admin\Biodegum','middleware' => ['auth','biodegum']], function() {
@@ -44,6 +51,6 @@ Route::group(['namespace' => 'Admin\Fipulp','middleware' => ['auth','fipulp']], 
 
 Auth::routes();
 Route::get('logout','\App\Http\Controllers\Auth\LoginController@logout');
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/upload', 'AdminController@Upload')->name('upload');

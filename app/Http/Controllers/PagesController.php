@@ -12,7 +12,16 @@ class PagesController extends Controller
 
 	public function Home()
     {
-    	return view('index');
+        $achievement = \App\Models\Asriwulandari\Achievement::get();
+        $about = \App\Models\Asriwulandari\About::get();
+        $riset = \App\Models\Asriwulandari\HasilRiset::get();
+        $gallery = \App\Models\Asriwulandari\Gallery::get();
+    	return view('index',[
+            'achievement' => $achievement,
+            'about' => $about,
+            'riset' => $riset,
+            'gallery' => $gallery,
+        ]);
     }
 
     public function biodegum()
@@ -40,8 +49,14 @@ class PagesController extends Controller
     	return view('detailjurnal');
     }
 
+    public function blog()
+    {
+    	return view('listblog');
+    }
+
     public function detailblog()
     {
-    	return view('detailblog');
+        return view('detailblog');
     }
+
 }

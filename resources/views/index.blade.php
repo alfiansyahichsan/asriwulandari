@@ -4,436 +4,391 @@ Home
 @endsection
 @section('content')
 
-	<section id="gtco-hero" class="gtco-cover" style="background-image: url(images/bum.jpg);"  data-section="home"  data-stellar-background-ratio="0.5">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 col-md-offset-0 text-center">
-					<div class="display-t">
-						<div class="display-tc">
-							<h3 class="animate-box" data-animate-effect="fadeIn">Scientist | Lecturer</h3>
-							<span class="line"></span>
-							<h1 class="animate-box" data-animate-effect="fadeIn">ASRI PENI WULANDARI</h1>
-							<!-- <p class="gtco-video-link animate-box" data-animate-effect="fadeIn"><a href="https://vimeo.com/channels/staffpicks/93951774" class="popup-vimeo"><i class="icon-controller-play"></i></a></p>  -->
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+<div class="wrapper">
 
-	<section id="gtco-our-team" data-section="about" style="margin-bottom: 40px;">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 heading animate-box" data-animate-effect="fadeIn" >
-					<h1>Welcome</h1>
-					<p class="sub" style="margin-top: -20px;"></p>
-					<h2 class="heading-colored" style="margin-top: 20px;">ASRI PENI WULANDARI, PhD</h2>
-					<p class="subtle-text animate-box" data-animate-effect="fadeIn"></p>
-				</div>
-			</div>
-			<div class="row gtco-team-reverse">
-				<div class="col-md-6 col-md-push-7 animate-box" data-animate-effect="fadeInRight">
-					<div class="img-shadow">
-						<img src="http://www.unpad.ac.id/wp-content/uploads/2015/04/asri-peni-DADAN.jpg" class="img-responsive" alt="Asri WULANDARI">
-					</div>
-				</div>
-				<div class="col-md-6  col-md-pull-6 animate-box" data-animate-effect="fadeInRight">
-					<p>Tentang Asri Peni Wulandari Torquatos nihil utuntur liberamur benivole epularum evertunt accommodare, democrito didicerimus occulta egregios, praeclaram familiaritatem novi accusamus delectus opinemur mutae expetenda perpauca eas, concederetur fecerit ignorare delectari industria patientiamque. Invenire probes contereret maior opinor iucundo inciderint depravate, concupiscunt, deorum didicerimus, solitudo ingeniis confectum attento illustribus. Quanta suam, quieti usu necessarius. Sapienter existimo fruenda contentiones deduceret dolere minuti animi scientia, inbecilloque servire evertunt. Exeduntur vivi laudatum dicitur omnia verterem fuerit inanitate efficiatur Torquatos nihil utuntur liberamur benivole epularum evertunt accommodare, democrito didicerimus occulta egregios, praeclaram familiaritatem novi accusamus delectus opinemur mutae expetenda perpauca eas, concederetur fecerit ignorare delectari industria patientiamque.</p>
-				</div>
-			</div>
+    <!--hero section-->
+    <div  class="parallax text-center vertical-align" style="background-image: url('images/bum.jpg');">
+        <div class="container-mid">
+            <div class="container">
+                <div class="banner-title light-txt">
+                    <h3 class="text-uppercase ls-20">Scientist | Lecturer</h3>
+                    <h1 class="text-uppercase">ASRI PENI WULANDARI</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--hero section-->
 
-		</div>
-	</section>
-	
-	<section id="gtco-about" data-section="about" style="background-image: url(images/header-back.png); background-repeat: no-repeat; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; margin-bottom: 50px;">
-		<div class="container">
-			<div class="row row-pb-md">
-				<div class="col-md-8 col-md-offset-2 heading animate-box" data-animate-effect="fadeIn">
-					
-					<h1 style="letter-spacing: 2px; color: white;">ACHIEVEMENT</h1>
-					<p class="sub" style="margin-top: -20px;"></p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4 animate-box" data-animate-effect="fadeInRight">
-					<div class="img-shadow test">
-						<a data-toggle="modal" href="#myModal"><img src="images/icons/bdg.png" style="height: 60px;"></a>
-						<p>Penghargaan 1</p>
-					</div>
-				</div>
-				<div class="col-md-4 animate-box" data-animate-effect="fadeInRight">
-					<div class="img-shadow test">
-						<a data-toggle="modal" href="#myModal"><img src="images/icons/bdg.png" style="height: 60px;"></a>
-						<p>Penghargaan 2</p>
-					</div>
-				</div>
-				<div class="col-md-4 animate-box" data-animate-effect="fadeInRight">
-					<div class="img-shadow test">
-						<a data-toggle="modal" href="#myModal"><img src="images/icons/bdg.png" style="height: 60px;"></a>
-						<p>Penghargaan 3</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+    <!--body content start-->
+        <section id="about" class="body-content" data-section="about">
+            <div class="container">
+                <div class="row page-content">
+                	<div class="m-bot-20 inline-block">
+                        <!--title-->
+                        <div class="heading-title-alt border-short-bottom text-center">
+                            <h2 class="text-uppercase">WELCOME</h2>
+                        </div>
+                        <!--title-->
+                    </div>
+                    <div class="post-list-aside">
+                        <div class="post-single">
+                    @foreach($about as $key=>$ab)
+                            <div class="col-md-6">
+                                <div class="post-slider post-img text-center">
+                                    <ul class="slides">
+                                            <img src="{{asset('storage/asriw/about/'.$ab->image)}}" alt="{{$ab->name}}">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="">
+                                    <h2 class="text-uppercase">
+                                        {{$ab->name}}
+                                    </h2>
 
-	<section id="gtco-practice-areas" data-section="practice-areas">
-		<div class="container" style="margin-bottom: 50px;">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 heading animate-box" data-animate-effect="fadeIn">
-					<h1 style="letter-spacing: 2px;">HASIL RISET</h1>
-					<p class="sub" style="margin-top: -20px;"></p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<div class="st-member">
-						<div class="st-member-img object-fit_cover" style="background-image: url(images/yuhu.jpg);">
-						</div>
-						<div class="st-member-info">
+                                    <p>
+                                        {{$ab->detail}}
+                                    </p>
 
-							<strong class="st-member-name"><a href="{{URL::route('biodegum')}}" style="color: black;">BIODEGUM</a></strong>
-							<p>riset ini merupakan riset di bidang mikroorganisme</p>
-							<div class="skills">
-								<div class="skill">
-									<strong>PROGRESS</strong>
-									<span>100%</span>
-									<div class="progress">
-										<div class="progress-bar progress-bar-sept" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
-											<span class="sr-only">100% Complete</span>
-										</div>
-									</div>
-								</div>
+                                </div>
+                            </div>
+                    @endforeach
+                        </div>
+                    </div>
+                </div>
+
+        </section>
+        <!--body content end-->
+
+    <section>
+        <!--parallax-->
+        <div class="parallax-inner" style="background-image: url(images/bum.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="heading-title-alt text-center m-bot-0 inline-block">
+                        <h1 class="text-uppercase light-txt">ACHIEVEMENT</h1>
+                        @foreach($achievement as $key=>$acv)
+                         <div class="col-md-4 animate-box" data-animate-effect="fadeInRight">
+							<div class="img-shadow test yuhu">
+								<a data-toggle="modal" href="#myModal" data-id="{{$acv->id}}"><img src="images/icons/bdg.png" style="height: 60px;">
+								<p>{{$acv->title}}</p></a>
 							</div>
 						</div>
-					</div>
-				</div>
+		                @endforeach 
+                    </div>
 
-				<div class="col-md-6">
-					<div class="st-member">
-						<div class="st-member-img object-fit_cover" style="background-image: url(images/yuhu.jpg);">
-						</div>
-						<div class="st-member-info">
-							<strong class="st-member-name"><a href="{{URL::route('fipulp')}}" style="color: black;">FIPULP</a></strong>
-							<p>riset ini merupakan riset di bidang mikroorganisme</p>
-							<div class="skills">
-								<div class="skill">
-									<strong>PROGRESS</strong>
-									<span>100%</span>
-									<div class="progress">
-										<div class="progress-bar progress-bar-sept" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
-											<span class="sr-only">100% Complete</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				
-			</div>
-		</div>
-	</section>
+                </div>
+            </div>
+        </div>
+        <!--parallax-->
+    </section>
+<hr>
+    <section id="riset" data-section="hasilriset">
 
-	<section id="gtco-practice-areas" style="background-image: url(images/funfact4.png); background-size: cover; margin-bottom: 50px;">
-		<div class="container">
-			<div class="row row-pb-md">
-				<div class="col-md-8 col-md-offset-2 heading animate-box" data-animate-effect="fadeIn">
-					<h1 style="letter-spacing: 2px;">LATEST JOURNAL</h1>
-					<p class="sub" style="margin-top: -20px;"></p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4">
-					<div class="gtco-practice-area-item animate-box">
-						<div class="gtco-icon">
-							<img src="images/scale.png" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
-						</div>
-						<div class="gtco-copy">
-							<h3><a href="{{URL::route('detailjurnal')}}" style="color: black;">Journal 1</a></h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed scelerisque sapien. Sed sodales, libero non faucibus rutrum, purus tellus finibus diam, eget ornare tortor leo eget erat. </p>
-							<a href="{{URL::route('detailjurnal')}}" class="read-more"><i>Read More</i></a>
-						</div>
-					</div>
+        <div class="page-content">
+            <div class="container">
+                <div class="row">
+                    <div class="m-bot-20 inline-block">
+                        <!--title-->
+                        <div class="heading-title-alt border-short-bottom text-center">
+                            <h2 class="text-uppercase">HASIL RISET</h2>
+                        </div>
+                        <!--title-->
+                    </div>
+                    @foreach($riset as $key=>$rs)
+                    @if (count($rs) < 1)
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6" style="padding-bottom: 10px;">
+                        <div class="team-member">
+                            <div class="team-img">
+                                <img src="{{asset('storage/asriw/hasilriset/'.$rs->image)}}" alt=""/>
+                            </div>
+                            <div class="team-hover">
+                                <div class="desk">
+                                    <a href=""><h2>{{$rs->title}}</h2>
+                                    <p>{{$rs->deskripsi}}</p></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3"></div>
+                    @else ($loop->reamaining)
+                    <div class="col-md-6" style="padding-bottom: 10px;">
+                        <div class="team-member">
+                            <div class="team-img">
+                                <img src="{{asset('storage/asriw/hasilriset/'.$rs->image)}}" alt=""/>
+                            </div>
+                            <div class="team-hover">
+                                <div class="desk">
+                                    <a href=""><h2>{{$rs->title}}</h2>
+                                    <p>{{$rs->deskripsi}}</p></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @endif
+                    @endforeach
 
-				</div>
-				<div class="col-md-4">
-					
-					<div class="gtco-practice-area-item animate-box">
-						<div class="gtco-icon">
-							<img src="images/scale.png" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
-						</div>
-						<div class="gtco-copy">
-							<h3><a href="{{URL::route('detailjurnal')}}" style="color: black;">Journal 2</a></h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed scelerisque sapien. Sed sodales, libero non faucibus rutrum, purus tellus finibus diam, eget ornare tortor leo eget erat. </p>
-							<a href="{{URL::route('detailjurnal')}}" class="read-more"><i>Read More</i></a>
-						</div>
-					</div>
+                </div>
+            </div>
+        </div>
+        <!--team member-->
+    </section>
+<hr>
+    <section data-section="journal">
+       <div class="page-content" style="background-image: url(images/4.png);">
+                <div class="container">
+                    <div class="row">
+                        <div class="m-bot-20 inline-block">
+                        <!--title-->
+                        <div class="heading-title-alt border-short-bottom text-center">
+                            <h2 class="text-uppercase">LATEST JOURNAL</h2>
+                        </div>
+                        <!--title-->
+                    </div>
+                        <div class="career-list">
+                            <div class="col-md-4 ">
+                                <div class="featured-item career-box">
+                                    <div class="title text-uppercase">
+                                        <h4 class="m-bot-0">Software Engineer</h4>
+                                        <p>London</p>
+                                    </div>
+                                    <div class="desc">
+                                        <p>We are a team of multi-skilled and curious digital specialists who are always up for a challenge and learning as fast as. We are a team of multi-skilled and curious digital specialists who are always ready to do.</p>
+                                    </div>
+                                    <a href="#" class="p-read-more">Read More <i class="icon-arrows_slim_right"></i></a>
+                                </div>
+                            </div>
 
-				</div>
-				<div class="col-md-4">
-					
-					<div class="gtco-practice-area-item animate-box">
-						<div class="gtco-icon">
-							<img src="images/scale.png" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
-						</div>
-						<div class="gtco-copy">
-							<h3><a href="{{URL::route('detailjurnal')}}" style="color: black;">Journal 3</a></h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed scelerisque sapien. Sed sodales, libero non faucibus rutrum, purus tellus finibus diam, eget ornare tortor leo eget erat. </p>
-							<a href="{{URL::route('detailjurnal')}}" class="read-more"><i>Read More</i></a>
-						</div>
-					</div>
+                            <div class="col-md-4 ">
+                                <div class="featured-item career-box">
+                                    <div class="title text-uppercase">
+                                        <h4 class="m-bot-0">Brand Manager</h4>
+                                        <p>new york</p>
+                                    </div>
+                                    <div class="desc">
+                                       <p> We are a team of multi-skilled and curious digital specialists who are always up for a challenge and learning as fast as. We are a team of multi-skilled and curious digital specialists who are always ready to do.</p>
+                                    </div>
+                                    <a href="#" class="p-read-more">Read More <i class="icon-arrows_slim_right"></i></a>
+                                </div>
+                            </div>
 
-				</div>
-			</div>
-		</div>
-	</section>
-		
-<section class="blog" id="blog" data-section="blog">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="col-md-8 col-md-offset-2 heading animate-box" data-animate-effect="fadeIn">
-					<h1 style="letter-spacing: 2px;">RECENT NEWS</h1>
-					<p class="sub" style="margin-top: -20px;"></p>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-8">
-				<div class="blog-post">
-					<div class="post-meta">
-						<span class="author"><a href="#"><img src="photos/author.jpg" alt=""> Asri Wulandari</a></span>,
-						<span>At <strong>22 September, 2017</strong></span>
-					</div>
-					<h2 class="post-title"><a href="{{URL::route('detailblog')}}">Asri Peni Wulandari, PhD Teliti Manfaat Tanaman Rami untuk Tekstil dan Biobriket</a></h2>
-					<div class="post-thumb"><a href="{{URL::route('detailblog')}}"><img src="http://www.unpad.ac.id/wp-content/uploads/2015/04/asri-peni-DADAN.jpg" alt="" class="img-responsive"></a></div>
-					<div class="post-content">
-						<p>Torquatos nihil utuntur liberamur benivole epularum evertunt accommodare, democrito didicerimus occulta egregios, praeclaram familiaritatem novi accusamus delectus opinemur mutae expetenda perpauca eas, concederetur fecerit ignorare delectari industria patientiamque. Invenire probes contereret maior opinor iucundo inciderint depravate, concupiscunt, deorum didicerimus, solitudo ingeniis confectum attento illustribus. Quanta suam, quieti usu necessarius. Sapienter existimo fruenda contentiones deduceret dolere minuti animi scientia, inbecilloque servire evertunt. Exeduntur vivi laudatum dicitur omnia verterem fuerit inanitate efficiatur <a href="{{URL::route('detailblog')}}" class="more-link">Continue reading <span class="meta-nav">&rarr;</span></a></p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="widgets">
-					<!-- <div class="widget">
-						<form action="" class="">
-							<div class="input-group">
-								<input type="text" class="form-control" placeholder="Search...">
-								<span class="input-group-btn">
-									<button class="btn btn-default btn-lg" type="submit"><i class="fa fa-search"></i></button>
-								</span>
-							</div>
-						</form>
-					</div> -->
-					<!-- <div class="widget">
-						<h2 class="widget-title">Categories</h2>
-						<ul>
-							<li><a href="#">Video <span class="badge pull-right">5</span></a></li>
-							<li><a href="#">Flyer <span class="badge pull-right">7</span></a></li>
-							<li><a href="#">PSD <span class="badge pull-right">2</span></a></li>
-							<li><a href="#">Theme <span class="badge pull-right">6</span></a></li>
-							<li><a href="#">Music <span class="badge pull-right">8</span></a></li>
-							<li><a href="#">Bootstrap <span class="badge pull-right">2</span></a></li>
-							<li><a href="#">WordPress <span class="badge pull-right">9</span></a></li>
-							<li><a href="#">Framework <span class="badge pull-right">7</span></a></li>
-						</ul>
-					</div> -->
-					<div class="widget">
-						<h2 class="widget-title">Recent Post</h2>
-						<ul>
-							<li>
-								<div class="recent-post clearfix">
-									<a href="#" class="post-thumb"><img src="photos/post-thumb-sm.jpg"></a>
-									<h2 class="post-title">
-										<a href="#">A example blog post with image</a>
-									</h2>
-									<div class="post-meta">
-										<span>Posted in <a href="#">WordPress</a></span>
-									</div>
-									
-								</div>
-							</li>
-							<li>
-								<div class="recent-post clearfix">
-									<a href="#" class="post-thumb"><img src="photos/post-thumb-sm.jpg"></a>
-									<h2 class="post-title">
-										<a href="#">A example blog post with image</a>
-									</h2>
-									<div class="post-meta">
-										<span>Posted in <a href="#">WordPress</a></span>
-									</div>
-									
-								</div>
-							</li>
-							<li>
-								<div class="recent-post clearfix">
-									<a href="#" class="post-thumb"><img src="photos/post-thumb-sm.jpg"></a>
-									<h2 class="post-title">
-										<a href="#">A example blog post with image</a>
-									</h2>
-									<div class="post-meta">
-										<span>Posted in <a href="#">WordPress</a></span>
-									</div>
-									
-								</div>
-							</li>
-							<li>
-								<div class="recent-post clearfix">
-									<a href="#" class="post-thumb"><img src="photos/post-thumb-sm.jpg"></a>
-									<h2 class="post-title">
-										<a href="#">A example blog post with image</a>
-									</h2>
-									<div class="post-meta">
-										<span>Posted in <a href="#">WordPress</a></span>
-									</div>
-									
-								</div>
-							</li>
-						</ul>
-					</div>
-					<!-- <div id="tag_cloud-3" class="widget widget_tag_cloud">
-						<h2 class="widget-title">Tags</h2>
-						<div class="tagcloud">
-							<a href="#">bootstrap3</a>
-							<a href="#">css</a>
-							<a href="#">html</a>
-							<a href="#">js</a>
-							<a href="#">php</a>
-							<a href="#">wordpress</a>
-							<a href="#">jquery</a>
-							<a href="#">less</a>
-							<a href="#">editor</a>
-							<a href="#">responsive</a>
-						</div>
-					</div> -->
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+                            <div class="col-md-4 ">
+                                <div class="featured-item career-box">
+                                    <div class="title text-uppercase">
+                                        <h4 class="m-bot-0">Php Developer</h4>
+                                        <p>melbourn</p>
+                                    </div>
+                                    <div class="desc">
+                                       <p> We are a team of multi-skilled and curious digital specialists who are always up for a challenge and learning as fast as. We are a team of multi-skilled and curious digital specialists who are always ready to do.</p>
+                                    </div>
+                                    <a href="#" class="p-read-more">Read More <i class="icon-arrows_slim_right"></i></a>
+                                </div>
+                            </div>
 
-<section class="screenshots" id="gtco-practice-areas" data-section="gallery">
-    <div class="container-fluid">
-		<div class="row">
-			<div class="col-md-8 col-md-offset-2 heading animate-box" data-animate-effect="fadeIn">
-					<h1 style="letter-spacing: 2px;">GALLERY</h1>
-					<p class="sub" style="margin-top: -20px;"></p>
-				</div>
-			<ul class="grid">
-				<li>
-					<figure>
-						<img src="images/bum.jpg" alt="Screenshot 01">
-						<figcaption>
-						<div class="caption-content">
-							<a href="images/bum.jpg" class="single_image">
-								<i class="fa fa-search"></i><br>
-								<p>Optimised For Design</p>
-							</a>
-						</div>
-						</figcaption>
-					</figure>
-				</li>
-				<li>
-					<figure>
-						<img src="images/02-screenshot.jpg" alt="Screenshot 01">
-						<figcaption>
-						<div class="caption-content">
-							<a href="images/large/02.jpg" class="single_image">
-								<i class="fa fa-search"></i><br>
-								<p>User Centric Design</p>
-							</a>
-						</div>
-						</figcaption>
-					</figure>
-				</li>
-				<li>
-					<figure>
-						<img src="images/03-screenshot.jpg" alt="Screenshot 01">
-						<figcaption>
-						<div class="caption-content">
-							<a href="images/large/03.jpg" class="single_image">
-								<i class="fa fa-search"></i><br>
-								<p>Responsive and Adaptive</p>
-							</a>
-						</div>
-						</figcaption>
-					</figure>
-				</li>
-				<li>
-					<figure>
-						<img src="images/04-screenshot.jpg" alt="Screenshot 01">
-						<figcaption>
-						<div class="caption-content">
-							<a href="images/large/04.jpg" class="single_image">
-								<i class="fa fa-search"></i><br>
-								<p>Absolutely Free</p>
-							</a>
-						</div>
-						</figcaption>
-					</figure>
-				</li>
-			</ul>
-		</div>
-		<div class="row">
-			<ul class="grid">
-				<li>
-					<figure>
-						<img src="images/05-screenshot.jpg" alt="Screenshot 01">
-						<figcaption>
-						<div class="caption-content">
-							<a href="images/large/05.jpg" class="single_image">
-								<i class="fa fa-search"></i><br>
-								<p>Multi-Purpose Design</p>
-							</a>
-						</div>
-						</figcaption>
-					</figure>
-				</li>
-				<li>
-					<figure>
-						<img src="images/06-screenshot.jpg" alt="Screenshot 01">
-						<figcaption>
-						<div class="caption-content">
-							<a href="images/large/06.jpg" class="single_image">
-								<i class="fa fa-search"></i><br>
-								<p>Exclusive to Codrops</p>
-							</a>
-						</div>
-						</figcaption>
-					</figure>
-				</li>
-				<li>
-					<figure>
-						<img src="images/07-screenshot.jpg" alt="Screenshot 01">
-						<figcaption>
-						<div class="caption-content">
-							<a href="images/large/07.jpg" class="single_image">
-								<i class="fa fa-search"></i><br>
-								<p>Made with Love</p>
-							</a>
-						</div>
-						</figcaption>
-					</figure>
-				</li>
-				<li>
-					<figure>
-						<img src="images/08-screenshot.jpg" alt="Screenshot 01">
-						<figcaption>
-						<div class="caption-content">
-							<a href="images/large/08.jpg" class="single_image">
-								<i class="fa fa-search"></i><br>
-								<p>In Sydney, Australia</p>
-							</a>
-						</div>
-						</figcaption>
-					</figure>
-				</li>
-			</ul>
-		</div>
-	</div>
-</section>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+    </section>
+    <hr>
+    <section id="blog" data-section="blog">
+        <!--blog-->
+        <div class="page-content">
+            <div class="container">
+                <div class="row">
+                    <div class="m-bot-50 inline-block">
+                        <!--title-->
+                        <div class="heading-title-alt border-short-bottom text-center">
+                            <h2 class="text-uppercase">LATEST BLOG</h2>
+                        </div>
+                        <!--title-->
+                    </div>
+
+
+                    <!--blog post-->
+                    <div class="post-list-aside">
+                        <div class="post-single">
+                            <div class="col-md-6">
+                                <div class="post-img title-img">
+                                    <img src="images/4.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="post-desk">
+                                    <h3 class="text-uppercase">
+                                        <a href="#">teliti manfaat tanaman rami</a>
+                                    </h3>
+                                    <div class="date">
+                                        <a href="#" class="author">Asri Wulandari</a> oktober 04, 2017
+                                    </div>
+                                    <p>
+                                        Phasellus fringilla suscipit risus nec eleifend. Pellentesque eu quam sem, ac malesuada leo sem quam pellente. Awesome sliders give you the opportunity to showcase your content.
+                                        fringilla suscipit risus nec eleifend. Pellentesque eu quam sem, ac malesuada leo sem quam pellente. Awesome sliders give you the opportunity to showcase your content.
+                                    </p>
+                                    <a href="#" class="p-read-more">Read More <i class="icon-arrows_slim_right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--blog post-->
+                    <div class="post-list-aside">
+                        <div class="post-single">
+                            <div class="col-md-6">
+                                <div class="post-img title-img">
+                                    <img src="images/4.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="post-desk">
+                                    <h3 class="text-uppercase">
+                                        <a href="#">teliti manfaat tanaman rami</a>
+                                    </h3>
+                                    <div class="date">
+                                        <a href="#" class="author">Asri Wulandari</a> oktober 04, 2017
+                                    </div>
+                                    <p>
+                                        Phasellus fringilla suscipit risus nec eleifend. Pellentesque eu quam sem, ac malesuada leo sem quam pellente. Awesome sliders give you the opportunity to showcase your content.
+                                        fringilla suscipit risus nec eleifend. Pellentesque eu quam sem, ac malesuada leo sem quam pellente. Awesome sliders give you the opportunity to showcase your content.
+                                    </p>
+                                    <a href="#" class="p-read-more">Read More <i class="icon-arrows_slim_right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="post-list-aside">
+                        <div class="post-single">
+                            <div class="col-md-6">
+                                <div class="post-img title-img">
+                                    <img src="images/4.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="post-desk">
+                                    <h3 class="text-uppercase">
+                                        <a href="#">teliti manfaat tanaman rami</a>
+                                    </h3>
+                                    <div class="date">
+                                        <a href="#" class="author">Asri Wulandari</a> oktober 04, 2017
+                                    </div>
+                                    <p>
+                                        Phasellus fringilla suscipit risus nec eleifend. Pellentesque eu quam sem, ac malesuada leo sem quam pellente. Awesome sliders give you the opportunity to showcase your content.
+                                        fringilla suscipit risus nec eleifend. Pellentesque eu quam sem, ac malesuada leo sem quam pellente. Awesome sliders give you the opportunity to showcase your content.
+                                    </p>
+                                    <a href="#" class="p-read-more">Read More <i class="icon-arrows_slim_right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <!--blog-->
+
+    </section>
+
+    <!--body content start-->
+        <section id="gallery" class="body-content page-content" data-section="gallery">
+            <div class="page-content" id="portfolio">
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="heading-title text-center">
+                            <h2 class="text-uppercase">GALLERY</h2>
+                        </div>
+
+                        <div class="portfolio col-4 portfolio-gallery gutter m-bot-0 inline-block">
+
+                            <div class="portfolio-item cat1 cat3 ">
+                                <div class="thumb">
+                                    <img src="images/img_team_2.jpg" alt="">
+                                    <div class="portfolio-hover">
+                                        <div class="action-btn">
+                                            <a href="images/img_team_2.jpg" class="popup-gallery" title="Title 1"> <i class="icon-basic_magnifier"></i>  </a>
+                                        </div>
+                                        <div class="portfolio-description">
+                                            <h4><a href="images/img_team_2.jpg" class="popup-gallery2" title="Title 1">lightbox view</a></h4>
+                                            <p><a href="#">category</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="portfolio-item cat2 cat4 ">
+                                <div class="thumb">
+                                    <img src="images/img_team_1.jpg" alt="">
+                                    <div class="portfolio-hover">
+                                        <div class="action-btn">
+                                            <a href="images/img_team_1.jpg" class="popup-gallery" title="Title 2"> <i class="icon-basic_magnifier"></i>  </a>
+                                        </div>
+                                        <div class="portfolio-description">
+                                            <h4><a href="images/img_team_1.jpg" class="popup-gallery2" title="Title 2">lightbox view</a></h4>
+                                            <p><a href="#">category</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="portfolio-item cat3 cat5 ">
+                                <div class="thumb">
+                                    <img src="images/img_team_2.jpg" alt="">
+                                    <div class="portfolio-hover">
+                                        <div class="action-btn">
+                                            <a href="images/img_team_2.jpg" class="popup-gallery" title="Title 3"> <i class="icon-basic_magnifier"></i>  </a>
+                                        </div>
+                                        <div class="portfolio-description">
+                                            <h4><a href="images/img_team_2.jpg" class="popup-gallery2" title="Title 3">lightbox view</a></h4>
+                                            <p><a href="#">category</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="portfolio-item cat3 cat5 ">
+                                <div class="thumb">
+                                    <img src="images/img_team_1.jpg" alt="">
+                                    <div class="portfolio-hover">
+                                        <div class="action-btn">
+                                            <a href="images/img_team_1.jpg" class="popup-gallery" title="Title 3"> <i class="icon-basic_magnifier"></i>  </a>
+                                        </div>
+                                        <div class="portfolio-description">
+                                            <h4><a href="images/img_team_1.jpg" class="popup-gallery2" title="Title 3">lightbox view</a></h4>
+                                            <p><a href="#">category</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="portfolio-item cat3 cat5 ">
+                                <div class="thumb">
+                                    <img src="images/img_team_2.jpg" alt="">
+                                    <div class="portfolio-hover">
+                                        <div class="action-btn">
+                                            <a href="images/img_team_2.jpg" class="popup-gallery" title="Title 3"> <i class="icon-basic_magnifier"></i>  </a>
+                                        </div>
+                                        <div class="portfolio-description">
+                                            <h4><a href="images/img_team_2.jpg" class="popup-gallery2" title="Title 3">lightbox view</a></h4>
+                                            <p><a href="#">category</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--body content end-->
+        <hr/>
+
+</div>
 
 <div id="myModal" class="modal fade" role="dialog">
 <div class="modal-dialog">
@@ -443,9 +398,8 @@ Home
 			<h3 class="modal-title" style="text-align: center; letter-spacing: 3px;">ACHIEVEMENT</h3>
 		</div>
 		<div class="modal-body" style="text-align: center;">
-			<p>Penghargaan 1</p>
-			<p>Mikro</p>
-			<p>Pada tahun 2017</p>
+			<p>{{$acv->title}}</p>
+			<p>{{$acv->detail}}</p>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-success" data-dismiss="modal">
 					<span class='glyphicon glyphicon-remove'></span> Close
@@ -455,10 +409,6 @@ Home
 		</div>
 	</div>
 </div>
-
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-	</div>
 
 @section('script')
 

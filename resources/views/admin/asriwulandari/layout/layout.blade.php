@@ -55,13 +55,13 @@
           
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="{{asset('lte-admin/dist/img/avatar5.png')}}" class="user-image" alt="User Image">
+              <img src="{{asset('lte-admin/dist/img/avatar2.png')}}" class="user-image" alt="User Image">
               <span class="hidden-xs">admin</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="{{asset('lte-admin/dist/img/avatar5.png')}}" class="img-circle" alt="User Image">
+                <img src="{{asset('lte-admin/dist/img/avatar2.png')}}" class="img-circle" alt="User Image">
 
                 <p>
                  

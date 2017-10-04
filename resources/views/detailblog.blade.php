@@ -4,56 +4,151 @@ Detail
 @endsection
 @section('content')
 
+<!--body content start-->
+        <section class="body-content ">
 
-<section class="blogSingle padding" id="content" style="margin-top: 100px;">
-		<div class="container">
-			<div class="row">
-				<div class="blog-left">
-					<div class="col-sm-2"></div>
-					<div class="col-sm-8">
-						<div class="owl-carousels">
-						    <div class="item"><img src="http://www.unpad.ac.id/wp-content/uploads/2015/04/asri-peni-DADAN.jpg" alt=""></div>
-						</div>
-						<div class="admin-list clearfix">
-							<ul>
-								<li><a>2017</a>&nbsp;/&nbsp;</li>
-								<li><a>Asri Peni</a></li>
-							</ul>
-						</div>
-						<div class="title">
-							<h2>Asri Peni Wulandari</h2>
-						</div>
-						<div class="paragraph" style="margin-bottom: 30px; word-wrap: break-word;">
-							<p>Torquatos nihil utuntur liberamur benivole epularum evertunt accommodare, democrito didicerimus occulta egregios, praeclaram familiaritatem novi accusamus delectus opinemur mutae expetenda perpauca eas, concederetur fecerit ignorare delectari industria patientiamque. Invenire probes contereret maior opinor iucundo inciderint depravate, concupiscunt, deorum didicerimus, solitudo ingeniis confectum attento illustribus. Quanta suam, quieti usu necessarius. Sapienter existimo fruenda contentiones deduceret dolere minuti animi scientia, inbecilloque servire evertunt. Exeduntur vivi laudatum dicitur omnia verterem fuerit inanitate efficiatur Torquatos nihil utuntur liberamur benivole epularum evertunt accommodare, democrito didicerimus occulta egregios, praeclaram familiaritatem novi accusamus delectus opinemur mutae expetenda perpauca eas, concederetur fecerit ignorare delectari industria patientiamque. Invenire probes contereret maior opinor iucundo inciderint depravate, concupiscunt, deorum didicerimus, solitudo ingeniis confectum attento illustribus. Quanta suam, quieti usu necessarius. Sapienter existimo fruenda contentiones deduceret dolere minuti animi scientia, inbecilloque servire evertunt. Exeduntur vivi laudatum dicitur omnia verterem fuerit inanitate efficiaturTorquatos nihil utuntur liberamur benivole epularum evertunt accommodare, democrito didicerimus occulta egregios, praeclaram familiaritatem novi accusamus delectus opinemur mutae expetenda perpauca eas, concederetur fecerit ignorare delectari industria patientiamque. Invenire probes contereret maior opinor iucundo inciderint depravate, concupiscunt, deorum didicerimus, solitudo ingeniis confectum attento illustribus. Quanta suam, quieti usu necessarius. Sapienter existimo fruenda contentiones deduceret dolere minuti animi scientia, inbecilloque servire evertunt. Exeduntur vivi laudatum dicitur omnia verterem fuerit inanitate efficiatur</p>
-						</div>
-				</div><!-- end blog-left -->
-				<div class="col-sm-2"></div>
-			</div><!-- end row -->
-		</div><!-- end container -->
-	</section>
-	<!-- =============== END BLOG SINGLE ================ -->
+            <div class="page-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <!--classic image post-->
+                            <div class="blog-classic">
+                                <div class="blog-post">
+                                    <div class="full-width">
+                                        <img src="{{asset('images/bum.jpg')}}" alt=""/>
+                                    </div>
+                                    <h4 class="text-uppercase"><a href="blog-single.html">standard blog post with photo</a></h4>
+                                    <ul class="post-meta">
+                                        <li><i class="fa fa-user"></i>posted by <a href="#">Asri Wulandari</a></li>
+                                    </ul>
 
-	<!-- =============== START PAGINATION ================ -->
-	<div class="section-block bkg-grey-ultralight pagination-2">
-	<div class="row full-width ">
+                                    <p>Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing elit</a>. Ab adipisci architecto
+                                        consequatur debitis eos eum hic illum ipsam itaque laborum magni minima
+                                        molestias nostrum numquam odit officia pariatur perspiciatis placeat porro quae
+                                        rem, sequi sit soluta temporibus ullam voluptas voluptates. Aliquid amet
+                                        architecto culpa cumque eius enim esse eum eveniet ex, fugiat illo ipsum
+                                        laudantium, minima nemo porro sequi tempora veritatis vero voluptate,
+                                        voluptatem. Culpa ducimus est eveniet, iste iusto officiis quas repudiandae
+                                        rerum sit tenetur totam voluptas? Accusamus accusantium alias aliquam aliquid
+                                        animi commodi dignissimos dolore doloremque dolorum exercitationem fugiat illum,
+                                        iste laboriosam maiores molestiae nam odio officia officiis omnis optio placeat
+                                        quaerat quia quibusdam quis quo ratione sapiente sed sequi sit tenetur unde ut
+                                        veniam voluptas! Dicta, voluptatum!</p>
 
-			<div class="col-sm-6 leftHover">
-				<a href="#" class="pagination-previous">
-					<small>Prev</small>
-					<span></span>
-				</a>
-			</div>
+                                    <div class="blog-post">
+                                        <blockquote class="quote-post">
+                                            <p>
+                                                Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.. Sed ut perspiciatis unde omnis iste natus error
+                                            </p>
+                                        </blockquote>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at debitis
+                                        deleniti dignissimos ea enim iste laboriosam nihil omnis possimus quia, tempora,
+                                        totam voluptatibus! Animi consectetur dolor in laboriosam unde.</p>
 
-			<div class="col-sm-6 rightHover">
-				<a href="#" class="pagination-next ">
-					<small>Next</small>
-					<span></span>
-				</a>
-			</div>
+                                    <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.  </p>
 
-		</div>
-	</div>
+                                    
+                                    <div class="pagination-row">
 
+                                        <div class="pagination-post">
+                                            <div class="prev-post">
+                                                <a href="#">
+                                                    <div class="arrow">
+                                                        <i class="fa fa-angle-double-left"></i>
+                                                    </div>
+                                                    <div class="pagination-txt">
+                                                        <span>Previous Post</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="post-list-link">
+                                                <a href="#">
+                                                    <i class="fa fa-home"></i>
+                                                </a>
+                                            </div>
+
+                                            <div class="next-post">
+                                                <a href="#">
+                                                    <div class="arrow">
+                                                        <i class="fa fa-angle-double-right"></i>
+                                                    </div>
+                                                    <div class="pagination-txt">
+                                                        <span>Next Post</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    
+
+                                </div>
+                            </div>
+                            <!--classic image post-->
+
+                        </div>
+                        <div class="col-md-4">
+
+                            <!--author widget-->
+                            <div class="widget">
+                                <div class="heading-title-alt text-left heading-border-bottom">
+                                    <h6 class="text-uppercase">about author</h6>
+                                </div>
+                                <div class="full-width avatar">
+                                    <img src="img/post/avatar.jpg" alt=""/>
+                                </div>
+                                <p>Persuaded to return to the shoemaker's shop, young Edward struggled on till three years of his wretched apprenticeship had passed over.</p>
+
+                                <span class="">- Nelson Leonard</span>
+                            </div>
+                            <!--author widget-->
+
+                            <!--latest post widget-->
+                            <div class="widget">
+                                <div class="heading-title-alt text-left heading-border-bottom">
+                                    <h6 class="text-uppercase">latest post</h6>
+                                </div>
+                                <ul class="widget-latest-post">
+                                    <li>
+                                        <div class="thumb"><a href="#"><img src="img/post/post-thumb.jpg" alt=""/></a></div>
+                                        <div class="w-desk">
+                                            <a href="#">Old Father Getup</a>
+                                            April 25, 2014
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="thumb"><a href="#"><img src="img/post/post-thumb-2.jpg" alt=""/></a></div>
+                                        <div class="w-desk">
+                                            <a href="#">Represent is the best way</a>
+                                            March 28, 2014
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="thumb"><a href="#"><img src="img/post/post-thumb-3.jpg" alt=""/></a></div>
+                                        <div class="w-desk">
+                                            <a href="#">Alone with the music</a>
+                                            May 05, 2014
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--latest post widget-->
+
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+        <!--body content end-->
 
 @section('script')
 

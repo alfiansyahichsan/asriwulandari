@@ -12,28 +12,39 @@
         </li>
         
         <li @yield('nav2')>
-            <a href="#">
-            <i class="fa fa-newspaper-o"></i> <span>Slider</span>
+            <a href="{{URL::Route('about.index')}}">
+            <i class="fa fa-user"></i> <span>About</span>
             </a>
         </li>
         <li @yield('nav3')>
-            <a href="#">
-            <i class="fa fa-suitcase"></i> <span>Profile About</span>
+            <a href="{{URL::Route('achievement.index')}}">
+            <i class="fa fa-suitcase"></i> <span>Achievement</span>
             </a>
         </li>
         <li @yield('nav4')>
-            <a href="#">
-            <i class="fa fa-user"></i> <span>Latest Journal</span>
+            <a href="{{URL::Route('hasilriset.index')}}">
+            <i class="fa fa-phone"></i> <span>Hasil Riset</span>
             </a>
         </li>
         <li @yield('nav5')>
-            <a href="#">
-            <i class="fa fa-phone"></i> <span>Gallery</span>
+            <a href="{{URL::Route('gallery.index')}}">
+            <i class="fa fa-newspaper-o"></i> <span>Gallery</span>
             </a>
         </li>
+        
         <li @yield('nav6')>
-            <a href="#">
+            <a href="{{URL::Route('blog.index')}}">
             <i class="fa fa-file-text-o"></i> <span>Blog</span>
+            </a>
+        </li>
+        <li @yield('nav7')>
+            <a href="#">
+            <i class="fa fa-file-text-o"></i> <span>Jurnal</span>
+            </a>
+        </li>
+        <li @yield('nav7')>
+            <a href="{{URL::Route('pagesetting.index')}}">
+            <i class="fa fa-file-text-o"></i> <span>Page Setting</span>
             </a>
         </li>
         
