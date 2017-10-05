@@ -106,7 +106,9 @@
                     <li>
                         <a class="page-scroll" href="#portfolio">Portfolio</a>
                     </li>
-                   
+                    <li>
+                        <a class="page-scroll" href="#instagram">Instagram</a>
+                    </li>
                     <li>
                         <a class="page-scroll" href="#team">Team</a>
                     </li>
@@ -226,10 +228,6 @@
         <!-- End Feature Section -->
     
     
-    
-    
-    
-    
     <!-- Start Portfolio Section -->
         <section id="portfolio" class="portfolio-section-1">
             <div class="container">
@@ -347,7 +345,33 @@
             </div>
         </div>
         <!-- End Portfolio Modal Section -->
-    
+
+
+     <!-- Start Instagram Section -->
+    <section id="instagram" class="ig-photos-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="section-title text-center">
+                            <h3 style="color:White">Instagram</h3>
+                            <p>Duis aute irure dolor in reprehenderit in voluptate</p>
+                        </div>
+                </div>
+            </div>
+       
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="ig-photos">
+                        <div class="our-ig">
+                            <div class="ig-member">
+                                        <!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/60d74bcbb8da59478dd0cd625a814ebc.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+    </section>
+    <!-- End Instagram Section -->
   
     <!-- Start Team Member Section -->
     <section id="team" class="team-member-section">
@@ -458,22 +482,14 @@
 
 
                                 </div>
-
-                    
                     </div>
                 </div>
             </div>
-                
         </div>
     </section>
     <!-- End Team Member Section -->
 
 
-
-   
-    
-    
-    
     <!-- Start Latest News Section -->
     <section id="latest-news" class="latest-news-section">
         <div class="container">
@@ -565,13 +581,7 @@
     </section>
     <!-- End Latest News Section -->
 
-
-
-    
-    
-    
-    
-
+    <!-- Start Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <div class="row">
@@ -617,6 +627,9 @@
             </div>
             
         </div>
+    <!-- End Contact Section --> 
+
+    <!-- Start footer Section -->
         <footer class="style-1">
             <div class="container">
                 <div class="row">
@@ -637,7 +650,7 @@
             <div class="dot2"></div>
         </div>
     </div>
-
+    <!-- End footer Section -->
     
 
     <!-- jQuery Version 2.1.1 -->

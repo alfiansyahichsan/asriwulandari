@@ -49,7 +49,7 @@
 			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
-
+        <link href="css/lightbox.css" rel="stylesheet">
 	</head>
 
     <body data-spy="scroll" data-target="#main-navbar">
@@ -107,7 +107,7 @@
 								<h1>Fipulp</h1>
 								<p>Hasil Tanaman Rami</p>
                                 <div class="extra-space-l"></div>
-								<a class="btn btn-blank" href="https://creativemarket.com/Themetorium" target="_blank" role="button">View More!</a>
+								<a class="page-scroll btn btn-primary" href="#about-section"   role="button">View More!</a>
 							</div>
 							
 						</div>
@@ -182,11 +182,7 @@
                         </div> <!-- /.row -->
                     </div> <!-- /.container -->
                 </div>
-                <!-- End rotate box-1 -->
-                
-                
-                
-                
+                <!-- End rotate box-1 -->             
           </section>
           <!-- End about section -->
  
@@ -237,10 +233,7 @@
                 </div>
             </section>
             <!-- End testimonials -->
-                
-
-                
-                
+   
             <!-- Begin Portfolio -->
             <section id="portfolio-section" class="page bg-style1">
             	<div class="container">
@@ -266,7 +259,7 @@
                                                 <div class="portfolio_single_content">
                                                     <img src="images/fipulp/gallery/{{$img['image_source']}}" alt="title"/>
                                                     <div>
-                                                        <a href="#">{{$img['title']}}</a>
+                                                        <a href="images/fipulp/gallery/{{$img['image_source']}}" data-lightbox="roadtrip">{{$img['title']}}</a>
                                                         <span>{{$img['subtitle']}}</span>
                                                     </div>
                                                 </div>
@@ -283,23 +276,15 @@
             </section>
             <!-- End portfolio -->
             
-                
-                
-                
-           
-                
-                
-                
-                
             <!-- Begin team-->
-            <section id="team-section" class="page">
+            <section id="team-section" class="page text-white parallax" data-stellar-background-ratio="0.5" style="background-image: url(images/fipulp/th.jpg);"">
                 <!-- Begin page header-->
                 <div class="page-header-wrapper">
                     <div class="container">
                         <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
                             <h2>Our Team</h2>
                             <div class="devider"></div>
-                            <p class="subtitle">Meat our experts</p>
+                            <p class="subtitle">Meet our experts</p>
                         </div>
                     </div>
                 </div>
@@ -422,17 +407,22 @@
             <!-- End team-->
                 
                  <!-- Start Latest News Section -->
-    <section id="latest-news" class="page-header-wrapper">
+    <section id="latest-news-section" class="page bg-style1">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
-                            <h2>Latest News</h2>
-                            <div class="devider"></div>
-                            <p class="subtitle"></p>
-                        </div>
-                </div>
-            </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="latest-news">
+                                <!-- Begin page header-->
+                                <div class="page-header-wrapper">
+                                    <div class="container">
+                                        <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+                                            <h2>Latest News</h2>
+                                            <div class="devider"></div>
+                                            <p class="subtitle">What happening</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End page header-->
             <div class="row">
                 <div class="latest-news">
                     @foreach($posts as $po)
@@ -514,15 +504,7 @@
     </section>
     <!-- End Latest News Section -->
                 
-                
-     
-          
-                
-                
-                
-                
-            <!-- Begin contact section -->
-			<section id="contact-section" class="page text-white parallax" data-stellar-background-ratio="0.5" style="background-image: url(images/fipulp/map-bg.jpg);">
+          <section id="contact-section" class="page text-white parallax" data-stellar-background-ratio="0.5" style="background-image: url(images/fipulp/map-bg.jpg);">
             <div class="cover"></div>
             
                  <!-- Begin page header-->
@@ -587,8 +569,6 @@
             <!-- Begin footer -->
             <footer class="text-off-white">
             
-              
-                
                 <div class="footer">
                     <div class="container text-center wow fadeIn" data-wow-delay="0.4s">
                         <p class="c-copyright c-font-white">2017 &copy; Asri Peni Wulandari, Developed by <a href="http://scriptpainter.com" style="color:#337ab7;">ScriptPainter</a>
@@ -618,7 +598,7 @@
 		<script src="inc/jquery.easing.min.js"></script>
 		<script src="inc/jquery.counterup.min.js"></script>
 		<script src="inc/smoothscroll.js"></script>
-
+        <script src="js/lightbox.js"></script>
 		<!-- Theme JS -->
 		<script src="js/fipulp/theme.js"></script>
 

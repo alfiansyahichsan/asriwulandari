@@ -649,6 +649,9 @@ a.rotate-box-1:hover, a.rotate-box-2:hover {
 .team-item {
 	height: 120px;
 }	
+#team-section .cover {
+	background-color: rgba(5, 8, 11, 0.93);
+}
 .team-item .team-triangle {
 	width: 120px;
 	height: 120px;
