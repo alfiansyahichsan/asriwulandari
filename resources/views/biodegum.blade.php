@@ -137,8 +137,6 @@
             <!-- Indicators -->
             <ol class="carousel-indicators">
                 <li data-target="#main-slide" data-slide-to="0" class="active"></li>
-                <li data-target="#main-slide" data-slide-to="1"></li>
-                <li data-target="#main-slide" data-slide-to="2"></li>
             </ol>
             <!--/ Indicators end-->
 
@@ -157,21 +155,8 @@
                     </div>
                 </div>
                 <!--/ Carousel item end -->
-                
-               
-                <!--/ Carousel item end -->
             </div>
             <!-- Carousel inner end-->
-
-            <!-- Controls -->
-            <a class="left carousel-control" href="#main-slide" data-slide="prev">
-                <span><i class="fa fa-angle-left"></i></span>
-            </a>
-            <a class="right carousel-control" href="#main-slide" data-slide="next">
-                <span><i class="fa fa-angle-right"></i></span>
-            </a>
-        </div>
-        <!-- /carousel -->
     </section>
     <!-- End Home Page Slider -->
 
@@ -364,7 +349,8 @@
                     <div id="ig-photos">
                         <div class="our-ig">
                             <div class="ig-member">
-                                        <!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/60d74bcbb8da59478dd0cd625a814ebc.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+                                        <!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/76753b9a31f75b9dba708e2a2ebb9ea9.html" width="100%" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+
                             </div>
                         </div>
                     </div>
