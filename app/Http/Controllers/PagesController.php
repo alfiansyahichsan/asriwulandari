@@ -3,9 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\BiodegumPosts;
+use App\BiodegumPortfolio;
 use App\FipulpBlog;
 use App\FipulpGallery;
 use Auth;
+
+use Illuminate\Support\Debug\Dumper;
 
 class PagesController extends Controller
 {
@@ -26,7 +30,17 @@ class PagesController extends Controller
 
     public function biodegum()
     {
-    	return view('biodegum');
+        $posts = BiodegumPosts::where('status',1)
+            ->take(6)
+            ->orderby('created_at', 'desc')
+            ->get();
+         $portfolio = BiodegumPortfolio::take(6)
+            ->orderby('created_at', 'desc')
+            ->get();
+        return view('biodegum')->with([
+            'posts'   => $posts,
+            'portfolio' => $portfolio
+        ]);
     }
 
     public function fipulp()
