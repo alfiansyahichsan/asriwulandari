@@ -11,12 +11,12 @@
             </a>
         </li>
         <li @yield('nav2')>
-            <a href="{{URL::Route('fipulpdashboard.gallery')}}">
+            <a href="{{URL::Route('gallery.index')}}">
             <i class="fa fa-picture-o"></i> <span>Gallery</span>
             </a>
         </li>
        <li @yield('nav3')>
-            <a href="{{URL::Route('fipulpdashboard.posts')}}">
+            <a href="{{URL::Route('posts.index')}}">
             <i class="fa fa-newspaper-o"></i> <span>Posts</span>
             </a>
         </li>

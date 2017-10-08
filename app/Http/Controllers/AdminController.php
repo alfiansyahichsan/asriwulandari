@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -43,7 +44,7 @@ class AdminController extends Controller
         $listFile = array();
         $rules = array('image' => 'required | image | max:2000'); 
         $fileCount = $request->fileCount;
-        
+
         for ($i = 1; $i <= $fileCount ; $i++){
             $fileName = "";
             if($request->file('file-'.$i)){
@@ -56,13 +57,14 @@ class AdminController extends Controller
                 if ($img->isValid() && !$validator->fails()) {
                     $extension = $img->getClientOriginalExtension(); 
                     $fileName = rand(111111,999999).'.'.$extension; 
-                    $img->storeAs('asriwulandari/tmp', $fileName);
+                    $img->storeAs('asriwulandari/tmp/', $fileName);
         
                 }
                      
             }
             array_push($listFile, $fileName);
         }
+
         return response()->json($listFile);
     }
 }

@@ -9,7 +9,7 @@ class FipulpBlog extends Model
 {
     use SoftDeletes;
     protected $table = 'fipulp_blog';
-	protected $primaryKey = 'id_fipulp_blog';
+	protected $primaryKey = 'id';
 
     public function image() {
         if ($this->img_header == "") {
