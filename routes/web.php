@@ -41,13 +41,14 @@ Route::group(['namespace' => 'Admin\Asriwulandari','middleware' => ['auth','asri
 
 Route::group(['namespace' => 'Admin\Biodegum','middleware' => ['auth','biodegum']], function() {
 	Route::get('/biodegum/dashboard',array('as'=>'biodegumdashboard','uses'=>'BiodegumController@index'));
+	Route::resource('/biodegum/dashboard/posts','BiodegumPostsController', ['names' => ['index' => 'biodegum.posts.index']]);
+	Route::resource('/biodegum/dashboard/portfolio','BiodegumPortfolioController', ['names' => ['index' => 'biodegum.portfolio.index']]);
 });
 
 Route::group(['namespace' => 'Admin\Fipulp','middleware' => ['auth','fipulp']], function() {
 	Route::get('/fipulp/dashboard',array('as'=>'fipulpdashboard','uses'=>'FipulpController@index'));
 	Route::resource('/fipulp/dashboard/posts','FipulpPostsController');
 	Route::resource('/fipulp/dashboard/gallery','FipulpGalleryController');
-
 });
 
 Auth::routes();

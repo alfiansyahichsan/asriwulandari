@@ -244,68 +244,18 @@
                         
                         <!-- Start Portfolio items -->
                         <ul id="portfolio-list">
+                            @foreach ($portfolio as $pr)
                             <li>
-                                <div class="portfolio-item">
-                                    <img src="images/biodegum/portfolio/img1.jpg" class="img-responsive" alt="" />
+                                <div class="portfolio-item" id="portfolio-{{$pr['id']}}">
+                                    <img src="images/biodegum/portfolio/{{$pr['image_source']}}" class="img-responsive" alt="" />
                                     <div class="portfolio-caption">
-                                        <h4>Portfolio Title</h4>
+                                        <h4>{{$pr['title']}}</h4>
                                         <a href="#portfolio-modal" data-toggle="modal" class="link-1"><i class="fa fa-magic"></i></a>
                                         <a href="#" class="link-2"><i class="fa fa-link"></i></a>
                                     </div>
                                 </div>
                             </li>
-                            <li>
-                                <div class="portfolio-item">
-                                    <img src="images/biodegum/portfolio/img2.jpg" class="img-responsive" alt="" />
-                                    <div class="portfolio-caption">
-                                        <h4>Portfolio Title</h4>
-                                        <a href="#portfolio-modal" data-toggle="modal" class="link-1"><i class="fa fa-magic"></i></a>
-                                        <a href="#" class="link-2"><i class="fa fa-link"></i></a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="portfolio-item">
-                                    <img src="images/biodegum/portfolio/img3.jpg" class="img-responsive" alt="" />
-                                    <div class="portfolio-caption">
-                                        <h4>Portfolio Title</h4>
-                                        <a href="#portfolio-modal" data-toggle="modal" class="link-1"><i class="fa fa-magic"></i></a>
-                                        <a href="#" class="link-2"><i class="fa fa-link"></i></a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="portfolio-item">
-                                    <img src="images/biodegum/portfolio/img4.jpg" class="img-responsive" alt="" />
-                                    <div class="portfolio-caption">
-                                        <h4>Portfolio Title</h4>
-                                        <a href="#portfolio-modal" data-toggle="modal" class="link-1"><i class="fa fa-magic"></i></a>
-                                        <a href="#" class="link-2"><i class="fa fa-link"></i></a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="portfolio-item">
-                                    <img src="images/biodegum/portfolio/img5.jpg" class="img-responsive" alt="" />
-                                    <div class="portfolio-caption">
-                                        <h4>Portfolio Title</h4>
-                                        <a href="#portfolio-modal" data-toggle="modal" class="link-1"><i class="fa fa-magic"></i></a>
-                                        <a href="#" class="link-2"><i class="fa fa-link"></i></a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="portfolio-item">
-                                    <img src="images/biodegum/portfolio/img6.jpg" class="img-responsive" alt="" />
-                                    <div class="portfolio-caption">
-                                        <h4>Portfolio Title</h4>
-                                        <a href="#portfolio-modal" data-toggle="modal" class="link-1"><i class="fa fa-magic"></i></a>
-                                        <a href="#" class="link-2"><i class="fa fa-link"></i></a>
-                                    </div>
-                                </div>
-                            </li>
-                            
-                            
+                            @endforeach
                         </ul>
                         <!-- End Portfolio items -->
                     </div>
@@ -503,78 +453,21 @@
             </div>
             <div class="row">
                 <div class="latest-news">
+                    @foreach ($posts as $po)
                     <div class="col-md-12">
                         <div class="latest-post">
-                            <img src="images/biodegum/about-01.jpg" class="img-responsive" alt="">
-                            <h4><a href="#">Standard Post with Image</a></h4>
+                            <img src="images/biodegum/posts/{{$po['img_header']}}" class="img-responsive" alt="">
+                            <h4><a href="#">{{$po['title']}}</a></h4>
                             <div class="post-details">
-                                <span class="date"><strong>31</strong> <br>Dec , 2014</span>
+                                <span class="date">{{$po->date()}}</span>
                                 
                             </div>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                            <p>{{$po->content}}</p>
                             <a href="#" class="btn btn-primary">Read More</a>
                         </div>
                     </div>
-                    <div class="col-md-12">
-                        <div class="latest-post">
-                            <img src="images/biodegum/about-02.jpg" class="img-responsive" alt="">
-                            <h4><a href="#">Standard Post with Image</a></h4>
-                            <div class="post-details">
-                                <span class="date"><strong>17</strong> <br>Feb , 2014</span>
-                                
-                            </div>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                            <a href="#" class="btn btn-primary">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="latest-post">
-                            <img src="images/biodegum/about-03.jpg" class="img-responsive" alt="">
-                            <h4><a href="#">Standard Post with Image</a></h4>
-                            <div class="post-details">
-                                <span class="date"><strong>08</strong> <br>Aug , 2014</span>
-                                
-                            </div>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                            <a href="#" class="btn btn-primary">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="latest-post">
-                            <img src="images/biodegum/about-01.jpg" class="img-responsive" alt="">
-                            <h4><a href="#">Standard Post with Image</a></h4>
-                            <div class="post-details">
-                                <span class="date"><strong>08</strong> <br>Aug , 2014</span>
-                                
-                            </div>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                            <a href="#" class="btn btn-primary">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="latest-post">
-                            <img src="images/biodegum/about-02.jpg" class="img-responsive" alt="">
-                            <h4><a href="#">Standard Post with Image</a></h4>
-                            <div class="post-details">
-                                <span class="date"><strong>08</strong> <br>Aug , 2014</span>
-                                
-                            </div>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                            <a href="#" class="btn btn-primary">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="latest-post">
-                            <img src="images/biodegum/about-03.jpg" class="img-responsive" alt="">
-                            <h4><a href="#">Standard Post with Image</a></h4>
-                            <div class="post-details">
-                                <span class="date"><strong>08</strong> <br>Aug , 2014</span>
-                                
-                            </div>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                            <a href="#" class="btn btn-primary">Read More</a>
-                        </div>
-                    </div>
+                    @endforeach
+                    
                 </div>
             </div>
         </div>

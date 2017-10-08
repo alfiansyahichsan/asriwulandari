@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin\Biodegum;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Log;
 
 class BiodegumController extends Controller
 {
@@ -14,7 +15,9 @@ class BiodegumController extends Controller
      */
     public function index()
     {
-        return view('admin.biodegum.index');
+        $total["posts"] = \App\BiodegumPosts::count();
+        $total["portfolio"] = \App\BiodegumPortfolio::count();
+        return view('admin.biodegum.index')->with('total',$total);
     }
 
     /**
@@ -82,4 +85,5 @@ class BiodegumController extends Controller
     {
         //
     }
+
 }
