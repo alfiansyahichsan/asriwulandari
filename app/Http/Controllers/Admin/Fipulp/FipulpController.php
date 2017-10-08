@@ -16,6 +16,7 @@ class FipulpController extends Controller
     public function index()
     {
         $total["posts"] = \App\FipulpBlog::count();
+        $total["gallery"] = \App\FipulpGallery::count();
         return view('admin.fipulp.index')->with('total',$total);
     }
 

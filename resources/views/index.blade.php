@@ -390,25 +390,7 @@ Home
 
 </div>
 
-<div id="myModal" class="modal fade" role="dialog">
-<div class="modal-dialog">
-	<div class="modal-content">
-		<div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal">&times;</button>
-			<h3 class="modal-title" style="text-align: center; letter-spacing: 3px;">ACHIEVEMENT</h3>
-		</div>
-		<div class="modal-body" style="text-align: center;">
-			<p>{{$acv->title}}</p>
-			<p>{{$acv->detail}}</p>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-success" data-dismiss="modal">
-					<span class='glyphicon glyphicon-remove'></span> Close
-				</button>
-			</div>
-		</div>
-		</div>
-	</div>
-</div>
+
 
 @section('script')
 

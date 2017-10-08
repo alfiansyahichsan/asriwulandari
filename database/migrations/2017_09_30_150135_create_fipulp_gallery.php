@@ -19,6 +19,7 @@ class CreateFipulpGallery extends Migration
             $table->text('title');
             $table->text('subtitle');
             $table->text('description');
+            $table->text('slug');
             $table->timestamps();
             $table->softDeletes();
         });

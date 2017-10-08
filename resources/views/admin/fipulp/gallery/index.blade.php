@@ -1,7 +1,7 @@
 @extends('admin.fipulp.layout.layout')
 
 @section('title')
-Slider
+Gallery
 @endsection
 
 @section('nav2')
@@ -19,7 +19,7 @@ class="active"
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Slider
+        Gallery
         <small>Panel</small>
       </h1>
       <ol class="breadcrumb">
@@ -35,13 +35,13 @@ class="active"
             <div id ="flash" class="col-md-12">
             </div>
 
-            <div class="col-md-12" id="successflash">
+            <div class="col-md-12" id="successflash" style="display: none;">
                 <div class="alert alert-success">
                 <h4><i class="icon fa fa-check"></i> Data berhasil diupdate!</h4>
               </div>
             </div>
 
-            <div class="col-md-12" id="failflash">
+            <div class="col-md-12" id="failflash" style="display: none;">
                 <div class="alert alert-danger">
                 <h4><i class="icon fa fa-check"></i> Data gagal diupdate!</h4>
                 <div id="failerror"></div>
@@ -65,15 +65,15 @@ class="active"
                         </thead>
                         <tbody id="datalist">
                             @foreach($images as $img)
-                            <tr id="row{{$img['id_gallery']}}">
+                            <tr id="row{{$img['id']}}">
                                 <td> {{$img['title']}} </td>
                                 <td><img src="{{asset('/images/fipulp/gallery/'.$img->image())}}" width="300"> </td>
                                 <td> 
-                                    <button type="button" class="btn btn-info editModal" data-toggle="modal" data-target="#editModal" value="{{$img['id_gallery']}}">
+                                    <button type="button" class="btn btn-info editModal" data-toggle="modal" data-target="#editModal" value="{{$img['id']}}">
                                     Edit
                                     </button>
 
-                                    <button type="button" class="btn btn-danger deleteModal" data-toggle="modal" data-target="#deleteModal" value="{{$img['id_gallery']}}">
+                                    <button type="button" class="btn btn-danger deleteModal" data-toggle="modal" data-target="#deleteModal" value="{{$img['id']}}">
                                     Delete
                                     </button>
                                 </td>
@@ -103,7 +103,7 @@ class="active"
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Edit Slider</h4>
+                <h4 class="modal-title">Edit Gallery</h4>
               </div>
               <div class="modal-body">
                 <form id="form" name="form">
@@ -113,10 +113,12 @@ class="active"
                     <label for="title">Judul</label>
                     <input type="text" class="form-control" id="title" placeholder="Judul" name="title">
                   </div>
-                  <!--<div class="form-group">
-                    <label for="content">Konten</label>
-                    <textarea class="form-control" id="content" name="content"></textarea>
-                  </div>-->
+
+                  <div class="form-group">
+                    <label for="subtitle">Sub Judul</label>
+                    <input type="text" class="form-control" id="subtitle" placeholder="Sub Judul" name="subtitle">
+                  </div>
+
                   <div class="form-group">
                     <label for="fileimage">Image</label>
                     <input type="file" name="file-1" onChange="validateJPG(this)" value="blank">
@@ -124,12 +126,8 @@ class="active"
                   </div>
                   
                   <div class="form-group">
-                    <label for="link">Link</label>
-                    <input type="text" class="form-control" id="link" name="link">
-                  </div>
-                  <div class="form-group">
-                    <label for="order">Urutan</label>
-                    <input type="number" class="form-control" id="order" placeholder="1" name="order">
+                    <label for="description">Deskripsi</label>
+                    <textarea class="form-control" id="description" name="description"></textarea>
                   </div>
                   <!--<div class="form-group">
                     <label for="dark">Dark</label>

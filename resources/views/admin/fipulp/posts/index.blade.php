@@ -49,13 +49,13 @@ class="active"
             <div id ="flash" class="col-md-12">
             </div>
 
-            <div class="col-md-12" id="successflash">
+            <div class="col-md-12" id="successflash" style="display: none;">
                 <div class="alert alert-success">
                 <h4><i class="icon fa fa-check"></i> Data berhasil diupdate!</h4>
               </div>
             </div>
 
-            <div class="col-md-12" id="failflash">
+            <div class="col-md-12" id="failflash" style="display: none;">
                 <div class="alert alert-danger">
                 <h4><i class="icon fa fa-check"></i> Data gagal diupdate!</h4>
                 <div id="failerror"></div>
@@ -80,16 +80,16 @@ class="active"
                         </thead>
                         <tbody id="datalist">
                             @foreach($posts as $po)
-                            <tr id="row{{$po['id_fipulp_blog']}}">
+                            <tr id="row{{$po['id']}}">
                                 <td> {{$po['title']}} </td>
                                 <td> {{$po['created_at']}} </td>
                                 <td><img src="{{asset('/images/fipulp/posts/'.$po->image())}}" width="100"> </td>
                                 <td> 
-                                    <button type="button" class="btn btn-info editModal" data-toggle="modal" data-target="#editModal" value="{{$po['id_fipulp_blog']}}">
+                                    <button type="button" class="btn btn-info editModal" data-toggle="modal" data-target="#editModal" value="{{$po['id']}}">
                                     Edit
                                     </button>
 
-                                    <button type="button" class="btn btn-danger deleteModal" data-toggle="modal" data-target="#deleteModal" value="{{$po['id_fipulp_blog']}}">
+                                    <button type="button" class="btn btn-danger deleteModal" data-toggle="modal" data-target="#deleteModal" value="{{$po['id']}}">
                                     Delete
                                     </button>
                                 </td>
@@ -119,7 +119,7 @@ class="active"
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Edit News</h4>
+                <h4 class="modal-title">Edit Post</h4>
               </div>
               <div class="modal-body">
                 <form id="form" name="form">
@@ -131,27 +131,17 @@ class="active"
                     <input type="text" class="form-control" id="title" placeholder="Judul" name="title">
                   </div>
                   <div class="form-group">
+                    <label for="title">Sub Judul</label>
+                    <input type="text" class="form-control" id="subtitle" placeholder="Sub Judul" name="subtitle">
+                  </div>
+                  <div class="form-group">
                     <label for="content">Konten</label>
                     <textarea class="form-control" id="content" name="content"></textarea>
                   </div>
                   <div class="form-group">
-                    <label>Date</label>
-                    <div class="input-group date">
-                      <div class="input-group-addon">
-                        <i class="fa fa-calendar"></i>
-                      </div>
-                      <input type="text" class="form-control pull-right" id="date" name="date">
-                    </div>
-                    <!-- /.input group -->
-                  </div>
-                  <div class="form-group">
-                    <label for="hashtag">Hashtag</label>
-                    <input type="text" class="form-control" id="hashtag" placeholder="Hashtag" name="hashtag" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="fileimage">Image (Recommended 1280x720 px)</label>
+                    <label for="img_header">Image (Recommended 1280x720 px)</label>
                     <input type="file" name="file-1" onChange="validateJPG(this)" value="blank">
-                    <a href="#" id="fileimage" target="_blank">Download</a>
+                    <a href="#" id="img_header" target="_blank">Download</a>
                   </div>
                   
                   <input type="submit" value="submit" style="display:none;">

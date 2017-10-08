@@ -1,34 +1,32 @@
 <script>
-  $(function () {
-    $("#successflash").hide();
-    $("#failflash").hide();
-  });
-    var table = $("#example1").DataTable({
-        responsive:true
-    });
+  // $(function () {
+  //   $("#successflash").hide();
+  //   $("#failflash").hide();
+  // });
+    var table = $("#example1").DataTable();
     $('#date').datepicker({
        format: 'yyyy-m-d',
        defaultDate: "{{date('Y-m-d')}}"
     });
 
     /* Ajax Start */
-    var url = "{{URL::Route('fipulpdashboard.posts')}}";
+    var url = "{{URL::Route('posts.index')}}";
     var uploadurl = "{{URL::Route('upload')}}";
 
     //display modal form for task editing
     $("#datalist").on('click', '.editModal', function(){
         var id = $(this).val();
-        $.get(url + '/' + id, function (data) {
+        $.get(url + '/' + id + '/edit', function (data) {
             //success data
-            // console.log(data);
+            console.log(data);
             $("#fileimage").hide();
-            $('#id').val(data.idnews);
-            $('#hashtag').val(data.hashtag);
+            $('#id').val(data.id);
             $('#title').val(data.title);
+            $('#subtitle').val(data.subtitle);
+            $('#img_header').val(data.img_header);
             CKEDITOR.instances.content.setData(data.content);
-            $('#date').val(data.date);
-            if(data.image != null){
-                $("#fileimage").attr("href", "{{asset('forsa/news/')}}/"+data.image);
+            if(data.img_header != ""){
+                $("#fileimage").attr("href", "{{asset('images/fipulp/posts/')}}/"+data.img_header);
                 $("#fileimage").show();
             }
             
@@ -69,9 +67,8 @@
 
         var formData = {
             title : $('#title').val(),
+            subtitle : $('#subtitle').val(),
             content:CKEDITOR.instances['content'].getData(),
-            hashtag:$('#hashtag').val(),
-            date:$('#date').val(),
             file:"",
             
         }
@@ -85,9 +82,6 @@
             type = "PUT"; //for updating existing resource
             my_url = url+'/' + id;
         }
-
-        console.log(formData);
-
         
         $.ajax({
             type: "POST",
@@ -103,22 +97,20 @@
                     data: formData,
                     dataType: 'json',
                     success: function (data) {
-                        console.log(data);
-
                         var newData = [
                             data.title,
-                            data.date,
-                            data.hashtag,
-                            '<img src="{{asset('forsa/news/')}}/'+data.image+'" width="100">',
-                            '<button type="button" class="btn btn-info editModal" data-toggle="modal" data-target="#editModal" value="'+data.idnews+'">Edit</button> <button type="button" class="btn btn-danger deleteModal" data-toggle="modal" data-target="#deleteModal" value="'+data.idnews+'">Delete</button>'
+                            data.created_at,
+                            '<img src="{{asset('images/fipulp/posts/')}}/'+data.img_header+'" width="100">',
+                            '<button type="button" class="btn btn-info editModal" data-toggle="modal" data-target="#editModal" value="'+data.id+'">Edit</button> <button type="button" class="btn btn-danger deleteModal" data-toggle="modal" data-target="#deleteModal" value="'+data.id+'">Delete</button>'
                             ];
+
 
                         if (state == "add"){ //if user added a new record
                             var newRow = table.row.add(newData).draw().node();
-                            $(newRow).attr("id","row"+data.idnews);
+                            $(newRow).attr("id","row"+data.id);
                         }else{ //if user updated an existing record
-
                             table.row("#row" + id).data(newData).draw(false);
+                            window.location.reload();
                         }
 
                         $('#form').trigger("reset");
@@ -163,8 +155,9 @@
             success: function (data) {
                 console.log(data);
                 table.row("#row" + data.idnews).remove().draw(false);
-                 $('#flash').html($('#successflash').html());
+                $('#flash').html($('#successflash').html());
                 $('#deleteModal').modal("hide");
+                window.location.reload();
             },
             error: function (data) {
                 console.log('Error:', data);

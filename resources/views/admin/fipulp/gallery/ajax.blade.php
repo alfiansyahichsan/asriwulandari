@@ -1,38 +1,37 @@
 <script>
-  $(function () {
-    $("#successflash").hide();
-    $("#failflash").hide();
-  });
-    var table = $("#example1").DataTable({
-        "order": [[ 2, "asc" ]],
-        responsive:true
-    });
+  // $(function () {
+  //   $("#successflash").hide();
+  //   $("#failflash").hide();
+  // });
+    // var table = $("#example1").DataTable({
+    //     "order": [[ 2, "asc" ]],
+    //     responsive:true
+    // });
+
+    var table = $("#example1").DataTable();
 
     /* Ajax Start */
-    var url = "{{URL::Route('fipulpdashboard.gallery')}}";
+    var url = "{{URL::Route('gallery.index')}}";
     var uploadurl = "{{URL::Route('upload')}}";
 
     //display modal form for task editing
     $("#datalist").on('click', '.editModal', function(){
         var id = $(this).val();
-        $.get(url + '/' + id, function (data) {
+        $.get(url + '/' + id + '/edit', function (data) {
             //success data
-            //console.log(data);
             $("#fileimage").hide();
-            $('#id').val(data.idslider);
-            $('#link').val(data.link);
+            $('#id').val(data.id);
             $('#title').val(data.title);
-            $('#order').val(data.order);
-            //$('#content').val(data.content);
-            //$('#dark').val(data.dark);
-            //$('#position').val(data.position);
-            if(data.image != null){
-                $("#fileimage").attr("href", "{{asset('forsa/slider/')}}/"+data.image);
+            $('#subtitle').val(data.subtitle);
+            $('#description').val(data.description);
+            // $('#image_source').val(data.image_source);
+            if(data.image_source != ''){
+                $("#fileimage").attr("href", "{{asset('/images/fipulp/gallery')}}/"+data.image_source);
                 $("#fileimage").show();
             }
             
             $('#btn-save').val("update");
-        }) 
+        })
     });
 
     //display modal form for creating new task
@@ -68,10 +67,11 @@
         var formData = {
             title : $('#title').val(),
             //content:$('#content').val(),
-            link:$('#link').val(),
-            order:$('#order').val(),
+            subtitle:$('#subtitle').val(),
+            description:$('#description').val(),
             //dark:$('#dark').val(),
             //position:$('#position').val(),
+            // image_source:"",
             file:"",
             
         }
@@ -86,9 +86,6 @@
             my_url = url+'/' + id;
         }
 
-        console.log(formData);
-
-        
         $.ajax({
             type: "POST",
             url: uploadurl,
@@ -104,26 +101,22 @@
                     dataType: 'json',
                     success: function (data) {
                         console.log(data);
-
                         var newData = [
                             data.title,
-                            '<img src="{{asset('forsa/slider/')}}/'+data.image+'" width="300">',
-                            data.order,
-                            '<button type="button" class="btn btn-info editModal" data-toggle="modal" data-target="#editModal" value="'+data.idslider+'">Edit</button> <button type="button" class="btn btn-danger deleteModal" data-toggle="modal" data-target="#deleteModal" value="'+data.idslider+'">Delete</button>'
+                            '<img src="{{asset('images/fipulp/gallery/')}}/'+data.image_source+'" width="300">',
+                            '<button type="button" class="btn btn-info editModal" data-toggle="modal" data-target="#editModal" value="'+data.id+'">Edit</button> <button type="button" class="btn btn-danger deleteModal" data-toggle="modal" data-target="#deleteModal" value="'+data.id+'">Delete</button>'
                             ];
-
                         if (state == "add"){ //if user added a new record
                             var newRow = table.row.add(newData).draw().node();
-                            $(newRow).attr("id","row"+data.idslider);
+                            $(newRow).attr("id","row"+data.id);
                         }else{ //if user updated an existing record
-
                             table.row("#row" + id).data(newData).draw(false);
+                            window.location.reload();
                         }
 
                         $('#form').trigger("reset");
                         $('#editModal').modal('hide');
                         $('#flash').html($('#successflash').html());
-                        
                     },
                     error: function (data) {
                         $('#editModal').modal('hide');
@@ -162,8 +155,9 @@
             success: function (data) {
                 console.log(data);
                 table.row("#row" + data.idslider).remove().draw(false);
-                 $('#flash').html($('#successflash').html());
+                $('#flash').html($('#successflash').html());
                 $('#deleteModal').modal("hide");
+                window.location.reload();
             },
             error: function (data) {
                 console.log('Error:', data);

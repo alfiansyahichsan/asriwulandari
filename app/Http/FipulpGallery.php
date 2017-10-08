@@ -9,7 +9,7 @@ class FipulpGallery extends Model
 {
     use SoftDeletes;
     protected $table = 'fipulp_gallery';
-	protected $primaryKey = 'id_gallery';
+	protected $primaryKey = 'id';
 
     public function image() {
         if ($this->image_source == "") {
