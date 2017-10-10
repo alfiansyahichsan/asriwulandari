@@ -83,7 +83,7 @@ class="active"
                             <tr id="row{{$bl['id']}}">
                                 <td> {{$bl['title']}} </td>
                                 <td> {{$bl['created_at']}} </td>
-                                <td><img src="{{asset('/images/biodegum/posts/'.$bl->image())}}" width="100"> </td>
+                                <td><img src="{{asset('/images/asriw/posts/'.$bl->image())}}" width="100"> </td>
                                 <td> 
                                     <button type="button" class="btn btn-info editModal" data-toggle="modal" data-target="#editModal" value="{{$bl['id']}}">
                                     Edit
@@ -140,8 +140,8 @@ class="active"
                   </div>
                   <div class="form-group" id="file-container">
                         <label for="file">Main Image</label>
-                        <input type="file" name="file" onChange="validateJPG(this)" id="file" required>
-                        <br><input type='text' class='form-control' id='filename' disabled style="display:none;">
+                        <input type="file" name="file-1" onChange="validateJPG(this)" id="file" required>
+                        <br><input type='text' class='form-control' id='img_header' disabled style="display:none;">
                     </div>
                   
                   <input type="submit" value="submit" style="display:none;">

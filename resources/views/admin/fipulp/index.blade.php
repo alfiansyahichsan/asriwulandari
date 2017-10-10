@@ -83,7 +83,7 @@ Dashboard
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
-            </div><a href="{{URL::Route('posts.index')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            </div><a href="{{URL::Route('fipulp.posts.index')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -98,7 +98,7 @@ Dashboard
             </div>
             <div class="icon">
               <i class="ion ion-images"></i>
-            </div><a href="{{URL::Route('gallery.index')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            </div><a href="{{URL::Route('fipulp.gallery.index')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->

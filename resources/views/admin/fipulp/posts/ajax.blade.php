@@ -10,7 +10,7 @@
     });
 
     /* Ajax Start */
-    var url = "{{URL::Route('posts.index')}}";
+    var url = "{{URL::Route('fipulp.posts.index')}}";
     var uploadurl = "{{URL::Route('upload')}}";
 
     //display modal form for task editing
