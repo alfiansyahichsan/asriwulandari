@@ -10,7 +10,7 @@
     var table = $("#example1").DataTable();
 
     /* Ajax Start */
-    var url = "{{URL::Route('blog.index')}}";
+    var url = "{{URL::Route('journal.index')}}";
     
 
     //display modal form for task editing
@@ -21,10 +21,7 @@
             console.log(data);
             $('#id').val(data.id);
             $('#title').val(data.title);
-            $('#filename').css('display', 'inline').val(data.image);
-            $('#link').val(data.link);
-            $('#category').val(data.category);
-            CKEDITOR.instances.deskripsi.setData(data.deskripsi);
+            $('#detail').val(data.detail);
             $('#method').val('PUT');
             $('#file').prop('required', false);
             
@@ -41,7 +38,6 @@
     //display modal form for creating new task
     $('#btn-add').click(function(){
         $('#form').trigger("reset");
-        CKEDITOR.instances.deskripsi.setData("");
         $('#btn-save').val("add");
     });
 
@@ -69,7 +65,9 @@
         }
 
         var formData = {
-            deskripsi:CKEDITOR.instances['deskripsi'].getData(),
+            name:$('#name').val(),
+            email:$('#email').val(),
+            vacancy:$('#vacancy').val(),
         }
 
         //used to determine the http verb to use [add=POST], [update=PUT]
@@ -85,7 +83,7 @@
         $.ajax({    
             type: 'POST',
             url: my_url,
-            data: formData,
+            data: new FormData($('#form')[0]),
             processData: false,
             contentType: false,
             success: function (data) {
@@ -93,16 +91,14 @@
 
                 var newData = [
                     data.title,
-                    '<img src="{{asset('storage/asriw/blog/')}}/'+data.image+'" width="300">',
-                    data.link,
-                    data.category,
+                    data.detail,
                     '<button type="button" class="btn btn-info editModal" data-toggle="modal" data-target="#editModal" value="'+data.id+'">Edit</button> <button type="button" class="btn btn-danger deleteModal" data-toggle="modal" data-target="#deleteModal" value="'+data.id+'">Delete</button>'
                 ];
 
                 if (state == "add"){ //if user added a new record
                     var newRow = table.row.add(newData).draw().node();
                     $(newRow.cells[2]).addClass('text-center');
-                    $(newRow.cells[1]).addClass('text-center');
+                    $(newRow.cells[1]).addClass();
                     $(newRow).attr("id","row"+data.id);
 
                 }else{ //if user updated an existing record

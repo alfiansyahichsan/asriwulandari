@@ -1397,7 +1397,7 @@ header.nav-block-left {
 
 .portfolio .portfolio-item .thumb img{
     width: 100%;
-    height: auto;
+    height: 350px;
     display: block;
 }
 
@@ -4188,4 +4188,8 @@ address p {
 
 .test p:hover{
     color: white;
+}
+
+.team-member .team-img img{
+    height: 400px;
 }

@@ -7,7 +7,7 @@ Home
 <div class="wrapper">
 
     <!--hero section-->
-    <div  class="parallax text-center vertical-align" style="background-image: url('images/bum.jpg');">
+    <div  class="parallax text-center vertical-align" style="background-image: url('{{asset('storage/asriw/page/'.$page)}}');">
         <div class="container-mid">
             <div class="container">
                 <div class="banner-title light-txt">
@@ -62,7 +62,7 @@ Home
 
     <section>
         <!--parallax-->
-        <div class="parallax-inner" style="background-image: url(images/bum.jpg);">
+        <div class="parallax-inner" style="background-image: url('{{asset('storage/asriw/page/'.$achieve)}}');">
             <div class="container">
                 <div class="row">
                     <div class="heading-title-alt text-center m-bot-0 inline-block">
@@ -70,8 +70,9 @@ Home
                         @foreach($achievement as $key=>$acv)
                          <div class="col-md-4 animate-box" data-animate-effect="fadeInRight">
 							<div class="img-shadow test yuhu">
-								<a data-toggle="modal" href="#myModal" data-id="{{$acv->id}}"><img src="images/icons/bdg.png" style="height: 60px;">
-								<p>{{$acv->title}}</p></a>
+                                <a data-toggle="modal" data-id="{{$acv->id}}" data-title="{{$acv->title}}" data-detail="{{$acv->detail}}" class="myModal" href="#myModal"><img src="images/icons/bdg.png" style="height: 60px;">
+                                <p>{{$acv->title}}</p></a>
+
 							</div>
 						</div>
 		                @endforeach 
@@ -136,7 +137,7 @@ Home
     </section>
 <hr>
     <section data-section="journal">
-       <div class="page-content" style="background-image: url(images/4.png);">
+        <div class="parallax-inner" style="background-image: url('{{asset('storage/asriw/page/'.$journal)}}');">
                 <div class="container">
                     <div class="row">
                         <div class="m-bot-20 inline-block">
@@ -147,45 +148,21 @@ Home
                         <!--title-->
                     </div>
                         <div class="career-list">
+                            @foreach($jurnal as $jrn)
                             <div class="col-md-4 ">
                                 <div class="featured-item career-box">
                                     <div class="title text-uppercase">
-                                        <h4 class="m-bot-0">Software Engineer</h4>
-                                        <p>London</p>
+                                        <h2 class="m-bot-0">{{$jrn->title}}</h2>
+                                        <h5>Asri Peni Wulandari</h5>
                                     </div>
                                     <div class="desc">
-                                        <p>We are a team of multi-skilled and curious digital specialists who are always up for a challenge and learning as fast as. We are a team of multi-skilled and curious digital specialists who are always ready to do.</p>
+                                        <p>{{str_limit($jrn->detail,100)}}</p>
                                     </div>
-                                    <a href="#" class="p-read-more">Read More <i class="icon-arrows_slim_right"></i></a>
+                                    <a href="{{URL::route('detailjurnal',$jrn->id)}}" class="p-read-more">Read More <i class="icon-arrows_slim_right"></i></a>
                                 </div>
                             </div>
-
-                            <div class="col-md-4 ">
-                                <div class="featured-item career-box">
-                                    <div class="title text-uppercase">
-                                        <h4 class="m-bot-0">Brand Manager</h4>
-                                        <p>new york</p>
-                                    </div>
-                                    <div class="desc">
-                                       <p> We are a team of multi-skilled and curious digital specialists who are always up for a challenge and learning as fast as. We are a team of multi-skilled and curious digital specialists who are always ready to do.</p>
-                                    </div>
-                                    <a href="#" class="p-read-more">Read More <i class="icon-arrows_slim_right"></i></a>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 ">
-                                <div class="featured-item career-box">
-                                    <div class="title text-uppercase">
-                                        <h4 class="m-bot-0">Php Developer</h4>
-                                        <p>melbourn</p>
-                                    </div>
-                                    <div class="desc">
-                                       <p> We are a team of multi-skilled and curious digital specialists who are always up for a challenge and learning as fast as. We are a team of multi-skilled and curious digital specialists who are always ready to do.</p>
-                                    </div>
-                                    <a href="#" class="p-read-more">Read More <i class="icon-arrows_slim_right"></i></a>
-                                </div>
-                            </div>
-
+                            @endforeach
+                            
                         </div>
 
                     </div>
@@ -304,80 +281,22 @@ Home
 
                         <div class="portfolio col-4 portfolio-gallery gutter m-bot-0 inline-block">
 
-                            <div class="portfolio-item cat1 cat3 ">
+                            @foreach($gallery as $gal)
+                            <div class="portfolio-item ">
                                 <div class="thumb">
-                                    <img src="images/img_team_2.jpg" alt="">
+                                    <img src="{{asset('storage/asriw/gallery/'.$gal->image)}}" alt="{{$gal->title}}">
                                     <div class="portfolio-hover">
                                         <div class="action-btn">
-                                            <a href="images/img_team_2.jpg" class="popup-gallery" title="Title 1"> <i class="icon-basic_magnifier"></i>  </a>
+                                            <a href="{{asset('storage/asriw/gallery/'.$gal->image)}}" class="popup-gallery" title="{{$gal->title}}"> <i class="icon-basic_magnifier"></i>  </a>
                                         </div>
                                         <div class="portfolio-description">
-                                            <h4><a href="images/img_team_2.jpg" class="popup-gallery2" title="Title 1">lightbox view</a></h4>
-                                            <p><a href="#">category</a></p>
+                                            <h4><a href="{{asset('storage/asriw/gallery/'.$gal->image)}}" class="popup-gallery2" title="{{$gal->title}}">{{$gal->title}}</a></h4>
+                                            <p><a href="#"> </a></p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="portfolio-item cat2 cat4 ">
-                                <div class="thumb">
-                                    <img src="images/img_team_1.jpg" alt="">
-                                    <div class="portfolio-hover">
-                                        <div class="action-btn">
-                                            <a href="images/img_team_1.jpg" class="popup-gallery" title="Title 2"> <i class="icon-basic_magnifier"></i>  </a>
-                                        </div>
-                                        <div class="portfolio-description">
-                                            <h4><a href="images/img_team_1.jpg" class="popup-gallery2" title="Title 2">lightbox view</a></h4>
-                                            <p><a href="#">category</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="portfolio-item cat3 cat5 ">
-                                <div class="thumb">
-                                    <img src="images/img_team_2.jpg" alt="">
-                                    <div class="portfolio-hover">
-                                        <div class="action-btn">
-                                            <a href="images/img_team_2.jpg" class="popup-gallery" title="Title 3"> <i class="icon-basic_magnifier"></i>  </a>
-                                        </div>
-                                        <div class="portfolio-description">
-                                            <h4><a href="images/img_team_2.jpg" class="popup-gallery2" title="Title 3">lightbox view</a></h4>
-                                            <p><a href="#">category</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="portfolio-item cat3 cat5 ">
-                                <div class="thumb">
-                                    <img src="images/img_team_1.jpg" alt="">
-                                    <div class="portfolio-hover">
-                                        <div class="action-btn">
-                                            <a href="images/img_team_1.jpg" class="popup-gallery" title="Title 3"> <i class="icon-basic_magnifier"></i>  </a>
-                                        </div>
-                                        <div class="portfolio-description">
-                                            <h4><a href="images/img_team_1.jpg" class="popup-gallery2" title="Title 3">lightbox view</a></h4>
-                                            <p><a href="#">category</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="portfolio-item cat3 cat5 ">
-                                <div class="thumb">
-                                    <img src="images/img_team_2.jpg" alt="">
-                                    <div class="portfolio-hover">
-                                        <div class="action-btn">
-                                            <a href="images/img_team_2.jpg" class="popup-gallery" title="Title 3"> <i class="icon-basic_magnifier"></i>  </a>
-                                        </div>
-                                        <div class="portfolio-description">
-                                            <h4><a href="images/img_team_2.jpg" class="popup-gallery2" title="Title 3">lightbox view</a></h4>
-                                            <p><a href="#">category</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
 
                         </div>
 
@@ -390,7 +309,26 @@ Home
 
 </div>
 
-
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title" style="text-align: center; letter-spacing: 3px;">ACHIEVEMENT</h3>
+            </div>
+            <div class="modal-body" style="text-align: center;">
+                <textarea type="text" name="title" id="title" style="border: none; text-align: center; width: 100%;"></textarea>
+                <br>
+                <textarea type="text" name="detail" id="detail" value="" style="border: none; text-align: center; width: 100%; height: 500px; border: none;"></textarea><br><br>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">
+                        <span class='glyphicon glyphicon-remove'></span> Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 @section('script')
 

@@ -20,11 +20,19 @@ class PagesController extends Controller
         $about = \App\Models\Asriwulandari\About::get();
         $riset = \App\Models\Asriwulandari\HasilRiset::get();
         $gallery = \App\Models\Asriwulandari\Gallery::get();
-    	return view('index',[
+        $page = \App\Models\Asriwulandari\PageSetting::where('title', 'slider')->first()->image;
+        $achieve = \App\Models\Asriwulandari\PageSetting::where('title', 'achievement')->first()->image;
+        $journal = \App\Models\Asriwulandari\PageSetting::where('title', 'journal')->first()->image;
+        $jurnal = \App\Models\Asriwulandari\Journal::get();
+        return view('index',[
             'achievement' => $achievement,
             'about' => $about,
             'riset' => $riset,
             'gallery' => $gallery,
+            'page' => $page,
+            'achieve' => $achieve,
+            'journal' => $journal,
+            'jurnal' => $jurnal,
         ]);
     }
 
@@ -58,9 +66,16 @@ class PagesController extends Controller
         ]);
     }
 
-    public function detailjurnal()
+    public function detailjurnal($param)
     {
-    	return view('detailjurnal');
+    	$jurnal = \App\Models\Asriwulandari\Journal::where('id', $param)->first();
+        $next = \App\Models\Asriwulandari\Journal::where('id','>',$param)->first();
+        $previous = \App\Models\Asriwulandari\Journal::where('id','<',$param)->first();
+        return view('detailjurnal', [
+            'jurnal' => $jurnal,
+            'next' => $next,
+            'previous' => $previous
+        ]);
     }
 
     public function blog()

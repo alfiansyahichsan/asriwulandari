@@ -17,7 +17,7 @@ class CreateAsriachievementTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('slug');
-            $table->string('detail');
+            $table->text('detail');
             $table->timestamps();
         });
     }

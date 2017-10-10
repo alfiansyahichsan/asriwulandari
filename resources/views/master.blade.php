@@ -58,6 +58,13 @@
 	    <!--common scripts-->
 	<script src="{{ asset('js/asriw/js/scripts.js?6') }}"></script>
 	
-
+    <script type="text/javascript">
+        $(document).on("click", ".myModal", function () {
+         var title = $(this).data('title');
+         var detail = $(this).data('detail');
+         $(".modal-body #title").val( title );
+         $(".modal-body #detail").val( detail );
+    });
+    </script>
 	</body>
 </html>

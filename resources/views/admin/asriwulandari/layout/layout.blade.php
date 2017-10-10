@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="{{asset('lte-admin/dist/css/skins/_all-skins.min.css')}}">
   <link rel="icon" href="">
 
+<link rel="stylesheet" href="{{asset('lte-admin/plugins/datatables/extensions/Responsive/css/dataTables.responsive.css')}}">
   <!-- HTML5 Shim and Respond.js')}} IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js')}} doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -56,7 +57,7 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="{{asset('lte-admin/dist/img/avatar2.png')}}" class="user-image" alt="User Image">
-              <span class="hidden-xs">admin</span>
+              <span class="hidden-xs">{{Auth::user()->name}}</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -120,6 +121,10 @@
 <script src="{{asset('lte-admin/plugins/fastclick/fastclick.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('lte-admin/dist/js/app.min.js')}}"></script>
+<script src="{{asset('lte-admin/plugins/datatables/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('lte-admin/plugins/datatables/dataTables.bootstrap.min.js')}}"></script>
+<script src="{{asset('lte-admin/plugins/datatables/dataTables.bootstrap.min.js')}}"></script>
+<script src="{{asset('lte-admin/plugins/datatables/extensions/Responsive/js/dataTables.responsive.js')}}"></script>
 
 @yield('js')
 </body>

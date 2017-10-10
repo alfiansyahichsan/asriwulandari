@@ -11,12 +11,8 @@
 @section('js')
 
     <meta name="_token" content="{!! csrf_token() !!}" />
-    <script src="{{asset('lte-admin/plugins/datatables/jquery.dataTables.min.js')}}"></script>
-    <script src="{{asset('lte-admin/plugins/datatables/dataTables.bootstrap.min.js')}}"></script>
-    <script src="{{asset('lte-admin/plugins/datatables/dataTables.bootstrap.min.js')}}"></script>
     <script src="{{asset('lte-admin/plugins/datepicker/bootstrap-datepicker.js')}}"></script>
     <script src="{{asset('lte-admin/plugins/ckeditor/ckeditor.js')}}"></script>
-    <script src="{{asset('js/bootstrap-select.js')}}"></script>
     <script>
       $(function () {
         CKEDITOR.replace( 'deskripsi', {
@@ -61,7 +57,7 @@
                             <tr>
                                 <th>Title</th>
                                 <th>Deskripsi</th>
-                                <th>Path</th>
+                                <th>Image</th>
                                 <th>Link</th>
                                 <th>Category</th>
                                 <th>Aksi</th>
@@ -72,7 +68,7 @@
                                 <tr id="row{{$bl->id}}">
                                     <td>{{$bl->title}}</td>
                                     <td>{{$bl->deskripsi}}</td>
-                                    <td class="text-center"><img src="{{asset('storage/asriw/blog/'.$bl->path)}}" width="300"></td>
+                                    <td class="text-center"><img src="{{asset('storage/asriw/blog/'.$bl->image)}}" width="300"></td>
                                     <td>{{$bl->link}}</td>
                                     <td>{{$bl->category}}</td>
                                     <td class="text-center">

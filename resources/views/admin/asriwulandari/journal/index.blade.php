@@ -1,10 +1,10 @@
 @extends('admin.asriwulandari.layout.layout')
 
 @section('title')
-    Gallery
+    Jurnal
 @endsection
 
-@section('nav4')
+@section('nav7')
     class="active"
 @endsection
 
@@ -13,7 +13,7 @@
     <meta name="_token" content="{!! csrf_token() !!}" />
     <script src="{{asset('lte-admin/plugins/datatables/jquery.dataTables.min.js')}}"></script>
     <script src="{{asset('lte-admin/plugins/datatables/dataTables.bootstrap.min.js')}}"></script>
-    @include("admin.asriwulandari.hasilriset.ajax")
+    @include("admin.asriwulandari.journal.ajax")
 
 @endsection
 
@@ -21,7 +21,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Hasil Riset
+            Jurnal
             <small>Panel</small>
         </h1>
     </section>
@@ -44,31 +44,26 @@
                             <thead>
                             <tr>
                                 <th>Title</th>
-                                <th>Deskripsi</th>
-                                <th>Image</th>
-                                <th>Link</th>
+                                <th>Detail</th>
                                 <th>Aksi</th>
                             </tr>
                             </thead>
                             <tbody id="datalist">
-                                 @foreach($hasilriset as $hr)
-                                <tr id="row{{$hr->id}}">
-                                    <td>{{$hr->title}}</td>
-                                    <td>{{$hr->deskripsi}}</td>
-                                    <td class="text-center"><img src="{{asset('storage/asriw/hasilriset/'.$hr->image)}}" width="300"></td>
-                                    <td>{{$hr->link}}</td>
+                                @foreach($journal as $jrnl)
+                                <tr id="row{{$jrnl->id}}">
+                                    <td>{{$jrnl->title}}</td>
+                                    <td style="word-wrap: break-word;">{{ str_limit($jrnl->detail,30) }}</td>
                                     <td class="text-center">
-                                        <button type="button" class="btn btn-info editModal" data-toggle="modal" data-target="#editModal" value="{{$hr->id}}">
+                                        <button type="button" class="btn btn-info editModal" data-toggle="modal" data-target="#editModal" value="{{$jrnl->id}}">
                                             Edit
                                         </button>
 
-                                        <button type="button" class="btn btn-danger deleteModal" data-toggle="modal" data-target="#deleteModal" value="{{$hr->id}}">
+                                        <button type="button" class="btn btn-danger deleteModal" data-toggle="modal" data-target="#deleteModal" value="{{$jrnl->id}}">
                                             Delete
                                         </button>
                                     </td>
                                 </tr>
                                 @endforeach
-                            
                             </tbody>
                         </table>
 
@@ -93,7 +88,7 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title">Add Hasil Riset</h4>
+                        <h4 class="modal-title">Add Jurnal</h4>
                     </div>
                     <div class="modal-body">
                         <form id="form" name="form">
@@ -103,18 +98,9 @@
                                 <label for="title">Judul</label>
                                 <input type="text" class="form-control" id="title" placeholder="Judul" name="title" required>
                             </div>
-                            <div class="form-group">
-                                <label for="title">Deskripsi</label>
-                                <textarea type="text" class="form-control" id="deskripsi" placeholder="Deskripsi riset Anda" name="deskripsi" required></textarea>
-                            </div>
-                            <div class="form-group" id="file-container">
-                                <label for="file">Main Image</label>
-                                <input type="file" name="file" onChange="validateJPG(this)" id="file" required>
-                                <br><input type='text' class='form-control' id='filename' disabled style="display:none;">
-                            </div>
-                            <div class="form-group">
-                                <label for="title">Link</label>
-                                <textarea type="text" class="form-control" id="link" placeholder="Link website/media hasil riset Anda" name="link" required></textarea>
+                            <div class="form-group" style="word-wrap: break-word;">
+                                <label for="title">Detail</label>
+                                <textarea type="text" class="form-control" style="width: 100%; height: 400px;" id="detail" placeholder="detail jurnal" name="detail" required></textarea>
                             </div>
 
                             <input type="submit" value="submit" style="display:none;">

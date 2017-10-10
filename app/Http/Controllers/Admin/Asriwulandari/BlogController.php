@@ -42,15 +42,15 @@ class BlogController extends Controller
         $blogs = new Blog;
         $blogs->title = $request->input('title');
         $blogs->deskripsi = $request->input('deskripsi');
-        $blogs->path = '';
+        $blogs->image = '';
         $blogs->link = $request->input('link');
         $blogs->category = $request->input('category');
         $blogs->save();
 
         $filename = $blogs->id;
 
-        $blogs->path =  $filename . '-' . rand(1,9) . '.' . $request->file('file')->getClientOriginalName();
-        Storage::disk('local')->put('public/asriw/blog/' . $blogs->path, File::get($request->file('file')));
+        $blogs->image =  $filename . '-' . rand(1,9) . '.' . $request->file('file')->getClientOriginalName();
+        Storage::disk('local')->put('public/asriw/blog/' . $blogs->image, File::get($request->file('file')));
         
         $blogs->save();
 
@@ -96,9 +96,9 @@ class BlogController extends Controller
         $blogs->category = $request->input('category');
 
         if ($request->file('file') != null) {
-            Storage::disk('local')->delete('public/asriw/blog/' . $blogs->path);
-            $blogs->path =  $blogs->id . '-' . str_slug($blogs->title) . '-' . rand(1,9) . '.' . $request->file('file')->getClientOriginalName();
-            Storage::disk('local')->put('public/asriw/blog/' . $blogs->path, File::get($request->file('file')));
+            Storage::disk('local')->delete('public/asriw/blog/' . $blogs->image);
+            $blogs->image =  $blogs->id . '-' . str_slug($blogs->title) . '-' . rand(1,9) . '.' . $request->file('file')->getClientOriginalName();
+            Storage::disk('local')->put('public/asriw/blog/' . $blogs->image, File::get($request->file('file')));
         }
 
         $blogs->save();
@@ -115,7 +115,7 @@ class BlogController extends Controller
     public function destroy($id)
     {
         $blogs = Blog::where('id', $id)->first();
-        Storage::disk('local')->delete('public/asriw/blog/' . $blogs->path);
+        Storage::disk('local')->delete('public/asriw/blog/' . $blogs->image);
         $blogs->delete();
 
         return response()->json($blogs);

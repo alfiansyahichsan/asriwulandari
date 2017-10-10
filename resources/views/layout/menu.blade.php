@@ -1,6 +1,9 @@
 @extends('master')
 @section('layout')
-<!--header start-->
+
+    <!--header end-->
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+	
     <header id="header" class=" header-full-width  transparent-header ">
 
         <div class="header-sticky light-header- dark-header header-bottom-border- ">
@@ -9,7 +12,7 @@
 
                     <!--logo start-->
                     <a href="index.html" class="logo-brand">
-                        <img class="retina" src="images/logo/asri.png" alt=""/>
+                        <img class="retina" src="{{asset('images/logo/asri.png')}}" alt=""/>
                     </a>
                     <!--logo end-->
                     <!--mega menu start-->
@@ -27,10 +30,8 @@
 
     </header>
 
-    <!--header end-->
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
 @yield('content');
-</body>
+
 <!--footer 1 start -->
     <footer id="gtco-footer" role="contentinfo">
 	<div class="container">
@@ -53,5 +54,5 @@
 
 	</div>
 </footer>
-
+</body>
 @endsection()

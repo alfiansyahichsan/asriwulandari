@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAsriblogsTable extends Migration
+class CreateAsrijournalsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,12 @@ class CreateAsriblogsTable extends Migration
      */
     public function up()
     {
-        Schema::create('asriblogs', function (Blueprint $table) {
+        Schema::create('asrijournals', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('title');
-            $table->text('deskripsi');
-            $table->string('image');
-            $table->string('link');
-            $table->string('category');
+            $table->string('title');
+            $table->string('slug');
+            $table->string('detail');
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
@@ -32,6 +29,6 @@ class CreateAsriblogsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('asriblogs');
+        Schema::dropIfExists('asrijournals');
     }
 }

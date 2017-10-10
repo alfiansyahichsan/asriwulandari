@@ -38,11 +38,11 @@
             </a>
         </li>
         <li @yield('nav7')>
-            <a href="#">
+            <a href="{{URL::Route('journal.index')}}">
             <i class="fa fa-file-text-o"></i> <span>Jurnal</span>
             </a>
         </li>
-        <li @yield('nav7')>
+        <li @yield('nav8')>
             <a href="{{URL::Route('pagesetting.index')}}">
             <i class="fa fa-file-text-o"></i> <span>Page Setting</span>
             </a>

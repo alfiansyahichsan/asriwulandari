@@ -13,7 +13,6 @@
     <meta name="_token" content="{!! csrf_token() !!}" />
     <script src="{{asset('lte-admin/plugins/datatables/jquery.dataTables.min.js')}}"></script>
     <script src="{{asset('lte-admin/plugins/datatables/dataTables.bootstrap.min.js')}}"></script>
-    <script src="{{asset('lte-admin/plugins/datatables/dataTables.bootstrap.min.js')}}"></script>
     @include("admin.asriwulandari.achievement.ajax")
 
 @endsection

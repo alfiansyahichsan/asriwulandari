@@ -1,34 +1,35 @@
 @extends('master')
 @section('layout')
-<!--header start-->
-        <header id="header" class=" header-full-width ">
 
-            <div class="header-sticky light-header " style="background-color: #58914C !important;">
+    <!--header end-->
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+	
+    <header id="header" class=" header-full-width  transparent-header " style="background-color: #58914C !important;">
 
-                <div class="container">
-                    <div id="massive-menu" class="menuzord">
+        <div class="header-sticky light-header- dark-header header-bottom-border- ">
+            <div class="container">
+                <div id="massive-menu" class="menuzord">
 
-                        <!--logo start-->
-                        <a href="{{URL::Route('home')}}" class="logo-brand">
-                            <img class="retina" src="{{ asset('images/logo/asri.png') }}" alt=""/>
-                        </a>
-                        <!--logo end-->
-
-                        <!--mega menu start-->
-                        <ul class="menuzord-menu pull-right">
-                            <li><a href="{{URL::Route('home')}}" data-nav-section="home">Home</a></li>
-                        </ul>
-                        <!--mega menu end-->
-
-                    </div>
+                    <!--logo start-->
+                    <a href="index.html" class="logo-brand">
+                        <img class="retina" src="{{asset('images/logo/asri.png')}}" alt=""/>
+                    </a>
+                    <!--logo end-->
+                    <!--mega menu start-->
+                    <ul class="menuzord-menu pull-right light">
+                        <li><a href="{{URL::route('home')}}" data-nav-section="home">Home</a></li>
+                    </ul>
+                    <!--mega menu end-->
                 </div>
             </div>
+        </div>
 
-        </header>
+    </header>
 
 @yield('content');
 
-<footer id="gtco-footer" role="contentinfo">
+<!--footer 1 start -->
+    <footer id="gtco-footer" role="contentinfo">
 	<div class="container">
 		
 		<div class="row copyright">
@@ -49,5 +50,5 @@
 
 	</div>
 </footer>
-
+</body>
 @endsection()

@@ -4,11 +4,10 @@ namespace App\Http\Controllers\Admin\Asriwulandari;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Asriwulandari\PageSetting;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\File;
+use App\Models\Asriwulandari\Journal;
 
-class PagesController extends Controller
+
+class JournalController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +16,8 @@ class PagesController extends Controller
      */
     public function index()
     {
-        $pages = PageSetting::get();
-        return view('admin.asriwulandari.pagesetting.index', ['pages' => $pages]);
+        $journal = Journal::get();
+        return view('admin.asriwulandari.journal.index', ['journal' => $journal]);
     }
 
     /**
@@ -39,19 +38,13 @@ class PagesController extends Controller
      */
     public function store(Request $request)
     {
-        $pages = new PageSetting;
-        $pages->title = $request->input('title');
-        $pages->image = '';
-        $pages->save();
+        $journal = new Journal;
+        $journal->title = $request->input('title');
+        $journal->slug = str_slug($request->input('title'));
+        $journal->detail = $request->input('detail');
+        $journal->save();
 
-        $filename = $pages->id;
-
-        $pages->image =  $filename . '-' . $request->file('file')->getClientOriginalName();
-        Storage::disk('local')->put('public/asriw/page/' . $pages->image, File::get($request->file('file')));
-        
-        $pages->save();
-
-        return response()->json($pages);
+        return response()->json($journal);
     }
 
     /**
@@ -73,8 +66,8 @@ class PagesController extends Controller
      */
     public function edit($id)
     {
-        $pages = PageSetting::where('id', $id)->first();
-        return response()->json($pages);
+        $journal = Journal::where('id', $id)->first();
+        return response()->json($journal);
     }
 
     /**
@@ -86,17 +79,14 @@ class PagesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $pages = PageSetting::where('id', $id)->first();
+        $journal = Journal::where('id', $id)->first();
+        $journal->title = $request->input('title');
+        $journal->slug = str_slug($request->input('title'));
+        $journal->detail = $request->input('detail');
 
-        if ($request->file('file') != null) {
-            Storage::disk('local')->delete('public/asriw/page/' . $pages->image);
-            $pages->image =  $pages->id . '-' . $request->file('file')->getClientOriginalName();
-            Storage::disk('local')->put('public/asriw/page/' . $pages->image, File::get($request->file('file')));
-        }
+        $journal->save();
 
-        $pages->save();
-
-        return response()->json($pages);
+        return response()->json($journal);
     }
 
     /**
@@ -107,6 +97,9 @@ class PagesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $journal = Journal::where('id', $id)->first();
+        $journal->delete();
+
+        return response()->json($journal);
     }
 }
