@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Asriwulandari\Blog;
 use Illuminate\Support\Facades\File;
+use Image;
 
 use Illuminate\Support\Debug\Dumper;
 
@@ -47,17 +48,28 @@ class BlogController extends Controller
         $blogs->title = $input['title'];
         $blogs->subtitle = $input['subtitle'];
         $blogs->content = $input['content'];
-        $blogs->image = '';
+        $blogs->img_header = '';
         $blogs->created_by = Auth::user()->id;
         $blogs->status = 1;
         $blogs->save();
 
-        $filename = $blogs->id;
+        $file=json_decode($input['file']);
 
-        $blogs->image =  $filename . '-' . rand(1,9) . '.' . $request->file('file')->getClientOriginalName();
-        Storage::disk('local')->put('public/asriw/blog/' . $blogs->image, File::get($request->file('file')));
+        if($file[0] != ""){
+            $ext = explode(".", $file[0]);
+            $tmpFile = storage_path('app\asriwulandari\tmp\\').$file[0];
+            $newFile = 'posts-'.$blogs->id.'.'.$ext[1];
+            $img = Image::make($tmpFile);
+            $img->resize(1280, null, function ($constraint) {
+                $constraint->aspectRatio();
+            });
+            $img->save(public_path('images/asriw/posts/').$newFile);
+            unlink($tmpFile);
+            $blogs->img_header = $newFile;
+            $blogs->save();
+        }
 
-        $blogs->save();
+        $blogs->image_source = $blogs->image();
         return response()->json($blogs);
     }
 
@@ -99,11 +111,27 @@ class BlogController extends Controller
         $blogs->subtitle = $input['subtitle'];
         $blogs->content = $input['content'];
 
-        if ($request->file('file') != null) {
-            Storage::disk('local')->delete('public/asriw/blog/' . $blogs->image);
-            $blogs->image =  $blogs->id . '-' . rand(1,9) . '.' . $request->file('file')->getClientOriginalName();
-            Storage::disk('local')->put('public/asriw/blog/' . $blogs->image, File::get($request->file('file')));
+        // if ($request->file('file') != null) {
+        //     Storage::disk('local')->delete('public/asriw/blog/' . $blogs->image);
+        //     $blogs->image =  $blogs->id . '-' . rand(1,9) . '.' . $request->file('file')->getClientOriginalName();
+        //     Storage::disk('local')->put('public/asriw/blog/' . $blogs->image, File::get($request->file('file')));
+        // }
+
+        $file=json_decode($input['file']);
+        // dump($input);
+
+        if ($file[0] != "") {
+            Storage::disk('local')->delete(public_path('images/asriw/posts/') . $blogs->img_header);
+            $tmpFile = storage_path('app\asriwulandari\tmp\\').$file[0];
+            $newimg = Image::make($tmpFile);
+            $newimg->resize(1280, null, function ($constraint) {
+                $constraint->aspectRatio();
+            });
+            $newimg->save(public_path('images/asriw/posts/').$blogs->img_header);
+            unlink($tmpFile);
         }
+
+        // dump($blogs);
 
         $blogs->save();
 

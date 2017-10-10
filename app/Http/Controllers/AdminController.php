@@ -6,6 +6,8 @@ use Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+use Illuminate\Support\Debug\Dumper;
+
 class AdminController extends Controller
 {
 	public function __construct()

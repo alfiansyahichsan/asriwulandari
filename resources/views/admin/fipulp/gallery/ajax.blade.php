@@ -11,7 +11,7 @@
     var table = $("#example1").DataTable();
 
     /* Ajax Start */
-    var url = "{{URL::Route('gallery.index')}}";
+    var url = "{{URL::Route('fipulp.gallery.index')}}";
     var uploadurl = "{{URL::Route('upload')}}";
 
     //display modal form for task editing

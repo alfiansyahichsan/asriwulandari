@@ -19,23 +19,26 @@
         $.get(url + '/' + id + '/edit', function (data) {
             //success data
             console.log(data);
+            $("#fileimage").hide();
             $('#id').val(data.id);
             $('#title').val(data.title);
             $('#subtitle').val(data.subtitle);
-            $('#filename').css('display', 'inline').val(data.image);
+            $('#img_header').val(data.img_header);
             CKEDITOR.instances.content.setData(data.content);
-            $('#method').val('PUT');
-            $('#file').prop('required', false);
+            if(data.img_header != ""){
+                $("#fileimage").attr("href", "{{asset('images/asriw/posts/')}}/"+data.img_header);
+                $("#fileimage").show();
+            }
             
             $('#btn-save').val("update");
         }) 
     });
 
-    $('.addModal').on('click', function(){
-        $('#filename').css('display', 'none');
-        $('#file').prop('required', true);
-        $('#method').val('POST');
-    });
+    // $('.addModal').on('click', function(){
+    //     $('#filename').css('display', 'none');
+    //     $('#file').prop('required', true);
+    //     $('#method').val('POST');
+    // });
 
     //display modal form for creating new task
     $('#btn-add').click(function(){
@@ -72,7 +75,6 @@
             subtitle : $('#subtitle').val(),
             content:CKEDITOR.instances['content'].getData(),
             file:"",
-            
         }
 
         //used to determine the http verb to use [add=POST], [update=PUT]
@@ -84,14 +86,16 @@
             type = "PUT"; //for updating existing resource
             my_url = url+'/' + id;
         }
-        
+
+        console.log("ssss");
         $.ajax({
             type: "POST",
             url: uploadurl,
             data:  new FormData($('#form')[0]),
             processData: false,
             contentType: false,
-            success: function (data) {
+            success: function (dataImage) {
+                formData.file = JSON.stringify(dataImage);
                 $.ajax({
                     type: type,
                     url: my_url,
@@ -101,7 +105,7 @@
                         var newData = [
                             data.title,
                             data.created_at,
-                            '<img src="{{asset('storage/asriw/blog/')}}/'+data.image+'" width="100">',
+                            '<img src="{{asset('images/asriw/posts/')}}/'+data.img_header+'" width="100">',
                             '<button type="button" class="btn btn-info editModal" data-toggle="modal" data-target="#editModal" value="'+data.id+'">Edit</button> <button type="button" class="btn btn-danger deleteModal" data-toggle="modal" data-target="#deleteModal" value="'+data.id+'">Delete</button>'
                             ];
 
