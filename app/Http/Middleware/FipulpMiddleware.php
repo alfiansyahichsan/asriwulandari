@@ -17,7 +17,7 @@ class FipulpMiddleware
     public function handle($request, Closure $next)
     {
         if(Auth::check()){
-            if (Auth::user()->role == 4)
+            if (Auth::user()->role == 4 OR 1)
             {   
             return $next($request);
             }

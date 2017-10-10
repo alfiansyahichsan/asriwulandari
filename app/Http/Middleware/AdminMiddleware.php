@@ -17,7 +17,7 @@ class AdminMiddleware
     public function handle($request, Closure $next)
     {
         if(Auth::check()){
-            if (Auth::user()->role == 2)
+            if (Auth::user()->role == 2 OR 1)
             {   
             return $next($request);
             }

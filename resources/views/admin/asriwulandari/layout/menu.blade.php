@@ -33,7 +33,7 @@
         </li>
         
         <li @yield('nav6')>
-            <a href="{{URL::Route('blog.index')}}">
+            <a href="{{URL::Route('asriwulandari.blog.index')}}">
             <i class="fa fa-file-text-o"></i> <span>Blog</span>
             </a>
         </li>

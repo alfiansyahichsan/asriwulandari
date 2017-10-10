@@ -37,7 +37,7 @@ Route::group(['namespace' => 'Admin\Asriwulandari','middleware' => ['auth','asri
 	Route::resource('asriw/about', 'AboutController');
 	Route::resource('asriw/pagesetting', 'PagesController');
 	Route::resource('asriw/hasilriset', 'HasilRisetController');
-	Route::resource('asriw/blog', 'BlogController');
+	Route::resource('asriw/blog', 'BlogController', ['names' => ['index' => 'asriwulandari.blog.index']]);
 	Route::resource('asriw/journal', 'JournalController');
 });
 

@@ -15,11 +15,12 @@ class CreateAsriblogsTable extends Migration
     {
         Schema::create('asriblogs', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('status');
+            $table->integer('created_by');
             $table->text('title');
-            $table->text('deskripsi');
-            $table->string('image');
-            $table->string('link');
-            $table->string('category');
+            $table->text('subtitle');
+            $table->text('img_header');
+            $table->text('content');
             $table->timestamps();
             $table->softDeletes();
         });

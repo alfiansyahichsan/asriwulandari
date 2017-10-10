@@ -1,17 +1,17 @@
 <script>
-    // $(function () {
-    //     $("#successflash").hide();
-    //     $("#failflash").hide();
-    // });
-
-    var successflash = '<div class="col-md-12" id="successflash"><div class="alert alert-success"><h4><i class="icon fa fa-check"></i> Data berhasil diupdate!</h4></div></div>';
-    var failflash = '<div class="col-md-12" id="failflash"><div class="alert alert-danger"><h4><i class="icon fa fa-check"></i> Data gagal diupdate!</h4><div id="failerror"></div></div></div>';
-
+  // $(function () {
+  //   $("#successflash").hide();
+  //   $("#failflash").hide();
+  // });
     var table = $("#example1").DataTable();
+    $('#date').datepicker({
+       format: 'yyyy-m-d',
+       defaultDate: "{{date('Y-m-d')}}"
+    });
 
     /* Ajax Start */
-    var url = "{{URL::Route('blog.index')}}";
-    
+    var url = "{{URL::Route('asriwulandari.blog.index')}}";
+    var uploadurl = "{{URL::Route('upload')}}";
 
     //display modal form for task editing
     $("#datalist").on('click', '.editModal', function(){
@@ -21,15 +21,14 @@
             console.log(data);
             $('#id').val(data.id);
             $('#title').val(data.title);
+            $('#subtitle').val(data.subtitle);
             $('#filename').css('display', 'inline').val(data.image);
-            $('#link').val(data.link);
-            $('#category').val(data.category);
-            CKEDITOR.instances.deskripsi.setData(data.deskripsi);
+            CKEDITOR.instances.content.setData(data.content);
             $('#method').val('PUT');
             $('#file').prop('required', false);
             
             $('#btn-save').val("update");
-        })
+        }) 
     });
 
     $('.addModal').on('click', function(){
@@ -41,12 +40,12 @@
     //display modal form for creating new task
     $('#btn-add').click(function(){
         $('#form').trigger("reset");
-        CKEDITOR.instances.deskripsi.setData("");
+        CKEDITOR.instances.content.setData("");
         $('#btn-save').val("add");
     });
 
     //delete task and remove it from list
-    $("#datalist").on('click', '.deleteModal', function(){
+     $("#datalist").on('click', '.deleteModal', function(){
         var id = $(this).val();
         $('#btndelete').val(id);
     });
@@ -60,74 +59,86 @@
             }
         })
 
-        e.preventDefault();
+        e.preventDefault(); 
 
         var $myForm = $('#form')
         if (!$myForm[0].checkValidity()) {
-            $myForm.find(':submit').click()
-            return;
+          $myForm.find(':submit').click()
+          return;
         }
 
         var formData = {
-            deskripsi:CKEDITOR.instances['deskripsi'].getData(),
+            title : $('#title').val(),
+            subtitle : $('#subtitle').val(),
+            content:CKEDITOR.instances['content'].getData(),
+            file:"",
+            
         }
 
         //used to determine the http verb to use [add=POST], [update=PUT]
         var state = $('#btn-save').val();
+        var type = "POST"; //for creating new resource
         var id = $('#id').val();
         var my_url = url;
         if (state == "update"){
+            type = "PUT"; //for updating existing resource
             my_url = url+'/' + id;
         }
-
-        // console.log(formData);
-
-        $.ajax({    
-            type: 'POST',
-            url: my_url,
-            data: formData,
+        
+        $.ajax({
+            type: "POST",
+            url: uploadurl,
+            data:  new FormData($('#form')[0]),
             processData: false,
             contentType: false,
             success: function (data) {
-                console.log(data);
+                $.ajax({
+                    type: type,
+                    url: my_url,
+                    data: formData,
+                    dataType: 'json',
+                    success: function (data) {
+                        var newData = [
+                            data.title,
+                            data.created_at,
+                            '<img src="{{asset('storage/asriw/blog/')}}/'+data.image+'" width="100">',
+                            '<button type="button" class="btn btn-info editModal" data-toggle="modal" data-target="#editModal" value="'+data.id+'">Edit</button> <button type="button" class="btn btn-danger deleteModal" data-toggle="modal" data-target="#deleteModal" value="'+data.id+'">Delete</button>'
+                            ];
 
-                var newData = [
-                    data.title,
-                    '<img src="{{asset('storage/asriw/blog/')}}/'+data.image+'" width="300">',
-                    data.link,
-                    data.category,
-                    '<button type="button" class="btn btn-info editModal" data-toggle="modal" data-target="#editModal" value="'+data.id+'">Edit</button> <button type="button" class="btn btn-danger deleteModal" data-toggle="modal" data-target="#deleteModal" value="'+data.id+'">Delete</button>'
-                ];
 
-                if (state == "add"){ //if user added a new record
-                    var newRow = table.row.add(newData).draw().node();
-                    $(newRow.cells[2]).addClass('text-center');
-                    $(newRow.cells[1]).addClass('text-center');
-                    $(newRow).attr("id","row"+data.id);
+                        if (state == "add"){ //if user added a new record
+                            var newRow = table.row.add(newData).draw().node();
+                            $(newRow).attr("id","row"+data.id);
+                        }else{ //if user updated an existing record
+                            table.row("#row" + id).data(newData).draw(false);
+                            window.location.reload();
+                        }
 
-                }else{ //if user updated an existing record
+                        $('#form').trigger("reset");
+                        $('#editModal').modal('hide');
+                        $('#flash').html($('#successflash').html());
+                        
+                    },
+                    error: function (data) {
+                        $('#editModal').modal('hide');
+                        var msgError = ""
+                        if (data.responseJSON.error)
+                            msgError = data.responseJSON.error;
+                        $("#failerror").text("Terjadi Kesalahan "+msgError)
+                        $('#flash').html($('#failflash').html());
+                        console.log('Error:', data);
 
-                    table.row("#row" + id).data(newData).draw(false);
-                }
-
-                $('#form').trigger("reset");
-                $('#editModal').modal('hide');
-                $('#flash').html(successflash);
-
+                    }
+                });
+                
             },
-            error: function (data) {
-                $('#editModal').modal('hide');
-                var msgError = ""
-                if (data.responseJSON.error)
-                    msgError = data.responseJSON.error;
-                $("#failerror").text("Terjadi Kesalahan "+msgError)
-                $('#flash').html(failflash);
-                console.log('Error:', data);
+            error: function (dataImage) {
+               
+                console.log('Error Image:', dataImage);
 
             }
-
         });
-
+        
     });
 
     //delete task and remove it from list
@@ -144,31 +155,35 @@
             url: url + '/' + id,
             success: function (data) {
                 console.log(data);
-                table.row("#row" + data.id).remove().draw(false);
-                $('#flash').html(successflash);
+                table.row("#row" + data.idnews).remove().draw(false);
+                $('#flash').html($('#successflash').html());
                 $('#deleteModal').modal("hide");
+                window.location.reload();
             },
             error: function (data) {
                 console.log('Error:', data);
                 $("#failerror").text("Terjadi Kesalahan");
-                $('#flash').html(failflash);
+                $('#flash').html($('#failflash').html());
                 $('#deleteModal').modal("hide");
             }
         });
     });
 
     // Function to preview image after validation
-    function validateJPG(objFileControl) {
-        var file = objFileControl.value;
-        var len = file.length;
-        var size = objFileControl.files[0].size;
-        var ext = file.slice(len - 4, len);
+   function validateJPG(objFileControl) {
+     var file = objFileControl.value;
+     var len = file.length;
+     var size = objFileControl.files[0].size;
+     var ext = file.slice(len - 4, len);
 
-        if (size > 2000000) {
-            alert("File size maximum 2MB");
-            objFileControl.value=""
-        }
-    }
+     if (ext.toUpperCase() != ".JPG" && ext.toUpperCase() != ".PNG" && ext.toUpperCase() != ".JPEG") {
+         alert("Only picture files allowed.");
+         objFileControl.value=""
+     } else if (size > 1000000) {
+         alert("File size maximum 1MB");
+        objFileControl.value=""
+     }
+  }
 
-    /* Ajax End */
+/* Ajax End */
 </script>

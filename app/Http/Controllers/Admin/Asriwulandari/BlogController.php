@@ -4,9 +4,12 @@ namespace App\Http\Controllers\Admin\Asriwulandari;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Asriwulandari\Blog;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use App\Models\Asriwulandari\Blog;
 use Illuminate\Support\Facades\File;
+
+use Illuminate\Support\Debug\Dumper;
 
 class BlogController extends Controller
 {
@@ -39,21 +42,22 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
+        $input = $request->all();
         $blogs = new Blog;
-        $blogs->title = $request->input('title');
-        $blogs->deskripsi = $request->input('deskripsi');
+        $blogs->title = $input['title'];
+        $blogs->subtitle = $input['subtitle'];
+        $blogs->content = $input['content'];
         $blogs->image = '';
-        $blogs->link = $request->input('link');
-        $blogs->category = $request->input('category');
+        $blogs->created_by = Auth::user()->id;
+        $blogs->status = 1;
         $blogs->save();
 
         $filename = $blogs->id;
 
         $blogs->image =  $filename . '-' . rand(1,9) . '.' . $request->file('file')->getClientOriginalName();
         Storage::disk('local')->put('public/asriw/blog/' . $blogs->image, File::get($request->file('file')));
-        
-        $blogs->save();
 
+        $blogs->save();
         return response()->json($blogs);
     }
 
@@ -89,21 +93,22 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $input = $request->all();
         $blogs = Blog::where('id', $id)->first();
-        $blogs->title = $request->input('title');
-        $blogs->deskripsi = $request->input('deskripsi');
-        $blogs->link = $request->input('link');
-        $blogs->category = $request->input('category');
+        $blogs->title = $input['title'];
+        $blogs->subtitle = $input['subtitle'];
+        $blogs->content = $input['content'];
 
         if ($request->file('file') != null) {
             Storage::disk('local')->delete('public/asriw/blog/' . $blogs->image);
-            $blogs->image =  $blogs->id . '-' . str_slug($blogs->title) . '-' . rand(1,9) . '.' . $request->file('file')->getClientOriginalName();
+            $blogs->image =  $blogs->id . '-' . rand(1,9) . '.' . $request->file('file')->getClientOriginalName();
             Storage::disk('local')->put('public/asriw/blog/' . $blogs->image, File::get($request->file('file')));
         }
 
         $blogs->save();
 
         return response()->json($blogs);
+
     }
 
     /**
@@ -115,7 +120,7 @@ class BlogController extends Controller
     public function destroy($id)
     {
         $blogs = Blog::where('id', $id)->first();
-        Storage::disk('local')->delete('public/asriw/blog/' . $blogs->image);
+        Storage::disk('local')->delete('public/asriw/blog/' . $blogs->path);
         $blogs->delete();
 
         return response()->json($blogs);
