@@ -33,13 +33,9 @@ class="active"
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Posts
+        Blog
         <small>Panel</small>
       </h1>
-      <ol class="breadcrumb">
-        <li><a href="{{URL::Route('biodegumdashboard')}}"> Home</a></li>
-        <li class="active">Posts</li>
-      </ol>
     </section>
 
     <!-- Main content -->
@@ -73,8 +69,9 @@ class="active"
                         <thead>
                             <tr>
                                 <th>Judul</th>
-                                <th>Tanggal</th>
-                                <th>Foto</th>
+                                <th>Konten</th>
+                                <th>Link</th>
+                                <th>Image</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -82,7 +79,8 @@ class="active"
                             @foreach($blogs as $bl)
                             <tr id="row{{$bl['id']}}">
                                 <td> {{$bl['title']}} </td>
-                                <td> {{$bl['created_at']}} </td>
+                                <td> {!!$bl['content']!!}</td>
+                                <td> {{$bl['subtitle']}} </td>
                                 <td><img src="{{asset('/images/asriw/posts/'.$bl->image())}}" width="100"> </td>
                                 <td> 
                                     <button type="button" class="btn btn-info editModal" data-toggle="modal" data-target="#editModal" value="{{$bl['id']}}">
@@ -119,7 +117,7 @@ class="active"
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Edit Post</h4>
+                <h4 class="modal-title">Edit Blog</h4>
               </div>
               <div class="modal-body">
                 <form id="form" name="form">
@@ -131,18 +129,17 @@ class="active"
                     <input type="text" class="form-control" id="title" placeholder="Judul" name="title">
                   </div>
                   <div class="form-group">
-                    <label for="title">Sub Judul</label>
-                    <input type="text" class="form-control" id="subtitle" placeholder="Sub Judul" name="subtitle">
-                  </div>
-                  <div class="form-group">
                     <label for="content">Konten</label>
                     <textarea class="form-control" id="content" name="content"></textarea>
                   </div>
-                  <div class="form-group" id="file-container">
-                        <label for="file">Main Image</label>
-                        <input type="file" name="file-1" onChange="validateJPG(this)" id="file" required>
-                        <br><input type='text' class='form-control' id='img_header' disabled style="display:none;">
-                    </div>
+                  <div class="form-group">
+                    <label for="title">Link Video</label>
+                    <input type="text" class="form-control" id="subtitle" placeholder="Link video embed" name="subtitle">
+                  </div>
+                  <div class="form-group">
+                    <label for="img_header">Image (Recommended 1280x720 px)</label>
+                    <input type="file" name="file-1" onChange="validateJPG(this)" value="blank">
+                  </div>
                   
                   <input type="submit" value="submit" style="display:none;">
                 </form>

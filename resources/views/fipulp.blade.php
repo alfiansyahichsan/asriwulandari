@@ -97,7 +97,7 @@
             
             
         	<!-- Begin text carousel intro section -->
-			<section id="text-carousel-intro-section" class="parallax" data-stellar-background-ratio="0.5" style="background-image: url(images/fipulp/slider-bg.jpg);">
+			<section id="text-carousel-intro-section" class="parallax" data-stellar-background-ratio="0.5" style="background-image: url('{{asset('storage/fipulp/page/'.$bgslider)}}');">
 				
 				<div class="container">
 					<div class="caption text-center text-white" data-stellar-ratio="0.7">
@@ -230,7 +230,7 @@
             <!-- End portfolio -->
             
             <!-- Begin team-->
-            <section id="team-section" class="page text-white parallax" data-stellar-background-ratio="0.5" style="background-image: url(images/fipulp/th.jpg);"">
+            <section id="team-section" class="page text-white parallax" data-stellar-background-ratio="0.5" style="background-image: url('{{asset('storage/fipulp/page/'.$bgteam)}}');"">
                 <!-- Begin page header-->
                 <div class="page-header-wrapper">
                     <div class="container">
@@ -457,7 +457,7 @@
     </section>
     <!-- End Latest News Section -->
                 
-          <section id="contact-section" class="page text-white parallax" data-stellar-background-ratio="0.5" style="background-image: url(images/fipulp/map-bg.jpg);">
+          <section id="contact-section" class="page text-white parallax" data-stellar-background-ratio="0.5" style="background-image: url('{{asset('storage/fipulp/page/'.$bgcontact)}}');">
             <div class="cover"></div>
             
                  <!-- Begin page header-->

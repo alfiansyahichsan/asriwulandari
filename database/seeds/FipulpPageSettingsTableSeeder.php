@@ -11,20 +11,21 @@ class FipulpPageSettingsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('biodegum_page_settings')->insert([
+        DB::table('fipulppages')->insert([
             'title' => 'slider',
             'image' => 'biodegum_title.jpg'
         ]);
 
-        DB::table('biodegum_page_settings')->insert([
-            'title' => 'slider',
+        DB::table('fipulppages')->insert([
+            'title' => 'team',
             'image' => 'biodegum_title.jpg'
         ]);
 
 
-        DB::table('biodegum_page_settings')->insert([
-            'title' => 'slider',
+        DB::table('fipulppages')->insert([
+            'title' => 'contact',
             'image' => 'biodegum_title.jpg'
         ]);
 
+    }
 }

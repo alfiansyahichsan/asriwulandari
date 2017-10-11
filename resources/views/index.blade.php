@@ -184,83 +184,58 @@ Home
                         <!--title-->
                     </div>
 
-
                     <!--blog post-->
-                    <div class="post-list-aside">
-                        <div class="post-single">
-                            <div class="col-md-6">
-                                <div class="post-img title-img">
-                                    <img src="images/4.png" alt="">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="post-desk">
-                                    <h3 class="text-uppercase">
-                                        <a href="#">teliti manfaat tanaman rami</a>
-                                    </h3>
-                                    <div class="date">
-                                        <a href="#" class="author">Asri Wulandari</a> oktober 04, 2017
+                        @foreach($blog as $blg)
+                        @if(!empty($blg->subtitle))
+                        <div class="post-list-aside">
+                            <div class="post-single">
+                                <div class="col-md-6">
+                                    <div class="post-img title-img">
+                                        <img src="{{asset('/images/asriw/posts/'.$blg->img_header)}}" alt="{{$blg->img_header}}">
                                     </div>
-                                    <p>
-                                        Phasellus fringilla suscipit risus nec eleifend. Pellentesque eu quam sem, ac malesuada leo sem quam pellente. Awesome sliders give you the opportunity to showcase your content.
-                                        fringilla suscipit risus nec eleifend. Pellentesque eu quam sem, ac malesuada leo sem quam pellente. Awesome sliders give you the opportunity to showcase your content.
-                                    </p>
-                                    <a href="#" class="p-read-more">Read More <i class="icon-arrows_slim_right"></i></a>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="post-desk">
+                                        <h3 class="text-uppercase">
+                                            <a href="{{URL::route('detailblog',$blg->id)}}">{{$blg->title}}</a>
+                                        </h3>
+                                        <div class="date">
+                                            <a href="#" class="author">Asri Wulandari</a> {{date('d M Y', strtotime($blg->created_at))}}
+                                        </div>
+                                        <p>
+                                            {!!str_limit($blg->content,200)!!}
+                                        </p>
+                                        <a href="{{URL::route('detailblog',$blg->id)}}" class="p-read-more">Read More <i class="icon-arrows_slim_right"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!--blog post-->
-                    <div class="post-list-aside">
-                        <div class="post-single">
-                            <div class="col-md-6">
-                                <div class="post-img title-img">
-                                    <img src="images/4.png" alt="">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="post-desk">
-                                    <h3 class="text-uppercase">
-                                        <a href="#">teliti manfaat tanaman rami</a>
-                                    </h3>
-                                    <div class="date">
-                                        <a href="#" class="author">Asri Wulandari</a> oktober 04, 2017
+                        @else
+                        <div class="post-list-aside">
+                            <div class="post-single">
+                                <div class="col-md-6">
+                                    <div class="post-img title-img">
+                                        <iframe width="100%" height="300" src="{{$blg->subtitle}}" frameborder="0" allowfullscreen></iframe>
                                     </div>
-                                    <p>
-                                        Phasellus fringilla suscipit risus nec eleifend. Pellentesque eu quam sem, ac malesuada leo sem quam pellente. Awesome sliders give you the opportunity to showcase your content.
-                                        fringilla suscipit risus nec eleifend. Pellentesque eu quam sem, ac malesuada leo sem quam pellente. Awesome sliders give you the opportunity to showcase your content.
-                                    </p>
-                                    <a href="#" class="p-read-more">Read More <i class="icon-arrows_slim_right"></i></a>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="post-desk">
+                                        <h3 class="text-uppercase">
+                                            <a href="{{URL::route('detailblog',$blg->id)}}">{{$blg->title}}</a>
+                                        </h3>
+                                        <div class="date">
+                                            <a href="#" class="author">Asri Wulandari</a> {{date('d M Y', strtotime($blg->created_at))}}
+                                        </div>
+                                        <p>
+                                            {!!str_limit($blg->content,200)!!}
+                                        </p>
+                                        <a href="{{URL::route('detailblog',$blg->id)}}" class="p-read-more">Read More <i class="icon-arrows_slim_right"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="post-list-aside">
-                        <div class="post-single">
-                            <div class="col-md-6">
-                                <div class="post-img title-img">
-                                    <img src="images/4.png" alt="">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="post-desk">
-                                    <h3 class="text-uppercase">
-                                        <a href="#">teliti manfaat tanaman rami</a>
-                                    </h3>
-                                    <div class="date">
-                                        <a href="#" class="author">Asri Wulandari</a> oktober 04, 2017
-                                    </div>
-                                    <p>
-                                        Phasellus fringilla suscipit risus nec eleifend. Pellentesque eu quam sem, ac malesuada leo sem quam pellente. Awesome sliders give you the opportunity to showcase your content.
-                                        fringilla suscipit risus nec eleifend. Pellentesque eu quam sem, ac malesuada leo sem quam pellente. Awesome sliders give you the opportunity to showcase your content.
-                                    </p>
-                                    <a href="#" class="p-read-more">Read More <i class="icon-arrows_slim_right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                        @endif
+                        @endforeach
 
                 </div>
             </div>

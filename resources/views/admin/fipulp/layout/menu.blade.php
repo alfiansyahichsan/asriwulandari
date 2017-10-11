@@ -20,6 +20,11 @@
             <i class="fa fa-newspaper-o"></i> <span>Posts</span>
             </a>
         </li>
+       <li @yield('nav4')>
+            <a href="{{URL::Route('pages.index')}}">
+            <i class="fa fa-newspaper-o"></i> <span>Page Setting</span>
+            </a>
+        </li>
       </ul>
     </section>
     <!-- /.sidebar -->

@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\BiodegumPosts;
 use App\BiodegumPortfolio;
+use App\BiodegumPages;
 use App\FipulpBlog;
 use App\FipulpGallery;
+use App\FipulpPages;
 use Auth;
 
 use Illuminate\Support\Debug\Dumper;
@@ -24,6 +26,7 @@ class PagesController extends Controller
         $achieve = \App\Models\Asriwulandari\PageSetting::where('title', 'achievement')->first()->image;
         $journal = \App\Models\Asriwulandari\PageSetting::where('title', 'journal')->first()->image;
         $jurnal = \App\Models\Asriwulandari\Journal::get();
+        $blog = \App\Models\Asriwulandari\Blog::orderBy('id', 'DESC')->paginate(3);
         return view('index',[
             'achievement' => $achievement,
             'about' => $about,
@@ -33,6 +36,7 @@ class PagesController extends Controller
             'achieve' => $achieve,
             'journal' => $journal,
             'jurnal' => $jurnal,
+            'blog' => $blog,
         ]);
     }
 
@@ -45,9 +49,17 @@ class PagesController extends Controller
          $portfolio = BiodegumPortfolio::take(6)
             ->orderby('created_at', 'desc')
             ->get();
+        $bgslider = BiodegumPages::where('title', 'slider')->first()->image;
+        $bgportfolio = BiodegumPages::where('title', 'portfolio')->first()->image;
+        $bginstagram = BiodegumPages::where('title', 'instagram')->first()->image;
+        $bgcontact = BiodegumPages::where('title', 'contact')->first()->image;
         return view('biodegum')->with([
             'posts'   => $posts,
-            'portfolio' => $portfolio
+            'portfolio' => $portfolio,
+            'bgslider' => $bgslider,
+            'bgportfolio' => $bgportfolio,
+            'bginstagram' => $bginstagram,
+            'bgcontact' => $bgcontact
         ]);
     }
 
@@ -60,9 +72,15 @@ class PagesController extends Controller
         $gallery = FipulpGallery::take(6)
             ->orderby('created_at', 'desc')
             ->get();
+        $bgslider = \App\Http\FipulpPages::where('title', 'slider')->first()->image;
+        $bgteam = \App\Http\FipulpPages::where('title', 'team')->first()->image;
+        $bgcontact = \App\Http\FipulpPages::where('title', 'contact')->first()->image;
     	return view('fipulp')->with([
             'posts'   => $posts,
-            'gallery' => $gallery
+            'gallery' => $gallery,
+            'bgslider' => $bgslider,
+            'bgteam' => $bgteam,
+            'bgcontact' => $bgcontact,
         ]);
     }
 
@@ -83,9 +101,20 @@ class PagesController extends Controller
     	return view('listblog');
     }
 
-    public function detailblog()
+    public function detailblog($param)
     {
-        return view('detailblog');
+        $detailblog = \App\Models\Asriwulandari\Blog::where('id', $param)->first();
+        $next = \App\Models\Asriwulandari\Blog::where('id','>',$param)->first();
+        $previous = \App\Models\Asriwulandari\Blog::where('id','<',$param)->first();
+        $recent = \App\Models\Asriwulandari\Blog::orderby('id','desc')->whereNotIn('id', [$param])->get();
+        $ab = \App\Models\Asriwulandari\About::get()->first();
+        return view('detailblog',[
+            'detailblog' => $detailblog,
+            'next' => $next,
+            'previous' => $previous,
+            'recent' => $recent,
+            'ab' => $ab
+        ]);
     }
 
 }

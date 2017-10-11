@@ -11,7 +11,7 @@
                 <div id="massive-menu" class="menuzord">
 
                     <!--logo start-->
-                    <a href="index.html" class="logo-brand">
+                    <a href="{{URL::route('home')}}" class="logo-brand">
                         <img class="retina" src="{{asset('images/logo/asri.png')}}" alt=""/>
                     </a>
                     <!--logo end-->

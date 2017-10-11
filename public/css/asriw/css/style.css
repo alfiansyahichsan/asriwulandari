@@ -2077,6 +2077,9 @@ header.nav-block-left {
 
 .post-list-aside .post-img img  {
     border: 2px solid transparent;
+    width: 100%;
+    height: 300px;
+    padding-right: 30px;
 }
 
 .post-list-aside .post-img img.flex-active {
@@ -2105,6 +2108,13 @@ header.nav-block-left {
     .post-slider-thumb .flex-direction-nav .flex-next{
         opacity: 1;
         right: 0px;
+    }
+
+    .post-list-aside .post-img img  {
+    border: 2px solid transparent;
+    width: 100%;
+    height: 250px;
+    padding-right: 0;
     }
 }
 

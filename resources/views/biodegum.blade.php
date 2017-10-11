@@ -143,7 +143,7 @@
             <!-- Carousel inner -->
             <div class="carousel-inner">
                 <div class="item active">
-                    <img class="img-responsive" src="images/biodegum/header-bg-1.jpg" alt="slider">
+                    <img class="img-responsive" src="{{asset('storage/biodegum/page/'.$bgslider)}}" alt="slider">
                     <div class="slider-content">
                         <div class="col-md-12 text-center">
                             <h1 class="animated3">
@@ -214,7 +214,7 @@
     
     
     <!-- Start Portfolio Section -->
-        <section id="portfolio" class="portfolio-section-1">
+        <section id="portfolio" class="portfolio-section-1" style="background-image: url('{{asset('storage/biodegum/page/'.$bgportfolio)}}')">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -283,7 +283,7 @@
 
 
      <!-- Start Instagram Section -->
-    <section id="instagram" class="ig-photos-section">
+    <section id="instagram" class="ig-photos-section" style="background-image: url('{{asset('storage/biodegum/page/'.$bginstagram)}}')">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12">
@@ -310,7 +310,7 @@
     <!-- End Instagram Section -->
   
     <!-- Start Team Member Section -->
-    <section id="team" class="team-member-section">
+    <section id="team" class="team-member-section" style="background-image: url('{{asset('storage/biodegum/page/'.$bgportfolio)}}')">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12">
@@ -461,7 +461,7 @@
     <!-- End Latest News Section -->
 
     <!-- Start Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact" style="background-image: url('{{asset('storage/biodegum/page/'.$bgcontact)}}')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">

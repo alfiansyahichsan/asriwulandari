@@ -14,13 +14,13 @@
 Route::get('/','PagesController@Home')->name('home');
 Route::get('/biodegum','PagesController@biodegum')->name('biodegum');
 Route::get('/blog','PagesController@blog')->name('blog');
-Route::get('/blog/detail','PagesController@detailblog')->name('detailblog');
 Route::get('/fipulp','PagesController@fipulp')->name('fipulp');
 Route::get('/fipulp/','PagesController@fipulp')->name('fipulp');
 Route::get('/admin','AdminController@redirect')->name('admin');
 Route::get('/oops','AdminController@sorry')->name('sorry');
 
 Route::get('/jurnal/{param}', 'PagesController@detailjurnal')->name('detailjurnal');
+Route::get('/blog/detail/{slug}','PagesController@detailblog')->name('detailblog');
 
 //admin
 Route::group(['middleware' => ['auth','superuser']], function() {
@@ -45,12 +45,14 @@ Route::group(['namespace' => 'Admin\Biodegum','middleware' => ['auth','biodegum'
 	Route::get('/biodegum/dashboard',array('as'=>'biodegumdashboard','uses'=>'BiodegumController@index'));
 	Route::resource('/biodegum/dashboard/posts','BiodegumPostsController', ['names' => ['index' => 'biodegum.posts.index']]);
 	Route::resource('/biodegum/dashboard/portfolio','BiodegumPortfolioController', ['names' => ['index' => 'biodegum.portfolio.index']]);
+	Route::resource('/biodegum/dashboard/pages','BiodegumPagesController');
 });
 
 Route::group(['namespace' => 'Admin\Fipulp','middleware' => ['auth','fipulp']], function() {
 	Route::get('/fipulp/dashboard',array('as'=>'fipulpdashboard','uses'=>'FipulpController@index'));
 	Route::resource('/fipulp/dashboard/posts','FipulpPostsController', ['names' => ['index' => 'fipulp.posts.index']]);
 	Route::resource('/fipulp/dashboard/gallery','FipulpGalleryController', ['names' => ['index' => 'fipulp.gallery.index']]);
+	Route::resource('/fipulp/dashboard/pages','FipulpPagesController');
 });
 
 Auth::routes();

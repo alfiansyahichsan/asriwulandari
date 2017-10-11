@@ -46,7 +46,7 @@ class BlogController extends Controller
         $input = $request->all();
         $blogs = new Blog;
         $blogs->title = $input['title'];
-        $blogs->subtitle = $input['subtitle'];
+        $blogs->subtitle = '';
         $blogs->content = $input['content'];
         $blogs->img_header = '';
         $blogs->created_by = Auth::user()->id;
@@ -58,7 +58,7 @@ class BlogController extends Controller
         if($file[0] != ""){
             $ext = explode(".", $file[0]);
             $tmpFile = storage_path('app\asriwulandari\tmp\\').$file[0];
-            $newFile = 'posts-'.$blogs->id.'.'.$ext[1];
+            $newFile = 'blogs-'.$blogs->id.'.'.$ext[1];
             $img = Image::make($tmpFile);
             $img->resize(1280, null, function ($constraint) {
                 $constraint->aspectRatio();
@@ -148,7 +148,13 @@ class BlogController extends Controller
     public function destroy($id)
     {
         $blogs = Blog::where('id', $id)->first();
-        Storage::disk('local')->delete('public/asriw/blog/' . $blogs->path);
+        if(is_null($blogs->img_header)){
+
+        }
+        elseif($blogs->img_header){
+            unlink(public_path('images/asriw/posts/'.$blogs->img_header));
+        }
+        
         $blogs->delete();
 
         return response()->json($blogs);
