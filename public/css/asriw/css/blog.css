@@ -21,6 +21,19 @@
     margin-right: 40px;
     letter-spacing: 1px;
 }
+.yuhu{
+    display: none;
+}
+
+@media screen and (max-width: 860px) {
+    .blog-classic .date{
+        display: none;
+    }
+    .yuhu {
+        padding: 0;
+        display: inline-block;
+    }
+}
 
 .blog-classic .date.right {
     float: right;

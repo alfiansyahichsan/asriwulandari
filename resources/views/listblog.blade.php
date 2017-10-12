@@ -25,6 +25,7 @@ Blog
                                     </div>
                                     <h4 class="text-uppercase"><a href="blog-single.html">{{$blogs->title}}</a></h4>
                                     <ul class="post-meta">
+                                        <li><span class="yuhu">{{date('d M Y', strtotime($blogs->created_at))}}</span></li>
                                         <li><i class="fa fa-user"></i>posted by <a href="#">asri wulandari</a></li>
                                     </ul>
                                     <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.  </p>
