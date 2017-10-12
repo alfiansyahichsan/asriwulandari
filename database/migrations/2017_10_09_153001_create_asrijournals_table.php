@@ -16,8 +16,8 @@ class CreateAsrijournalsTable extends Migration
         Schema::create('asrijournals', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->string('slug');
-            $table->string('detail');
+            $table->text('detail');
+            $table->string('file');
             $table->timestamps();
         });
     }

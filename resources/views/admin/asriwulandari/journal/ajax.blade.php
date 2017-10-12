@@ -22,6 +22,7 @@
             $('#id').val(data.id);
             $('#title').val(data.title);
             $('#detail').val(data.detail);
+            $('#filename').css('display', 'inline').val(data.file);
             $('#method').val('PUT');
             $('#file').prop('required', false);
             
@@ -92,6 +93,7 @@
                 var newData = [
                     data.title,
                     data.detail,
+                    data.file,
                     '<button type="button" class="btn btn-info editModal" data-toggle="modal" data-target="#editModal" value="'+data.id+'">Edit</button> <button type="button" class="btn btn-danger deleteModal" data-toggle="modal" data-target="#deleteModal" value="'+data.id+'">Delete</button>'
                 ];
 

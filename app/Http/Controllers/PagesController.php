@@ -98,7 +98,12 @@ class PagesController extends Controller
 
     public function blog()
     {
-    	return view('listblog');
+        $blog = \App\Models\Asriwulandari\Blog::orderBy('id', 'DESC')->paginate(5);
+        $ab = \App\Models\Asriwulandari\About::get()->first();
+    	return view('listblog', [
+            'blog' => $blog,
+            'ab' => $ab,
+        ]);
     }
 
     public function detailblog($param)

@@ -14,11 +14,12 @@
     width: 100px;
     height: 100px;
     padding-top: 15px;
-    background: #222222;
+    background: #58914C;
     color: #fff;
     font-size: 30px;
     text-align: center;
     margin-right: 40px;
+    letter-spacing: 1px;
 }
 
 .blog-classic .date.right {

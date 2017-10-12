@@ -45,6 +45,7 @@
                             <tr>
                                 <th>Title</th>
                                 <th>Detail</th>
+                                <th>File</th>
                                 <th>Aksi</th>
                             </tr>
                             </thead>
@@ -53,6 +54,7 @@
                                 <tr id="row{{$jrnl->id}}">
                                     <td>{{$jrnl->title}}</td>
                                     <td style="word-wrap: break-word;">{{ str_limit($jrnl->detail,30) }}</td>
+                                    <td>{{$jrnl->file}}</td>
                                     <td class="text-center">
                                         <button type="button" class="btn btn-info editModal" data-toggle="modal" data-target="#editModal" value="{{$jrnl->id}}">
                                             Edit
@@ -101,6 +103,11 @@
                             <div class="form-group" style="word-wrap: break-word;">
                                 <label for="title">Detail</label>
                                 <textarea type="text" class="form-control" style="width: 100%; height: 400px;" id="detail" placeholder="detail jurnal" name="detail" required></textarea>
+                            </div>
+                            <div class="form-group" id="file-container">
+                                <label for="file">File</label>
+                                <input type="file" name="file" id="file" required>
+                                <br><input type='text' class='form-control' id='filename' disabled style="display:none;">
                             </div>
 
                             <input type="submit" value="submit" style="display:none;">

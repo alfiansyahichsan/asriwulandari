@@ -153,12 +153,11 @@ Home
                                 <div class="featured-item career-box">
                                     <div class="title text-uppercase">
                                         <h2 class="m-bot-0">{{$jrn->title}}</h2>
-                                        <h5>Asri Peni Wulandari</h5>
                                     </div>
                                     <div class="desc">
-                                        <p>{{str_limit($jrn->detail,100)}}</p>
+                                        <p>{{str_limit($jrn->detail,300)}}</p>
                                     </div>
-                                    <a href="{{URL::route('detailjurnal',$jrn->id)}}" class="p-read-more">Read More <i class="icon-arrows_slim_right"></i></a>
+                                    <a href="{{asset('storage/asriw/journal/'.$jrn->file)}}" target="_blank" class="p-read-more">Read More <i class="icon-arrows_slim_right"></i></a>
                                 </div>
                             </div>
                             @endforeach
@@ -179,7 +178,7 @@ Home
                     <div class="m-bot-50 inline-block">
                         <!--title-->
                         <div class="heading-title-alt border-short-bottom text-center">
-                            <h2 class="text-uppercase">LATEST BLOG</h2>
+                            <a href="{{URL::route('blog')}}"><h2 class="text-uppercase">LATEST BLOG</h2></a>
                         </div>
                         <!--title-->
                     </div>

@@ -127,7 +127,7 @@ Detail
                                     <li>
                                         <div class="thumb"><a href="#"><img src="{{asset('/images/asriw/posts/'.$re->img_header)}}" alt=""/></a></div>
                                         <div class="w-desk">
-                                            <a href="#">{{$re->title}}</a>
+                                            <a href="{{URL::route('detailblog',$re->id)}}">{{$re->title}}</a>
                                             {{date('d M Y', strtotime($re->created_at))}}
                                         </div>
                                     </li>

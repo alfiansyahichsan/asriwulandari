@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin\Asriwulandari;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Asriwulandari\Journal;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 
 
 class JournalController extends Controller
@@ -40,9 +42,15 @@ class JournalController extends Controller
     {
         $journal = new Journal;
         $journal->title = $request->input('title');
-        $journal->slug = str_slug($request->input('title'));
         $journal->detail = $request->input('detail');
+        $journal->file = '';
         $journal->save();
+
+        $journal->file = $journal->id . '-' . $request->file('file')->getClientOriginalName();
+        
+        $journal->save();
+
+        Storage::disk('local')->put('public/asriw/journal/' . $journal->file, File::get($request->file('file')));
 
         return response()->json($journal);
     }
@@ -81,8 +89,13 @@ class JournalController extends Controller
     {
         $journal = Journal::where('id', $id)->first();
         $journal->title = $request->input('title');
-        $journal->slug = str_slug($request->input('title'));
         $journal->detail = $request->input('detail');
+
+        if ($request->file('file') != null) {
+            Storage::disk('local')->delete('public/asriw/journal/' . $journal->file);
+            $journal->file =  $journal->id . '-' . rand(1,9) . '.' . $request->file('file')->getClientOriginalName();
+            Storage::disk('local')->put('public/asriw/journal/' . $journal->file, File::get($request->file('file')));
+        }
 
         $journal->save();
 
