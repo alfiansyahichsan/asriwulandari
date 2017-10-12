@@ -159,7 +159,7 @@ h6 {
     color: #333;
     font-weight: 600;
     line-height: 1.5;
-    margin: 0 0 30px 0;
+    margin: 0 0 20px 0;
     font-family: 'Abel', sans-serif;
     font-weight: normal;
 }
@@ -2082,6 +2082,12 @@ header.nav-block-left {
     padding-right: 30px;
 }
 
+.post-img iframe{
+    width: 100%;
+    height: 300px;
+    padding-right: 30px;
+}
+
 .post-list-aside .post-img img.flex-active {
     border: 2px solid rgba(0, 0, 0, 0.8);
 }
@@ -2114,6 +2120,12 @@ header.nav-block-left {
     border: 2px solid transparent;
     width: 100%;
     height: 250px;
+    padding-right: 0;
+    }
+
+    .post-img iframe{
+    width: 100%;
+    height: 300px;
     padding-right: 0;
     }
 }
@@ -4188,7 +4200,7 @@ address p {
   transform: rotate(360deg);
 }
 
-.yuhu{
+.yuhuuu{
     padding: 30px 0 10px 0;
 }
 
@@ -4198,6 +4210,9 @@ address p {
 
 .test p:hover{
     color: white;
+}
+.test img{
+    margin: 30px 0 10px 0;
 }
 
 .team-member .team-img img{

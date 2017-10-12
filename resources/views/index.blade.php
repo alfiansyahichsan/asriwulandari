@@ -36,7 +36,7 @@ Home
                             <div class="col-md-6">
                                 <div class="post-slider post-img text-center">
                                     <ul class="slides">
-                                            <img src="{{asset('storage/asriw/about/'.$ab->image)}}" alt="{{$ab->name}}">
+                                            <img src="{{asset('storage/asriw/about/'.$ab->image)}}" alt="{{$ab->name}}" style="object-fit: cover;">
                                     </ul>
                                 </div>
                             </div>
@@ -69,7 +69,7 @@ Home
                         <h1 class="text-uppercase light-txt">ACHIEVEMENT</h1>
                         @foreach($achievement as $key=>$acv)
                          <div class="col-md-4 animate-box" data-animate-effect="fadeInRight">
-							<div class="img-shadow test yuhu">
+							<div class="img-shadow test yuhuuu">
                                 <a data-toggle="modal" data-id="{{$acv->id}}" data-title="{{$acv->title}}" data-detail="{{$acv->detail}}" class="myModal" href="#myModal"><img src="images/icons/bdg.png" style="height: 60px;">
                                 <p>{{$acv->title}}</p></a>
 
@@ -97,12 +97,12 @@ Home
                         <!--title-->
                     </div>
                     @foreach($riset as $key=>$rs)
-                    @if (count($rs) < 1)
+                    @if (count($rs) <= 1)
                     <div class="col-md-3"></div>
                     <div class="col-md-6" style="padding-bottom: 10px;">
                         <div class="team-member">
                             <div class="team-img">
-                                <img src="{{asset('storage/asriw/hasilriset/'.$rs->image)}}" alt=""/>
+                                <img src="{{asset('storage/asriw/hasilriset/'.$rs->image)}}" alt="{{$rs->title}}" style="object-fit: cover;">
                             </div>
                             <div class="team-hover">
                                 <div class="desk">
@@ -185,19 +185,19 @@ Home
 
                     <!--blog post-->
                         @foreach($blog as $blg)
-                        @if(!empty($blg->subtitle))
+                        @if($blg->category == 1)
                         <div class="post-list-aside">
                             <div class="post-single">
                                 <div class="col-md-6">
                                     <div class="post-img title-img">
-                                        <img src="{{asset('/images/asriw/posts/'.$blg->img_header)}}" alt="{{$blg->img_header}}">
+                                        <img src="{{asset('/images/asriw/posts/'.$blg->img_header)}}" alt="{{$blg->img_header}}" style="object-fit: cover;">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="post-desk">
-                                        <h3 class="text-uppercase">
+                                        <h2 class="text-uppercase">
                                             <a href="{{URL::route('detailblog',$blg->id)}}">{{$blg->title}}</a>
-                                        </h3>
+                                        </h2>
                                         <div class="date">
                                             <a href="#" class="author">Asri Wulandari</a> {{date('d M Y', strtotime($blg->created_at))}}
                                         </div>
@@ -219,9 +219,9 @@ Home
                                 </div>
                                 <div class="col-md-6">
                                     <div class="post-desk">
-                                        <h3 class="text-uppercase">
+                                        <h2 class="text-uppercase">
                                             <a href="{{URL::route('detailblog',$blg->id)}}">{{$blg->title}}</a>
-                                        </h3>
+                                        </h2>
                                         <div class="date">
                                             <a href="#" class="author">Asri Wulandari</a> {{date('d M Y', strtotime($blg->created_at))}}
                                         </div>
@@ -249,7 +249,7 @@ Home
                 <div class="container-fluid">
 
                     <div class="row">
-                        <div class="heading-title text-center">
+                        <div class="heading-title-alt border-short-bottom text-center">
                             <h2 class="text-uppercase">GALLERY</h2>
                         </div>
 
@@ -258,7 +258,7 @@ Home
                             @foreach($gallery as $gal)
                             <div class="portfolio-item ">
                                 <div class="thumb">
-                                    <img src="{{asset('storage/asriw/gallery/'.$gal->image)}}" alt="{{$gal->title}}">
+                                    <img src="{{asset('storage/asriw/gallery/'.$gal->image)}}" alt="{{$gal->title}}" style="object-fit: cover;">
                                     <div class="portfolio-hover">
                                         <div class="action-btn">
                                             <a href="{{asset('storage/asriw/gallery/'.$gal->image)}}" class="popup-gallery" title="{{$gal->title}}"> <i class="icon-basic_magnifier"></i>  </a>
@@ -291,9 +291,9 @@ Home
                 <h3 class="modal-title" style="text-align: center; letter-spacing: 3px;">ACHIEVEMENT</h3>
             </div>
             <div class="modal-body" style="text-align: center;">
-                <textarea type="text" name="title" id="title" style="border: none; text-align: center; width: 100%;"></textarea>
+                <textarea type="text" name="title" id="title" style="border: none; text-align: center; width: 100%;" readonly=""></textarea>
                 <br>
-                <textarea type="text" name="detail" id="detail" value="" style="border: none; text-align: center; width: 100%; height: 500px; border: none;"></textarea><br><br>
+                <textarea type="text" name="detail" id="detail" value="" style="border: none; text-align: center; width: 100%; height: 400px; border: none;" readonly=""></textarea><br><br>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-success" data-dismiss="modal">
                         <span class='glyphicon glyphicon-remove'></span> Close

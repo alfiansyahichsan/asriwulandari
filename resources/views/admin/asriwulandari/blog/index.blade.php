@@ -72,6 +72,7 @@ class="active"
                                 <th>Konten</th>
                                 <th>Link</th>
                                 <th>Image</th>
+                                <th>Category</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -79,9 +80,10 @@ class="active"
                             @foreach($blogs as $bl)
                             <tr id="row{{$bl['id']}}">
                                 <td> {{$bl['title']}} </td>
-                                <td> {!!$bl['content']!!}</td>
+                                <td style="width: 500px;"> {!!str_limit($bl['content'], 250)!!}</td>
                                 <td> {{$bl['subtitle']}} </td>
                                 <td><img src="{{asset('/images/asriw/posts/'.$bl->image())}}" width="100"> </td>
+                                <td> {{$bl['category']}} </td>
                                 <td> 
                                     <button type="button" class="btn btn-info editModal" data-toggle="modal" data-target="#editModal" value="{{$bl['id']}}">
                                     Edit
@@ -139,6 +141,13 @@ class="active"
                   <div class="form-group">
                     <label for="img_header">Image (Recommended 1280x720 px)</label>
                     <input type="file" name="file-1" onChange="validateJPG(this)" value="blank">
+                  </div>
+                  <div class="form-group">
+                    <label for="category">Category</label>
+                      <select name="category" class="form-control" id="category">
+                          <option value="1">Image</option>
+                          <option value="2">Video</option>
+                      </select>
                   </div>
                   
                   <input type="submit" value="submit" style="display:none;">

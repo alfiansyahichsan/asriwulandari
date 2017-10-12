@@ -46,8 +46,9 @@ class BlogController extends Controller
         $input = $request->all();
         $blogs = new Blog;
         $blogs->title = $input['title'];
-        $blogs->subtitle = '';
+        $blogs->subtitle = $input['subtitle'];
         $blogs->content = $input['content'];
+        $blogs->category = $input['category'];
         $blogs->img_header = '';
         $blogs->created_by = Auth::user()->id;
         $blogs->status = 1;
@@ -110,6 +111,7 @@ class BlogController extends Controller
         $blogs->title = $input['title'];
         $blogs->subtitle = $input['subtitle'];
         $blogs->content = $input['content'];
+        $blogs->category = $input['category'];
 
         // if ($request->file('file') != null) {
         //     Storage::disk('local')->delete('public/asriw/blog/' . $blogs->image);

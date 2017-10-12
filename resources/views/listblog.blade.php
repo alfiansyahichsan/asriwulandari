@@ -13,7 +13,7 @@ Blog
                         <div class="col-md-8">
                             <!--classic image post-->
                             @foreach($blog as $blogs)
-                            @if(!empty($blogs->subtitle))
+                            @if($blogs->category == 1)
                             <div class="blog-classic">
                                 <div class="date">
                                     {{date('d', strtotime($blogs->created_at))}}
@@ -23,13 +23,13 @@ Blog
                                     <div class="full-width">
                                         <img src="{{asset('/images/asriw/posts/'.$blogs->img_header)}}" alt=""/>
                                     </div>
-                                    <h4 class="text-uppercase"><a href="blog-single.html">{{$blogs->title}}</a></h4>
+                                    <h4 class="text-uppercase"><a href="{{URL::route('detailblog',$blogs->id)}}">{{$blogs->title}}</a></h4>
                                     <ul class="post-meta">
                                         <li><span class="yuhu">{{date('d M Y', strtotime($blogs->created_at))}}</span></li>
                                         <li><i class="fa fa-user"></i>posted by <a href="#">asri wulandari</a></li>
                                     </ul>
-                                    <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.  </p>
-                                    <a href="blog-single.html" class="btn btn-small btn-dark-solid  " style="background-color: #58914C !important;"> Continue Reading</a>
+                                    <p>{!!str_limit($blogs->content, 350)!!}</p>
+                                    <a href="{{URL::route('detailblog',$blogs->id)}}" class="btn btn-small btn-dark-solid  " style="background-color: #58914C !important; letter-spacing: 1.5px;"> Continue Reading</a>
                                 </div>
                             </div>
                             @else
@@ -41,14 +41,15 @@ Blog
                                 </div>
                                 <div class="blog-post">
                                     <p class="video-fit m-bot-50">
-                                        <iframe width="560" height="315" src="{{$blogs->subtitle}}"  allowfullscreen></iframe>
+                                        <iframe width="100%" height="400" src="{{$blogs->subtitle}}"  allowfullscreen></iframe>
                                     </p>
-                                    <h4 class="text-uppercase"><a href="blog-single.html">Video post</a></h4>
+                                    <h4 class="text-uppercase"><a href="{{URL::route('detailblog',$blogs->id)}}">{{$blogs->title}}</a></h4>
                                     <ul class="post-meta">
-                                        <li><i class="fa fa-user"></i>posted by <a href="#">admin</a></li>
+                                        <li><span class="yuhu">{{date('d M Y', strtotime($blogs->created_at))}}</span></li>
+                                        <li><i class="fa fa-user"></i>posted by <a href="#">asri wulandari</a></li>
                                     </ul>
-                                    <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.  </p>
-                                    <a href="blog-single.html" class="btn btn-small btn-dark-solid  "> Continue Reading</a>
+                                    <p>{!!str_limit($blogs->content, 350)!!}</p>
+                                    <a href="{{URL::route('detailblog',$blogs->id)}}" class="btn btn-small btn-dark-solid  " style="background-color: #58914C !important; letter-spacing: 1.5px;"> Continue Reading</a>
                                 </div>
 
                             </div>

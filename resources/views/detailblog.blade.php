@@ -14,12 +14,12 @@ Detail
                             <!--classic image post-->
                             <div class="blog-classic">
                                 <div class="blog-post">
-                                    @if(!empty($detailblog->subtitle))
+                                    @if($detailblog->category == 1)
                                     <div class="full-width">
                                         <img src="{{asset('/images/asriw/posts/'.$detailblog->img_header)}}" alt=""/>
                                     </div>
                                     @else
-                                    <iframe width="100%" height="300" src="{{$detailblog->subtitle}}" frameborder="0" allowfullscreen></iframe>
+                                    <iframe width="100%" height="415" src="{{$detailblog->subtitle}}" frameborder="0" allowfullscreen style="margin-bottom: 20px;"></iframe>
                                     @endif
                                     <h4 class="text-uppercase"><a href="blog-single.html">{{$detailblog->title}}</a></h4>
                                     <ul class="post-meta">
@@ -124,6 +124,7 @@ Detail
                                 </div>
                                 <ul class="widget-latest-post" style="margin-top: -20px;">
                                     @foreach($recent as $re)
+                                    @if($re->category == 1)
                                     <li>
                                         <div class="thumb"><a href="#"><img src="{{asset('/images/asriw/posts/'.$re->img_header)}}" alt=""/></a></div>
                                         <div class="w-desk">
@@ -131,6 +132,15 @@ Detail
                                             {{date('d M Y', strtotime($re->created_at))}}
                                         </div>
                                     </li>
+                                    @else
+                                    <li>
+                                        <div class="thumb"><iframe width="100%" height="300" src="{{$detailblog->subtitle}}" frameborder="0" allowfullscreen></iframe></div>
+                                        <div class="w-desk">
+                                            <a href="{{URL::route('detailblog',$re->id)}}">{{$re->title}}</a>
+                                            {{date('d M Y', strtotime($re->created_at))}}
+                                        </div>
+                                    </li>
+                                    @endif
                                     @endforeach
                                 </ul>
                             </div>

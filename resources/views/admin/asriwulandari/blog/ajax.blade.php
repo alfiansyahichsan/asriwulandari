@@ -24,6 +24,7 @@
             $('#title').val(data.title);
             $('#subtitle').val(data.subtitle);
             $('#img_header').val(data.img_header);
+            $('#category').val(data.category);
             CKEDITOR.instances.content.setData(data.content);
             if(data.img_header != ""){
                 $("#fileimage").attr("href", "{{asset('images/asriw/posts/')}}/"+data.img_header);
@@ -73,6 +74,7 @@
         var formData = {
             title : $('#title').val(),
             subtitle : $('#subtitle').val(),
+            category : $('#category').val(),
             content:CKEDITOR.instances['content'].getData(),
             file:"",
         }
@@ -107,6 +109,7 @@
                             data.content,
                             data.subtitle,
                             '<img src="{{asset('images/asriw/posts/')}}/'+data.img_header+'" width="100">',
+                            data.category,
                             '<button type="button" class="btn btn-info editModal" data-toggle="modal" data-target="#editModal" value="'+data.id+'">Edit</button> <button type="button" class="btn btn-danger deleteModal" data-toggle="modal" data-target="#deleteModal" value="'+data.id+'">Delete</button>'
                             ];
 
