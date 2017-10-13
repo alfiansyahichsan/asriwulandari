@@ -17,7 +17,7 @@ class BiodegumMiddleware
     public function handle($request, Closure $next)
     {
         if(Auth::check()){
-            if (Auth::user()->role == 3 OR 1)
+            if (Auth::user()->role == 3 || Auth::user()->role == 1)
             {   
             return $next($request);
             }
