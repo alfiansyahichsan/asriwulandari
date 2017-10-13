@@ -76,7 +76,7 @@ Dashboard
             <div class="inner">
               <h3></h3>
 
-              <p>Applicants</p>
+              <p>Blog</p>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>
@@ -92,7 +92,7 @@ Dashboard
             <div class="inner">
               <h3></h3>
 
-              <p>Portfolios</p>
+              <p>Journal</p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>

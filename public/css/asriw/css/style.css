@@ -4218,3 +4218,10 @@ address p {
 .team-member .team-img img{
     height: 400px;
 }
+
+.bum a h2:hover{
+    color: #58914C;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}

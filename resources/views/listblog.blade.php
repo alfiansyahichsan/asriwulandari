@@ -26,7 +26,7 @@ Blog
                                     <h4 class="text-uppercase"><a href="{{URL::route('detailblog',$blogs->id)}}">{{$blogs->title}}</a></h4>
                                     <ul class="post-meta">
                                         <li><span class="yuhu">{{date('d M Y', strtotime($blogs->created_at))}}</span></li>
-                                        <li><i class="fa fa-user"></i>posted by <a href="#">asri wulandari</a></li>
+                                        <li><i class="fa fa-user"></i>posted by <a href="#">{{$blogs->created_by}}</a></li>
                                     </ul>
                                     <p>{!!str_limit($blogs->content, 350)!!}</p>
                                     <a href="{{URL::route('detailblog',$blogs->id)}}" class="btn btn-small btn-dark-solid  " style="background-color: #58914C !important; letter-spacing: 1.5px;"> Continue Reading</a>
@@ -46,7 +46,7 @@ Blog
                                     <h4 class="text-uppercase"><a href="{{URL::route('detailblog',$blogs->id)}}">{{$blogs->title}}</a></h4>
                                     <ul class="post-meta">
                                         <li><span class="yuhu">{{date('d M Y', strtotime($blogs->created_at))}}</span></li>
-                                        <li><i class="fa fa-user"></i>posted by <a href="#">asri wulandari</a></li>
+                                        <li><i class="fa fa-user"></i>posted by <a href="#">{{$blogs->created_by}}</a></li>
                                     </ul>
                                     <p>{!!str_limit($blogs->content, 350)!!}</p>
                                     <a href="{{URL::route('detailblog',$blogs->id)}}" class="btn btn-small btn-dark-solid  " style="background-color: #58914C !important; letter-spacing: 1.5px;"> Continue Reading</a>

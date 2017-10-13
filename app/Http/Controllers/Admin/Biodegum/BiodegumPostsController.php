@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin\Biodegum;
 
-use App\BiodegumPosts;
+use App\Models\Asriwulandari\Blog;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -20,7 +20,11 @@ class BiodegumPostsController extends Controller
      */
     public function index()
     {
-        $posts = BiodegumPosts::orderby('created_at','desc')->get();
+        if (Auth::user()->role == 1) {
+            $posts = Blog::get();
+        }
+        else
+        $posts = Blog::orderby('created_at','desc')->where('status', Auth::user()->id)->get();
         return view('admin.biodegum.posts.index', [
             'posts' => $posts
             ]);
@@ -45,13 +49,14 @@ class BiodegumPostsController extends Controller
     public function store(Request $request)
     {
         $input = $request->all();
-        $post = new BiodegumPosts;
+        $post = new Blog;
         $post->title = $input['title'];
         $post->subtitle = $input['subtitle'];
         $post->content = $input['content'];
+        $post->category = $input['category'];
         $post->img_header = "default.jpg";
-        $post->created_by = Auth::user()->id;
-        $post->status = 1;
+        $post->created_by = Auth::user()->name;
+        $post->status = Auth::user()->id;
         $post->save();
 
         $file=json_decode($input['file']);
@@ -64,7 +69,7 @@ class BiodegumPostsController extends Controller
             $img->resize(1280, null, function ($constraint) {
                 $constraint->aspectRatio();
             });
-            $img->save(public_path('images/biodegum/posts/').$newFile);
+            $img->save(public_path('images/asriw/posts/').$newFile);
             unlink($tmpFile);
             $post->img_header = $newFile;
             $post->save();
@@ -93,7 +98,7 @@ class BiodegumPostsController extends Controller
      */
     public function edit($id)
     {   
-        $post = BiodegumPosts::where('id', $id)->first();
+        $post = Blog::where('id', $id)->first();
         return response()->json($post);
     }
 
@@ -107,10 +112,11 @@ class BiodegumPostsController extends Controller
     public function update(Request $request, $id)
     {
         $input = $request->all();
-        $post = BiodegumPosts::where('id', $id)->first();
+        $post = Blog::where('id', $id)->first();
         $post->title = $input['title'];
         $post->subtitle = $input['subtitle'];
         $post->content = $input['content'];
+        $post->category = $input['category'];
 
         $file=json_decode($input['file']);
 
@@ -118,7 +124,7 @@ class BiodegumPostsController extends Controller
             $ext = explode(".", $file[0]);
             $newFile = 'post-'.$post->id.'.'.$ext[1];
 
-            Storage::disk('local')->delete(public_path('images/biodegum/post/') . $post->img_header);
+            Storage::disk('local')->delete(public_path('images/asriw/posts/') . $post->img_header);
             $tmpFile = storage_path('app\asriwulandari\tmp\\').$file[0];
             // dump($tmpFile);
             $newimg = Image::make($tmpFile);
@@ -126,7 +132,7 @@ class BiodegumPostsController extends Controller
                 $constraint->aspectRatio();
             });
             $post->img_header = $newFile;
-            $newimg->save(public_path('images/biodegum/posts/').$post->img_header);
+            $newimg->save(public_path('images/asriw/posts/').$post->img_header);
             unlink($tmpFile);
         }
 
@@ -143,7 +149,7 @@ class BiodegumPostsController extends Controller
      */
     public function destroy($id)
     {
-        $post = BiodegumPosts::where('id', $id)->first();
+        $post = Blog::where('id', $id)->first();
         $post->delete();
         return response()->json($post);
     }

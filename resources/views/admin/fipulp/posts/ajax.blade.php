@@ -24,9 +24,11 @@
             $('#title').val(data.title);
             $('#subtitle').val(data.subtitle);
             $('#img_header').val(data.img_header);
+            $('#category').val(data.category);
+            $('#created_by').val(data.created_by);
             CKEDITOR.instances.content.setData(data.content);
             if(data.img_header != ""){
-                $("#fileimage").attr("href", "{{asset('images/fipulp/posts/')}}/"+data.img_header);
+                $("#fileimage").attr("href", "{{asset('images/asriw/posts/')}}/"+data.img_header);
                 $("#fileimage").show();
             }
             
@@ -68,6 +70,7 @@
         var formData = {
             title : $('#title').val(),
             subtitle : $('#subtitle').val(),
+            category : $('#category').val(),
             content:CKEDITOR.instances['content'].getData(),
             file:"",
             
@@ -99,8 +102,11 @@
                     success: function (data) {
                         var newData = [
                             data.title,
-                            data.created_at,
-                            '<img src="{{asset('images/fipulp/posts/')}}/'+data.img_header+'" width="100">',
+                            data.content,
+                            data.subtitle,
+                            data.created_by,
+                            '<img src="{{asset('images/asriw/posts/')}}/'+data.img_header+'" width="100">',
+                            data.category,
                             '<button type="button" class="btn btn-info editModal" data-toggle="modal" data-target="#editModal" value="'+data.id+'">Edit</button> <button type="button" class="btn btn-danger deleteModal" data-toggle="modal" data-target="#deleteModal" value="'+data.id+'">Delete</button>'
                             ];
 

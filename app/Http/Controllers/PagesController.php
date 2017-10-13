@@ -26,7 +26,7 @@ class PagesController extends Controller
         $achieve = \App\Models\Asriwulandari\PageSetting::where('title', 'achievement')->first()->image;
         $journal = \App\Models\Asriwulandari\PageSetting::where('title', 'journal')->first()->image;
         $jurnal = \App\Models\Asriwulandari\Journal::get();
-        $blog = \App\Models\Asriwulandari\Blog::orderBy('id', 'DESC')->paginate(3);
+        $blog = \App\Models\Asriwulandari\Blog::orderBy('id', 'DESC')->paginate(5);
         return view('index',[
             'achievement' => $achievement,
             'about' => $about,

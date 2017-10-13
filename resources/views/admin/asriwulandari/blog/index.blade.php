@@ -71,6 +71,9 @@ class="active"
                                 <th>Judul</th>
                                 <th>Konten</th>
                                 <th>Link</th>
+                                @if(Auth::user()->role == 1)
+                                <th>Created By</th>
+                                @endif
                                 <th>Image</th>
                                 <th>Category</th>
                                 <th>Aksi</th>
@@ -82,6 +85,9 @@ class="active"
                                 <td> {{$bl['title']}} </td>
                                 <td style="width: 500px;"> {!!str_limit($bl['content'], 250)!!}</td>
                                 <td> {{$bl['subtitle']}} </td>
+                                @if(Auth::user()->role == 1)
+                                <td> {{$bl['created_by']}} </td>
+                                @endif
                                 <td><img src="{{asset('/images/asriw/posts/'.$bl->image())}}" width="100"> </td>
                                 <td> {{$bl['category']}} </td>
                                 <td> 

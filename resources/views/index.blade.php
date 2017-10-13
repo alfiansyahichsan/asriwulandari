@@ -199,7 +199,7 @@ Home
                                             <a href="{{URL::route('detailblog',$blg->id)}}">{{$blg->title}}</a>
                                         </h2>
                                         <div class="date">
-                                            <a href="#" class="author">Asri Wulandari</a> {{date('d M Y', strtotime($blg->created_at))}}
+                                            <a href="#" class="author">{{$blg->created_by}}</a> {{date('d M Y', strtotime($blg->created_at))}}
                                         </div>
                                         <p>
                                             {!!str_limit($blg->content,200)!!}
@@ -223,7 +223,7 @@ Home
                                             <a href="{{URL::route('detailblog',$blg->id)}}">{{$blg->title}}</a>
                                         </h2>
                                         <div class="date">
-                                            <a href="#" class="author">Asri Wulandari</a> {{date('d M Y', strtotime($blg->created_at))}}
+                                            <a href="#" class="author">{{$blg->created_by}}</a> {{date('d M Y', strtotime($blg->created_at))}}
                                         </div>
                                         <p>
                                             {!!str_limit($blg->content,200)!!}

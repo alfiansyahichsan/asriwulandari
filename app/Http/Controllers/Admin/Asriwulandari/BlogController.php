@@ -21,7 +21,12 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $blogs = Blog::get();
+        if (Auth::user()->role == 1) {
+            $blogs = Blog::get();
+        }
+        else
+
+        $blogs = Blog::where('status', Auth::user()->id)->get();
         return view('admin.asriwulandari.blog.index', ['blogs' => $blogs]);
     }
 
@@ -50,8 +55,8 @@ class BlogController extends Controller
         $blogs->content = $input['content'];
         $blogs->category = $input['category'];
         $blogs->img_header = '';
-        $blogs->created_by = Auth::user()->id;
-        $blogs->status = 1;
+        $blogs->created_by = Auth::user()->name;
+        $blogs->status = Auth::user()->id;
         $blogs->save();
 
         $file=json_decode($input['file']);

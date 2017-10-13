@@ -73,8 +73,13 @@ class="active"
                         <thead>
                             <tr>
                                 <th>Judul</th>
-                                <th>Tanggal</th>
-                                <th>Foto</th>
+                                <th>Konten</th>
+                                <th>Link</th>
+                                @if(Auth::user()->role == 1)
+                                <th>Created By</th>
+                                @endif
+                                <th>Image</th>
+                                <th>Category</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -82,8 +87,13 @@ class="active"
                             @foreach($posts as $po)
                             <tr id="row{{$po['id']}}">
                                 <td> {{$po['title']}} </td>
-                                <td> {{$po['created_at']}} </td>
-                                <td><img src="{{asset('/images/fipulp/posts/'.$po->image())}}" width="100"> </td>
+                                <td style="width: 500px;"> {!!str_limit($po['content'], 250)!!}</td>
+                                <td> {{$po['subtitle']}} </td>
+                                @if(Auth::user()->role == 1)
+                                <td> {{$po['created_by']}} </td>
+                                @endif
+                                <td><img src="{{asset('/images/asriw/posts/'.$po->image())}}" width="100"> </td>
+                                <td> {{$po['category']}} </td>
                                 <td> 
                                     <button type="button" class="btn btn-info editModal" data-toggle="modal" data-target="#editModal" value="{{$po['id']}}">
                                     Edit
@@ -139,9 +149,20 @@ class="active"
                     <textarea class="form-control" id="content" name="content"></textarea>
                   </div>
                   <div class="form-group">
+                    <label for="title">Link Video</label>
+                    <input type="text" class="form-control" id="subtitle" placeholder="Link video embed" name="subtitle">
+                  </div>
+                  <div class="form-group">
                     <label for="img_header">Image (Recommended 1280x720 px)</label>
                     <input type="file" name="file-1" onChange="validateJPG(this)" value="blank">
                     <a href="#" id="img_header" target="_blank">Download</a>
+                  </div>
+                  <div class="form-group">
+                    <label for="category">Category</label>
+                      <select name="category" class="form-control" id="category">
+                          <option value="1">Image</option>
+                          <option value="2">Video</option>
+                      </select>
                   </div>
                   
                   <input type="submit" value="submit" style="display:none;">
