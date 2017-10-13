@@ -92,7 +92,7 @@ Dashboard
             <div class="inner">
               <h3></h3>
 
-              <p>Journal</p>
+              <p>Downloaded Journal</p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
