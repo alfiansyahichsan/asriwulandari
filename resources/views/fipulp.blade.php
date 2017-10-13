@@ -24,19 +24,19 @@
 		<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'> <!-- Navbar font -->
 
 		<!-- Libs and Plugins CSS -->
-		<link rel="stylesheet" href="inc/bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" href="inc/animations/css/animate.min.css">
-		<link rel="stylesheet" href="inc/font-awesome/css/font-awesome.min.css"> <!-- Font Icons -->
-		<link rel="stylesheet" href="inc/owl-carousel/css/owl.carousel.css">
-		<link rel="stylesheet" href="inc/owl-carousel/css/owl.theme.css">
+		<link rel="stylesheet" href="{{asset('inc/bootstrap/css/bootstrap.min.css')}}">
+		<link rel="stylesheet" href="{{asset('inc/animations/css/animate.min.css')}}">
+		<link rel="stylesheet" href="{{asset('inc/font-awesome/css/font-awesome.min.css')}}"> <!-- Font Icons -->
+		<link rel="stylesheet" href="{{asset('inc/owl-carousel/css/owl.carousel.css')}}">
+		<link rel="stylesheet" href="{{asset('inc/owl-carousel/css/owl.theme.css')}}">
 
 		<!-- Theme CSS -->
-        <link rel="stylesheet" href="css/fp_reset.css">
-		<link rel="stylesheet" href="css/fp_style.css">
-		<link rel="stylesheet" href="css/fp_mobile.css">
+        <link rel="stylesheet" href="{{asset('css/fp_reset.css')}}">
+		<link rel="stylesheet" href="{{asset('css/fp_style.css')}}">
+		<link rel="stylesheet" href="{{asset('css/fp_mobile.css')}}">
 
 		<!-- Skin CSS -->
-		<link rel="stylesheet" href="css/skin/cool-gray.css">
+		<link rel="stylesheet" href="{{asset('css/skin/cool-gray.css')}}">
         <!-- <link rel="stylesheet" href="css/skin/ice-blue.css"> -->
         <!-- <link rel="stylesheet" href="css/skin/summer-orange.css"> -->
         <!-- <link rel="stylesheet" href="css/skin/fresh-lime.css"> -->
@@ -49,7 +49,7 @@
 			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
-        <link href="css/lightbox.css" rel="stylesheet">
+        <link href="{{asset('css/lightbox.css')}}" rel="stylesheet">
 	</head>
 
     <body data-spy="scroll" data-target="#main-navbar">
@@ -129,7 +129,7 @@
                         <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
                             <h2>FIPULP</h2>
                             <div class="devider"></div>
-                            <p class="subtitle"><img src="images/fipulp/organic.png" width="200" length="200"></p>
+                            <p class="subtitle"><img src="{{asset('images/fipulp/organic.png')}}" width="200" length="200"></p>
                         </div>
                     </div>
                 </div>
@@ -250,7 +250,7 @@
                                     <div class="team-item">
                                         <div class="team-triangle">
                                             <div class="content">
-                                                <img src="images/fipulp/team/1.jpg" alt="title"/>
+                                                <img src="{{asset('images/fipulp/team/1.jpg')}}" alt="title"/>
                                                 <div class="team-hover text-center">
                                                     <i class="fa fa-male"></i>
                                                     <p>John Doe</p>
@@ -265,7 +265,7 @@
                                     <div class="team-item">
                                         <div class="team-triangle">
                                             <div class="content">
-                                                <img src="images/fipulp/team/1.jpg" alt="title"/>
+                                                <img src="{{asset('images/fipulp/team/1.jpg')}}" alt="title"/>
                                                 <div class="team-hover text-center">
                                                     <i class="fa fa-female"></i>
                                                     <p>Jane Doe</p>
@@ -280,7 +280,7 @@
                                     <div class="team-item">
                                         <div class="team-triangle">
                                             <div class="content">
-                                                <img src="images/fipulp/team/1.jpg" alt="title"/>
+                                                <img src="{{asset('images/fipulp/team/1.jpg')}}" alt="title"/>
                                                 <div class="team-hover text-center">
                                                     <i class="fa fa-male"></i>
                                                     <p>John Doe</p>
@@ -296,7 +296,7 @@
                                     <div class="team-item">
                                         <div class="team-triangle">
                                             <div class="content">
-                                                <img src="images/fipulp/team/1.jpg" alt="title"/>
+                                                <img src="{{asset('images/fipulp/team/1.jpg')}}" alt="title"/>
                                                 <div class="team-hover text-center">
                                                     <i class="fa fa-male"></i>
                                                     <p>John Doe</p>
@@ -311,7 +311,7 @@
                                     <div class="team-item">
                                         <div class="team-triangle">
                                             <div class="content">
-                                                <img src="images/fipulp/team/1.jpg" alt="title"/>
+                                                <img src="{{asset('images/fipulp/team/1.jpg')}}" alt="title"/>
                                                 <div class="team-hover text-center">
                                                     <i class="fa fa-male"></i>
                                                     <p>John Doe</p>
@@ -326,7 +326,7 @@
                                     <div class="team-item">
                                         <div class="team-triangle">
                                             <div class="content">
-                                                <img src="images/fipulp/team/1.jpg" alt="title"/>
+                                                <img src="{{asset('images/fipulp/team/1.jpg')}}" alt="title"/>
                                                 <div class="team-hover text-center">
                                                     <i class="fa fa-male"></i>
                                                     <p>John Doe</p>
@@ -341,7 +341,7 @@
                                     <div class="team-item">
                                         <div class="team-triangle">
                                             <div class="content">
-                                                <img src="images/fipulp/team/1.jpg" alt="title"/>
+                                                <img src="{{asset('images/fipulp/team/1.jpg')}}" alt="title"/>
                                                 <div class="team-hover text-center">
                                                     <i class="fa fa-female"></i>
                                                     <p>Jane Doe</p>
@@ -540,20 +540,20 @@
         
         
         <!-- Plugins JS -->
-		<script src="inc/jquery/jquery-1.11.1.min.js"></script>
-		<script src="inc/bootstrap/js/bootstrap.min.js"></script>
-		<script src="inc/owl-carousel/js/owl.carousel.min.js"></script>
-		<script src="inc/stellar/js/jquery.stellar.min.js"></script>
-		<script src="inc/animations/js/wow.min.js"></script>
-        <script src="inc/waypoints.min.js"></script>
-		<script src="inc/isotope.pkgd.min.js"></script>
-		<script src="inc/classie.js"></script>
-		<script src="inc/jquery.easing.min.js"></script>
-		<script src="inc/jquery.counterup.min.js"></script>
-		<script src="inc/smoothscroll.js"></script>
-        <script src="js/lightbox.js"></script>
+		<script src="{{asset('inc/jquery/jquery-1.11.1.min.js')}}"></script>
+		<script src="{{asset('inc/bootstrap/js/bootstrap.min.js')}}"></script>
+		<script src="{{asset('inc/owl-carousel/js/owl.carousel.min.js')}}"></script>
+		<script src="{{asset('inc/stellar/js/jquery.stellar.min.js')}}"></script>
+		<script src="{{asset('inc/animations/js/wow.min.js')}}"></script>
+        <script src="{{asset('inc/waypoints.min.js')}}"></script>
+		<script src="{{asset('inc/isotope.pkgd.min.js')}}"></script>
+		<script src="{{asset('inc/classie.js')}}"></script>
+		<script src="{{asset('inc/jquery.easing.min.js')}}"></script>
+		<script src="{{asset('inc/jquery.counterup.min.js')}}"></script>
+		<script src="{{asset('inc/smoothscroll.js')}}"></script>
+        <script src="{{asset('js/lightbox.js')}}"></script>
 		<!-- Theme JS -->
-		<script src="js/fipulp/theme.js"></script>
+		<script src="{{asset('js/fipulp/theme.js')}}"></script>
 
     </body> 
         

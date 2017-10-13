@@ -12,50 +12,50 @@
     <title>Biodegum - Asri Peni Wulandari</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bdg_bootstrap.min.css" rel="stylesheet">
+    <link href="{{asset('css/bdg_bootstrap.min.css')}}"" rel="stylesheet">
     
     <!-- Font Awesome CSS -->
-    <link href="css/bdg_font-awesome.min.css" rel="stylesheet">
+    <link href="{{asset('css/bdg_font-awesome.min.css')}}" rel="stylesheet">
     
     
     <!-- Animate CSS -->
-    <link href="css/bdg_animate.css" rel="stylesheet" >
+    <link href="{{asset('css/bdg_animate.css')}}" rel="stylesheet" >
     
     <!-- Owl-Carousel -->
-    <link rel="stylesheet" href="css/bdg_owl.carousel.css" >
-    <link rel="stylesheet" href="css/bdg_owl.theme.css" >
-    <link rel="stylesheet" href="css/bdg_owl.transitions.css" >
+    <link rel="stylesheet" href="{{asset('css/bdg_owl.carousel.css')}}" >
+    <link rel="stylesheet" href="{{asset('css/bdg_owl.theme.css')}}" >
+    <link rel="stylesheet" href="{{asset('css/bdg_owl.transitions.css')}}" >
 
     <!-- Custom CSS -->
-    <link href="css/bdg_style.css" rel="stylesheet">
-    <link href="css/bdg_responsive.css" rel="stylesheet">
+    <link href="{{asset('css/bdg_style.css')}}" rel="stylesheet">
+    <link href="{{asset('css/bdg_responsive.css')}}" rel="stylesheet">
     
     <!-- Colors CSS -->
-    <link rel="stylesheet" type="text/css" href="css/color/green.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/color/green.css')}}">
     
     
     
     <!-- Colors CSS -->
-    <link rel="stylesheet" type="text/css" href="css/color/green.css" title="green">
-    <link rel="stylesheet" type="text/css" href="css/color/light-red.css" title="light-red">
-    <link rel="stylesheet" type="text/css" href="css/color/blue.css" title="blue">
-    <link rel="stylesheet" type="text/css" href="css/color/light-blue.css" title="light-blue">
-    <link rel="stylesheet" type="text/css" href="css/color/yellow.css" title="yellow">
-    <link rel="stylesheet" type="text/css" href="css/color/light-green.css" title="light-green">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/color/green.css')}}" title="green">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/color/light-red.css')}}" title="light-red">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/color/blue.css')}}" title="blue">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/color/light-blue.css')}}" title="light-blue">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/color/yellow.css')}}" title="yellow">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/color/light-green.css')}}" title="light-green">
 
     <!-- Custom Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     
     
     <!-- Modernizer js -->
-    <script src="js/biodegum/modernizr.custom.js"></script>
+    <script src="{{asset('js/biodegum/modernizr.custom.js')}}"></script>
 
     
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+<link href="{{asset('css/lightbox.css')}}" rel="stylesheet">
 </head>
 
 <body class="index">
@@ -234,9 +234,9 @@
                                 <div class="portfolio-item" id="portfolio-{{$pr['id']}}">
                                     <img src="images/biodegum/portfolio/{{$pr['image_source']}}" class="img-responsive" alt="" />
                                     <div class="portfolio-caption">
-                                        <h4>{{$pr['title']}}</h4>
-                                        <a href="#portfolio-modal" data-toggle="modal" class="link-1"><i class="fa fa-magic"></i></a>
-                                        <a href="#" class="link-2"><i class="fa fa-link"></i></a>
+                                       <a href="images/biodegum/portfolio/{{$pr['image_source']}}" data-lightbox="roadtrip"> <h4>{{$pr['title']}}</h4>
+                                        </i></a>
+                                        
                                     </div>
                                 </div>
                             </li>
@@ -249,7 +249,7 @@
         </section>
         <!-- End Portfolio Section -->
     
-    <!-- Start Portfolio Modal Section -->
+    <!-- Start Portfolio Modal Section 
         <div class="section-modal modal fade" id="portfolio-modal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal">
@@ -275,10 +275,10 @@
                             <img src="images/biodegum/portfolio/img1.jpg" class="img-responsive" alt="..">
                         </div>
                         
-                    </div><!-- /.row -->
+                    </div>
                 </div>                
             </div>
-        </div>
+        </div>-->
         <!-- End Portfolio Modal Section -->
 
 
@@ -533,28 +533,28 @@
     
 
     <!-- jQuery Version 2.1.1 -->
-    <script src="js/biodegum/jquery-2.1.1.min.js"></script>
+    <script src="{{asset('js/biodegum/jquery-2.1.1.min.js')}}"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/biodegum/bootstrap.min.js"></script>
+    <script src="{{asset('js/biodegum/bootstrap.min.js')}}"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="js/biodegum/jquery.easing.1.3.js"></script>
-    <script src="js/biodegum/classie.js"></script>
-    <script src="js/biodegum/count-to.js"></script>
-    <script src="js/biodegum/jquery.appear.js"></script>
-    <script src="js/biodegum/cbpAnimatedHeader.js"></script>
-    <script src="js/biodegum/owl.carousel.min.js"></script>
-	<script src="js/biodegum/jquery.fitvids.js"></script>
-	<script src="js/biodegum/styleswitcher.js"></script>
-
+    <script src="{{asset('js/biodegum/jquery.easing.1.3.js')}}"></script>
+    <script src="{{asset('js/biodegum/classie.js')}}"></script>
+    <script src="{{asset('js/biodegum/count-to.js')}}"></script>
+    <script src="{{asset('js/biodegum/jquery.appear.js')}}"></script>
+    <script src="{{asset('js/biodegum/cbpAnimatedHeader.js')}}"></script>
+    <script src="{{asset('js/biodegum/owl.carousel.min.js')}}"></script>
+	<script src="{{asset('js/biodegum/jquery.fitvids.js')}}"></script>
+	<script src="{{asset('js/biodegum/styleswitcher.js')}}"></script>
+    
     <!-- Contact Form JavaScript -->
-    <script src="js/biodegum/jqBootstrapValidation.js"></script>
-    <script src="js/biodegum/contact_me.js"></script>
+    <script src="{{asset('js/biodegum/jqBootstrapValidation.js')}}"></script>
+    <script src="{{asset('js/biodegum/contact_me.js')}}"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="js/biodegum/script.js"></script>
-
+    <script src="{{asset('js/biodegum/script.js')}}"></script>
+        <script src="{{asset('js/lightbox.js')}}"></script>
 </body>
 
 </html>
