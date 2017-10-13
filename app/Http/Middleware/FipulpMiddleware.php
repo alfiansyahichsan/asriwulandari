@@ -18,7 +18,7 @@ class FipulpMiddleware
     {
         if(Auth::check()){
             if (Auth::user()->role == 4 || Auth::user()->role == 1)
-            {   dump(Auth::user()->role );
+            {
             return $next($request);
             }
     
