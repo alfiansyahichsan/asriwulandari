@@ -42,7 +42,7 @@ class PagesController extends Controller
 
     public function biodegum()
     {
-        $posts = BiodegumPosts::where('status',1)
+        $posts = \App\Models\Asriwulandari\Blog::where('status',3)
             ->take(6)
             ->orderby('created_at', 'desc')
             ->get();
@@ -65,7 +65,7 @@ class PagesController extends Controller
 
     public function fipulp()
     {
-        $posts = FipulpBlog::where('status',1)
+        $posts = \App\Models\Asriwulandari\Blog::where('status',4)
             ->take(6)
             ->orderby('created_at', 'desc')
             ->get();

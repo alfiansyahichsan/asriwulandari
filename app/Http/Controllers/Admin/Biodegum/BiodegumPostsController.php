@@ -56,7 +56,7 @@ class BiodegumPostsController extends Controller
         $post->category = $input['category'];
         $post->img_header = "default.jpg";
         $post->created_by = Auth::user()->name;
-        $post->status = Auth::user()->id;
+        $post->status = Auth::user()->role;
         $post->save();
 
         $file=json_decode($input['file']);

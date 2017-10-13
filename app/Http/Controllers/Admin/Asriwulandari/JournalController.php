@@ -40,6 +40,10 @@ class JournalController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'file' => 'mimes:doc,pdf,docx',
+        ]);
+
         $journal = new Journal;
         $journal->title = $request->input('title');
         $journal->detail = $request->input('detail');

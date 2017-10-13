@@ -448,7 +448,7 @@
                                 <span class="date">{{$po->date()}}</span>
                                 
                             </div>
-                            <p>{{$po->content}}</p>
+                            <p>{!!str_limit($po->content, 250)!!}</p>
                             <a href="#" class="btn btn-primary">Read More</a>
                         </div>
                     </div>

@@ -106,7 +106,8 @@
                             </div>
                             <div class="form-group" id="file-container">
                                 <label for="file">File</label>
-                                <input type="file" name="file" id="file" required>
+                                <input type="file" name="file" id="file" required accept="application/pdf,application/msword,
+  application/vnd.openxmlformats-officedocument.wordprocessingml.document">
                                 <br><input type='text' class='form-control' id='filename' disabled style="display:none;">
                             </div>
 

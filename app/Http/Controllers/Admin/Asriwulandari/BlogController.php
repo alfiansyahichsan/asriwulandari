@@ -56,7 +56,7 @@ class BlogController extends Controller
         $blogs->category = $input['category'];
         $blogs->img_header = '';
         $blogs->created_by = Auth::user()->name;
-        $blogs->status = Auth::user()->id;
+        $blogs->status = Auth::user()->role;
         $blogs->save();
 
         $file=json_decode($input['file']);
