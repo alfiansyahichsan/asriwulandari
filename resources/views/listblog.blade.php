@@ -5,16 +5,34 @@ Blog
 @section('content')
 <!--body content start-->
 
+    <section class="page-title">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4 class="text-uppercase">Blog</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="body-content ">
 
-            <div class="page-content" style="margin-top: 100px;">
+            <div class="page-content">
                 <div class="container">
                     <div class="row">
+                        <div class="text-center" style="margin-bottom: 50px;">
+                            <ul class="portfolio-filter">
+                                <li class="active"><a href="#" data-filter="*"> All</a></li>
+                                <li><a href="#" data-filter=".asri">Asri</a></li>
+                                <li><a href="#" data-filter=".biodegum">Biodegum</a></li>
+                                <li><a href="#" data-filter=".fipulp">Fipulp</a></li>
+                            </ul>
+                        </div>
                         <div class="col-md-8">
                             <!--classic image post-->
                             @foreach($blog as $blogs)
                             @if($blogs->category == 1)
-                            <div class="blog-classic">
+                            <div class="blog-classic {{$blogs->created_by}}">
                                 <div class="date">
                                     {{date('d', strtotime($blogs->created_at))}}
                                     <span>{{date('M Y', strtotime($blogs->created_at))}}</span>
@@ -34,7 +52,7 @@ Blog
                             </div>
                             @else
                             <!--classic video post-->
-                            <div class="blog-classic">
+                            <div class="blog-classic {{$blogs->created_by}}">
                                 <div class="date">
                                     10
                                     <span>MAR 2015</span>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin\Asriwulandari;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class AsriController extends Controller
 {
@@ -15,6 +16,7 @@ class AsriController extends Controller
     public function index()
     {
         $total["posts"] = \App\Models\Asriwulandari\Blog::where('status', 2)->count();
+        $total["click"] = \App\Page::count();
         return view('admin.asriwulandari.index')->with('total',$total);;
     }
 

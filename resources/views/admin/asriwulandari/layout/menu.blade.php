@@ -6,7 +6,7 @@
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
         <li @yield('nav1')>
-            <a href="#">
+            <a href="{{URL::Route('asridashboard')}}">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
             </a>
         </li>
@@ -38,7 +38,7 @@
             </a>
         </li>
         <li @yield('nav7')>
-            <a href="{{URL::Route('journal.index')}}">
+            <a href="{{URL::Route('asriwulandari.journal.index')}}">
             <i class="fa fa-file-text-o"></i> <span>Jurnal</span>
             </a>
         </li>

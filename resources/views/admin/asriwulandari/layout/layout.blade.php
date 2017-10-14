@@ -66,14 +66,14 @@
 
                 <p>
                  
-                  <small>admin@asriwulandari.com</small>
+                  <small>{{Auth::user()->email}}</small>
                 </p>
               </li>
              
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Setting</a>
+                  <!-- <a href="#" class="btn btn-default btn-flat">Setting</a> -->
                 </div>
                 <div class="pull-right">
                   <a href="{{url('logout')}}" class="btn btn-default btn-flat">Sign out</a>

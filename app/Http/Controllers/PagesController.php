@@ -84,9 +84,9 @@ class PagesController extends Controller
         ]);
     }
 
-    public function detailjurnal($slug, $param)
+    public function detailjurnal($param)
     {
-    	$jurnal = \App\Models\Asriwulandari\Journal::where('slug', $slug)->first();
+    	$jurnal = \App\Models\Asriwulandari\Journal::where('id', $param)->first();
         $next = \App\Models\Asriwulandari\Journal::where('id','>',$param)->first();
         $previous = \App\Models\Asriwulandari\Journal::where('id','<',$param)->first();
         return view('detailjurnal', [

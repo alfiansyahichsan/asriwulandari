@@ -4,11 +4,13 @@
     <!--header end-->
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 	
-    <header id="header" class=" header-full-width  transparent-header " style="background-color: #58914C !important;">
+    <!--header start-->
+        <header id="header" class=" header-full-width " style="background-color: #58914C !important;">
 
-        <div class="header-sticky light-header- dark-header header-bottom-border- ">
-            <div class="container">
-                <div id="massive-menu" class="menuzord">
+            <div class="header-sticky light-header ">
+
+                <div class="container">
+                    <div id="massive-menu" class="menuzord">
 
                     <!--logo start-->
                     <a href="{{URL::route('home')}}" class="logo-brand">

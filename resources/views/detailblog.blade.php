@@ -19,7 +19,9 @@ Detail
                                         <img src="{{asset('/images/asriw/posts/'.$detailblog->img_header)}}" alt=""/>
                                     </div>
                                     @elseif($detailblog->category == 2)
+                                    <div class="full-width">
                                     <iframe width="100%" height="415" src="{{$detailblog->subtitle}}" frameborder="0" allowfullscreen style="margin-bottom: 20px;"></iframe>
+                                    </div> 
                                     @endif
                                     <h4 class="text-uppercase"><a href="#">{{$detailblog->title}}</a></h4>
                                     <ul class="post-meta">

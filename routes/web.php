@@ -20,6 +20,7 @@ Route::get('/admin','AdminController@redirect')->name('admin');
 Route::get('/oops','AdminController@sorry')->name('sorry');
 
 Route::get('/jurnal/{param}', 'PagesController@detailjurnal')->name('detailjurnal');
+
 Route::get('/blog/detail/{slug}','PagesController@detailblog')->name('detailblog');
 
 
@@ -43,7 +44,7 @@ Route::group(['namespace' => 'Admin\Asriwulandari','middleware' => ['auth','asri
 	Route::resource('asriw/pagesetting', 'PagesController');
 	Route::resource('asriw/hasilriset', 'HasilRisetController');
 	Route::resource('asriw/blog', 'BlogController', ['names' => ['index' => 'asriwulandari.blog.index']]);
-	Route::resource('asriw/journal', 'JournalController');
+	Route::resource('asriw/journal', 'JournalController', ['names' => ['index' => 'asriwulandari.journal.index']]);
 });
 
 Route::group(['namespace' => 'Admin\Biodegum','middleware' => ['auth','biodegum']], function() {

@@ -351,7 +351,7 @@ header.sticky{
 
 
 header .logo-brand img {
-    height: 80px;
+    height: 100px;
     float: left;
 }
 
@@ -383,7 +383,7 @@ header .light-header,
 header.sticky .light-header,
 #header.transparent-header.sticky .light-header,
 .light-nav{
-    background: #fff !important;
+    background: #58914C;
 }
 
 header .dark-header,
@@ -458,7 +458,7 @@ header.sticky .menuzord-menu>li>a {
 }
 
 header.sticky .logo-brand {
-    line-height: 25px;
+    line-height: 60px;
 }
 
 .menuzord-menu ul.dropdown li a,

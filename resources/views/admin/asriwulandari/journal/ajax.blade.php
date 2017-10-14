@@ -10,7 +10,7 @@
     var table = $("#example1").DataTable();
 
     /* Ajax Start */
-    var url = "{{URL::Route('journal.index')}}";
+    var url = "{{URL::Route('asriwulandari.journal.index')}}";
     
 
     //display modal form for task editing

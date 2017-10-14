@@ -90,14 +90,14 @@ Dashboard
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-              <h3></h3>
+              <h3>{{$total["click"]}}</h3>
 
-              <p>Downloaded Journal</p>
+              <p>Clicked Journal</p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="{{URL::Route('asriwulandari.journal.index')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
