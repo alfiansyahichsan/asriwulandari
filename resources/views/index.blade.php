@@ -157,7 +157,7 @@ Home
                                     <div class="desc">
                                         <p>{{str_limit($jrn->detail,300)}}</p>
                                     </div>
-                                    <a href="{{asset('storage/asriw/journal/'.$jrn->file)}}" class="p-read-more">Read More <i class="icon-arrows_slim_right"></i><a href="{{ Counter::showAndCount('home') }}"></a></a>
+                                    <a href="{{asset('storage/asriw/journal/'.$jrn->file)}}" class="p-read-more">Read More <i class="icon-arrows_slim_right"></i><a href="{{ Counter::Count('home') }}"></a></a>
                                 </div>
                             </div>
                             @endforeach

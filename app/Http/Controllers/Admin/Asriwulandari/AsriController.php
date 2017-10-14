@@ -16,7 +16,7 @@ class AsriController extends Controller
     public function index()
     {
         $total["posts"] = \App\Models\Asriwulandari\Blog::where('status', 2)->count();
-        $total["click"] = \App\Page::count();
+        $total["view"] = \App\Visitor::count();
         return view('admin.asriwulandari.index')->with('total',$total);;
     }
 

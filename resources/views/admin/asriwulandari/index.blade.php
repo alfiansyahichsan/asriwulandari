@@ -90,9 +90,9 @@ Dashboard
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-              <h3>{{$total["click"]}}</h3>
+              <h3>{{$total["view"]}}</h3>
 
-              <p>Clicked Journal</p>
+              <p>Viewed Website</p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
