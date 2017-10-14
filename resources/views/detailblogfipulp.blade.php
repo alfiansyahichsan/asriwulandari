@@ -3,7 +3,7 @@
 <head>
 	
 	<meta charset="utf-8">
-	<title>Blog Biodegum</title>
+	<title>Blog Fipulp</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="author" content="">
@@ -123,14 +123,65 @@
 						</div><!-- //SINGLE BLOG POST -->
 						
 						
-						<!-- SINGLE BLOG POST TAG -->
+						<!-- pagination -->
 						<div class="single_blog_post_tags margbot50" data-animated="fadeInUp">
 							<ul>
-								<li><a href="javascript:void(0);" >Fashion</a></li>
-								<li><a href="javascript:void(0);" >Shop</a></li>
-								<li><a href="javascript:void(0);" >Color</a></li>
+								<li><div class="pagination-row">
+
+                                        <div class="pagination-post">
+                                            @if($previous)
+                                            <div class="prev-post">
+                                                <a href="{{URL::route('detailblogfipulp',$previous['id'])}}">
+                                                    <div class="arrow">
+                                                        <i class="fa fa-angle-double-left"></i>
+                                                    </div>
+                                                    <div class="pagination-txt">
+                                                        <span>Previous Post</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        @else
+                                            <div class="prev-post">
+                                                <a href="#">
+                                                    <div class="arrow">
+                                                        <i class="fa fa-angle-double-left"></i>
+                                                    </div>
+                                                    <div class="pagination-txt">
+                                                        <span>Previous Post</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            @endif</a></li>
+								<li> @if($next)  
+                                            <div class="next-post">
+                                                <a href="{{URL::route('detailblogfipulp',$next['id'])}}">
+                                                    <div class="arrow">
+                                                        <i class="fa fa-angle-double-right"></i>
+                                                    </div>
+                                                    <div class="pagination-txt">
+                                                        <span>Next Post</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        @else
+                                            <div class="next-post">
+                                                <a href="#">
+                                                    <div class="arrow">
+                                                        <i class="fa fa-angle-double-right"></i>
+                                                    </div>
+                                                    <div class="pagination-txt">
+                                                        <span>Next Post</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            @endif
+
+                                        </div>
+
+                                    </div></a></li>
+								
 							</ul>
-						</div><!-- //SINGLE BLOG POST TAG -->
+						</div><!-- //pagination -->
 						
 						<hr>
 						
