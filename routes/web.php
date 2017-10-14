@@ -22,6 +22,15 @@ Route::get('/oops','AdminController@sorry')->name('sorry');
 Route::get('/jurnal/{param}', 'PagesController@detailjurnal')->name('detailjurnal');
 Route::get('/blog/detail/{slug}','PagesController@detailblog')->name('detailblog');
 
+Route::get('/detailblogbiodegum', function()
+{
+    return View::make('detailblogbiodegum');
+});
+Route::get('/detailblogfipulp', function()
+{
+    return View::make('detailblogfipulp');
+});
+
 //admin
 Route::group(['middleware' => ['auth','superuser']], function() {
 	Route::get('/admin/dashboard',array('as'=>'admindashboard','uses'=>'AdminController@index'));
