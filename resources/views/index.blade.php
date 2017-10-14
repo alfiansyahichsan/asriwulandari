@@ -209,7 +209,7 @@ Home
                                 </div>
                             </div>
                         </div>
-                        @else
+                        @elseif($blg->category == 2)
                         <div class="post-list-aside">
                             <div class="post-single">
                                 <div class="col-md-6">

@@ -122,4 +122,32 @@ class PagesController extends Controller
         ]);
     }
 
+    public function detailblogbiodegum($param)
+    {
+        $detailblogbiodegum =  \App\Models\Asriwulandari\Blog::where('id', $param)->first();
+        $next = \App\Models\Asriwulandari\Blog::where('id','>',$param)->first();
+        $previous = \App\Models\Asriwulandari\Blog::where('id','<',$param)->first();
+        $recent = \App\Models\Asriwulandari\Blog::orderby('id','desc')->whereNotIn('id', [$param])->get();
+        return view('detailblogbiodegum',[
+            'detailblogbiodegum' => $detailblogbiodegum,
+            'next' => $next,
+            'previous' => $previous,
+            'recent' => $recent,
+        ]);
+    }
+
+    public function detailblogfipulp($param)
+    {
+        $detailblogfipulp =  \App\Models\Asriwulandari\Blog::where('id', $param)->first();
+        $next = \App\Models\Asriwulandari\Blog::where('id','>',$param)->first();
+        $previous = \App\Models\Asriwulandari\Blog::where('id','<',$param)->first();
+        $recent = \App\Models\Asriwulandari\Blog::orderby('id','desc')->whereNotIn('id', [$param])->get();
+        return view('detailblogfipulp',[
+            'detailblogfipulp' => $detailblogfipulp,
+            'next' => $next,
+            'previous' => $previous,
+            'recent' => $recent,
+        ]);
+    }
+
 }
