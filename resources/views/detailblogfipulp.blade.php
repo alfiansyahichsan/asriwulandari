@@ -123,7 +123,7 @@
 						</div><!-- //SINGLE BLOG POST -->
 						
 						
-						<!-- pagination -->
+						<!-- SINGLE BLOG POST TAG -->
 						<div class="single_blog_post_tags margbot50" data-animated="fadeInUp">
 							<ul>
 								<li><div class="pagination-row">
@@ -176,12 +176,12 @@
                                             </div>
                                             @endif
 
-                                        </div>
+                                        
 
-                                    </div></a></li>
+                                    </a></li>
 								
 							</ul>
-						</div><!-- //pagination -->
+						</div><!-- //SINGLE BLOG POST TAG -->
 						
 						<hr>
 						

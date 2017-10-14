@@ -176,9 +176,9 @@
                                             </div>
                                             @endif
 
-                                        </div>
+                                        
 
-                                    </div></a></li>
+                                    </a></li>
 								
 							</ul>
 						</div><!-- //pagination -->
