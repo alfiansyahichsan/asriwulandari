@@ -15,7 +15,7 @@ class BiodegumController extends Controller
      */
     public function index()
     {
-        $total["posts"] = \App\BiodegumPosts::count();
+        $total["posts"] = \App\Models\Asriwulandari\Blog::where('status', 3)->count();
         $total["portfolio"] = \App\BiodegumPortfolio::count();
         return view('admin.biodegum.index')->with('total',$total);
     }

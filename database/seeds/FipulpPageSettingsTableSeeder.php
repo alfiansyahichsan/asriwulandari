@@ -13,18 +13,18 @@ class FipulpPageSettingsTableSeeder extends Seeder
     {
         DB::table('fipulppages')->insert([
             'title' => 'slider',
-            'image' => 'biodegum_title.jpg'
+            'image' => 'slider.jpg'
         ]);
 
         DB::table('fipulppages')->insert([
             'title' => 'team',
-            'image' => 'biodegum_title.jpg'
+            'image' => 'team.jpg'
         ]);
 
 
         DB::table('fipulppages')->insert([
             'title' => 'contact',
-            'image' => 'biodegum_title.jpg'
+            'image' => 'contact.jpg'
         ]);
 
     }

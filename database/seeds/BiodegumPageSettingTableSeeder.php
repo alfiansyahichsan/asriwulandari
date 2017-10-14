@@ -13,19 +13,19 @@ class BiodegumPageSettingTableSeeder extends Seeder
     {
         DB::table('biodegum_pages')->insert([
             'title' => 'slider',
-            'image' => 'bum.jpg',
+            'image' => 'slider.jpg',
         ]);
         DB::table('biodegum_pages')->insert([
             'title' => 'portfolio',
-            'image' => 'boom.jpg',
+            'image' => 'instagram.png',
         ]);
         DB::table('biodegum_pages')->insert([
             'title' => 'instagram',
-            'image' => 'c2a.png',
+            'image' => 'instagram.png',
         ]);
         DB::table('biodegum_pages')->insert([
             'title' => 'contact',
-            'image' => 'c2a.png',
+            'image' => 'contact.jpg',
         ]);
     }
 }

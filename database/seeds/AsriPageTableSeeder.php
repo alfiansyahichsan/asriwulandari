@@ -13,15 +13,15 @@ class AsriPageTableSeeder extends Seeder
     {
         DB::table('asripagesetting')->insert([
             'title' => 'slider',
-            'image' => 'bum.jpg',
+            'image' => 'slider.jpg',
         ]);
         DB::table('asripagesetting')->insert([
             'title' => 'achievement',
-            'image' => 'boom.jpg',
+            'image' => 'achievement.jpg',
         ]);
         DB::table('asripagesetting')->insert([
             'title' => 'journal',
-            'image' => 'c2a.png',
+            'image' => 'journal.png',
         ]);
     }
 }

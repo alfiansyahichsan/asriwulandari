@@ -24,7 +24,7 @@ class BiodegumPostsController extends Controller
             $posts = Blog::get();
         }
         else
-        $posts = Blog::orderby('created_at','desc')->where('status', Auth::user()->id)->get();
+        $posts = Blog::orderby('created_at','desc')->where('status', 3)->get();
         return view('admin.biodegum.posts.index', [
             'posts' => $posts
             ]);

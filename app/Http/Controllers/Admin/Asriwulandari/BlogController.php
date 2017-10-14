@@ -26,7 +26,7 @@ class BlogController extends Controller
         }
         else
 
-        $blogs = Blog::where('status', Auth::user()->id)->get();
+        $blogs = Blog::where('status', 2)->get();
         return view('admin.asriwulandari.blog.index', ['blogs' => $blogs]);
     }
 

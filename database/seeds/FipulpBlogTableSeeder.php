@@ -12,7 +12,7 @@ class FipulpBlogTableSeeder extends Seeder
     public function run()
     {
         DB::table('fipulp_blog')->insert([
-            'status' => 1,
+            'status' => 4,
             'created_by' => 1,
             'title' => 'Blog 1 : Testing Fipulop Blog',
             'subtitle' => 'Ini Subtitle',
@@ -23,7 +23,7 @@ class FipulpBlogTableSeeder extends Seeder
         ]);
 
         DB::table('fipulp_blog')->insert([
-            'status' => 1,
+            'status' => 4,
             'created_by' => 1,
             'title' => 'Blog 2 : Testing Fipulop Blog',
             'subtitle' => 'Ini Subtitle',
@@ -34,7 +34,7 @@ class FipulpBlogTableSeeder extends Seeder
         ]);
 
         DB::table('fipulp_blog')->insert([
-            'status' => 1,
+            'status' => 4,
             'created_by' => 1,
             'title' => 'Blog 3 : Testing Fipulop Blog',
             'subtitle' => 'Ini Subtitle',

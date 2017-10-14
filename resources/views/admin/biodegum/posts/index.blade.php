@@ -141,10 +141,6 @@ class="active"
                     <input type="text" class="form-control" id="title" placeholder="Judul" name="title">
                   </div>
                   <div class="form-group">
-                    <label for="title">Sub Judul</label>
-                    <input type="text" class="form-control" id="subtitle" placeholder="Sub Judul" name="subtitle">
-                  </div>
-                  <div class="form-group">
                     <label for="content">Konten</label>
                     <textarea class="form-control" id="content" name="content"></textarea>
                   </div>

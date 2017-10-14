@@ -23,7 +23,7 @@ Detail
                                     @endif
                                     <h4 class="text-uppercase"><a href="#">{{$detailblog->title}}</a></h4>
                                     <ul class="post-meta">
-                                        <li><i class="fa fa-user"></i>posted by <a href="#">Asri Wulandari</a></li>
+                                        <li><i class="fa fa-user"></i>posted by <a href="#">{{$detailblog->created_by}}</a></li>
                                     </ul>
 
                                     <p>{!!$detailblog->content!!}</p>

@@ -14,7 +14,7 @@ class AsriAboutTableSeeder extends Seeder
         DB::table('asriaabout')->insert([
             'name' => 'Asri Penny Wulandari PhD',
             'detail' => 'saya asri wulandari',
-            'image' => 'about.png',
+            'image' => '1-asri.jpg',
         ]);
     }
 }

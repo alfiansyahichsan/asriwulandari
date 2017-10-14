@@ -15,8 +15,8 @@ class CreateAsriblogsTable extends Migration
     {
         Schema::create('asriblogs', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('status');
-            $table->integer('created_by');
+            $table->string('status');
+            $table->string('created_by');
             $table->text('title');
             $table->text('subtitle');
             $table->text('img_header')->nullable();

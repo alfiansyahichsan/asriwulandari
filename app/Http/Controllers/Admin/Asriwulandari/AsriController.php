@@ -14,7 +14,8 @@ class AsriController extends Controller
      */
     public function index()
     {
-        return view('admin.asriwulandari.index');
+        $total["posts"] = \App\Models\Asriwulandari\Blog::where('status', 2)->count();
+        return view('admin.asriwulandari.index')->with('total',$total);;
     }
 
     /**
