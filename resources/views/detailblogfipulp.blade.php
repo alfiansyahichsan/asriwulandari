@@ -57,7 +57,7 @@
 					
 					<!-- LOGO -->
 					<div class="logo pull-left">
-						<a href="{{URL::route('biodegum')}}" ><span class="b2">F</span><span class="b2">I</span><span class="b2">P</span><span class="b2">U</span><span class="b2">L</span><span class="b2">P</span></a>
+						<a href="{{URL::route('fipulp')}}" ><span class="b2">F</span><span class="b2">I</span><span class="b2">P</span><span class="b2">U</span><span class="b2">L</span><span class="b2">P</span></a>
 					</div><!-- //LOGO -->
 					
 					<!-- SEARCH FORM -->
@@ -71,7 +71,7 @@
 					<div class="pull-right">
 						<nav class="navmenu center">
 							<ul>
-								<li class="first scroll_btn"><a href="{{URL::route('biodegum')}}">Home</a></li>
+								<li class="first scroll_btn"><a href="{{URL::route('fipulp')}}">Home</a></li>
 							</ul>
 						</nav>
 					</div><!-- //MENU -->
