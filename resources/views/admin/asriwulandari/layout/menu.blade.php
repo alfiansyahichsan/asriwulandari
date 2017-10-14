@@ -18,17 +18,17 @@
         </li>
         <li @yield('nav3')>
             <a href="{{URL::Route('achievement.index')}}">
-            <i class="fa fa-suitcase"></i> <span>Achievement</span>
+            <i class="ion ion-ribbon-b"></i> <span>Achievement</span>
             </a>
         </li>
         <li @yield('nav4')>
             <a href="{{URL::Route('hasilriset.index')}}">
-            <i class="fa fa-phone"></i> <span>Hasil Riset</span>
+            <i class="ion ion-map"></i> <span>Hasil Riset</span>
             </a>
         </li>
         <li @yield('nav5')>
             <a href="{{URL::Route('gallery.index')}}">
-            <i class="fa fa-newspaper-o"></i> <span>Gallery</span>
+            <i class="ion ion-images"></i> <span>Gallery</span>
             </a>
         </li>
         
@@ -39,12 +39,12 @@
         </li>
         <li @yield('nav7')>
             <a href="{{URL::Route('asriwulandari.journal.index')}}">
-            <i class="fa fa-file-text-o"></i> <span>Jurnal</span>
+            <i class="ion ion-ios-bookmarks-outline"></i> <span>Jurnal</span>
             </a>
         </li>
         <li @yield('nav8')>
             <a href="{{URL::Route('pagesetting.index')}}">
-            <i class="fa fa-file-text-o"></i> <span>Page Setting</span>
+            <i class="ion ion-ios-gear-outline"></i> <span>Page Setting</span>
             </a>
         </li>
         

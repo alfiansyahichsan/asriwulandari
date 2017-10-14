@@ -22,7 +22,7 @@ Route::get('/oops','AdminController@sorry')->name('sorry');
 Route::get('/jurnal/{id}', 'PagesController@detailjurnal')->name('detailjurnal');
 
 Route::get('/blog/detail/{id}','PagesController@detailblog')->name('detailblog');
-
+Route::post ( '/jurnal', 'PagesController@click')->name('jurnal');
 
 Route::get('/biodegum/blog/detail/{id}','PagesController@detailblogbiodegum')->name('detailblogbiodegum');
 

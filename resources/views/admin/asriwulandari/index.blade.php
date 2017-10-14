@@ -79,7 +79,7 @@ Dashboard
               <p>Blog</p>
             </div>
             <div class="icon">
-              <i class="ion ion-person-add"></i>
+              <i class="ion ion-ios-paper"></i>
             </div>
             <a href="{{URL::Route('asriwulandari.blog.index')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
@@ -93,6 +93,21 @@ Dashboard
               <h3>{{$total["view"]}}</h3>
 
               <p>Viewed Website</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-person-add"></i>
+            </div>
+            <a href="#" class="small-box-footer"><i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-red">
+            <div class="inner">
+              <h3>{{$total["click"]}}</h3>
+
+              <p>Clicked Journal</p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>

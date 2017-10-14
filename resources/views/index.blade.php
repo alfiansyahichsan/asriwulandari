@@ -4,6 +4,7 @@ Home
 @endsection
 @section('content')
 
+
 <div class="wrapper">
 
     <!--hero section-->
@@ -13,6 +14,7 @@ Home
                 <div class="banner-title light-txt">
                     <h3 class="text-uppercase ls-20">Scientist | Lecturer</h3>
                     <h1 class="text-uppercase">ASRI PENI WULANDARI</h1>
+                    <a href="{{ Counter::showAndCount('home') }}"></a>
                 </div>
             </div>
         </div>
@@ -149,6 +151,8 @@ Home
                     </div>
                         <div class="career-list">
                             @foreach($jurnal as $jrn)
+                            <form id="myForm" action="/jurnal" method="POST" id="insert_form" enctype="multipart/form-data">
+                            {{ csrf_field() }}
                             <div class="col-md-4 ">
                                 <div class="featured-item career-box">
                                     <div class="title text-uppercase">
@@ -157,9 +161,10 @@ Home
                                     <div class="desc">
                                         <p>{{str_limit($jrn->detail,300)}}</p>
                                     </div>
-                                    <a href="{{asset('storage/asriw/journal/'.$jrn->file)}}" class="p-read-more">Read More <i class="icon-arrows_slim_right"></i></a>
+                                    <a href="{{asset('storage/asriw/journal/'.$jrn->file)}}" onclick="document.forms['myForm'].submit(); return true;" target="_blank" class="p-read-more">Read More <i class="icon-arrows_slim_right"></i></a>
                                 </div>
                             </div>
+                            </form>
                             @endforeach
                             
                         </div>

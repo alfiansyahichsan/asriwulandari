@@ -9,6 +9,7 @@ use App\BiodegumPages;
 use App\FipulpBlog;
 use App\FipulpGallery;
 use App\FipulpPages;
+use App\Click;
 use Auth;
 
 use Illuminate\Support\Debug\Dumper;
@@ -38,6 +39,15 @@ class PagesController extends Controller
             'jurnal' => $jurnal,
             'blog' => $blog,
         ]);
+    }
+
+    public function click()
+    {
+        $click = new Click;
+        $click->click = 1;
+        $click->save();
+
+        return redirect()->back();
     }
 
     public function biodegum()

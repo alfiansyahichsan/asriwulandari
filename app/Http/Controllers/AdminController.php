@@ -34,7 +34,10 @@ class AdminController extends Controller
 
     public function index()
     {
-    	return view('admin.index');
+        $total["posts"] = \App\Models\Asriwulandari\Blog::count();
+        $total["view"] = \App\Visitor::count();
+        $total["click"] = \App\Click::count();
+    	return view('admin.index')->with('total', $total);
     }
 
     public function sorry()
