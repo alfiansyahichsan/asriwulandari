@@ -36,7 +36,7 @@ Detail
                                         <div class="pagination-post">
                                             @if($previous)
                                             <div class="prev-post">
-                                                <a href="{{URL::route('detailblog',$previous['id'])}}">
+                                                <a href="{{URL::route('detailblog', $previous->id)}}">
                                                     <div class="arrow">
                                                         <i class="fa fa-angle-double-left"></i>
                                                     </div>
@@ -66,7 +66,7 @@ Detail
 
                                         @if($next)  
                                             <div class="next-post">
-                                                <a href="{{URL::route('detailblog',$next['id'])}}">
+                                                <a href="{{URL::route('detailblog', $next->id)}}">
                                                     <div class="arrow">
                                                         <i class="fa fa-angle-double-right"></i>
                                                     </div>

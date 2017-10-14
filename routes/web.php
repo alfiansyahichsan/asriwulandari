@@ -19,14 +19,14 @@ Route::get('/fipulp/','PagesController@fipulp')->name('fipulp');
 Route::get('/admin','AdminController@redirect')->name('admin');
 Route::get('/oops','AdminController@sorry')->name('sorry');
 
-Route::get('/jurnal/{param}', 'PagesController@detailjurnal')->name('detailjurnal');
+Route::get('/jurnal/{id}', 'PagesController@detailjurnal')->name('detailjurnal');
 
-Route::get('/blog/detail/{slug}','PagesController@detailblog')->name('detailblog');
+Route::get('/blog/detail/{id}','PagesController@detailblog')->name('detailblog');
 
 
-Route::get('/biodegum/blog/detail/{slug}','PagesController@detailblogbiodegum')->name('detailblogbiodegum');
+Route::get('/biodegum/blog/detail/{id}','PagesController@detailblogbiodegum')->name('detailblogbiodegum');
 
-Route::get('/fipulp/blog/detail/{slug}','PagesController@detailblogfipulp')->name('detailblogfipulp');
+Route::get('/fipulp/blog/detail/{id}','PagesController@detailblogfipulp')->name('detailblogfipulp');
 
 //admin
 Route::group(['middleware' => ['auth','superuser']], function() {

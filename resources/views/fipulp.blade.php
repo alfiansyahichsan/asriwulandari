@@ -381,7 +381,7 @@
                     @foreach($posts as $po)
                     <div class="col-md-4">
                         <div class="latest-post">
-                            <img src="images/fipulp/posts/{{$po->image()}}" class="img-responsive" alt="">
+                            <img src="{{asset('/images/asriw/posts/'.$po->img_header)}}" class="img-responsive" alt="">
                             <h4><a href="{{URL::route('detailblogfipulp',$po->id)}}">{{$po['title']}}</a></h4>
                             <div class="post-details">
                                 <span class="date">{{$po->date()}}</span>                                
