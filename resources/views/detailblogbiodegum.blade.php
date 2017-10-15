@@ -50,10 +50,10 @@
 		<header>
 			
 			<!-- MENU BLOCK -->
-			<div class="menu_block">
+			<div class="menu">
 			
 				<!-- CONTAINER -->
-				<div class="container clearfix">
+				<div class="container">
 					
 					<!-- LOGO -->
 					<div class="logo pull-left">
@@ -63,7 +63,7 @@
 					<!-- MENU -->
 					<!-- MENU -->
 					<div class="dropdown" style="float:right;">
- 					<button class="dropbtn"><a href="{{URL::route('biodegum')}}"><font color="Black"><b>Home</b></a></font></button>
+ 					<a href="{{URL::route('biodegum')}}"><button class="dropbtn"><font color="Black"><b>Home</b></font></button></a>
 					</div><!-- //MENU -->
 				</div><!-- //MENU BLOCK -->
 			</div><!-- //CONTAINER -->
