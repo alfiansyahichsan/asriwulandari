@@ -105,16 +105,13 @@
 					<header class="entry-header">
 
 						<h1 class="entry-title">
-							Hey, This Is a Raleway Typeface!
+							{{$detailblogfipulp->title}}
 						</h1> 				 
 						
 						<div class="entry-meta">
 							<ul>
-								<li>July 12, 2014</li>
-								<span class="meta-sep">•</span>								
-								<li><a rel="category tag" title="" href="#">Ghost</a></li>
-								<span class="meta-sep">•</span>
-								<li>John Doe</li>
+								<li>{{date('M d', strtotime($detailblogfipulp->created_at))}}, {{date('Y', strtotime($detailblogfipulp->created_at))}}</li>
+								<li>{{$detailblogfipulp->created_by}}</li>
 							</ul>
 						</div> 
 						 
@@ -122,24 +119,13 @@
 
 					<div class="entry-content-media">
 						<div class="post-thumb">
-							<img src="{{asset('images/fipulp/blog/post-thumb.jpg')}}">
+							<img src="{{asset('/images/asriw/posts/'.$detailblogfipulp->img_header)}}">
 						</div> 
 					</div> 
 						
 					<div class="entry-content">
-						<p class="lead">Lorem ipsum Nisi enim est proident est magna occaecat dolore proident eu ex sunt consectetur consectetur dolore enim nisi exercitation adipisicing magna culpa commodo deserunt ut do Ut occaecat. Lorem ipsum Veniam consequat quis aliquip dolore minim ex labore dolor Excepteur Duis velit in officia Excepteur officia officia officia cillum ut elit in fugiat incididunt ea ad Ut ut ea ea dolor ex dolor eu magna voluptate irure consectetur.</p>
-
-						<p>Duis ex ad cupidatat tempor Excepteur cillum cupidatat fugiat nostrud cupidatat dolor sunt sint sit nisi est eu exercitation incididunt adipisicing veniam velit id fugiat enim mollit amet anim veniam dolor dolor irure velit commodo cillum sit nulla ullamco magna amet magna cupidatat qui labore cillum sit in tempor veniam consequat non laborum adipisicing aliqua ea nisi sint ut quis proident ullamco ut dolore culpa occaecat ut laboris in sit minim cupidatat ut dolor voluptate enim veniam consequat occaecat fugiat in adipisicing in amet Ut nulla nisi non ut enim aliqua laborum mollit quis nostrud sed sed.
-						</p>
-
-						<p>Duis ex ad cupidatat tempor Excepteur cillum cupidatat fugiat nostrud cupidatat dolor sunt sint sit nisi est eu exercitation incididunt adipisicing veniam velit id fugiat enim mollit amet anim veniam dolor dolor irure velit commodo cillum sit nulla ullamco magna amet magna cupidatat qui labore cillum sit in tempor veniam consequat non laborum adipisicing aliqua ea nisi sint ut quis proident ullamco ut dolore culpa occaecat ut laboris in sit minim cupidatat ut dolor voluptate enim veniam consequat occaecat fugiat in adipisicing in amet Ut nulla nisi non ut enim aliqua laborum mollit quis nostrud sed sed.
-						</p>
+						{!!$detailblogfipulp->content!!}
 					</div> 
-
-					<p class="tags">
-	  			     	<span>Tagged in </span>:
-	  				  	<a href="#">orci</a>, <a href="#">lectus</a>, <a href="#">varius</a>, <a href="#">turpis</a>
-	  			   </p>
 
 	  			   <div class="pagenav group">
 	  			   @if($previous)
@@ -156,192 +142,7 @@
 	  				</div>  
 
 				</article> <!-- /entry -->
-
-				<div id="comments">
-
-	            <h3>5 Comments</h3>
-
-	            <ol class="commentlist">
-
-	               <li class="depth-1">
-
-	                  <div class="avatar">
-	                     <img width="50" height="50" alt="" src="{{asset('images/fipulp/blog/user-01.png')}}" class="avatar">
-	                  </div>
-
-	                  <div class="comment-content">
-
-		                  <div class="comment-info">
-		                     <cite>Itachi Uchiha</cite>
-
-		                     <div class="comment-meta">
-		                        <time datetime="2014-07-12T23:05" class="comment-time">Jul 12, 2014 @ 23:05</time>
-		                        <span class="sep">/</span><a href="#" class="reply">Reply</a>
-		                     </div>
-		                  </div>
-
-		         	     	<div class="comment-text">
-		                    	<p>Adhuc quaerendum est ne, vis ut harum tantas noluisse, id suas iisque mei. Nec te inani ponderum vulputate,
-		                        facilisi expetenda has et. Iudico dictas scriptorem an vim, ei alia mentitum est, ne has voluptua praesent.</p>
-		                  </div>
-
-		               </div>
-
-	               </li>
-
-	               <li class="thread-alt depth-1">
-
-	                  <div class="avatar">
-	                     <img width="50" height="50" alt="" src="{{asset('images/fipulp/blog/user-03.png')}}" class="avatar">
-	                  </div>
-
-	                  <div class="comment-content">
-
-		                  <div class="comment-info">
-		                     <cite>John Doe</cite>
-
-		                     <div class="comment-meta">
-		                        <time datetime="2014-07-12T24:05" class="comment-time">Jul 12, 2014 @ 24:05</time>
-		                        <span class="sep">/</span><a href="#" class="reply">Reply</a>
-		                     </div>
-		                  </div>
-
-		                  <div class="comment-text">
-		                     <p>Sumo euismod dissentiunt ne sit, ad eos iudico qualisque adversarium, tota falli et mei. Esse euismod
-		                        urbanitas ut sed, et duo scaevola pericula splendide. Primis veritus contentiones nec ad, nec et
-		                        tantas semper delicatissimi.</p>                        
-		                  </div>
-
-		               </div>
-
-	                  <ul class="children">
-
-	                     <li class="depth-2">
-
-	                        <div class="avatar">
-	                           <img width="50" height="50" alt="" src="{{asset('images/fipulp/blog/user-03.png')}}" class="avatar">
-	                        </div>
-
-	                        <div class="comment-content">
-
-		                        <div class="comment-info">
-		                           <cite>Kakashi Hatake</cite>
-
-		                           <div class="comment-meta">
-		                              <time datetime="2014-07-12T25:05" class="comment-time">Jul 12, 2014 @ 25:05</time>
-		                              <span class="sep">/</span><a href="#" class="reply">Reply</a>
-		                           </div>
-		                        </div>
-
-		                        <div class="comment-text">
-		                           <p>Duis sed odio sit amet nibh vulputate
-		                              cursus a sit amet mauris. Morbi accumsan ipsum velit. Duis sed odio sit amet nibh vulputate
-		                              cursus a sit amet mauris</p>
-		                        </div>
-
-	                        </div>
-
-	                        <ul class="children">
-
-	                           <li class="depth-3">
-
-	                              <div class="avatar">
-	                                 <img width="50" height="50" alt="" src="{{asset('images/fipulp/blog/user-03.png')}}" class="avatar">
-	                              </div>
-
-	                              <div class="comment-content">
-
-		                              <div class="comment-info">
-		                                 <cite>John Doe</cite>
-
-		                                 <div class="comment-meta">
-		                                    <time datetime="2014-07-12T25:15" class="comment-time">July 12, 2014 @ 25:15</time>
-		                                    <span class="sep">/</span><a href="#" class="reply">Reply</a>
-		                                 </div>
-		                              </div>
-
-		                              <div class="comment-text">
-		                                 <p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est
-		                                    etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.</p>
-		                              </div>
-
-	                              </div>
-
-	                           </li>
-
-	                        </ul> <!-- /children -->	
-
-	                     </li>
-
-	                  </ul> <!-- /children -->
-
-	               </li>
-
-	               <li class="depth-1">
-
-	                  <div class="avatar">
-	                     <img width="50" height="50" alt="" src="{{asset('images/fipulp/blog/user-02.png')}}" class="avatar">
-	                  </div>
-
-	                  <div class="comment-content">
-
-		                  <div class="comment-info">
-		                     <cite>Hinata Hyuga</cite>
-
-		                     <div class="comment-meta">
-		                        <time datetime="2014-07-12T25:15" class="comment-time">July 12, 2014 @ 25:15</time>
-		                        <span class="sep">/</span><a href="#" class="reply">Reply</a>
-		                     </div>
-		                  </div>
-
-		                  <div class="comment-text">
-		                     <p>Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.</p>
-		                  </div>
-
-	                  </div>
-
-	               </li>
-
-	            </ol> <!-- /commentlist -->
-
-
-	            <!-- respond -->
-	            <div class="respond">
-
-	               <h3>Leave a Comment</h3>
-
-	               <!-- form -->
-	               <form action="" method="post" id="contactForm" name="contactForm">
-	  					<fieldset>
-
-	                  <div class="group">
-	  						   <label for="cName">Name <span class="required">*</span></label>
-	  						   <input type="text" value="" size="35" id="cName" name="cName">
-	                  </div>
-
-	                  <div class="group">
-	  						   <label for="cEmail">Email <span class="required">*</span></label>
-	  						   <input type="text" value="" size="35" id="cEmail" name="cEmail">
-	                  </div>
-
-	                  <div class="group">
-	  						   <label for="cWebsite">Website</label>
-	  						   <input type="text" value="" size="35" id="cWebsite" name="cWebsite">
-	                  </div>
-
-	                  <div class="message group">
-	                     <label for="cMessage">Message <span class="required">*</span></label>
-	                     <textarea cols="50" rows="10" id="cMessage" name="cMessage"></textarea>
-	                  </div>
-
-	                  <button class="stroke medium" type="submit">Submit</button>
-
-	  					</fieldset>
-	  				   </form> <!-- /contactForm -->
-
-	            </div> <!-- /respond -->
-
-         	</div> <!-- /comments -->							   
+							   
 	         
 	   	</div> <!-- /main -->  
 
@@ -349,21 +150,9 @@
 				
 				<aside id="sidebar">
 
-	            <div class="widget widget_search">
-
-	               <h5>Search</h5>
-	               <form action="#">
-
-	                  <input type="text" value="Search here..." onblur="if(this.value == '') { this.value = 'Search here...'; }" onfocus="if (this.value == 'Search here...') { this.value = ''; }" class="text-search" kl_virtual_keyboard_secure_input="on">
-	                  <input type="submit" value="" class="submit-search">
-
-	               </form>
-
-	            </div> <!-- /widget_search -->
-
 	            <div class="widget widget_text">
 
-	               <h5 class="widget-title">Text Widget</h5>
+	               <h5 class="widget-title">About Fipulp</h5>
 	               <div class="textwidget">Proin gravida nibh vel velit auctor aliquet.
 	               Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,
 	               nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus
