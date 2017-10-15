@@ -109,8 +109,47 @@ a:hover, a:focus {text-decoration:none; color:#333;}
 
 
 
+.dropbtn {
+    background-color: #4CAF50;
+    margin-top: 15px;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
 
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
 
 
 
@@ -213,6 +252,7 @@ blockquote:before {content:'“'; position:absolute; left:15px; top:13px; font-s
 	background-size:cover;
 }
 .breadcrumbs_block h2 {
+	margin-top:30px;
 	margin-bottom:15px;
 	line-height:80px;
 	font-size:80px;
@@ -1030,7 +1070,7 @@ ul.project_info li span {color:#979797;}
 	width:270px;
 	height:180px;
 	margin-bottom:16px;
-	background-image:url(../images/4.png);
+	background-image:url('../images/4.png');
 }
 .post_item_img_widget img {
 	width:auto;

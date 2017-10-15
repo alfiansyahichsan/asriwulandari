@@ -15,17 +15,6 @@ jQuery(window).load(function () {
 
 
 
-/*-----------------------------------------------------------------------------------*/
-/*	NICESCROLL
-/*-----------------------------------------------------------------------------------*/
-jQuery(document).ready(function() {
-	jQuery("body").niceScroll({
-		cursorcolor:"#333",
-		cursorborder:"0px",
-		cursorwidth :"8px",
-		zindex:"9999"
-	});
-});
 
 
 

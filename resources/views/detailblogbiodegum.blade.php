@@ -16,7 +16,7 @@
 	<link href="{{asset('css/blogbdg/animate.css')}}" rel="stylesheet" type="text/css" media="all" />
     <link href="{{asset('css/blogbdg/owl.carousel.css')}}" rel="stylesheet">
 	<link href="{{asset('css/blogbdg/style.css')}}" rel="stylesheet" type="text/css" />
-	<link href="{{asset('css/blogbdg/colors/')}}" rel="stylesheet" type="text/css" id="colors" />
+	
     
 	<!-- FONTS -->
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500italic,700,500,700italic,900,900italic' rel='stylesheet' type='text/css'>
@@ -28,7 +28,7 @@
 	
 	<script src="{{asset('js/blogbdg/jquery.min.js')}}" type="text/javascript"></script>
 	<script src="{{asset('js/blogbdg/bootstrap.min.js')}}" type="text/javascript"></script>
-	<script src="{{asset('js/blogbdg/jquery.nicescroll.min.js')}}" type="text/javascript"></script>
+	
 	<script src="{{asset('js/blogbdg/superfish.min.js')}}" type="text/javascript"></script>
 	<script src="{{asset('js/blogbdg/jquery.flexslider-min.js')}}" type="text/javascript"></script>
 	<script src="{{asset('js/blogbdg/owl.carousel.js')}}"></script>
@@ -57,16 +57,13 @@
 					
 					<!-- LOGO -->
 					<div class="logo pull-left">
-						<a href="{{URL::route('biodegum')}}" ><span class="b2">B</span><span class="b2">I</span><span class="b2">O</span><span class="b2">D</span><span class="b2">E</span><span class="b2">G</span><span class="b2">U</span><span class="b2">M</span></a>
+						<a href="{{URL::route('biodegum')}}" ><span class="b2">BIODEGUM</span></a>
 					</div><!-- //LOGO -->
 					
 					<!-- MENU -->
-					<div class="pull-right">
-						<nav class="navmenu center">
-							<ul>
-								<li class="first scroll_btn"><a href="{{URL::route('biodegum')}}">Home</a></li>
-							</ul>
-						</nav>
+					<!-- MENU -->
+					<div class="dropdown" style="float:right;">
+ 					<button class="dropbtn"><a href="{{URL::route('biodegum')}}"><font color="Black"><b>Home</b></a></font></button>
 					</div><!-- //MENU -->
 				</div><!-- //MENU BLOCK -->
 			</div><!-- //CONTAINER -->
