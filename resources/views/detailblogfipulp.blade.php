@@ -161,52 +161,22 @@
 
 			      </div> <!-- /widget_text -->
 
-	            <div class="widget widget_categories">
-
-	               <h5 class="widget-title">Categories</h5>
-	               <ul class="link-list group">
-	               	<li><a href="blog.html">All</a></li>
-	                  <li><a href="#">Designs</a></li>
-	                  <li><a href="#">Internet</a></li>
-	                  <li><a href="#">Typography</a></li>
-	                  <li><a href="#">Photography</a></li>
-	                  <li><a href="#">Web Development</a></li>
-	                  <li><a href="#">Projects</a></li>
-	                  <li><a href="#">Other Stuff</a></li>
-	               </ul>
-
-	            </div> <!-- /widget_categories -->
-
-	            <div class="widget widget_tag_cloud group">
-
-	               <h5 class="widget-title">Tags</h5>
-	               <div class="tagcloud group">
-	                  <a href="#">drupal</a>
-	                  <a href="#">joomla</a>
-	                  <a href="#">ghost</a>
-	                  <a href="#">wordpress</a>
-	                  <a href="#">magento</a>
-	                  <a href="#">tumblr</a>
-	               </div>
-
-	            </div> <!-- /widget_tag_cloud -->
-
-	            <div class="widget widget_photostream">
-
-	               <h5>Photostream</h5>
-	               <ul class="photostream group">
-	                  <li><a href="#"><img alt="thumbnail" src="{{asset('images/fipulp/blog/thumb.jpg')}}"></a></li>
-	                  <li><a href="#"><img alt="thumbnail" src="{{asset('images/fipulp/blog/thumb.jpg')}}"></a></li>
-	                  <li><a href="#"><img alt="thumbnail" src="{{asset('images/fipulp/blog/thumb.jpg')}}"></a></li>
-	                  <li><a href="#"><img alt="thumbnail" src="{{asset('images/fipulp/blog/thumb.jpg')}}"></a></li>
-	                  <li><a href="#"><img alt="thumbnail" src="{{asset('images/fipulp/blog/thumb.jpg')}}"></a></li>
-	                  <li><a href="#"><img alt="thumbnail" src="{{asset('images/fipulp/blog/thumb.jpg')}}"></a></li>
-	                  <li><a href="#"><img alt="thumbnail" src="{{asset('images/fipulp/blog/thumb.jpg')}}"></a></li>
-	                  <li><a href="#"><img alt="thumbnail" src="{{asset('images/fipulp/blog/thumb.jpg')}}"></a></li>
-	               </ul>
-
-		         </div> <!-- /widget_photostream -->
-
+	            <h3><b>Latest</b> Posts</h3>
+							
+							@foreach($recent as $rec)
+							<div class="recent_posts_widget clearfix">
+								<div class="post_item_img_widget">
+									<img src="{{asset('/images/asriw/posts/'.$rec->img_header)}}" alt="{{$rec->title}}" />
+								</div>
+								<div class="post_item_content_widget">
+									<a class="title" href="{{URL::route('detailblogbiodegum',$rec->id)}}" >{{$rec->title}}</a>
+									<ul class="post_item_inf_widget">
+										<li>{{date('d M Y', strtotime($rec->created_at))}}</li>
+									</ul>
+								</div>
+							</div>
+							@endforeach
+						</div><!-- //POPULAR POSTS WIDGET -->
 	         </aside> <!-- /sidebar -->	            
 
 	      </div> <!-- /secondary -->
@@ -273,8 +243,8 @@
 
          </div>
 
-         <p class="copyright">&copy; Copyright 2014 Puremedia. Design by <a href="http://www.styleshout.com/">Styleshout.</a></p>        
-
+         <p class="c-copyright c-font-white">2017 &copy; Asri Peni Wulandari, Developed by <a href="http://scriptpainter.com" style="color:#337ab7;">ScriptPainter</a>
+                            <span class="c-font-white">All Rights Reserved.</span>
          <div id="go-top">
             <a class="smoothscroll" title="Back to Top" href="#top"><span>Top</span><i class="fa fa-long-arrow-up"></i></a>
          </div>

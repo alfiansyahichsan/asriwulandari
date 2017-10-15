@@ -250,10 +250,10 @@
                                     <div class="team-item">
                                         <div class="team-triangle">
                                             <div class="content">
-                                                <img src="{{asset('images/fipulp/team/1.jpg')}}" alt="title"/>
+                                                <img src="{{asset('images/fipulp/team/2.jpg')}}" alt="title"/>
                                                 <div class="team-hover text-center">
                                                     <i class="fa fa-male"></i>
-                                                    <p>John Doe</p>
+                                                    <p>Dugong</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -265,7 +265,7 @@
                                     <div class="team-item">
                                         <div class="team-triangle">
                                             <div class="content">
-                                                <img src="{{asset('images/fipulp/team/1.jpg')}}" alt="title"/>
+                                                <img src="{{asset('images/fipulp/team/3.jpg')}}" alt="title"/>
                                                 <div class="team-hover text-center">
                                                     <i class="fa fa-female"></i>
                                                     <p>Jane Doe</p>
@@ -280,7 +280,7 @@
                                     <div class="team-item">
                                         <div class="team-triangle">
                                             <div class="content">
-                                                <img src="{{asset('images/fipulp/team/1.jpg')}}" alt="title"/>
+                                                <img src="{{asset('images/fipulp/team/4.jpg')}}" alt="title"/>
                                                 <div class="team-hover text-center">
                                                     <i class="fa fa-male"></i>
                                                     <p>John Doe</p>
@@ -296,7 +296,7 @@
                                     <div class="team-item">
                                         <div class="team-triangle">
                                             <div class="content">
-                                                <img src="{{asset('images/fipulp/team/1.jpg')}}" alt="title"/>
+                                                <img src="{{asset('images/fipulp/team/5.jpg')}}" alt="title"/>
                                                 <div class="team-hover text-center">
                                                     <i class="fa fa-male"></i>
                                                     <p>John Doe</p>
@@ -311,7 +311,7 @@
                                     <div class="team-item">
                                         <div class="team-triangle">
                                             <div class="content">
-                                                <img src="{{asset('images/fipulp/team/1.jpg')}}" alt="title"/>
+                                                <img src="{{asset('images/fipulp/team/6.jpg')}}" alt="title"/>
                                                 <div class="team-hover text-center">
                                                     <i class="fa fa-male"></i>
                                                     <p>John Doe</p>
@@ -326,7 +326,7 @@
                                     <div class="team-item">
                                         <div class="team-triangle">
                                             <div class="content">
-                                                <img src="{{asset('images/fipulp/team/1.jpg')}}" alt="title"/>
+                                                <img src="{{asset('images/fipulp/team/7.jpg')}}" alt="title"/>
                                                 <div class="team-hover text-center">
                                                     <i class="fa fa-male"></i>
                                                     <p>John Doe</p>
@@ -341,7 +341,7 @@
                                     <div class="team-item">
                                         <div class="team-triangle">
                                             <div class="content">
-                                                <img src="{{asset('images/fipulp/team/1.jpg')}}" alt="title"/>
+                                                <img src="{{asset('images/fipulp/team/8.jpg')}}" alt="title"/>
                                                 <div class="team-hover text-center">
                                                     <i class="fa fa-female"></i>
                                                     <p>Jane Doe</p>

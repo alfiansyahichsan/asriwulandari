@@ -808,7 +808,7 @@ header .logo {
 	vertical-align: middle;
 	margin: 0;
 	padding: 0;
-	margin-right: 15px;
+	margin-right: 0px;
 
 	/* add position relative since z-index only applies to
 	elements that have been given an explicit position */
@@ -818,7 +818,7 @@ header .logo {
 header .logo a {
 	display: block;
 	margin: 0 20px 0 0;
-	padding: 0;
+	padding: 20px;
 	border: none;
 	outline: none;
 	font: 0/0 a;
@@ -1998,4 +1998,37 @@ hr {
 }
 .more-projects .portfolio-wrapper {
 	text-align: left;
+}
+/* __________ Recent Posts Sidebar __________ */
+.recent_posts_widget {margin-bottom:25px;}
+.post_item_img_widget {
+	overflow:hidden;
+	width:270px;
+	height:180px;
+	margin-bottom:16px;
+	background-image:url('../images/4.png');
+}
+.post_item_img_widget img {
+	width:auto;
+	max-width:none;
+	height:100%;
+	transition: opacity 0.3s ease-in-out; 
+	-webkit-transition: opacity 0.3s ease-in-out;
+}
+.recent_posts_widget:hover .post_item_img_widget img {opacity:0.5;}
+
+.post_item_content_widget a.title {
+	display:block;
+	line-height:21px;
+	font-size:18px;
+	color:#333;
+}
+.post_item_content_widgeta.title:hover {color:#666;}
+.post_item_inf_widget li {
+	display:inline-block;
+	padding-top:12px;
+	padding-right:10px;
+	line-height:17px;
+	font-size:11px;
+	color:#999;
 }
