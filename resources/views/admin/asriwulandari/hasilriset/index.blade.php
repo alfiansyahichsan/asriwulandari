@@ -113,7 +113,7 @@
                                 <br><input type='text' class='form-control' id='filename' disabled style="display:none;">
                             </div>
                             <div class="form-group">
-                                <label for="title">Link</label>
+                                <label for="title">Link (Isi # apabila ingin dikosongkan)</label>
                                 <textarea type="text" class="form-control" id="link" placeholder="Link website/media hasil riset Anda" name="link" required></textarea>
                             </div>
 

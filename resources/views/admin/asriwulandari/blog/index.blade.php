@@ -134,15 +134,15 @@ class="active"
                   
                   <div class="form-group">
                     <label for="title">Judul</label>
-                    <input type="text" class="form-control" id="title" placeholder="Judul" name="title">
+                    <input type="text" class="form-control" id="title" placeholder="Judul blog Anda" name="title">
                   </div>
                   <div class="form-group">
                     <label for="content">Konten</label>
                     <textarea class="form-control" id="content" name="content"></textarea>
                   </div>
                   <div class="form-group">
-                    <label for="title">Link Video</label>
-                    <input type="text" class="form-control" id="subtitle" placeholder="Link video embed" name="subtitle">
+                    <label for="subtitle">Link Video (Kosongkan apabila ingin post menggunakan gambar)</label>
+                    <input type="text" class="form-control" id="subtitle" placeholder="Copy link video embed dari youtube (Contoh : https://www.youtube.com/embed/KNT7wuqaykc)" name="subtitle">
                   </div>
                   <div class="form-group">
                     <label for="img_header">Image (Recommended 1280x720 px)</label>

@@ -108,12 +108,12 @@ Detail
                             <!--author widget-->
                             <div class="widget">
                                 <div class="heading-title-alt text-left heading-border-bottom">
-                                    <h6 class="text-uppercase" style="letter-spacing: 1px;">about author</h6>
+                                    <h3 class="text-uppercase" style="letter-spacing: 2px;">about <b>author</b></h3>
                                 </div>
                                 <div class="full-width avatar">
                                     <img src="{{asset('storage/asriw/about/'.$ab->image)}}" alt=""/>
                                 </div>
-                                <p>{{str_limit($ab->detail,50)}}</p>
+                                <p>{{str_limit($ab->detail,200)}}</p>
 
                                 <span class="">- ASRI PENI WULANDARI</span>
                             </div>
@@ -122,7 +122,7 @@ Detail
                             <!--latest post widget-->
                             <div class="widget">
                                 <div class="heading-title-alt text-left heading-border-bottom">
-                                    <h6 class="text-uppercase">latest post</h6>
+                                    <h3 class="text-uppercase">latest <b>post</b></h3>
                                 </div>
                                 <ul class="widget-latest-post" style="margin-top: -20px;">
                                     @foreach($recent as $re)

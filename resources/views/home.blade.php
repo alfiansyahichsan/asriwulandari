@@ -13,9 +13,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    @if (Auth::user()->role == 2)
-                    You are logged in! asri
-                    @endif
+
+                    You are logged in!
                 </div>
             </div>
         </div>

@@ -36,7 +36,7 @@ Route::group(['middleware' => ['auth','superuser']], function() {
 	Route::get('/admin/fipulp/dashboard',array('as'=>'sufipulpdashboard','uses'=>'Admin\Fipulp\FipulpController@index'));
 });
 
-Route::group(['namespace' => 'Admin\Asriwulandari','middleware' => ['auth','asriwulandari']], function() {
+Route::group(['namespace' => 'Admin\Asriwulandari','middlewareGroups' => ['auth','asriwulandari']], function() {
 	Route::get('/asriw/dashboard',array('as'=>'asridashboard','uses'=>'AsriController@index'));
 	Route::resource('asriw/gallery', 'GalleryController');
 	Route::resource('asriw/achievement', 'AchievementController');
@@ -47,14 +47,14 @@ Route::group(['namespace' => 'Admin\Asriwulandari','middleware' => ['auth','asri
 	Route::resource('asriw/journal', 'JournalController', ['names' => ['index' => 'asriwulandari.journal.index']]);
 });
 
-Route::group(['namespace' => 'Admin\Biodegum','middleware' => ['auth','biodegum']], function() {
+Route::group(['namespace' => 'Admin\Biodegum','middlewareGroups' => ['auth','biodegum']], function() {
 	Route::get('/biodegum/dashboard',array('as'=>'biodegumdashboard','uses'=>'BiodegumController@index'));
 	Route::resource('/biodegum/dashboard/posts','BiodegumPostsController', ['names' => ['index' => 'biodegum.posts.index']]);
 	Route::resource('/biodegum/dashboard/portfolio','BiodegumPortfolioController', ['names' => ['index' => 'biodegum.portfolio.index']]);
 	Route::resource('/biodegum/dashboard/pages','BiodegumPagesController');
 });
 
-Route::group(['namespace' => 'Admin\Fipulp','middleware' => ['auth','fipulp']], function() {
+Route::group(['namespace' => 'Admin\Fipulp','middlewareGroups' => ['auth','fipulp']], function() {
 	Route::get('/fipulp/dashboard',array('as'=>'fipulpdashboard','uses'=>'FipulpController@index'));
 	Route::resource('/fipulp/dashboard/posts','FipulpPostsController', ['names' => ['index' => 'fipulp.posts.index']]);
 	Route::resource('/fipulp/dashboard/gallery','FipulpGalleryController', ['names' => ['index' => 'fipulp.gallery.index']]);
@@ -66,3 +66,7 @@ Route::get('logout','\App\Http\Controllers\Auth\LoginController@logout');
 
 
 Route::post('/upload', 'AdminController@Upload')->name('upload');
+Auth::routes();
+
+Auth::routes();
+

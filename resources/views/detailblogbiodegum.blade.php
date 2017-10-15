@@ -176,6 +176,15 @@
 					<!-- SIDEBAR -->
 					<div class="sidebar col-lg-3 col-md-3 padbot50">
 						
+
+						<!-- TEXT WIDGET -->
+						<div class="sidepanel widget_text">
+							<h3>About<b> BIODEGUM</b></h3>
+							<p>I must admit this particular defense set me on edge a little bit, for two reasons. The first is that she’s being held to a completely different standard than male politicians are held to.</p>
+						</div><!-- //TEXT WIDGET -->
+
+						<hr>
+						
 						<!-- POPULAR POSTS WIDGET -->
 						<div class="sidepanel widget_popular_posts">
 							<h3><b>Latest</b> Posts</h3>
@@ -195,13 +204,7 @@
 							@endforeach
 						</div><!-- //POPULAR POSTS WIDGET -->
 					
-						<hr>
 						
-						<!-- TEXT WIDGET -->
-						<div class="sidepanel widget_text">
-							<h3>About<b> BIODEGUM</b></h3>
-							<p>I must admit this particular defense set me on edge a little bit, for two reasons. The first is that she’s being held to a completely different standard than male politicians are held to.</p>
-						</div><!-- //TEXT WIDGET -->
 					</div><!-- //SIDEBAR -->
 				</div><!-- //ROW -->
 			</div><!-- //CONTAINER -->

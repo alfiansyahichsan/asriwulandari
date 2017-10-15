@@ -17,6 +17,10 @@ class DatabaseSeeder extends Seeder
         $this->call(AsriAboutTableSeeder::class);
         $this->call(AsriPageTableSeeder::class);
         $this->call(AsriPostsTableSeeder::class);
+        $this->call(GalleryTableSeeder::class);
+        $this->call(AchievementTableSeeder::class);
+        $this->call(HasilRisetTableSeeder::class);
+        $this->call(JournalTableSeeder::class);
         //$this->call(BiodegumPostsTableSeeder::class);
         $this->call(BiodegumPortfolioTableSeeder::class);
         $this->call(BiodegumPageSettingTableSeeder::class);

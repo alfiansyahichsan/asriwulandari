@@ -108,7 +108,7 @@ Blog
                                 <div class="full-width avatar">
                                     <img src="{{asset('storage/asriw/about/'.$ab->image)}}" alt=""/>
                                 </div>
-                                <p>{{str_limit($ab->detail,50)}}</p>
+                                <p>{{str_limit($ab->detail,200)}}</p>
 
                                 <span class="">- ASRI PENI WULANDARI</span>
                             </div>

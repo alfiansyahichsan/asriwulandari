@@ -96,11 +96,11 @@
                             <input type="hidden" name="_method" id="method">
                             <div class="form-group">
                                 <label for="title">Judul</label>
-                                <input type="text" class="form-control" id="title" placeholder="Judul" name="title" required>
+                                <input type="text" class="form-control" id="title" placeholder="Judul gambar/photo" name="title" required>
                             </div>
                             <div class="form-group">
                                 <label for="title">Detail</label>
-                                <textarea type="text" class="form-control" id="detail" placeholder="detail achievement" name="detail" required></textarea>
+                                <textarea type="text" class="form-control" id="detail" placeholder="Deskripsikan detail penghargaan yang Anda raih" name="detail" required></textarea>
                             </div>
 
                             <input type="submit" value="submit" style="display:none;">

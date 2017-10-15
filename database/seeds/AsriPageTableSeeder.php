@@ -21,7 +21,7 @@ class AsriPageTableSeeder extends Seeder
         ]);
         DB::table('asripagesetting')->insert([
             'title' => 'journal',
-            'image' => 'journal.png',
+            'image' => 'journal.jpg',
         ]);
     }
 }

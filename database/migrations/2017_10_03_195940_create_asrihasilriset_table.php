@@ -16,7 +16,7 @@ class CreateAsrihasilrisetTable extends Migration
         Schema::create('asrihasilriset', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->string('deskripsi');
+            $table->text('deskripsi');
             $table->string('image');
             $table->string('link');
             $table->timestamps();

@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Asriwulandari\HasilRiset;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Auth;
 
 class HasilRisetController extends Controller
 {

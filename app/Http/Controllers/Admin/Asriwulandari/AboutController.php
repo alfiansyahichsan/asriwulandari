@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Asriwulandari\About;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Auth;
 
 class AboutController extends Controller
 {

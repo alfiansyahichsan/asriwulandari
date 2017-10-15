@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Asriwulandari\Journal;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Auth;
 
 
 class JournalController extends Controller
@@ -115,6 +116,7 @@ class JournalController extends Controller
     public function destroy($id)
     {
         $journal = Journal::where('id', $id)->first();
+        Storage::disk('local')->delete('public/asriw/journal/' . $journal->file);
         $journal->delete();
 
         return response()->json($journal);

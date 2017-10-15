@@ -14,7 +14,6 @@ Home
                 <div class="banner-title light-txt">
                     <h3 class="text-uppercase ls-20">Scientist | Lecturer</h3>
                     <h1 class="text-uppercase">ASRI PENI WULANDARI</h1>
-                    <a href="{{ Counter::showAndCount('home') }}"></a>
                 </div>
             </div>
         </div>
@@ -99,23 +98,6 @@ Home
                         <!--title-->
                     </div>
                     @foreach($riset as $key=>$rs)
-                    @if (count($rs) <= 1)
-                    <div class="col-md-3"></div>
-                    <div class="col-md-6" style="padding-bottom: 10px;">
-                        <div class="team-member">
-                            <div class="team-img">
-                                <img src="{{asset('storage/asriw/hasilriset/'.$rs->image)}}" alt="{{$rs->title}}" style="object-fit: cover;">
-                            </div>
-                            <div class="team-hover">
-                                <div class="desk">
-                                    <a href=""><h2>{{$rs->title}}</h2>
-                                    <p>{{$rs->deskripsi}}</p></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3"></div>
-                    @else ($loop->reamaining)
                     <div class="col-md-6" style="padding-bottom: 10px;">
                         <div class="team-member">
                             <div class="team-img">
@@ -129,7 +111,6 @@ Home
                             </div>
                         </div>
                     </div>
-                    @endif
                     @endforeach
 
                 </div>

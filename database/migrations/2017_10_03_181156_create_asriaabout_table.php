@@ -16,7 +16,7 @@ class CreateAsriaaboutTable extends Migration
         Schema::create('asriaabout', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('detail');
+            $table->text('detail');
             $table->string('image');
             $table->timestamps();
         });

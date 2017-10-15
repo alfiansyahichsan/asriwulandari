@@ -151,7 +151,7 @@ class PagesController extends Controller
         $detailblogfipulp =  \App\Models\Asriwulandari\Blog::where('id', $id)->first();
         $next = \App\Models\Asriwulandari\Blog::where('id','>',$id)->where('status',4)->orderBy('id','asc')->first();
         $previous = \App\Models\Asriwulandari\Blog::where('id','<',$id)->where('status',4)->orderBy('id','desc')->first();
-        $recent = \App\Models\Asriwulandari\Blog::where('status',4)->orderby('id','desc')->whereNotIn('id', [$id])->get();
+        $recent = \App\Models\Asriwulandari\Blog::orderby('id','desc')->where('status',4)->whereNotIn('id', [$id])->get();
         return view('detailblogfipulp',[
             'detailblogfipulp' => $detailblogfipulp,
             'next' => $next,
