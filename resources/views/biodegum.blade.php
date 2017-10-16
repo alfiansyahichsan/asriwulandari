@@ -444,26 +444,26 @@
                     <div class="col-md-12">
                         <div class="latest-post">
                             <img src="{{asset('images/biodegum/posts/'.$po['img_header'])}}" class="img-responsive" alt="">
-                            <h4><a href="{{URL::route('detailblogbiodegum',$po->id)}}">{{$po['title']}}</a></h4>
+                            <h4><a href="{{URL::route('detailblogbiodegum',$po->slug)}}">{{$po['title']}}</a></h4>
                             <div class="post-details">
                                 <span class="date">{{$po->date()}}</span>
                                 
                             </div>
                             <p>{!!str_limit($po->content, 250)!!}</p>
-                            <a href="{{URL::route('detailblogbiodegum',$po->id)}}" class="btn btn-primary">Read More</a>
+                            <a href="{{URL::route('detailblogbiodegum',$po->slug)}}" class="btn btn-primary">Read More</a>
                         </div>
                     </div>
                     @elseif($po->category == 2)
                     <div class="col-md-12">
                         <div class="latest-post">
                             <iframe width="100%" height="300" src="{{$po->subtitle}}" frameborder="0" allowfullscreen></iframe>
-                            <h4><a href="{{URL::route('detailblogbiodegum',$po->id)}}">{{$po['title']}}</a></h4>
+                            <h4><a href="{{URL::route('detailblogbiodegum',$po->slug)}}">{{$po['title']}}</a></h4>
                             <div class="post-details">
                                 <span class="date">{{$po->date()}}</span>
                                 
                             </div>
                             <p>{!!str_limit($po->content, 250)!!}</p>
-                            <a href="{{URL::route('detailblogbiodegum',$po->id)}}" class="btn btn-primary">Read More</a>
+                            <a href="{{URL::route('detailblogbiodegum',$po->slug)}}" class="btn btn-primary">Read More</a>
                         </div>
                     </div>
                     @endif

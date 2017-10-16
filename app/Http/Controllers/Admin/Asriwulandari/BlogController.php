@@ -51,6 +51,7 @@ class BlogController extends Controller
         $input = $request->all();
         $blogs = new Blog;
         $blogs->title = $input['title'];
+        $blogs->slug = str_slug($input['title']);
         $blogs->subtitle = $input['subtitle'];
         $blogs->content = $input['content'];
         $blogs->category = $input['category'];
@@ -114,6 +115,7 @@ class BlogController extends Controller
         $input = $request->all();
         $blogs = Blog::where('id', $id)->first();
         $blogs->title = $input['title'];
+        $blogs->slug = str_slug($input['title']);
         $blogs->subtitle = $input['subtitle'];
         $blogs->content = $input['content'];
         $blogs->category = $input['category'];

@@ -18,6 +18,7 @@ class CreateAsriblogsTable extends Migration
             $table->string('status');
             $table->string('created_by');
             $table->text('title');
+            $table->text('slug');
             $table->text('subtitle');
             $table->text('img_header')->nullable();
             $table->text('content');

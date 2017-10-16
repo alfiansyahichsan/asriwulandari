@@ -34,9 +34,9 @@ Detail
                                     <div class="pagination-row">
 
                                         <div class="pagination-post">
-                                            @if($previous)
+                                            @if($detailblog->prev())
                                             <div class="prev-post">
-                                                <a href="{{URL::route('detailblog', $previous->id)}}">
+                                                <a href="{{ URL::route('detailblog', $detailblog->prev()->slug) }}">
                                                     <div class="arrow">
                                                         <i class="fa fa-angle-double-left"></i>
                                                     </div>
@@ -64,9 +64,9 @@ Detail
                                                 </a>
                                             </div>
 
-                                        @if($next)  
+                                        @if($detailblog->next())  
                                             <div class="next-post">
-                                                <a href="{{URL::route('detailblog', $next->id)}}">
+                                                <a href="{{ URL::route('detailblog', $detailblog->next()->slug) }}">
                                                     <div class="arrow">
                                                         <i class="fa fa-angle-double-right"></i>
                                                     </div>

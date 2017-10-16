@@ -51,6 +51,7 @@ class BiodegumPostsController extends Controller
         $input = $request->all();
         $post = new Blog;
         $post->title = $input['title'];
+        $post->slug = str_slug($input['title']);
         $post->subtitle = $input['subtitle'];
         $post->content = $input['content'];
         $post->category = $input['category'];
@@ -114,6 +115,7 @@ class BiodegumPostsController extends Controller
         $input = $request->all();
         $post = Blog::where('id', $id)->first();
         $post->title = $input['title'];
+        $post->slug = str_slug($input['title']);
         $post->subtitle = $input['subtitle'];
         $post->content = $input['content'];
         $post->category = $input['category'];

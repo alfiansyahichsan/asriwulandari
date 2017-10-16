@@ -44,7 +44,7 @@
                             <thead>
                             <tr>
                                 <th>Title</th>
-                                <th>Deskripsi</th>
+                                <th style="max-width: 300px;">Deskripsi</th>
                                 <th>Image</th>
                                 <th>Link</th>
                                 <th>Aksi</th>

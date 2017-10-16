@@ -21,4 +21,5 @@ class BiodegumPosts extends Model
     public function date() {
         return $this->created_at->toFormattedDateString();
     }
+    
 }

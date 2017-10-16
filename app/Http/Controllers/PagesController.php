@@ -116,46 +116,34 @@ class PagesController extends Controller
         ]);
     }
 
-    public function detailblog($id)
+    public function detailblog($slug)
     {
-        $detailblog = \App\Models\Asriwulandari\Blog::where('id', $id)->first();
-        $next = \App\Models\Asriwulandari\Blog::where('id','>',$id)->orderBy('id','asc')->first();
-        $previous = \App\Models\Asriwulandari\Blog::where('id','<',$id)->orderBy('id','desc')->first();
-        $recent = \App\Models\Asriwulandari\Blog::orderby('id','desc')->whereNotIn('id', [$id])->get();
+        $detailblog = \App\Models\Asriwulandari\Blog::where('slug', $slug)->first();
+        $recent = \App\Models\Asriwulandari\Blog::orderby('id','desc')->whereNotIn('slug', [$slug])->get();
         $ab = \App\Models\Asriwulandari\About::get()->first();
         return view('detailblog',[
             'detailblog' => $detailblog,
-            'next' => $next,
-            'previous' => $previous,
             'recent' => $recent,
             'ab' => $ab
         ]);
     }
 
-    public function detailblogbiodegum($id)
+    public function detailblogbiodegum($slug)
     {
-        $detailblogbiodegum =  \App\Models\Asriwulandari\Blog::where('id', $id)->first();
-        $next = \App\Models\Asriwulandari\Blog::where('id','>',$id)->where('status',3)->orderBy('id','asc')->first();
-        $previous = \App\Models\Asriwulandari\Blog::where('id','<',$id)->where('status',3)->orderBy('id','desc')->first();
-        $recent = \App\Models\Asriwulandari\Blog::where('status',3)->orderby('id','desc')->whereNotIn('id', [$id])->get();
+        $detailblogbiodegum =  \App\Models\Asriwulandari\Blog::where('slug', $slug)->first();
+        $recent = \App\Models\Asriwulandari\Blog::where('status',3)->orderby('id','desc')->whereNotIn('slug', [$slug])->get();
         return view('detailblogbiodegum',[
             'detailblogbiodegum' => $detailblogbiodegum,
-            'next' => $next,
-            'previous' => $previous,
             'recent' => $recent,
         ]);
     }
 
-    public function detailblogfipulp($id)
+    public function detailblogfipulp($slug)
     {
-        $detailblogfipulp =  \App\Models\Asriwulandari\Blog::where('id', $id)->first();
-        $next = \App\Models\Asriwulandari\Blog::where('id','>',$id)->where('status',4)->orderBy('id','asc')->first();
-        $previous = \App\Models\Asriwulandari\Blog::where('id','<',$id)->where('status',4)->orderBy('id','desc')->first();
-        $recent = \App\Models\Asriwulandari\Blog::orderby('id','desc')->where('status',4)->whereNotIn('id', [$id])->get();
+        $detailblogfipulp =  \App\Models\Asriwulandari\Blog::where('slug', $slug)->first();
+        $recent = \App\Models\Asriwulandari\Blog::orderby('id','desc')->where('status',4)->whereNotIn('slug', [$slug])->get();
         return view('detailblogfipulp',[
             'detailblogfipulp' => $detailblogfipulp,
-            'next' => $next,
-            'previous' => $previous,
             'recent' => $recent,
         ]);
     }

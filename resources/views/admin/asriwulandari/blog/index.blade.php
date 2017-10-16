@@ -69,7 +69,7 @@ class="active"
                         <thead>
                             <tr>
                                 <th>Judul</th>
-                                <th>Konten</th>
+                                <th style="max-width: 300px;">Konten</th>
                                 <th>Link</th>
                                 @if(Auth::user()->role == 1)
                                 <th>Created By</th>

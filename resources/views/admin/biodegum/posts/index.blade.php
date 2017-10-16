@@ -151,7 +151,6 @@ class="active"
                   <div class="form-group">
                     <label for="img_header">Image (Recommended 1280x720 px)</label>
                     <input type="file" name="file-1" onChange="validateJPG(this)" value="blank">
-                    <a href="#" id="img_header" target="_blank">Download</a>
                   </div>
                   <div class="form-group">
                     <label for="category">Category</label>

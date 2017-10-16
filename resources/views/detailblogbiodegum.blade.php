@@ -114,9 +114,9 @@
 								<li><div class="pagination-row">
 
                                         <div class="pagination-post">
-                                            @if($previous)
+                                            @if($detailblogbiodegum->prevbiod())
                                             <div class="prev-post">
-                                                <a href="{{URL::route('detailblogbiodegum',$previous['id'])}}">
+                                                <a href="{{ URL::route('detailblogbiodegum',$detailblogbiodegum->prevbiod()->slug) }}">
                                                     <div class="arrow">
                                                         <i class="fa fa-angle-double-left"></i>
                                                     </div>
@@ -137,9 +137,9 @@
                                                 </a>
                                             </div>
                                             @endif</a></li>
-								<li> @if($next)  
+								<li> @if($detailblogbiodegum->nextbiod())  
                                             <div class="next-post">
-                                                <a href="{{URL::route('detailblogbiodegum',$next['id'])}}">
+                                                <a href="{{ URL::route('detailblogbiodegum',$detailblogbiodegum->nextbiod()->slug) }}">
                                                     <div class="arrow">
                                                         <i class="fa fa-angle-double-right"></i>
                                                     </div>

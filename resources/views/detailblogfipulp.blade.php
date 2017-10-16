@@ -128,14 +128,14 @@
 					</div> 
 
 	  			   <div class="pagenav group">
-	  			   @if($previous)
+	  			   @if($detailblogfipulp->prevfip())
 		  			   <div class="prev-post">
-                        <span class="prev"><a href="{{URL::route('detailblogfipulp',$previous['id'])}}" rel="prev">Previous</a></span>
+                        <span class="prev"><a href="{{ URL::route('detailblogfipulp',$detailblogfipulp->prevfip()->slug) }}" rel="prev">Previous</a></span>
                          @else
                          <span class="prev"><a href="#" rel="prev">Previous</a></span>
                          @endif
-                     @if($next) 
-		  				<span class="next"><a href="{{URL::route('detailblogfipulp',$next['id'])}}" rel="next">Next</a></span>  	
+                     @if($detailblogfipulp->nextfip()) 
+		  				<span class="next"><a href="{{ URL::route('detailblogfipulp',$detailblogfipulp->nextfip()->slug) }}" rel="next">Next</a></span>  	
 		  				@else
 		  				<span class="next"><a href="#" rel="next">Next</a></span>			   
 	  				@endif

@@ -182,7 +182,7 @@ Home
                                 <div class="col-md-6">
                                     <div class="post-desk">
                                         <h2 class="text-uppercase">
-                                            <a href="{{URL::route('detailblog',$blg->id)}}">{{$blg->title}}</a>
+                                            <a href="{{URL::route('detailblog',$blg->slug)}}">{{$blg->title}}</a>
                                         </h2>
                                         <div class="date">
                                             <a href="#" class="author">{{$blg->created_by}}</a> {{date('d M Y', strtotime($blg->created_at))}}
@@ -190,7 +190,7 @@ Home
                                         <p>
                                             {!!str_limit($blg->content,200)!!}
                                         </p>
-                                        <a href="{{URL::route('detailblog',$blg->id)}}" class="p-read-more">Read More <i class="icon-arrows_slim_right"></i></a>
+                                        <a href="{{URL::route('detailblog',$blg->slug)}}" class="p-read-more">Read More <i class="icon-arrows_slim_right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -206,7 +206,7 @@ Home
                                 <div class="col-md-6">
                                     <div class="post-desk">
                                         <h2 class="text-uppercase">
-                                            <a href="{{URL::route('detailblog',$blg->id)}}">{{$blg->title}}</a>
+                                            <a href="{{URL::route('detailblog',$blg->slug)}}">{{$blg->title}}</a>
                                         </h2>
                                         <div class="date">
                                             <a href="#" class="author">{{$blg->created_by}}</a> {{date('d M Y', strtotime($blg->created_at))}}
@@ -214,7 +214,7 @@ Home
                                         <p>
                                             {!!str_limit($blg->content,200)!!}
                                         </p>
-                                        <a href="{{URL::route('detailblog',$blg->id)}}" class="p-read-more">Read More <i class="icon-arrows_slim_right"></i></a>
+                                        <a href="{{URL::route('detailblog',$blg->slug)}}" class="p-read-more">Read More <i class="icon-arrows_slim_right"></i></a>
                                     </div>
                                 </div>
                             </div>

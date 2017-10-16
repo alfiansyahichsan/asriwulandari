@@ -382,12 +382,12 @@
                     <div class="col-md-4">
                         <div class="latest-post">
                             <img src="{{asset('/images/asriw/posts/'.$po->img_header)}}" class="img-responsive" alt="">
-                            <h4><a href="{{URL::route('detailblogfipulp',$po->id)}}">{{$po['title']}}</a></h4>
+                            <h4><a href="{{URL::route('detailblogfipulp',$po->slug)}}">{{$po['title']}}</a></h4>
                             <div class="post-details">
                                 <span class="date">{{$po->date()}}</span>                                
                             </div>
                             <p>{!!str_limit($po->content, 250)!!}</p>
-                            <a href="{{URL::route('detailblogfipulp',$po->id)}}" class="btn btn-primary">Read More</a>
+                            <a href="{{URL::route('detailblogfipulp',$po->slug)}}" class="btn btn-primary">Read More</a>
                         </div>
                     </div>
                     @endforeach

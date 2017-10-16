@@ -52,7 +52,7 @@
                                  @foreach($galleries as $gal)
                                 <tr id="row{{$gal->id}}">
                                     <td>{{$gal->title}}</td>
-                                    <td class="text-center"><img src="{{asset('storage/asriw/gallery/'.$gal->image)}}" width="300"></td>
+                                    <td class="text-center"><img src="{{asset('storage/asriw/gallery/'.$gal->image)}}" width="100"></td>
                                     <td class="text-center">
                                         <button type="button" class="btn btn-info editModal" data-toggle="modal" data-target="#editModal" value="{{$gal->id}}">
                                             Edit

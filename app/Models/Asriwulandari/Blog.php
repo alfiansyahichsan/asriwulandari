@@ -22,4 +22,34 @@ class Blog extends Model
         return $this->created_at->toFormattedDateString();
     }
     
+    public function next()
+    {
+        return Blog::where('id', '>', $this->id)->orderBy('id','asc')->first();
+    }
+
+    public  function prev()
+    {
+        return Blog::where('id', '<', $this->id)->orderBy('id','desc')->first();
+    }
+
+    public function nextbiod()
+    {
+        return Blog::where('id', '>', $this->id)->where('status',3)->orderBy('id','asc')->first();
+    }
+
+    public  function prevbiod()
+    {
+        return Blog::where('id', '<', $this->id)->where('status',3)->orderBy('id','desc')->first();
+    }
+
+    public function nextfip()
+    {
+        return Blog::where('id', '>', $this->id)->where('status',4)->orderBy('id','asc')->first();
+    }
+
+    public  function prevfip()
+    {
+        return Blog::where('id', '<', $this->id)->where('status',4)->orderBy('id','desc')->first();
+    }
+
 }

@@ -44,7 +44,7 @@
                             <thead>
                             <tr>
                                 <th>Name</th>
-                                <th>Detail</th>
+                                <th style="max-width: 300px;">Detail</th>
                                 <th>Image</th>
                                 <th>Aksi</th>
                             </tr>

@@ -44,7 +44,7 @@
                             <thead>
                             <tr>
                                 <th>Title</th>
-                                <th>Detail</th>
+                                <th style="max-width: 250px;">Detail</th>
                                 <th>File</th>
                                 <th>Aksi</th>
                             </tr>
@@ -53,7 +53,7 @@
                                 @foreach($journal as $jrnl)
                                 <tr id="row{{$jrnl->id}}">
                                     <td>{{$jrnl->title}}</td>
-                                    <td style="word-wrap: break-word;">{{ str_limit($jrnl->detail,30) }}</td>
+                                    <td>{{$jrnl->detail}}</td>
                                     <td>{{$jrnl->file}}</td>
                                     <td class="text-center">
                                         <button type="button" class="btn btn-info editModal" data-toggle="modal" data-target="#editModal" value="{{$jrnl->id}}">
