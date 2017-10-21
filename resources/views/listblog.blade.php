@@ -41,13 +41,13 @@ Blog
                                     <div class="full-width">
                                         <img src="{{asset('/images/asriw/posts/'.$blogs->img_header)}}" alt=""/>
                                     </div>
-                                    <h4 class="text-uppercase"><a href="{{URL::route('detailblog',$blogs->id)}}">{{$blogs->title}}</a></h4>
+                                    <h4 class="text-uppercase"><a href="{{URL::route('detailblog',$blogs->slug)}}">{{$blogs->title}}</a></h4>
                                     <ul class="post-meta">
                                         <li><span class="yuhu">{{date('d M Y', strtotime($blogs->created_at))}}</span></li>
                                         <li><i class="fa fa-user"></i>posted by <a href="#">{{$blogs->created_by}}</a></li>
                                     </ul>
                                     <p>{!!str_limit($blogs->content, 350)!!}</p>
-                                    <a href="{{URL::route('detailblog',$blogs->id)}}" class="btn btn-small btn-dark-solid  " style="background-color: #58914C !important; letter-spacing: 1.5px;"> Continue Reading</a>
+                                    <a href="{{URL::route('detailblog',$blogs->slug)}}" class="btn btn-small btn-dark-solid  " style="background-color: #58914C !important; letter-spacing: 1.5px;"> Continue Reading</a>
                                 </div>
                             </div>
                             @else
@@ -61,13 +61,13 @@ Blog
                                     <p class="video-fit m-bot-50">
                                         <iframe width="100%" height="400" src="{{$blogs->subtitle}}"  allowfullscreen></iframe>
                                     </p>
-                                    <h4 class="text-uppercase"><a href="{{URL::route('detailblog',$blogs->id)}}">{{$blogs->title}}</a></h4>
+                                    <h4 class="text-uppercase"><a href="{{URL::route('detailblog',$blogs->slug)}}">{{$blogs->title}}</a></h4>
                                     <ul class="post-meta">
                                         <li><span class="yuhu">{{date('d M Y', strtotime($blogs->created_at))}}</span></li>
                                         <li><i class="fa fa-user"></i>posted by <a href="#">{{$blogs->created_by}}</a></li>
                                     </ul>
                                     <p>{!!str_limit($blogs->content, 350)!!}</p>
-                                    <a href="{{URL::route('detailblog',$blogs->id)}}" class="btn btn-small btn-dark-solid  " style="background-color: #58914C !important; letter-spacing: 1.5px;"> Continue Reading</a>
+                                    <a href="{{URL::route('detailblog',$blogs->slug)}}" class="btn btn-small btn-dark-solid  " style="background-color: #58914C !important; letter-spacing: 1.5px;"> Continue Reading</a>
                                 </div>
 
                             </div>

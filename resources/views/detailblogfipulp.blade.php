@@ -163,19 +163,19 @@
 
 	            <h3><b>Latest</b> Posts</h3>
 							
-							@foreach($recent as $rec)
-							<div class="recent_posts_widget clearfix">
-								<div class="post_item_img_widget">
-									<img src="{{asset('/images/asriw/posts/'.$rec->img_header)}}" alt="{{$rec->title}}" />
-								</div>
-								<div class="post_item_content_widget">
-									<a class="title" href="{{URL::route('detailblogfipulp',$rec->id)}}" >{{$rec->title}}</a>
-									<ul class="post_item_inf_widget">
-										<li>{{date('d M Y', strtotime($rec->created_at))}}</li>
-									</ul>
-								</div>
-							</div>
-							@endforeach
+					@foreach($recent as $rec)
+					<div class="recent_posts_widget clearfix">
+						<div class="post_item_img_widget">
+							<img src="{{asset('/images/asriw/posts/'.$rec->img_header)}}" alt="{{$rec->title}}" />
+						</div>
+						<div class="post_item_content_widget">
+							<a class="title" href="{{URL::route('detailblogfipulp',$rec->slug)}}" >{{$rec->title}}</a>
+							<ul class="post_item_inf_widget">
+								<li>{{date('d M Y', strtotime($rec->created_at))}}</li>
+							</ul>
+						</div>
+					</div>
+					@endforeach
 	         </aside> <!-- /sidebar -->	            
 
 	      </div> <!-- /secondary -->

@@ -379,6 +379,7 @@
             <div class="row">
                 <div class="latest-news">
                     @foreach($posts as $po)
+                    @if($po->category == 1)
                     <div class="col-md-4">
                         <div class="latest-post">
                             <img src="{{asset('/images/asriw/posts/'.$po->img_header)}}" class="img-responsive" alt="">
@@ -390,67 +391,21 @@
                             <a href="{{URL::route('detailblogfipulp',$po->slug)}}" class="btn btn-primary">Read More</a>
                         </div>
                     </div>
+                    @elseif($po->category == 2)
+                    <div class="col-md-12">
+                        <div class="latest-post">
+                            <iframe width="100%" height="100" src="{{$po->subtitle}}" frameborder="0" allowfullscreen></iframe>
+                            <h4><a href="{{URL::route('detailblogbiodegum',$po->slug)}}">{{$po['title']}}</a></h4>
+                            <div class="post-details">
+                                <span class="date">{{$po->date()}}</span>
+                                
+                            </div>
+                            <p>{!!str_limit($po->content, 250)!!}</p>
+                            <a href="{{URL::route('detailblogbiodegum',$po->slug)}}" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                    @endif
                     @endforeach
-                    <!-- <div class="col-md-4">
-                        <div class="latest-post">
-                            <img src="images/biodegum/about-02.jpg" class="img-responsive" alt="">
-                            <h4><a href="#">Standard Post with Image</a></h4>
-                            <div class="post-details">
-                                <span class="date"><strong>17</strong> <br>Feb , 2014</span>
-                                
-                            </div>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                            <a href="#" class="btn btn-primary">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="latest-post">
-                            <img src="images/biodegum/about-03.jpg" class="img-responsive" alt="">
-                            <h4><a href="#">Standard Post with Image</a></h4>
-                            <div class="post-details">
-                                <span class="date"><strong>08</strong> <br>Aug , 2014</span>
-                                
-                            </div>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                            <a href="#" class="btn btn-primary">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="latest-post">
-                            <img src="images/biodegum/about-01.jpg" class="img-responsive" alt="">
-                            <h4><a href="#">Standard Post with Image</a></h4>
-                            <div class="post-details">
-                                <span class="date"><strong>08</strong> <br>Aug , 2014</span>
-                                
-                            </div>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                            <a href="#" class="btn btn-primary">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="latest-post">
-                            <img src="images/biodegum/about-02.jpg" class="img-responsive" alt="">
-                            <h4><a href="#">Standard Post with Image</a></h4>
-                            <div class="post-details">
-                                <span class="date"><strong>08</strong> <br>Aug , 2014</span>
-                                
-                            </div>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                            <a href="#" class="btn btn-primary">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="latest-post">
-                            <img src="images/biodegum/about-03.jpg" class="img-responsive" alt="">
-                            <h4><a href="#">Standard Post with Image</a></h4>
-                            <div class="post-details">
-                                <span class="date"><strong>08</strong> <br>Aug , 2014</span>
-                                
-                            </div>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                            <a href="#" class="btn btn-primary">Read More</a>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>

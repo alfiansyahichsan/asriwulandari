@@ -195,7 +195,7 @@
 									<img src="{{asset('/images/asriw/posts/'.$rec->img_header)}}" alt="{{$rec->title}}" />
 								</div>
 								<div class="post_item_content_widget">
-									<a class="title" href="{{URL::route('detailblogbiodegum',$rec->id)}}" >{{$rec->title}}</a>
+									<a class="title" href="{{URL::route('detailblogbiodegum',$rec->slug)}}" >{{$rec->title}}</a>
 									<ul class="post_item_inf_widget">
 										<li>{{date('d M Y', strtotime($rec->created_at))}}</li>
 									</ul>

@@ -131,7 +131,7 @@ class PagesController extends Controller
     public function detailblogbiodegum($slug)
     {
         $detailblogbiodegum =  \App\Models\Asriwulandari\Blog::where('slug', $slug)->first();
-        $recent = \App\Models\Asriwulandari\Blog::where('status',3)->orderby('id','desc')->whereNotIn('slug', [$slug])->get();
+        $recent = \App\Models\Asriwulandari\Blog::where('status',3)->orderby('id','desc')->whereNotIn('slug',[$slug])->get();
         return view('detailblogbiodegum',[
             'detailblogbiodegum' => $detailblogbiodegum,
             'recent' => $recent,
@@ -141,7 +141,7 @@ class PagesController extends Controller
     public function detailblogfipulp($slug)
     {
         $detailblogfipulp =  \App\Models\Asriwulandari\Blog::where('slug', $slug)->first();
-        $recent = \App\Models\Asriwulandari\Blog::orderby('id','desc')->where('status',4)->whereNotIn('slug', [$slug])->get();
+        $recent = \App\Models\Asriwulandari\Blog::where('status',4)->orderby('id','desc')->whereNotIn('slug',[$slug])->get();
         return view('detailblogfipulp',[
             'detailblogfipulp' => $detailblogfipulp,
             'recent' => $recent,
